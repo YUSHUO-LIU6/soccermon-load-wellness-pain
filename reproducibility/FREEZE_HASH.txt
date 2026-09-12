@@ -1,0 +1,6 @@
+R2_FINAL_ANALYSIS_FREEZE combined freeze hash
+method: sha256 of the concatenation of per-file sha256 hex digests, files sorted by relative path
+scope: all files under FR except the two sandbox trees (02_R1_REPRODUCTION/r1_sandbox, 03_RAW_REBUILD/r1_raw_sandbox),
+which are recorded as directory entries only; the four manifest/hash/status files exclude themselves.
+files_hashed: 13358
+freeze_hash: 5e2522a5b5bbbb4df370b0bdffcfa4747363d03a253d43797ec2c295e75421e9

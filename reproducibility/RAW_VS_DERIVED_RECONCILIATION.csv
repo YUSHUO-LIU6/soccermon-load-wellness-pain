@@ -1,0 +1,34 @@
+file,check,item,reference_value,rebuilt_value,match_status,abs_diff,rel_diff,notes
+02_RAW_DATA/rebuilt_player_day_base.csv,byte_identity,02_RAW_DATA/rebuilt_player_day_base.csv,45e8e123b0c2303b,45e8e123b0c2303b,MATCH,0.0,0.0,byte-identical
+02_RAW_DATA/raw_data_inventory.csv,byte_identity,02_RAW_DATA/raw_data_inventory.csv,5b60bcfe76549f2e,5b60bcfe76549f2e,MATCH,0.0,0.0,byte-identical
+02_RAW_DATA/raw_value_ranges.csv,byte_identity,02_RAW_DATA/raw_value_ranges.csv,2300771e6b797de4,2300771e6b797de4,MATCH,0.0,0.0,byte-identical
+02_RAW_DATA/raw_to_old_derived_comparison.csv,byte_identity,02_RAW_DATA/raw_to_old_derived_comparison.csv,09cb54b16e8cf7f9,09cb54b16e8cf7f9,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/modeling_dataset.csv,byte_identity,07_ANALYSIS_OUTPUTS/modeling_dataset.csv,4a0c4d99f2470700,4a0c4d99f2470700,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/episode_inventory.csv,byte_identity,07_ANALYSIS_OUTPUTS/episode_inventory.csv,d4dcad82e3240882,d4dcad82e3240882,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/onset_day_inventory.csv,byte_identity,07_ANALYSIS_OUTPUTS/onset_day_inventory.csv,73d4cc60e799193d,73d4cc60e799193d,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/episode_comparison_vs_frozen.csv,byte_identity,07_ANALYSIS_OUTPUTS/episode_comparison_vs_frozen.csv,13b4e60f290b25b8,13b4e60f290b25b8,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/player_event_distribution.csv,byte_identity,07_ANALYSIS_OUTPUTS/player_event_distribution.csv,d59ca1099f9481ec,d59ca1099f9481ec,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/missingness_by_player.csv,byte_identity,07_ANALYSIS_OUTPUTS/missingness_by_player.csv,bc4dd56adf1a67ba,bc4dd56adf1a67ba,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/missingness_by_variable.csv,byte_identity,07_ANALYSIS_OUTPUTS/missingness_by_variable.csv,815fc25e606f6a1e,815fc25e606f6a1e,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/observation_model_results.csv,byte_identity,07_ANALYSIS_OUTPUTS/observation_model_results.csv,d6c7ffdebea0056e,d6c7ffdebea0056e,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/ipw_diagnostics.csv,byte_identity,07_ANALYSIS_OUTPUTS/ipw_diagnostics.csv,b4270756330dfa22,b4270756330dfa22,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/ipw_effective_sample_size.csv,byte_identity,07_ANALYSIS_OUTPUTS/ipw_effective_sample_size.csv,44370f8ba6ed8599,44370f8ba6ed8599,MATCH,0.0,0.0,byte-identical
+07_ANALYSIS_OUTPUTS/ipw_extreme_weights.csv,byte_identity,07_ANALYSIS_OUTPUTS/ipw_extreme_weights.csv,12c3738a92b03850,12c3738a92b03850,MATCH,0.0,0.0,byte-identical
+REFERENCE_COUNTS,count,grid player-days,36550,36550,MATCH,0,,
+REFERENCE_COUNTS,count,at-risk primary player-days (modeling_dataset rows),36296,36296,MATCH,0,,
+REFERENCE_COUNTS,count,7d LL episodes,92,92,MATCH,0,,
+REFERENCE_COUNTS,count,unique LL onset-days (7d),52,52,MATCH,0,,
+REFERENCE_COUNTS,count,onset-days in risk set (7d),42,42,MATCH,0,,
+REFERENCE_COUNTS,count,event players (7d),15,15,MATCH,0,,
+REFERENCE_COUNTS,count,"knee episodes (7d, knee scope)",22,22,MATCH,0,,
+REFERENCE_COUNTS,count,outcome positives in risk set,42,42,MATCH,0,,
+REFERENCE_COUNTS,count,"CC n (soreness, model A)",19758,19758,MATCH,0,,
+REFERENCE_COUNTS,count,CC players (soreness),49,49,MATCH,0,,
+REFERENCE_COUNTS,count,CC events (soreness),28,28,MATCH,0,,
+REFERENCE_COUNTS,count,"CC n (fatigue, model A)",19815,19815,MATCH,0,,
+REFERENCE_COUNTS,count,"CC n (readiness, model A)",19817,19817,MATCH,0,,
+REFERENCE_COUNTS,count,injury.csv rows,162,found,MATCH,,,source: gate_b_01.log
+REFERENCE_COUNTS,count,body-location entries,306,found,MATCH,,,source: gate_b_01.log
+REFERENCE_COUNTS,count,lower-limb entries,295,found,MATCH,,,source: gate_b_01.log
+REFERENCE_COUNTS,count,minor severity,230,found,MATCH,,,source: gate_b_01.log
+REFERENCE_COUNTS,count,major severity,76,found,MATCH,,,source: gate_b_01.log
