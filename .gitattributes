@@ -1,0 +1,9 @@
+* text=auto
+analysis/core/** -text
+analysis/sensitivity/** -text
+analysis/reporting/** -text
+reproducibility/frozen/** -text
+protocol/revision_sap/** -text
+environment/original_* -text
+data/subjective.zip.sha256 -text
+reproducibility/SOURCE_FREEZE_HASH.txt -text

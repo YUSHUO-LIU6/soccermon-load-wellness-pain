@@ -1,0 +1,4 @@
+focal_group,wellness_variant,n_tests,n_nominal_p05,estimator_families_tested,estimator_families_nominal_p05,classification
+acute_x_fatigue,fatigue,7,0,4,0,no_nominal_signal
+acute_x_readiness,readiness,7,0,4,0,no_nominal_signal
+acute_x_soreness,soreness,34,11,5,4,replicates_across_independent_estimators

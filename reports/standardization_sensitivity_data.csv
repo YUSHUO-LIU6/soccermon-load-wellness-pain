@@ -1,0 +1,5 @@
+standardization,parameter,model_id,term,OR,CI_low,CI_high,n,events,source
+Retrospective full-period,Acute load × soreness,F,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,0.629552028809833,0.445024129213313,0.965067464096432,19758,28,r1/r_results.csv
+Retrospective full-period,Chronic load,F,chronic_load_28d_wp_z,0.947219920255698,0.533211926617023,1.71881049450506,19758,28,r1/r_results.csv
+Prior observations only,Acute load × soreness,F_hist,acute_load_7d_wp_z_hist:soreness_burden_recent3_wp_z_hist,0.974084183502877,0.727651843783169,1.25204346548811,19216,27,11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_RESULTS.csv
+Prior observations only,Chronic load,F_hist,chronic_load_28d_wp_z_hist,1.95545434782404,1.20829121202403,3.05818279293206,19216,27,11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_RESULTS.csv

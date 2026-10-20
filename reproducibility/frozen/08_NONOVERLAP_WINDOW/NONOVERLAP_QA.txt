@@ -1,0 +1,7 @@
+NONOVERLAP WINDOW QA - R2 freeze, exposure workstream
+script: 08_NONOVERLAP_WINDOW/run_nonoverlap_window.py
+
+[PASS] chronic_load_28to8_lag == mean(daily_load[t-28..t-8]) (brute force, n=400) max|diff|=0.00e+00 on 383 pairs, NaN mismatches=0
+[PASS] window disjointness: {t-28..t-8} vs {t-7..t-1} share no index 
+[PASS] missingness pattern identical to chronic_load_28d_lag (both require 28 prior days) 
+[PASS] nonoverlap soreness CC N == 19,758 (same 28-prior-day requirement as R1 chronic) N=19758

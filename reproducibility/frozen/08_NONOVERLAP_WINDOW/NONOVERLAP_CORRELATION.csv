@@ -1,0 +1,3 @@
+chronic_variant,sample,n,events,event_players,pearson,spearman
+"chronic_load_28to8_wp_z (non-overlap, t-28..t-8)",soreness_cc,19758,28,9,0.469521,0.450491
+"chronic_load_28d_wp_z (R1 overlap, t-28..t-1; reference)",soreness_cc,19758,28,9,0.698104,0.675075

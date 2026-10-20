@@ -1,0 +1,12 @@
+metric,value,definition_notes
+total_distinct_fitted_specifications_registered,85,MODEL_REGISTRY rows excl. FAILED (incl. rejected ladder levels and internal-QA LOO fits)
+total_fit_attempts_failed,1,E readiness (coxph gamma frailty + coxme fallback): 'No starting estimate was successful'
+total_fitted_coefficient_tests,614,term rows with a Wald/p value across MASTER_RESULTS_R2 (intercepts and nuisance terms included; bootstrap-CI-only rows have no p and are excluded)
+total_focal_exposure_or_interaction_tests,269,"terms in focal set: acute_load, chronic_load, acute x soreness/fatigue/readiness, prev_episode_ever"
+total_load_x_wellness_interaction_tests,48,terms containing ':' (all are acute_load x wellness burden/deficit)
+total_secondary_or_sensitivity_focal_tests,266,focal tests in models whose role is not primary
+nominal_p<0.05_focal_tests,88,"nominal, unadjusted; census only - no Bonferroni/FDR primary inference"
+nominal_p<0.05_interaction_tests,11,subset of focal; see NOMINAL_SIGNIFICANCE_INVENTORY.csv
+interaction_signals_replicating_across_independent_estimator_families,1,acute_x_soreness (R1 Firth + R1 IPW); see replication detail rows
+interaction_signals_isolated_to_one_estimator_family,0,
+binding_information_limit,28 CC onset-days / 9 event players,multiple model fits do NOT create more outcome information than the sparse event set

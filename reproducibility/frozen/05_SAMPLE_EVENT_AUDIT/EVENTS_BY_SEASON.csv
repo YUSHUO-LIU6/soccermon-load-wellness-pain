@@ -1,0 +1,5 @@
+taxonomy,scope,season,player_days,events,pct_of_scope_events,event_players,players
+R2_INTERNAL_QA_ONLY,risk_set_42,2020,18052,33,78.57,14,50
+R2_INTERNAL_QA_ONLY,risk_set_42,2021,18244,9,21.43,5,50
+R2_INTERNAL_QA_ONLY,soreness_cc_28,2020,7816,20,71.43,9,37
+R2_INTERNAL_QA_ONLY,soreness_cc_28,2021,11942,8,28.57,4,49

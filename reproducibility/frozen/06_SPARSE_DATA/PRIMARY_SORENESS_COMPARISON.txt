@@ -1,0 +1,9 @@
+PRIMARY soreness comparison ¡ª R1 Model A population-average fallback vs full R1 Firth (Model F):
+  acute_load_7d_wp_z: A-PA OR=0.696 [0.296,1.637] p=0.407 | F OR=0.599 [0.325,1.114] p=0.105
+  soreness_burden_recent3_wp_z: A-PA OR=0.745 [0.440,1.260] p=0.272 | F OR=0.823 [0.579,1.166] p=0.273
+  acute_load_7d_wp_z:soreness_burden_recent3_wp_z: not in A-PA | F OR=0.630 [0.445,0.965] p=0.0348
+  teamTeamB: A-PA OR=0.000 [0.000,0.000] p=0 | F OR=0.023 [0.000,0.170] p=6.17e-07
+
+Reserved slots: A_drop_team, F_drop_team (R2 drop-team workstream).
+
+28 CC onset-days / 9 event players = severe information limit; multiple estimators share the same events; TeamB contributes 0 CC events so the team coefficient is degenerate (separation); nominal p<0.05 must never be called robust. EPV is reported as a descriptive sparsity metric only ¡ª 10 EPV is NOT a validity threshold and no variable selection was performed.

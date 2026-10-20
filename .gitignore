@@ -1,0 +1,16 @@
+.venv/
+workspace/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+!.env.example
+*.zip
+*.docx
+*.tif
+*.pdf
+Rplots.pdf
+.Rhistory
+.RData
+.Rproj.user/

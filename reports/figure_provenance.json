@@ -1,0 +1,9 @@
+{
+  "purpose": "Research portfolio illustration, not a replacement for submitted figures",
+  "source": "Frozen structured results; no model was refitted by this plotting script",
+  "uncertainty": "Profile-likelihood 95% confidence intervals from logistf; these are not cluster-bootstrap intervals",
+  "sample": "Same underlying cohort, different complete-case samples after baseline construction",
+  "selection": "Both focal parameters, soreness variant, same Firth estimator and covariates, team retained",
+  "source_data_sha256": "231928f9d95f0ec8efb41908eea7119fde3756dd92c5b8545ebb21c46645ac68",
+  "matplotlib_version": "3.11.2"
+}

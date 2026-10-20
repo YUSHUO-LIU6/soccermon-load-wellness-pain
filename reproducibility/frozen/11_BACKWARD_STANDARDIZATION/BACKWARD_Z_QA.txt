@@ -1,0 +1,115 @@
+BACKWARD_STANDARDIZATION QA - R2 freeze, exposure workstream
+script: 11_BACKWARD_STANDARDIZATION/run_backward_standardization.py
+risk-set rows=36296, total events=42, soreness CC (full-period z) N=19758
+
+[PASS] burden series soreness_burden_recent3: full-grid recompute == modeling_dataset column 
+[PASS] burden series fatigue_burden_recent3: full-grid recompute == modeling_dataset column 
+[PASS] burden series readiness_deficit_recent3: full-grid recompute == modeling_dataset column 
+[PASS] brute-force spot check acute_load_7d_wp_z_hist (n=400, leakage-free baseline < t) max|diff|=0.00e+00 on 301 non-NaN pairs
+[PASS] brute-force spot check acute_load_7d_wp_z_r90 (n=400, leakage-free baseline < t, last 90d) max|diff|=0.00e+00 on 281 non-NaN pairs
+[PASS] brute-force spot check chronic_load_28d_wp_z_hist (n=400, leakage-free baseline < t) max|diff|=0.00e+00 on 301 non-NaN pairs
+[PASS] brute-force spot check chronic_load_28d_wp_z_r90 (n=400, leakage-free baseline < t, last 90d) max|diff|=0.00e+00 on 284 non-NaN pairs
+[PASS] brute-force spot check soreness_burden_recent3_wp_z_hist (n=400, leakage-free baseline < t) max|diff|=0.00e+00 on 218 non-NaN pairs
+[PASS] brute-force spot check soreness_burden_recent3_wp_z_r90 (n=400, leakage-free baseline < t, last 90d) max|diff|=0.00e+00 on 213 non-NaN pairs
+[PASS] brute-force spot check fatigue_burden_recent3_wp_z_hist (n=400, leakage-free baseline < t) max|diff|=0.00e+00 on 209 non-NaN pairs
+[PASS] brute-force spot check fatigue_burden_recent3_wp_z_r90 (n=400, leakage-free baseline < t, last 90d) max|diff|=0.00e+00 on 198 non-NaN pairs
+[PASS] brute-force spot check readiness_deficit_recent3_wp_z_hist (n=400, leakage-free baseline < t) max|diff|=0.00e+00 on 202 non-NaN pairs
+[PASS] brute-force spot check readiness_deficit_recent3_wp_z_r90 (n=400, leakage-free baseline < t, last 90d) max|diff|=0.00e+00 on 224 non-NaN pairs
+[PASS] determinism: acute_load_7d_wp_z_hist recomputed bit-identical 
+[PASS] min-obs rule enforced for acute_load_7d_wp_z_hist (all rows with <10 prior obs or missing x_t are NaN) 
+[PASS] min-obs rule enforced for chronic_load_28d_wp_z_hist (all rows with <10 prior obs or missing x_t are NaN) 
+[PASS] min-obs rule enforced for soreness_burden_recent3_wp_z_hist (all rows with <10 prior obs or missing x_t are NaN) 
+[PASS] min-obs rule enforced for fatigue_burden_recent3_wp_z_hist (all rows with <10 prior obs or missing x_t are NaN) 
+[PASS] min-obs rule enforced for readiness_deficit_recent3_wp_z_hist (all rows with <10 prior obs or missing x_t are NaN) 
+
+Anomalies (baseline SD<=0 / players losing all z):
+- acute_load_7d_lag: player TeamA-0362cdd5-7a63-480a-a46a-62a99fb1692f has 510 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-2d44f941-2f24-4fc2-afa8-611a091f2e93 has 64 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-32fed4b3-d7fc-482d-ba21-c46c58f015b5 has 68 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-358603ef-b3a3-46b5-b80a-ad64e06b6592 has 172 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-3e5f6e2b-46b7-4890-84a9-3bbb2649af5a has 65 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-4051bba7-1170-4c43-b912-8c38815a7625 has 65 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-560cb066-a8ae-412f-b09f-0d2a6aa0cf05 has 67 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-5a3be598-2f51-426f-95a5-b63d1d7c1b43 has 65 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-5a5b135d-d146-4b4c-b3da-efcd4d203f95 has 146 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-5cd7a61b-88b2-46d2-94f8-5a0d4f682d93 has 65 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-67961019-dbb5-464b-839e-08e5896c2c42 has 149 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-705923a2-378f-4f8e-8a29-464837b88cdc has 161 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-74afe68c-f348-414c-9754-6d6f9df12587 has 64 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-78f2ae2c-caf7-47eb-9e84-521f7820182e has 13 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-7a0fe0d4-c3f7-4ba1-8210-2ee9354d331e has 511 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-82a0cc6a-a398-4c89-b5fb-34bc4b53dbea has 195 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-967090b2-87d4-476b-adba-56cfaf65ba87 has 384 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-af719df9-3e6c-4ad4-9e8e-0c0c45f4f76a has 65 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-affd6f1d-b364-4700-98bf-8f20896e5ac4 has 64 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-b58af410-da77-479e-b93c-e03617b9f36d has 64 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-bcc03f81-2733-45d3-abf1-f7a709c63e68 has 12 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-c4ccf1a6-48c3-4a17-8d6c-eedd12e8680e has 65 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-c91a44bb-976c-421f-b146-f57e1e5b0846 has 565 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-d7299614-fa73-4f69-b5e9-f913e3154ff6 has 61 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-e920ae60-5c4b-4597-be27-fc6876dcec33 has 64 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-ecdbd8ec-61a7-4131-97ec-3af76f621f65 has 64 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamA-f20565cc-df22-46a7-aa97-af8ed00601d7 has 158 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-08e35b7b-d2ad-411f-a0de-4e663f14c3c3 has 592 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-29c5271b-5c46-455e-91ea-da2abfa8ff3c has 186 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-48bfd4ea-e9e2-45b5-befc-3383cae87fdf has 32 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-4b1e23d2-4204-4e16-9991-e0490649079b has 393 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-5a921187-19c7-8df4-8f4f-f31e78de5857 has 538 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-5eba590a-cecb-400f-a92e-08224c7e2e59 has 361 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-6d568bee-175f-4dcb-9d3a-0f3e8f35de07 has 572 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-7ab47f4e-6eca-4793-880f-6a0dad3459c3 has 5 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-7d41e602-eece-328b-ff7b-118e820865d6 has 361 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-9c845827-99f9-47f4-977d-2200a107a013 has 259 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-a7126274-c2d2-4f4e-9b67-35d376aefacc has 7 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-ab5ec6e5-b0f3-401e-8dc5-aa6c5070e255 has 18 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-ab691983-3544-4a0e-8f70-db44d85cb907 has 35 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-d9501f3a-aaa1-4311-8b8b-3a8d3f21480f has 367 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-e1f63352-01cb-4688-9486-5c6f1e5cf0cd has 504 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- acute_load_7d_lag: player TeamB-f67673c0-d467-4832-9519-55133a2647e5 has 16 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-01-18
+- chronic_load_28d_lag: player TeamA-0362cdd5-7a63-480a-a46a-62a99fb1692f has 489 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-2d44f941-2f24-4fc2-afa8-611a091f2e93 has 43 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-32fed4b3-d7fc-482d-ba21-c46c58f015b5 has 47 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-358603ef-b3a3-46b5-b80a-ad64e06b6592 has 151 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-3e5f6e2b-46b7-4890-84a9-3bbb2649af5a has 44 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-4051bba7-1170-4c43-b912-8c38815a7625 has 44 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-560cb066-a8ae-412f-b09f-0d2a6aa0cf05 has 46 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-5a3be598-2f51-426f-95a5-b63d1d7c1b43 has 44 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-5a5b135d-d146-4b4c-b3da-efcd4d203f95 has 125 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-5cd7a61b-88b2-46d2-94f8-5a0d4f682d93 has 44 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-67961019-dbb5-464b-839e-08e5896c2c42 has 128 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-705923a2-378f-4f8e-8a29-464837b88cdc has 140 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-74afe68c-f348-414c-9754-6d6f9df12587 has 43 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-7a0fe0d4-c3f7-4ba1-8210-2ee9354d331e has 490 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-82a0cc6a-a398-4c89-b5fb-34bc4b53dbea has 174 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-967090b2-87d4-476b-adba-56cfaf65ba87 has 363 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-af719df9-3e6c-4ad4-9e8e-0c0c45f4f76a has 44 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-affd6f1d-b364-4700-98bf-8f20896e5ac4 has 43 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-b58af410-da77-479e-b93c-e03617b9f36d has 43 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-bcc03f81-2733-45d3-abf1-f7a709c63e68 has 7 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-c4ccf1a6-48c3-4a17-8d6c-eedd12e8680e has 44 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-c91a44bb-976c-421f-b146-f57e1e5b0846 has 544 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-d7299614-fa73-4f69-b5e9-f913e3154ff6 has 40 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-e920ae60-5c4b-4597-be27-fc6876dcec33 has 43 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-ecdbd8ec-61a7-4131-97ec-3af76f621f65 has 43 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamA-f20565cc-df22-46a7-aa97-af8ed00601d7 has 137 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-08e35b7b-d2ad-411f-a0de-4e663f14c3c3 has 571 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-29c5271b-5c46-455e-91ea-da2abfa8ff3c has 165 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-48bfd4ea-e9e2-45b5-befc-3383cae87fdf has 11 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-4b1e23d2-4204-4e16-9991-e0490649079b has 372 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-5a921187-19c7-8df4-8f4f-f31e78de5857 has 517 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-5eba590a-cecb-400f-a92e-08224c7e2e59 has 340 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-6d568bee-175f-4dcb-9d3a-0f3e8f35de07 has 551 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-7d41e602-eece-328b-ff7b-118e820865d6 has 340 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-9c845827-99f9-47f4-977d-2200a107a013 has 238 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-ab691983-3544-4a0e-8f70-db44d85cb907 has 14 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-d9501f3a-aaa1-4311-8b8b-3a8d3f21480f has 346 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- chronic_load_28d_lag: player TeamB-e1f63352-01cb-4688-9486-5c6f1e5cf0cd has 483 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-02-08
+- soreness_burden_recent3: player TeamA-967090b2-87d4-476b-adba-56cfaf65ba87 has 56 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2021-02-14
+- soreness_burden_recent3: player TeamA-b58af410-da77-479e-b93c-e03617b9f36d has 2 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-03-31
+- soreness_burden_recent3: player TeamB-29c5271b-5c46-455e-91ea-da2abfa8ff3c has 8 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-07-31
+- soreness_burden_recent3: player TeamB-4b1e23d2-4204-4e16-9991-e0490649079b has 22 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2021-02-17
+- soreness_burden_recent3: player TeamB-5eba590a-cecb-400f-a92e-08224c7e2e59 has 10 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2021-01-25
+- soreness_burden_recent3: player TeamB-9c845827-99f9-47f4-977d-2200a107a013 has 48 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-10-08
+- fatigue_burden_recent3: player TeamA-967090b2-87d4-476b-adba-56cfaf65ba87 has 5 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2021-02-14
+- fatigue_burden_recent3: player TeamA-d7299614-fa73-4f69-b5e9-f913e3154ff6 has 5 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-03-28
+- fatigue_burden_recent3: player TeamB-29c5271b-5c46-455e-91ea-da2abfa8ff3c has 2 day(s) with >=10 prior obs but NaN z (baseline SD<=0), first at 2020-07-31

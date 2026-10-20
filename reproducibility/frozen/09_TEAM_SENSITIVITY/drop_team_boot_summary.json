@@ -1,0 +1,13 @@
+{
+  "model_id": "A_drop_team_boot",
+  "wellness_variant": "soreness",
+  "term": "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+  "n_boot_requested": 2000,
+  "n_boot_ok": 2000,
+  "n_boot_failed": 0,
+  "beta_full_sample": -0.341737458596013,
+  "OR_median": 0.7400979206944621,
+  "OR_ci_low": 0.5555808288041754,
+  "OR_ci_high": 1.1323038612868648,
+  "p_OR_gt1": 0.1015
+}

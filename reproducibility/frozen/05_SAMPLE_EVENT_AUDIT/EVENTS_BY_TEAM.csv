@@ -1,0 +1,5 @@
+taxonomy,scope,team,player_days,events,pct_of_scope_events,event_players,players
+R2_INTERNAL_QA_ONLY,risk_set_42,TeamA,19504,38,90.48,11,27
+R2_INTERNAL_QA_ONLY,risk_set_42,TeamB,16792,4,9.52,4,23
+R2_INTERNAL_QA_ONLY,soreness_cc_28,TeamA,12502,28,100.0,9,27
+R2_INTERNAL_QA_ONLY,soreness_cc_28,TeamB,7256,0,0.0,0,22

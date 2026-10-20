@@ -1,59 +1,18 @@
-# Reproducibility
+# Reproducibility records
 
-This directory documents the reproducibility and validation framework used for the SoccerMon secondary analysis.
+- `source_archives.json`: SHA-256 identities of supplied source archives.
+- `source_manifest.csv`: hashes of imported code, protocol and frozen results.
+  For portable core scripts the original source hash is also retained.
+- `data_fingerprints.json`: six frozen derived-file fingerprints, including
+  column order, row order, missingness and eight-decimal numerical values.
+- `frozen/`: reference results, not fresh calculations.
+- `SOURCE_FREEZE_HASH.txt`: original complete research-freeze identity.
 
-The project was developed as a structured reproducibility workflow rather than as a single analysis script. The frozen analysis package includes explicit model specifications, validation checks, numerical consistency checks, and records of the final analytical state.
+The three CSVs originally at this directory's root are retained as historical
+validation records. Fresh execution scope and results are in
+[`reports/VALIDATION.md`](../reports/VALIDATION.md).
 
-## Reproducibility framework
-
-The workflow includes:
-
-- reconstruction of the analytical player-day dataset from the public source data
-- predefined exposure and outcome construction
-- structured model specifications
-- sparse-event diagnostics
-- whole-player resampling procedures
-- sensitivity analyses
-- numerical consistency checks
-- software and execution records
-- file-integrity checks for the frozen analytical package
-
-## Validation
-
-The frozen revision package contains multiple layers of validation designed to check that:
-
-1. the analytical dataset can be reconstructed from the documented source data;
-2. derived variables and model inputs are consistent with the frozen reference analysis;
-3. reported numerical results correspond to the final analysis outputs;
-4. the analysis package remains internally consistent after manuscript revision.
-
-Detailed validation outputs and machine-readable records will be added to this directory as the repository is finalized.
-
-## Analysis provenance
-
-The repository separates:
-
-- raw public source data
-- reconstructed analytical data
-- analysis scripts
-- model outputs
-- manuscript-facing results
-
-This separation is intended to make each stage of the workflow traceable.
-
-## Frozen analysis
-
-The current repository is being prepared from the reproducibility package associated with the revised manuscript.
-
-The frozen submission archive will be preserved separately from the GitHub-facing research repository so that the original analytical record remains unchanged.
-
-## Planned contents
-
-This directory will include:
-
-- analysis taxonomy
-- model registry
-- validation summaries
-- numerical consistency records
-- file-integrity manifests
-- final freeze information
+`verify-frozen` checks imported-file/SAP hashes and reexecutes 54 frozen
+numeric-consistency checks. `rebuild` and `refit-focus` verify fresh data
+and models separately. A historical PASS record alone is not evidence that a
+model has been rerun.

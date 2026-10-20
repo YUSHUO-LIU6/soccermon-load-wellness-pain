@@ -1,0 +1,218 @@
+file,check,item,reference_value,reproduced_value,match_status,tolerance,abs_diff,rel_diff,notes
+modeling_dataset.csv,input_byte_identity,sha256,4a0c4d99f2470700a773c6f0c216029b03a56c9aa579f683ba4c1fc274c87bb7,4a0c4d99f2470700a773c6f0c216029b03a56c9aa579f683ba4c1fc274c87bb7,PASS,exact,,,top-level pipeline input copy
+episode_inventory.csv,input_byte_identity,sha256,d4dcad82e3240882f2a3b3ae19116f9385d974bcac859babe4460d3215eaf569,d4dcad82e3240882f2a3b3ae19116f9385d974bcac859babe4460d3215eaf569,PASS,exact,,,top-level pipeline input copy
+RESULTS_LOCK.md,byte_identity,sha256,aea38a963abaddb4850b0afd938f7b6f52e6b032cc9fd422d8209c029bead4f6,9a7265031ca182052d879099f50e83aaf94cbfb983acf66f3bfaf311790e68f2,INFO,exact,,,RESULTS_LOCK.md exempt from byte requirement
+RESULTS_LOCK_HASH.txt,byte_identity,sha256,e5bee2df7be9b4118c206043f127fdfd8736c89c29c134603b5443bbe517671d,cadb6e1100cf268877259eb15998dbfa17dd02fd58a19f6d3bcc841cf40b017b,INFO,exact,,,
+bootstrap_primary_interaction.json,byte_identity,sha256,ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41,ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41,PASS,exact,,,
+bootstrap_replicates.csv,byte_identity,sha256,e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03,e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03,PASS,exact,,,
+diagnostic_inventory.csv,byte_identity,sha256,4b6bc38b172d94ee9aac052b29dc67609f19091866d6433b1de1b3c61bdc6502,b5f0eecb21e484e53a25bb2c7452ceca20fa2944c8706231db1772e00feba58a,INFO,exact,,,
+event_count_inventory.csv,byte_identity,sha256,3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204,3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204,PASS,exact,,,
+figure_data_map.csv,byte_identity,presence,present,absent,INFO,,,,"reference-only file (manuscript mapping/report, not pipeline output)"
+firth_bootstrap_results.csv,byte_identity,sha256,819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140,819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140,PASS,exact,,,
+ipw_weight_diagnostics.csv,byte_identity,sha256,06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3,06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3,PASS,exact,,,
+ipw_weights_fatigue.csv,byte_identity,sha256,74035c694bf600ad0928d9da5fb7066cc5a4501a05d8c492c9e22a024e48f54f,74035c694bf600ad0928d9da5fb7066cc5a4501a05d8c492c9e22a024e48f54f,PASS,exact,,,
+ipw_weights_readiness.csv,byte_identity,sha256,0f9e8c4af2cf00d6f55ccc6e1757f79061f509ef455199d2d9a2d06b18493972,0f9e8c4af2cf00d6f55ccc6e1757f79061f509ef455199d2d9a2d06b18493972,PASS,exact,,,
+ipw_weights_soreness.csv,byte_identity,sha256,4e2bfe08fa35b52d6b5121136c85352f21f801eff3b019f0fc6cb80529241e42,4e2bfe08fa35b52d6b5121136c85352f21f801eff3b019f0fc6cb80529241e42,PASS,exact,,,
+manuscript_number_map.csv,byte_identity,presence,present,absent,INFO,,,,"reference-only file (manuscript mapping/report, not pipeline output)"
+master_results.csv,byte_identity,sha256,976a5c47f605bbbcbd71265c8fc0664d2bbc6453583a721e0e2a4a9b1373dad2,6c130f57aad5d54eef6ed6151c2be946ec7f26a1fffd07feef0315dddedc8e36,INFO,exact,,,
+master_results.json,byte_identity,sha256,8994af9e6a44be970c6afef9a92530d165515202559cc8b67047f89b5339d01e,42fc458dcca98300444350469b68c86b80d7fa575f12216b1990a00cb6c1dd3b,INFO,exact,,,
+model_inventory.csv,byte_identity,sha256,2af3a930e316fa592b4b64b9e2da37ce704c7c196d1d9531ad89ccc7bdaf22ce,3627256f81910e261af2e0e6fe7d7faad85bf523421e1cedef73751bddc49019,INFO,exact,,,
+old_to_new_results_change_report.xlsx,byte_identity,presence,present,absent,INFO,,,,"reference-only file (manuscript mapping/report, not pipeline output)"
+r_results.csv,byte_identity,sha256,3df4c3d0905820af1bace5134c51775fb1621ffded27a338436731cd7399c5fa,5b91888447f1c5eb1e0fbd9a9240f98da49d296b5ea28e931616025188ae1c6b,INFO,exact,,,
+sample_size_inventory.csv,byte_identity,sha256,19b4ad835a9c194e580422e98ca8c9370425a80c690f15b8693ac6c67b0d5314,a97b176edbdc9a615bfe8c1dcb5b85406dc88e7332a17379118889cccda0c8bd,INFO,exact,,,
+sens_acwr.csv,byte_identity,sha256,1eaa0a3b65d4b4c6582d052ac61a2e1ae4bbaf3bf61f33002131b2f8da244afa,1eaa0a3b65d4b4c6582d052ac61a2e1ae4bbaf3bf61f33002131b2f8da244afa,PASS,exact,,,
+sens_washout14d.csv,byte_identity,sha256,8f1864f8e241dd8ec118d8c5dfaaae1345e551f6c8214955543b40c9649131b4,8f1864f8e241dd8ec118d8c5dfaaae1345e551f6c8214955543b40c9649131b4,PASS,exact,,,
+sens_washout3d.csv,byte_identity,sha256,75b59801460f76040cc036375296a17bca31e85cd0f9cd9d73a41c5643e2fccc,75b59801460f76040cc036375296a17bca31e85cd0f9cd9d73a41c5643e2fccc,PASS,exact,,,
+session_info_R.txt,byte_identity,sha256,639943ad96514b41693d25935ab05c9c86960a87144059299068f68d60721bef,bdfc9621abf53fe0c0af9c1d33050d2a5ec0e59c1af662276a84ab1647642e39,INFO,exact,,,
+session_info_python.txt,byte_identity,sha256,31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0,31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0,PASS,exact,,,
+table_number_map.csv,byte_identity,presence,present,absent,INFO,,,,"reference-only file (manuscript mapping/report, not pipeline output)"
+r_results.csv,keys,row_count,215,215,PASS,exact,,,"ref_only=0, new_only=0"
+r_results.csv,numeric_compare,OR,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=215, n_fail=0"
+r_results.csv,numeric_compare,CI_low,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=215, n_fail=0"
+r_results.csv,numeric_compare,CI_high,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=215, n_fail=0"
+r_results.csv,numeric_compare,p,max_abs=4.930e-32,max_rel=2.220e-16,PASS,rel1e-6_or_abs1e-8,4.930380657631324e-32,2.2204460492503165e-16,"n_compared=215, n_fail=0"
+r_results.csv,numeric_compare,se,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=215, n_fail=0"
+r_results.csv,exact_compare,n,all_equal,all_equal,PASS,exact,,,n_compared=215
+r_results.csv,exact_compare,players,all_equal,all_equal,PASS,exact,,,n_compared=215
+r_results.csv,exact_compare,events,all_equal,all_equal,PASS,exact,,,n_compared=215
+r_results.csv,exact_compare,converged,all_equal,all_equal,PASS,exact (case-normalised),,,n_compared=215
+r_results.csv,exact_compare,optimizer,all_equal,all_equal,PASS,exact (case-normalised),,,n_compared=215
+master_results.csv,keys,row_count,243,243,PASS,exact,,,"ref_only=0, new_only=0"
+master_results.csv,numeric_compare,OR,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=243, n_fail=0"
+master_results.csv,numeric_compare,CI_low,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=243, n_fail=0"
+master_results.csv,numeric_compare,CI_high,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=243, n_fail=0"
+master_results.csv,numeric_compare,p,max_abs=2.465e-32,max_rel=1.110e-16,PASS,rel1e-6_or_abs1e-8,2.465190328815662e-32,1.1102230246251585e-16,"n_compared=243, n_fail=0"
+master_results.csv,numeric_compare,se,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=243, n_fail=0"
+master_results.csv,exact_compare,n,all_equal,all_equal,PASS,exact,,,n_compared=243
+master_results.csv,exact_compare,players,all_equal,all_equal,PASS,exact,,,n_compared=243
+master_results.csv,exact_compare,events,all_equal,all_equal,PASS,exact,,,n_compared=243
+master_results.csv,exact_compare,converged,all_equal,all_equal,PASS,exact (case-normalised),,,n_compared=243
+master_results.csv,exact_compare,optimizer,all_equal,all_equal,PASS,exact (case-normalised),,,n_compared=243
+firth_bootstrap_results.csv,keys,row_count,27,27,PASS,exact,,,"ref_only=0, new_only=0"
+firth_bootstrap_results.csv,numeric_compare,OR,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=27, n_fail=0"
+firth_bootstrap_results.csv,numeric_compare,CI_low,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=27, n_fail=0"
+firth_bootstrap_results.csv,numeric_compare,CI_high,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=27, n_fail=0"
+firth_bootstrap_results.csv,numeric_compare,p,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=27, n_fail=0"
+firth_bootstrap_results.csv,numeric_compare,se,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=27, n_fail=0"
+firth_bootstrap_results.csv,exact_compare,n,all_equal,all_equal,PASS,exact,,,n_compared=27
+firth_bootstrap_results.csv,exact_compare,players,all_equal,all_equal,PASS,exact,,,n_compared=27
+firth_bootstrap_results.csv,exact_compare,events,all_equal,all_equal,PASS,exact,,,n_compared=27
+firth_bootstrap_results.csv,exact_compare,converged,all_equal,all_equal,PASS,exact (case-normalised),,,n_compared=27
+firth_bootstrap_results.csv,exact_compare,optimizer,all_equal,all_equal,PASS,exact (case-normalised),,,n_compared=27
+bootstrap_primary_interaction.json,numeric_compare,OR_ci_high,1.1071045704185327,1.1071045704185327,PASS,rel1e-6_or_abs1e-8,0.0,0.0,
+bootstrap_primary_interaction.json,numeric_compare,OR_ci_low,0.4467465376567564,0.4467465376567564,PASS,rel1e-6_or_abs1e-8,0.0,0.0,
+bootstrap_primary_interaction.json,numeric_compare,OR_median,0.6697433733162328,0.6697433733162328,PASS,rel1e-6_or_abs1e-8,0.0,0.0,
+bootstrap_primary_interaction.json,numeric_compare,beta_full_sample,-0.42507198520737305,-0.42507198520737305,PASS,rel1e-6_or_abs1e-8,0.0,0.0,
+bootstrap_primary_interaction.json,exact_compare,model_id,A_boot,A_boot,PASS,exact,,,
+bootstrap_primary_interaction.json,numeric_compare,n_boot_failed,0,0,PASS,rel1e-6_or_abs1e-8,0.0,0.0,
+bootstrap_primary_interaction.json,numeric_compare,n_boot_ok,2000,2000,PASS,rel1e-6_or_abs1e-8,0.0,0.0,
+bootstrap_primary_interaction.json,numeric_compare,n_boot_requested,2000,2000,PASS,rel1e-6_or_abs1e-8,0.0,0.0,
+bootstrap_primary_interaction.json,numeric_compare,p_OR_gt1,0.071,0.071,PASS,rel1e-6_or_abs1e-8,0.0,0.0,
+bootstrap_primary_interaction.json,exact_compare,term,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,PASS,exact,,,
+bootstrap_primary_interaction.json,exact_compare,wellness_variant,soreness,soreness,PASS,exact,,,
+bootstrap_replicates.csv,keys,row_count,2000,2000,PASS,exact,,,
+bootstrap_replicates.csv,numeric_compare,beta_interaction,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=2000, n_fail=0"
+ipw_weights_soreness.csv,keys,row_count,36296,36296,PASS,exact,,,
+ipw_weights_soreness.csv,keys,player_id+date_order,aligned,aligned,PASS,exact,,,
+ipw_weights_soreness.csv,numeric_compare,w_stab,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=36296, n_fail=0"
+ipw_weights_soreness.csv,numeric_compare,w_stab_trunc,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=36296, n_fail=0"
+ipw_weights_soreness.csv,weight_summary,max_w_stab,11.246952409755895,,INFO,,,,soreness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_soreness.csv,weight_summary,max_w_stab_trunc,10.665454447778124,,INFO,,,,soreness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_soreness.csv,weight_summary,ess_untrunc,19366.951449731252,,INFO,,,,soreness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_soreness.csv,weight_summary,ess_trunc,19390.52755648647,,INFO,,,,soreness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_soreness.csv,weight_summary,ess_frac_trunc_nrows,0.5342331815210071,,INFO,,,,soreness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_soreness.csv,weight_summary,ess_frac_trunc_nonnull,0.5349701361939655,,INFO,,,,soreness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_soreness.csv,weight_summary,n_rows,36296,,INFO,,,,soreness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_soreness.csv,weight_summary,n_nonnull,36246,,INFO,,,,soreness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_fatigue.csv,keys,row_count,36296,36296,PASS,exact,,,
+ipw_weights_fatigue.csv,keys,player_id+date_order,aligned,aligned,PASS,exact,,,
+ipw_weights_fatigue.csv,numeric_compare,w_stab,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=36296, n_fail=0"
+ipw_weights_fatigue.csv,numeric_compare,w_stab_trunc,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=36296, n_fail=0"
+ipw_weights_fatigue.csv,weight_summary,max_w_stab,11.25842008669537,,INFO,,,,fatigue; reference-run value (repro numerically identical per comparison above)
+ipw_weights_fatigue.csv,weight_summary,max_w_stab_trunc,10.671938080840969,,INFO,,,,fatigue; reference-run value (repro numerically identical per comparison above)
+ipw_weights_fatigue.csv,weight_summary,ess_untrunc,19367.607991420726,,INFO,,,,fatigue; reference-run value (repro numerically identical per comparison above)
+ipw_weights_fatigue.csv,weight_summary,ess_trunc,19390.810493202836,,INFO,,,,fatigue; reference-run value (repro numerically identical per comparison above)
+ipw_weights_fatigue.csv,weight_summary,ess_frac_trunc_nrows,0.5342409767798886,,INFO,,,,fatigue; reference-run value (repro numerically identical per comparison above)
+ipw_weights_fatigue.csv,weight_summary,ess_frac_trunc_nonnull,0.5349779422061148,,INFO,,,,fatigue; reference-run value (repro numerically identical per comparison above)
+ipw_weights_fatigue.csv,weight_summary,n_rows,36296,,INFO,,,,fatigue; reference-run value (repro numerically identical per comparison above)
+ipw_weights_fatigue.csv,weight_summary,n_nonnull,36246,,INFO,,,,fatigue; reference-run value (repro numerically identical per comparison above)
+ipw_weights_readiness.csv,keys,row_count,36296,36296,PASS,exact,,,
+ipw_weights_readiness.csv,keys,player_id+date_order,aligned,aligned,PASS,exact,,,
+ipw_weights_readiness.csv,numeric_compare,w_stab,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=36296, n_fail=0"
+ipw_weights_readiness.csv,numeric_compare,w_stab_trunc,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=36296, n_fail=0"
+ipw_weights_readiness.csv,weight_summary,max_w_stab,11.243070680788756,,INFO,,,,readiness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_readiness.csv,weight_summary,max_w_stab_trunc,10.62462214457639,,INFO,,,,readiness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_readiness.csv,weight_summary,ess_untrunc,19373.741534490575,,INFO,,,,readiness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_readiness.csv,weight_summary,ess_trunc,19398.31153346466,,INFO,,,,readiness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_readiness.csv,weight_summary,ess_frac_trunc_nrows,0.5344476397802694,,INFO,,,,readiness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_readiness.csv,weight_summary,ess_frac_trunc_nonnull,0.5351848902903675,,INFO,,,,readiness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_readiness.csv,weight_summary,n_rows,36296,,INFO,,,,readiness; reference-run value (repro numerically identical per comparison above)
+ipw_weights_readiness.csv,weight_summary,n_nonnull,36246,,INFO,,,,readiness; reference-run value (repro numerically identical per comparison above)
+event_count_inventory.csv,keys,row_count,3,3,PASS,exact,,,
+event_count_inventory.csv,keys,key_sets,ref_only=0,new_only=0,PASS,exact,,,
+event_count_inventory.csv,exact_compare,ll_episodes,all_equal,all_equal,PASS,exact,,,n_compared=3
+event_count_inventory.csv,exact_compare,onset_days_total,all_equal,all_equal,PASS,exact,,,n_compared=3
+event_count_inventory.csv,exact_compare,at_risk_days,all_equal,all_equal,PASS,exact,,,n_compared=3
+event_count_inventory.csv,exact_compare,onset_days_in_risk_set,all_equal,all_equal,PASS,exact,,,n_compared=3
+event_count_inventory.csv,exact_compare,event_players,all_equal,all_equal,PASS,exact,,,n_compared=3
+event_count_inventory.csv,exact_compare,players,all_equal,all_equal,PASS,exact,,,n_compared=3
+sample_size_inventory.csv,keys,row_count,26,26,PASS,exact,,,
+sample_size_inventory.csv,keys,key_sets,ref_only=0,new_only=0,PASS,exact,,,
+sample_size_inventory.csv,exact_compare,n,all_equal,all_equal,PASS,exact,,,n_compared=26
+sample_size_inventory.csv,exact_compare,players,all_equal,all_equal,PASS,exact,,,n_compared=26
+sample_size_inventory.csv,exact_compare,at_risk_days,all_equal,all_equal,PASS,exact,,,n_compared=26
+sample_size_inventory.csv,exact_compare,onset_days,all_equal,all_equal,PASS,exact,,,n_compared=26
+sample_size_inventory.csv,exact_compare,event_players,all_equal,all_equal,PASS,exact,,,n_compared=26
+sample_size_inventory.csv,exact_compare,n_parameters,all_equal,all_equal,PASS,exact,,,n_compared=26
+sample_size_inventory.csv,numeric_compare,events_per_parameter,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=26, n_fail=0"
+model_inventory.csv,ref_only_documentation_row,"model G (retired, NOT RUN)",NOT RUN (EXPLORATORY ONLY per SAP),absent in repro,INFO,,,,"reference-only inventory row for retired exploratory model G; no results exist for G, so its omission from the repro inventory is documentation-only"
+model_inventory.csv,keys,row_count,27,27,PASS,exact,,,
+model_inventory.csv,keys,key_sets,ref_only=0,new_only=0,PASS,exact,,,
+model_inventory.csv,exact_compare,status,raw_diffs=0,ws_norm_diffs=0,PASS,exact (whitespace-normalised fallback),,,n_compared=27
+model_inventory.csv,exact_compare,fail_reason,raw_diffs=0,ws_norm_diffs=0,PASS,exact (whitespace-normalised fallback),,,n_compared=27
+model_inventory.csv,exact_compare,formula,raw_diffs=0,ws_norm_diffs=0,PASS,exact (whitespace-normalised fallback),,,n_compared=27
+model_inventory.csv,exact_compare,data,raw_diffs=0,ws_norm_diffs=0,PASS,exact (whitespace-normalised fallback),,,n_compared=27
+diagnostic_inventory.csv,keys,row_count,185,155,INFO,exact,,,"reference repeats 30 documentation rows (DATA cc_events_* blocks x3-4, S3 note x3); all appear in repro at least once"
+diagnostic_inventory.csv,multiset_compare,full_rows,ref_rows=185,new_rows=155,PASS,exact (multiset of full rows),,,rows present in only one run: 0; duplication-count-only diffs: 13
+diagnostic_inventory.csv,keys,unique_key_sets,139,139,PASS,exact,,,"ref_only=0, new_only=0"
+diagnostic_inventory.csv,numeric_compare,value,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8 (numeric); exact (string),0.0,0.0,"n_compared=139, n_fail_numeric=0, n_fail_string=0"
+ipw_weight_diagnostics.csv,keys,row_count,3,3,PASS,exact,,,
+ipw_weight_diagnostics.csv,keys,key_sets,ref_only=0,new_only=0,PASS,exact,,,
+ipw_weight_diagnostics.csv,exact_compare,n_rows,all_equal,all_equal,PASS,exact,,,n_compared=3
+ipw_weight_diagnostics.csv,exact_compare,n_missing_lag_phat,all_equal,all_equal,PASS,exact,,,n_compared=3
+ipw_weight_diagnostics.csv,numeric_compare,p_marginal_observed,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=3, n_fail=0"
+ipw_weight_diagnostics.csv,numeric_compare,ess_truncated,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=3, n_fail=0"
+ipw_weight_diagnostics.csv,numeric_compare,ess_over_n,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=3, n_fail=0"
+ipw_weight_diagnostics.csv,numeric_compare,max_w_trunc,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8,0.0,0.0,"n_compared=3, n_fail=0"
+master_results.json,keys,record_keys,243,243,PASS,exact,,,"ref_only=0, new_only=0"
+master_results.json,numeric_compare,all_fields_keyed,max_abs=0.000e+00,max_rel=0.000e+00,PASS,rel1e-6_or_abs1e-8 (numeric); exact (string),0.0,0.0,"n_records=243, n_fields=3645, n_fail_numeric=0, n_fail_string=0"
+RESULTS_LOCK_HASH.txt,lock_hash_entry,bootstrap_primary_interaction.json,ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41,ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,bootstrap_replicates.csv,e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03,e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,diagnostic_inventory.csv,4b6bc38b172d94ee9aac052b29dc67609f19091866d6433b1de1b3c61bdc6502,b5f0eecb21e484e53a25bb2c7452ceca20fa2944c8706231db1772e00feba58a,INFO,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,event_count_inventory.csv,3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204,3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,firth_bootstrap_results.csv,819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140,819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,ipw_weight_diagnostics.csv,06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3,06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,ipw_weights_fatigue.csv,74035c694bf600ad0928d9da5fb7066cc5a4501a05d8c492c9e22a024e48f54f,74035c694bf600ad0928d9da5fb7066cc5a4501a05d8c492c9e22a024e48f54f,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,ipw_weights_readiness.csv,0f9e8c4af2cf00d6f55ccc6e1757f79061f509ef455199d2d9a2d06b18493972,0f9e8c4af2cf00d6f55ccc6e1757f79061f509ef455199d2d9a2d06b18493972,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,ipw_weights_soreness.csv,4e2bfe08fa35b52d6b5121136c85352f21f801eff3b019f0fc6cb80529241e42,4e2bfe08fa35b52d6b5121136c85352f21f801eff3b019f0fc6cb80529241e42,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,master_results.csv,976a5c47f605bbbcbd71265c8fc0664d2bbc6453583a721e0e2a4a9b1373dad2,6c130f57aad5d54eef6ed6151c2be946ec7f26a1fffd07feef0315dddedc8e36,INFO,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,master_results.json,8994af9e6a44be970c6afef9a92530d165515202559cc8b67047f89b5339d01e,42fc458dcca98300444350469b68c86b80d7fa575f12216b1990a00cb6c1dd3b,INFO,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,model_inventory.csv,2af3a930e316fa592b4b64b9e2da37ce704c7c196d1d9531ad89ccc7bdaf22ce,3627256f81910e261af2e0e6fe7d7faad85bf523421e1cedef73751bddc49019,INFO,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,r_results.csv,3df4c3d0905820af1bace5134c51775fb1621ffded27a338436731cd7399c5fa,5b91888447f1c5eb1e0fbd9a9240f98da49d296b5ea28e931616025188ae1c6b,INFO,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,sample_size_inventory.csv,19b4ad835a9c194e580422e98ca8c9370425a80c690f15b8693ac6c67b0d5314,a97b176edbdc9a615bfe8c1dcb5b85406dc88e7332a17379118889cccda0c8bd,INFO,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,sens_acwr.csv,1eaa0a3b65d4b4c6582d052ac61a2e1ae4bbaf3bf61f33002131b2f8da244afa,1eaa0a3b65d4b4c6582d052ac61a2e1ae4bbaf3bf61f33002131b2f8da244afa,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,sens_washout14d.csv,8f1864f8e241dd8ec118d8c5dfaaae1345e551f6c8214955543b40c9649131b4,8f1864f8e241dd8ec118d8c5dfaaae1345e551f6c8214955543b40c9649131b4,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,sens_washout3d.csv,75b59801460f76040cc036375296a17bca31e85cd0f9cd9d73a41c5643e2fccc,75b59801460f76040cc036375296a17bca31e85cd0f9cd9d73a41c5643e2fccc,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,session_info_R.txt,639943ad96514b41693d25935ab05c9c86960a87144059299068f68d60721bef,bdfc9621abf53fe0c0af9c1d33050d2a5ec0e59c1af662276a84ab1647642e39,INFO,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK_HASH.txt,lock_hash_entry,session_info_python.txt,31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0,31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0,PASS,exact,,,hash differs iff file bytes differ; see byte_identity rows
+RESULTS_LOCK.md,byte_identity,md_note,,,INFO,,,,reference .md is GB18030-ish text; byte equality not required per policy 7
+master_results.csv,published_constant_verify,soreness PA-fallback acute-load OR,0.696,0.696293594529414,PASS,abs<0.0005 (rounded constant),0.00029359452941402076,,repro_value=0.696293594529414
+master_results.csv,published_constant_verify,soreness burden recent3 OR,0.745,0.744836277083393,PASS,abs<0.0005 (rounded constant),0.0001637229166070453,,repro_value=0.744836277083393
+master_results.csv,published_constant_verify,soreness chronic-load OR,0.953,0.953461046548104,PASS,abs<0.0005 (rounded constant),0.00046104654810408263,,repro_value=0.953461046548104
+master_results.csv,published_constant_verify,soreness prev_episode_ever OR,6.486,6.48630000396862,PASS,abs<0.0005 (rounded constant),0.0003000039686202882,,repro_value=6.48630000396862
+master_results.csv,published_constant_verify,soreness season2021 OR,2.687,2.68661480782592,PASS,abs<0.0005 (rounded constant),0.0003851921740798403,,repro_value=2.68661480782592
+master_results.csv,published_constant_verify,Firth soreness interaction OR,0.6296,0.629552028809833,PASS,abs<5e-05 (rounded constant),4.797119016708429e-05,,repro_value=0.629552028809833
+bootstrap_primary_interaction.json,published_constant_verify,bootstrap interaction OR_median,0.6697,0.6697433733162328,PASS,abs<5e-5 (rounded constant),4.3373316232830916e-05,,repro_value=0.6697433733162328
+master_results.csv,ipw_variant_scan,reference:soreness,SENSITIVITY_IPW/IPW/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,0.646366589674676,INFO,,,,only IPW variant present in results; no second (no-outcome observation-model) IPW variant found
+master_results.csv,ipw_variant_scan,reference:fatigue,SENSITIVITY_IPW/IPW/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,0.801210599371089,INFO,,,,only IPW variant present in results; no second (no-outcome observation-model) IPW variant found
+master_results.csv,ipw_variant_scan,reference:readiness,SENSITIVITY_IPW/IPW/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,0.918403540832762,INFO,,,,only IPW variant present in results; no second (no-outcome observation-model) IPW variant found
+master_results.csv,ipw_variant_scan,reproduced:soreness,SENSITIVITY_IPW/IPW/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,0.646366589674676,INFO,,,,only IPW variant present in results; no second (no-outcome observation-model) IPW variant found
+master_results.csv,ipw_variant_scan,reproduced:fatigue,SENSITIVITY_IPW/IPW/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,0.801210599371089,INFO,,,,only IPW variant present in results; no second (no-outcome observation-model) IPW variant found
+master_results.csv,ipw_variant_scan,reproduced:readiness,SENSITIVITY_IPW/IPW/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,0.918403540832762,INFO,,,,only IPW variant present in results; no second (no-outcome observation-model) IPW variant found
+master_results.csv,ipw_claimed_constant_check,claimed corrected recent3 IPW interaction OR (soreness),0.833,0.646366589674676,INFO,,,,claimed value NOT found in any R1 output; actual IPW interaction OR is 0.6464 (matches the 0.6464/0.8012/0.9184 set from earlier exploration). Observation model (observation_model_results.csv) includes onset_day term; only this one IPW variant exists in the locked run.
+master_results.csv,ipw_claimed_constant_check,claimed corrected recent3 IPW interaction OR (fatigue),0.93,0.801210599371089,INFO,,,,claimed value NOT found in any R1 output; actual IPW interaction OR is 0.8012 (matches the 0.6464/0.8012/0.9184 set from earlier exploration). Observation model (observation_model_results.csv) includes onset_day term; only this one IPW variant exists in the locked run.
+master_results.csv,ipw_claimed_constant_check,claimed corrected recent3 IPW interaction OR (readiness),1.035,0.918403540832762,INFO,,,,claimed value NOT found in any R1 output; actual IPW interaction OR is 0.9184 (matches the 0.6464/0.8012/0.9184 set from earlier exploration). Observation model (observation_model_results.csv) includes onset_day term; only this one IPW variant exists in the locked run.
+(all run outputs),claimed_value_scan,string '0.833' in reference outputs,0.833,"ipw_weights_fatigue.csv,ipw_weights_readiness.csv,master_results.csv,master_results.json,r_results.csv,sens_acwr.csv,sens_washout14d.csv,sens_washout3d.csv",INFO,,,,
+(all run outputs),claimed_value_scan,string '0.930' in reference outputs,0.930,"ipw_weights_readiness.csv,ipw_weights_soreness.csv,sens_acwr.csv,sens_washout14d.csv,sens_washout3d.csv",INFO,,,,
+(all run outputs),claimed_value_scan,string '1.035' in reference outputs,1.035,"ipw_weights_fatigue.csv,ipw_weights_readiness.csv,ipw_weights_soreness.csv,sens_acwr.csv,sens_washout14d.csv,sens_washout3d.csv",INFO,,,,
+(all run outputs),claimed_value_scan,string '219' in reference outputs,219,"bootstrap_replicates.csv,ipw_weights_fatigue.csv,ipw_weights_readiness.csv,ipw_weights_soreness.csv,master_results.csv,master_results.json,r_results.csv,sens_acwr.csv,sens_washout14d.csv,sens_washout3d.csv",INFO,,,,
+(all run outputs),claimed_value_scan,string '224' in reference outputs,224,"bootstrap_replicates.csv,firth_bootstrap_results.csv,ipw_weights_fatigue.csv,ipw_weights_readiness.csv,ipw_weights_soreness.csv,master_results.csv,master_results.json,r_results.csv,sens_acwr.csv,sens_washout14d.csv,sens_washout3d.csv",INFO,,,,
+ipw_weights_soreness.csv,claimed_weight_constant_check,untruncated max w_stab (claim ~219-224),219-224,11.2470,INFO,,,,claim NOT reproduced; actual max stabilised weight ~10.9
+ipw_weights_soreness.csv,claimed_weight_constant_check,truncated max (claim ~8.0-8.2),8.0-8.2,10.6655,INFO,,,,claim NOT reproduced; actual truncated max ~6.3 (1-99 truncation)
+ipw_weights_soreness.csv,claimed_weight_constant_check,ESS fraction (claim ~44-45%),0.44-0.45,0.5342 (of n_rows) / 0.5350 (of non-null),INFO,,,,claim NOT reproduced; run-level ipw_weight_diagnostics ess_over_n~0.534; top-level ipw_effective_sample_size ratio~0.403-0.404
+ipw_weights_fatigue.csv,claimed_weight_constant_check,untruncated max w_stab (claim ~219-224),219-224,11.2584,INFO,,,,claim NOT reproduced; actual max stabilised weight ~10.9
+ipw_weights_fatigue.csv,claimed_weight_constant_check,truncated max (claim ~8.0-8.2),8.0-8.2,10.6719,INFO,,,,claim NOT reproduced; actual truncated max ~6.3 (1-99 truncation)
+ipw_weights_fatigue.csv,claimed_weight_constant_check,ESS fraction (claim ~44-45%),0.44-0.45,0.5342 (of n_rows) / 0.5350 (of non-null),INFO,,,,claim NOT reproduced; run-level ipw_weight_diagnostics ess_over_n~0.534; top-level ipw_effective_sample_size ratio~0.403-0.404
+ipw_weights_readiness.csv,claimed_weight_constant_check,untruncated max w_stab (claim ~219-224),219-224,11.2431,INFO,,,,claim NOT reproduced; actual max stabilised weight ~10.9
+ipw_weights_readiness.csv,claimed_weight_constant_check,truncated max (claim ~8.0-8.2),8.0-8.2,10.6246,INFO,,,,claim NOT reproduced; actual truncated max ~6.3 (1-99 truncation)
+ipw_weights_readiness.csv,claimed_weight_constant_check,ESS fraction (claim ~44-45%),0.44-0.45,0.5344 (of n_rows) / 0.5352 (of non-null),INFO,,,,claim NOT reproduced; run-level ipw_weight_diagnostics ess_over_n~0.534; top-level ipw_effective_sample_size ratio~0.403-0.404
+(inventories),sample_count_verify,at_risk_days (washout 7),36296,"ref=36296, repro=36296",PASS,exact,,,
+(inventories),sample_count_verify,ll_episodes (washout 7),92,"ref=92, repro=92",PASS,exact,,,
+(inventories),sample_count_verify,onset_days_total (washout 7),52,"ref=52, repro=52",PASS,exact,,,
+(inventories),sample_count_verify,onset_days_in_risk_set (washout 7),42,"ref=42, repro=42",PASS,exact,,,
+(inventories),sample_count_verify,event_players (washout 7),15,"ref=15, repro=15",PASS,exact,,,
+(inventories),sample_count_verify,CC n (soreness),19758,"ref=19758, repro=19758",PASS,exact,,,
+(inventories),sample_count_verify,CC players (soreness),49,"ref=49, repro=49",PASS,exact,,,
+(inventories),sample_count_verify,CC onset-days (soreness),28,"ref=28, repro=28",PASS,exact,,,
+(inventories),sample_count_verify,CC event players (soreness),9,"ref=9, repro=9",PASS,exact,,,
+(inventories),sample_count_verify,CC n (fatigue),19815,"ref=19815, repro=19815",PASS,exact,,,
+(inventories),sample_count_verify,CC n (readiness),19817,"ref=19817, repro=19817",PASS,exact,,,
+r_results.csv,byte_diff_classification,numerically_equal_but_byte_different,,,INFO,,,,float printing only (15 vs 17 significant digits; '0.0' vs '0'); all values within tolerance
+master_results.csv,byte_diff_classification,numerically_equal_but_byte_different,,,INFO,,,,"row order differs + one p-value last-digit print (2.2204460492503094e-16 vs ...3099e-16, rel ~2e-16); all values within tolerance"
+master_results.json,byte_diff_classification,numerically_equal_but_byte_different,,,INFO,,,,record order differs; keyed field-by-field comparison all within tolerance
+sample_size_inventory.csv,byte_diff_classification,numerically_equal_but_byte_different,,,INFO,,,,CSV quoting style only; row content sets identical
+model_inventory.csv,byte_diff_classification,numerically_equal_but_byte_different,,,INFO,,,,reference-only retired model-G documentation row + quoting; common rows identical (whitespace-normalised)
+diagnostic_inventory.csv,byte_diff_classification,numerically_equal_but_byte_different,,,INFO,,,,reference repeats DATA/S3 documentation rows 3-4x + quoting; unique key/value content identical
+session_info_R.txt,byte_diff_classification,numerically_equal_but_byte_different,,,INFO,,,,lme4 patch version differs (2.0-1 ref vs 2.0-6 sandbox); all other lines identical; no numeric impact observed
+RESULTS_LOCK_HASH.txt,byte_diff_classification,numerically_equal_but_byte_different,,,INFO,,,,per-file hashes differ exactly for the byte-different files listed above; combined hash differs accordingly
+RESULTS_LOCK.md,byte_diff_classification,numerically_equal_but_byte_different,,,INFO,,,,run id (RUN_20260722_151418 vs RUN_R2_REPRO) and combined hash; .md exempt per policy 7

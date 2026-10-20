@@ -1,0 +1,13 @@
+{
+  "model_id": "A_nonoverlap_dropteam_boot",
+  "wellness_variant": "soreness",
+  "term": "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+  "n_boot_requested": 2000,
+  "n_boot_ok": 2000,
+  "n_boot_failed": 0,
+  "beta_full_sample": -0.3410246022976568,
+  "OR_median": 0.740412992385132,
+  "OR_ci_low": 0.5567567069208207,
+  "OR_ci_high": 1.133109376918052,
+  "p_OR_gt1": 0.102
+}

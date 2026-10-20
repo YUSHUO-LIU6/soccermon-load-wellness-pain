@@ -1,0 +1,13 @@
+section,variable,variant,sample,n_before_fullperiod_z,n_after_backward_z,pct_lost,events_before,events_after,event_players_before,event_players_after,pearson_corr_fullperiod_vs_backward,n_corr
+risk_set,acute_load_7d_lag,hist,risk_set,35946,27261,24.1612,42,36,15,12,0.572912,27261
+risk_set,acute_load_7d_lag,r90,risk_set,35946,25384,29.383,42,36,15,12,0.566257,25384
+risk_set,chronic_load_28d_lag,hist,risk_set,34907,27070,22.4511,39,34,12,10,0.018674,27070
+risk_set,chronic_load_28d_lag,r90,risk_set,34907,25445,27.1063,39,34,12,10,0.019578,25445
+risk_set,soreness_burden_recent3,hist,risk_set,19868,19321,2.7532,30,29,11,11,0.952297,19321
+risk_set,soreness_burden_recent3,r90,risk_set,19868,19038,4.1776,30,29,11,11,0.912432,19038
+risk_set,fatigue_burden_recent3,hist,risk_set,19925,19454,2.3639,30,29,11,11,0.957437,19454
+risk_set,fatigue_burden_recent3,r90,risk_set,19925,19000,4.6424,30,29,11,11,0.92414,19000
+risk_set,readiness_deficit_recent3,hist,risk_set,19927,19468,2.3034,30,29,11,11,0.895589,19468
+risk_set,readiness_deficit_recent3,r90,risk_set,19927,19182,3.7386,30,29,11,11,0.79957,19182
+soreness_cc,soreness_complete_case,hist,soreness_cc,19758,19216,2.7432,28,27,9,9,,
+soreness_cc,soreness_complete_case,r90,soreness_cc,19758,18925,4.216,28,27,9,9,,

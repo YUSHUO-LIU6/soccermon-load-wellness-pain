@@ -1,0 +1,19 @@
+{
+  "generated_by": "20_FREEZE/build_validation.py",
+  "domains": {
+    "data_integrity": "Gate B raw rebuild: 33/33 numeric checks MATCH, max abs diff 0.0; 50x731 grid, 0 duplicate player-dates; all 25 compared columns EXACT MATCH vs old derived.",
+    "temporal_integrity": "Exposures lagged (windows end t-1); non-overlap chronic t-28..t-8 disjoint from acute t-7..t-1 (NONOVERLAP_QA.txt: 4/4 PASS, brute-force max|diff|=0); backward-z baselines use only history < t with min-10-prior-obs rule (BACKWARD_Z_QA.txt: 19/19 PASS, bit-identical determinism, max|diff|=0 on brute-force spot checks).",
+    "polarity_integrity": "All 7 wellness codings CONSISTENT with independent external anchors (descriptor DOI 10.1038/s41597-024-03386-x Fig.2; Jarmann 2023 Table 2.1; PMData OSF wiki), HIGH confidence, outcome data never used in any coding decision.",
+    "ipw_integrity": "With-onset IPW reproduced exactly (obs-model refit max|diff|=1.8e-15 on weights; R weighted-glm refit dOR=0.0). No-outcome variant is NEW R2 sensitivity; integrity checks PASS both variants. Prompt-claimed alternative R1 IPW numbers do not exist (prompt-vs-archive discrepancy, not an R1 defect).",
+    "model_integrity": "1 failed fit (E readiness gamma frailty) recorded not omitted; all separation-driven ladder rejections and aliased Cox terms documented in 06_SPARSE_DATA and workstream diagnostics; 3 logistf maxit warnings resolved by maxit=200 refits (max|dlogOR|<=1.25e-05).",
+    "cross_file_consistency": "NUMERIC_CONSISTENCY_CHECK.csv: 54 checks, 0 FAIL.",
+    "gate_status": "Gate A PASS (0 FAIL of 217); Gate B PASS (33/33 byte/numeric identical).",
+    "prompt_vs_archive_discrepancies": [
+      "Claimed R1 IPW interaction ORs 0.833/0.930/1.035, weights 219-224, trunc 8.0-8.2, ESS 44-45%: NOT present in locked R1 outputs. Actual: 0.6464/0.8012/0.9184; max w_stab ~11.24-11.26; trunc max ~10.62-10.67; ESS/CC ~0.36, ESS/all-rows 0.534.",
+      "Claimed run id RUN_20260728_FINAL does not exist; actual locked reference run is RUN_20260722_151418."
+    ]
+  },
+  "overall_verdict": "PASS",
+  "n_checks": 54,
+  "n_fail": 0
+}

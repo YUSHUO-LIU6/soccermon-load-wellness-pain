@@ -1,0 +1,7 @@
+"model_id","wellness_variant","diagnostic","value"
+"DATA","soreness","cc_events_TeamA","28/12502"
+"DATA","soreness","cc_events_TeamB","0/7256"
+"A_drop_team","soreness","formula_full","onset_day ~ acute_load_7d_wp_z + soreness_burden_recent3_wp_z +      chronic_load_28d_wp_z + prev_episode_ever + calendar_time +      season + (1 | player_id) + acute_load_7d_wp_z:soreness_burden_recent3_wp_z"
+"A_drop_team","soreness","converged_full","TRUE"
+"A_drop_team","soreness","singular_full","FALSE"
+"A_drop_team","soreness","separation_full","FALSE"

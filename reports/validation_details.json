@@ -1,0 +1,143 @@
+{
+  "verification_date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "python": "3.11.15",
+  "platform": "macOS-15.7.9-arm64-arm-64bit",
+  "python_packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "stored_results_audit": {
+    "source_files_verified": 101,
+    "sap_hashes_verified": true,
+    "frozen_master_rows": 678,
+    "frozen_registry_rows": 86,
+    "reexecuted_frozen_consistency_checks": 54,
+    "status": "PASS",
+    "scope": "Fresh checks of stored results; models and bootstrap were not refitted."
+  },
+  "raw_data_rebuild": [
+    {
+      "file": "02_RAW_DATA/rebuilt_player_day_base.csv",
+      "status": "PASS",
+      "rows": 36550,
+      "columns": 50,
+      "differing_columns": []
+    },
+    {
+      "file": "07_ANALYSIS_OUTPUTS/modeling_dataset.csv",
+      "status": "PASS",
+      "rows": 36296,
+      "columns": 41,
+      "differing_columns": []
+    },
+    {
+      "file": "07_ANALYSIS_OUTPUTS/episode_inventory.csv",
+      "status": "PASS",
+      "rows": 695,
+      "columns": 8,
+      "differing_columns": []
+    },
+    {
+      "file": "07_ANALYSIS_OUTPUTS/onset_day_inventory.csv",
+      "status": "PASS",
+      "rows": 168,
+      "columns": 7,
+      "differing_columns": []
+    },
+    {
+      "file": "07_ANALYSIS_OUTPUTS/player_event_distribution.csv",
+      "status": "PASS",
+      "rows": 50,
+      "columns": 7,
+      "differing_columns": []
+    },
+    {
+      "file": "07_ANALYSIS_OUTPUTS/missingness_by_variable.csv",
+      "status": "PASS",
+      "rows": 336,
+      "columns": 7,
+      "differing_columns": []
+    }
+  ],
+  "sensitivity_data_rebuild": [
+    {
+      "file": "08_NONOVERLAP_WINDOW/modeling_dataset_nonoverlap.csv",
+      "rows": 36296,
+      "columns": 43,
+      "differing_columns": [],
+      "status": "PASS"
+    },
+    {
+      "file": "11_BACKWARD_STANDARDIZATION/modeling_dataset_backwardz.csv",
+      "rows": 36296,
+      "columns": 51,
+      "differing_columns": [],
+      "status": "PASS"
+    }
+  ],
+  "focal_refits": [
+    {
+      "model": "F",
+      "term": "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+      "n": 19758,
+      "events": 28,
+      "OR": 0.629552028809833,
+      "CI_low": 0.445024129213309,
+      "CI_high": 0.965067464096429,
+      "frozen_OR": 0.629552028809833,
+      "max_abs_difference": 4.27435864480685e-15,
+      "tolerance": 0.001,
+      "status": "PASS"
+    },
+    {
+      "model": "F",
+      "term": "chronic_load_28d_wp_z",
+      "n": 19758,
+      "events": 28,
+      "OR": 0.947219920255698,
+      "CI_low": 0.533211926617031,
+      "CI_high": 1.71881049450506,
+      "frozen_OR": 0.947219920255698,
+      "max_abs_difference": 7.549516567451061e-15,
+      "tolerance": 0.001,
+      "status": "PASS"
+    },
+    {
+      "model": "F_hist",
+      "term": "acute_load_7d_wp_z_hist:soreness_burden_recent3_wp_z_hist",
+      "n": 19216,
+      "events": 27,
+      "OR": 0.974084183502877,
+      "CI_low": 0.727651843783167,
+      "CI_high": 1.25204346548811,
+      "frozen_OR": 0.974084183502877,
+      "max_abs_difference": 2.44249065417534e-15,
+      "tolerance": 0.001,
+      "status": "PASS"
+    },
+    {
+      "model": "F_hist",
+      "term": "chronic_load_28d_wp_z_hist",
+      "n": 19216,
+      "events": 27,
+      "OR": 1.95545434782404,
+      "CI_low": 1.20829121202402,
+      "CI_high": 3.05818279293207,
+      "frozen_OR": 1.95545434782404,
+      "max_abs_difference": 8.88178419700125e-15,
+      "tolerance": 0.001,
+      "status": "PASS"
+    }
+  ],
+  "not_rerun": [
+    "full R1/R2 model suite",
+    "all B=2000 bootstrap procedures",
+    "submitted DOCX tables and binary TIFF figures",
+    "manual external polarity-source audit"
+  ]
+}

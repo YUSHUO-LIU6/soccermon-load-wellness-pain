@@ -1,40 +1,13 @@
-# Sensitivity and Robustness Analyses
+# Frozen R2 workstreams
 
-This directory contains the sensitivity, robustness, and internal QA analyses used alongside the core SoccerMon analysis.
+These source scripts are byte-identical imports from the supplied final
+revision archive. Their original Windows paths are retained for provenance.
+The runner stages copies and relocates only the root paths.
 
-The public-facing scripts are derived from the frozen manuscript-revision workflow. Workstation-specific absolute paths are replaced with project-relative workspace paths while preserving the intended study definitions and statistical logic.
+Workstreams include sample/event auditing, sparse-data diagnostics,
+collinearity, non-overlapping chronic-load windows, team and season
+sensitivities, expanding-history standardization, IPW, event-player influence
+and final result assembly. `19_VALIDATION/gate_a_compare.py` is historical
+code requiring the separate historical reference layout.
 
-## Included workstreams
-
-The sensitivity workflow includes:
-
-- sample and event audit
-- sparse-data diagnostics
-- acute–chronic load collinearity assessment
-- non-overlapping exposure-window analysis
-- drop-team sensitivity
-- season stability analysis
-- backward-looking within-player standardization
-- inverse-probability-weighting analyses
-- event concentration analysis
-- leave-one-event-player-out analysis
-
-## Default workspace
-
-Scripts stored in `analysis/sensitivity/` use the repository workspace by default:
-
-`<repository>/workspace/`
-
-This can be overridden using the `SOCCERMON_WORKSPACE` environment variable.
-
-Sensitivity outputs are written by default to:
-
-`<repository>/workspace/sensitivity_outputs/`
-
-The output location can be overridden using `SOCCERMON_SENSITIVITY_OUT`.
-
-## Reproducibility note
-
-These files form a GitHub-facing portability layer.
-
-The frozen manuscript-revision archive remains the provenance record. The portable sensitivity workflow should receive a final end-to-end validation against the frozen outputs before public release.
+Use [the reproduction guide](../../docs/REPRODUCING.md).

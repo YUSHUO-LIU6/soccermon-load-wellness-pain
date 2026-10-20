@@ -1,75 +1,99 @@
-# SoccerMon Load–Wellness Monitoring and Lower-Limb Pain
+# SoccerMon: load, wellness and lower-limb pain
 
-Reproducible within-player analysis of training load, wellness, and next-day self-reported lower-limb pain in elite female football using the public SoccerMon dataset.
+A reproducible study of **within-player athlete monitoring**, using two elite
+Norwegian women's football teams across the 2020–2021 seasons.
 
-## Overview
+**Yushuo Liu · Yunnan Normal University**
 
-This repository contains the reproducible analysis workflow for a longitudinal secondary analysis of the SoccerMon dataset.
+Associated manuscript: *Within-player load–wellness monitoring and lower-limb
+pain in elite female football: a reproducible secondary analysis of the
+SoccerMon dataset*. Revised manuscript under review at PLOS ONE; no publication
+or acceptance is claimed here. This repository is currently private.
 
-The study examines whether within-player deviations in training load and wellness are associated with subsequent lower-limb pain onset in elite female football players.
+## Research question
 
-Rather than treating athlete monitoring variables as fixed between-player characteristics, the analysis focuses on day-to-day changes within individual players.
+Are deviations from a player's usual training load and wellness associated
+with next-day onset of a self-reported lower-limb pain/injury episode, and how
+stable are the estimates to exposure construction, sparse events and missing
+monitoring?
 
-## Study Design
+The reference risk set has **36,296 player-days and 42 onset-days from 15
+players**. The soreness complete-case sample has **28 onset-days from nine
+players**. This information limit remains the same across the overlapping
+model specifications. The analysis estimates associations; it is not a
+validated injury prediction tool.
 
-The analysis is based on longitudinal player-day data from the publicly available SoccerMon dataset.
+## A central sensitivity result
 
-The workflow includes:
+![Firth estimates and profile-likelihood 95% confidence intervals for the load–soreness interaction and chronic load under full-period and prior-observations-only standardization. The interaction attenuates toward one and the chronic-load estimate increases.](reports/standardization_sensitivity.png)
 
-- reconstruction of player-day observations
-- identification of recurrent lower-limb pain episodes
-- acute and chronic training-load derivation
-- within-player standardization of load and wellness variables
-- mixed-effects and sparse-data modelling
-- whole-player bootstrap analyses
-- missing-data and weighting analyses
-- sensitivity analyses using alternative exposure and standardization strategies
+Retrospective full-period standardization and backward-looking
+standardization lead to materially different estimates. The latter uses only
+observations available before each day and reduces the complete-case sample
+to 19,216 days and 27 onset-days. Sparse events, team separation and selection
+from incomplete monitoring also limit interpretation. Full details are in
+[study definitions](docs/STUDY.md).
 
-## Methodological Focus
+The figure is generated from frozen structured results. Its intervals are
+profile-likelihood 95% CIs, not player-cluster bootstrap intervals. The
+[underlying table](reports/standardization_sensitivity_data.csv) and
+[provenance](reports/figure_provenance.json) are included. It is a portfolio
+illustration, separate from the submitted figures.
 
-A central aim of the study is to evaluate whether apparent load–wellness associations are robust to analytical choices.
+## Reproduce and inspect
 
-Particular attention is given to:
+```bash
+uv sync --frozen
+uv run python scripts/pipeline.py verify-frozen
+uv run python scripts/pipeline.py plot
+uv run python scripts/pipeline.py rebuild
+uv run python scripts/pipeline.py diagnostics
+```
 
-**Within-player exposure definition**  
-Training load and wellness are interpreted relative to each player's own longitudinal distribution.
+`rebuild` obtains the small public `subjective.zip`, verifies its SHA-256,
+and regenerates the analytical dataset. Use `--raw-zip /path/to/subjective.zip`
+for an existing local copy. Raw data and player-level derived files stay in
+the ignored `workspace/` directory.
 
-**Sparse outcome data**  
-The analysis includes diagnostics and modelling strategies designed for a small number of onset events.
+For R setup, independent focal model refits and the full B=2,000 workstreams,
+see [the reproduction guide](docs/REPRODUCING.md). The guide distinguishes
+fresh calculations from audits of stored results. The dated
+[verification report](reports/VALIDATION.md) records exactly what has run.
 
-**Standardization strategy**  
-The robustness of focal estimates is examined under alternative within-player standardization approaches, including approaches restricted to information available before each observation.
+## What this repository demonstrates
 
-**Reproducibility**  
-The analysis package includes structured scripts, model registries, validation outputs, and numerical consistency checks.
+- Raw-data integrity checks and explicit recurrent-event risk sets.
+- Lagged exposure construction, canonical wellness coding and within-player
+  scaling, including an expanding-history sensitivity.
+- Sparse-data and separation diagnostics, Firth estimation, mixed-model
+  fallback rules and whole-player uncertainty analysis.
+- Missingness/IPW diagnostics and sensitivity analyses for team, season,
+  exposure windows and event-player influence.
+- A frozen analysis plan, model registry, structured results and
+  independently checkable provenance.
 
-## Data
+## Repository map
 
-The study uses the publicly available SoccerMon dataset.
+| Location | Contents |
+|---|---|
+| `analysis/core/` | Portable data reconstruction and R1 analysis scripts |
+| `analysis/sensitivity/` | Original frozen R2 workstreams, staged by the runner |
+| `protocol/revision_sap/` | Frozen revision SAP, model matrix and missing-data plan |
+| `reproducibility/frozen/` | Frozen reference outputs, separate from fresh outputs |
+| `reproducibility/` | Source hashes and derived-data fingerprints |
+| `scripts/` | Runner, focal model verification, R setup and figure generation |
+| `reports/` | Figure, source table and dated verification report |
 
-Raw source data will not be redistributed in this repository. Data-access information and instructions for reproducing the analytical dataset will be documented separately.
+## Source and citation
 
-## Repository Status
+SoccerMon was created by Midoglu and colleagues. Data source:
+[Zenodo, DOI 10.5281/zenodo.10033832](https://doi.org/10.5281/zenodo.10033832).
+The unchanged preregistration is
+[OSF, DOI 10.17605/OSF.IO/UAFWQ](https://doi.org/10.17605/OSF.IO/UAFWQ).
+The revision SAP and subsequent R2 sensitivity taxonomy are kept distinct.
+An article DOI will be added only when one is available.
 
-This repository is currently being prepared from the frozen reproducibility package associated with the revised manuscript.
-
-The public release will include:
-
-- analysis scripts
-- reproducibility documentation
-- figure-generation workflows
-- key derived results
-- validation records
-- software environment information
-
-## Citation
-
-Citation information will be added when the associated article or preprint becomes publicly available.
-
-## Contact
-
-**Yushuo Liu**  
-MSc researcher in Sport Training Science  
-Yunnan Normal University
-
-GitHub: [YUSHUO-LIU6](https://github.com/YUSHUO-LIU6)
+The original submission archives remain unchanged and are identified in
+`reproducibility/source_archives.json`. Raw ZIP files, installed software,
+manuscript drafts and reviewer correspondence are not redistributed here.
+No new code or data license has been assigned during this staging work.

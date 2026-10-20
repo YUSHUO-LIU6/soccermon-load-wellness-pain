@@ -1,0 +1,38 @@
+section,sample,metric,value,detail,taxonomy,notes
+9.3.1_pairwise_primary,soreness_CC_primary,n_complete_cases,19758.0,rows,R2_REVIEWER_REQUESTED,"CC = non-missing on acute, chronic, wellness variant, prev_episode_ever, calendar_time, team, season"
+9.3.1_pairwise_primary,soreness_CC_primary,pearson_r,0.6981,"95% CI [0.6909, 0.7052] (Fisher z); p=0.000e+00",R2_REVIEWER_REQUESTED,acute_load_7d_wp_z vs chronic_load_28d_wp_z
+9.3.1_pairwise_primary,soreness_CC_primary,spearman_rho,0.6751,p=0.000e+00,R2_REVIEWER_REQUESTED,"rank correlation, same pair"
+9.3.5_pairwise_QA,fatigue_CC_QA,n_complete_cases,19815.0,rows,R2_REVIEWER_REQUESTED,"CC = non-missing on acute, chronic, wellness variant, prev_episode_ever, calendar_time, team, season"
+9.3.5_pairwise_QA,fatigue_CC_QA,pearson_r,0.6912,"95% CI [0.6839, 0.6984] (Fisher z); p=0.000e+00",R2_REVIEWER_REQUESTED,acute_load_7d_wp_z vs chronic_load_28d_wp_z
+9.3.5_pairwise_QA,fatigue_CC_QA,spearman_rho,0.6727,p=0.000e+00,R2_REVIEWER_REQUESTED,"rank correlation, same pair"
+9.3.5_pairwise_QA,readiness_CC_QA,n_complete_cases,19817.0,rows,R2_REVIEWER_REQUESTED,"CC = non-missing on acute, chronic, wellness variant, prev_episode_ever, calendar_time, team, season"
+9.3.5_pairwise_QA,readiness_CC_QA,pearson_r,0.6909,"95% CI [0.6836, 0.6981] (Fisher z); p=0.000e+00",R2_REVIEWER_REQUESTED,acute_load_7d_wp_z vs chronic_load_28d_wp_z
+9.3.5_pairwise_QA,readiness_CC_QA,spearman_rho,0.6724,p=0.000e+00,R2_REVIEWER_REQUESTED,"rank correlation, same pair"
+9.3.2_two_predictor_VIF,soreness_CC_primary,VIF_two_predictor,1.9506,"1/(1-r^2), r=0.6981",R2_REVIEWER_REQUESTED,exact for a 2-regressor design; upper bound check for full VIF
+9.3.2_two_predictor_VIF,fatigue_CC_QA,VIF_two_predictor,1.915,"1/(1-r^2), r=0.6912",R2_REVIEWER_REQUESTED,exact for a 2-regressor design; upper bound check for full VIF
+9.3.2_two_predictor_VIF,readiness_CC_QA,VIF_two_predictor,1.9134,"1/(1-r^2), r=0.6909",R2_REVIEWER_REQUESTED,exact for a 2-regressor design; upper bound check for full VIF
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[acute_load_7d_wp_z],2.0136,design=main_effects_only,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[chronic_load_28d_wp_z],1.9585,design=main_effects_only,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[soreness_burden_recent3_wp_z],1.0081,design=main_effects_only,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[prev_episode_ever],1.0626,design=main_effects_only,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[calendar_time],4.0846,design=main_effects_only,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[season],4.0442,design=main_effects_only,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[team_TeamB],1.0594,design=main_effects_only,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,max_VIF[main_effects_only],4.0846,variable=calendar_time,R2_REVIEWER_REQUESTED,max VIF across design matrix
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[acute_load_7d_wp_z],2.4024,design=with_acute_x_chronic_interaction,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[chronic_load_28d_wp_z],2.2027,design=with_acute_x_chronic_interaction,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[soreness_burden_recent3_wp_z],1.0083,design=with_acute_x_chronic_interaction,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[prev_episode_ever],1.0629,design=with_acute_x_chronic_interaction,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[calendar_time],4.1453,design=with_acute_x_chronic_interaction,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[acute_x_chronic],2.0979,design=with_acute_x_chronic_interaction,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[season],4.049,design=with_acute_x_chronic_interaction,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,VIF[team_TeamB],1.0722,design=with_acute_x_chronic_interaction,R2_REVIEWER_REQUESTED,auxiliary R^2 regression on remaining covariates; intercept excluded
+9.3.3_full_design_VIF,soreness_CC_primary,max_VIF[with_acute_x_chronic_interaction],4.1453,variable=calendar_time,R2_REVIEWER_REQUESTED,max VIF across design matrix
+9.3.4_condition_number,soreness_CC_primary,condition_number[main_effects_only],3.791,"scaled (centered, unit-sd) design matrix, intercept excluded",R2_REVIEWER_REQUESTED,largest condition index = kappa; singular values min=50.8059 max=192.6255
+9.3.4_condition_number,soreness_CC_primary,max_condition_index[main_effects_only],3.791,n_singular_values=7,R2_REVIEWER_REQUESTED,internal QA row; kappa>30 would indicate serious collinearity
+9.3.4_condition_number,soreness_CC_primary,condition_number[with_interaction],4.332,"scaled (centered, unit-sd) design matrix, intercept excluded",R2_REVIEWER_REQUESTED,largest condition index = kappa; singular values min=50.4201 max=218.4022
+9.3.4_condition_number,soreness_CC_primary,max_condition_index[with_interaction],4.332,n_singular_values=8,R2_REVIEWER_REQUESTED,internal QA row; kappa>30 would indicate serious collinearity
+9.3.6_within_player_partial,soreness_CC_primary,within_player_demeaned_r,0.6227,n_players=49; p=0.000e+00,R2_REVIEWER_REQUESTED,correlation after removing player means; residual variation is within-player (structural window overlap)
+9.3.6_within_player_partial,soreness_CC_primary,between_player_means_r,0.9925,n_players=49; p=1.290e-44,R2_REVIEWER_REQUESTED,correlation of player-level means (between-player component); near 0 expected for within-player z-scores
+9.3.8_nonoverlap_remainder_check,soreness_CC_primary_raw_lags,pearson_r_acute_vs_remainder,0.541,"95% CI [0.5310, 0.5508]; n=19758; p=0.000e+00",R2_REVIEWER_REQUESTED,derived check: remainder = (28*chronic_load_28d_lag - 7*acute_load_7d_lag)/21 = mean load t-28..t-8 (non-overlapping)
+9.3.8_nonoverlap_remainder_check,soreness_CC_primary_raw_lags,spearman_rho_acute_vs_remainder,0.5272,n=19758; p=0.000e+00,R2_REVIEWER_REQUESTED,"derived check, rank version"
