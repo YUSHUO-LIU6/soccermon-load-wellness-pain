@@ -1,0 +1,56 @@
+{
+  "assessment": "READY WITH DOCUMENTED LIMITATIONS",
+  "scientific_assessment": "READY WITH DOCUMENTED LIMITATIONS",
+  "strict_result_gates": {
+    "PASS": 709,
+    "FAIL": 95,
+    "BLOCKED": 0,
+    "NOT RUN": 17
+  },
+  "protected_scientific_contrast_discrepancies": 0,
+  "retained_fail_impact_classes": {
+    "A": 0,
+    "B": 68,
+    "C": 16,
+    "D": 8,
+    "E": 3
+  },
+  "Firth_replay": {
+    "completed": 6000,
+    "accepted": 5999,
+    "accepted_without_original_step_criterion": 0,
+    "summary_agreement": true
+  },
+  "local_tests": {
+    "count": 39,
+    "status": "PASS"
+  },
+  "source_integrity": "101 source files and 54 frozen consistency checks PASS",
+  "author_authorization": {
+    "MIT": true,
+    "historical_Git_identity_disclosure": true
+  },
+  "privacy_and_data_rights": "Source-data CC BY 4.0 attribution retained; no raw monitoring, sampled player identities, libraries or private correspondence added",
+  "unverified_for_scientific_interpretation": [
+    "gamma frailty Model E",
+    "joint team/season-removal internal QA GLMM"
+  ],
+  "CI": {
+    "status": "PASS",
+    "tested_code_commit": "f92c54b366865474fdc0e05ea9893604744fdfe5",
+    "tests": 39,
+    "pull_request_run": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122545635",
+    "push_run": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122539941"
+  },
+  "pull_request": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/pull/1",
+  "previous_remote_CI": {
+    "tested_commit": "a8c9898f6bd432adbb16b0d7499f4591e6237572",
+    "conclusion": "success",
+    "runs": [
+      "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122163620",
+      "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122163971"
+    ],
+    "tests": 38
+  },
+  "release_constraints": "Retain strict FAIL records and all unverified ancillary results; no universal convergence or exact cross-platform equality claim"
+}

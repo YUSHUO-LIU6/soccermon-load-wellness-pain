@@ -9,8 +9,12 @@
 - `SOURCE_FREEZE_HASH.txt`: original complete research-freeze identity.
 
 The three CSVs originally at this directory's root are retained as historical
-validation records. Fresh execution scope and results are in
-[`reports/VALIDATION.md`](../reports/VALIDATION.md).
+validation records. The earlier portability pass is preserved in
+[`reports/VALIDATION.md`](../reports/VALIDATION.md). Current post-publication
+execution scope, result gates and limitations are in
+[`reports/REPRODUCIBILITY_AUDIT.md`](../reports/REPRODUCIBILITY_AUDIT.md),
+[`RESULT_COMPARISON.csv`](../reports/RESULT_COMPARISON.csv) and
+[`EXECUTION_MANIFEST.json`](../reports/EXECUTION_MANIFEST.json).
 
 `verify-frozen` checks imported-file/SAP hashes and reexecutes 54 frozen
 numeric-consistency checks. `rebuild` and `refit-focus` verify fresh data

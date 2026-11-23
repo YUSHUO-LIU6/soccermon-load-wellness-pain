@@ -6,6 +6,7 @@ are relocated; frozen numerical results remain separate from fresh outputs.
 from pathlib import Path, PurePosixPath
 import argparse
 import csv
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -25,6 +26,48 @@ SB = FR / '02_R1_REPRODUCTION/r1_sandbox'
 FROZEN = ROOT / 'reproducibility/frozen'
 PYTHON = sys.executable
 SEED = 20260722
+
+def configure_workspace(path):
+    """Confine execution to an ignored directory, never a frozen input tree."""
+    global WORK, FR, SB
+    candidate = Path(path).expanduser()
+    if not candidate.is_absolute():
+        candidate = ROOT / candidate
+    candidate = candidate.resolve()
+    base = ROOT / 'workspace'
+    if base.is_symlink() or not candidate.is_relative_to(base):
+        raise ValueError('Execution root must be inside the ignored repository workspace/')
+    WORK = candidate
+    FR = WORK / 'r2'
+    SB = FR / '02_R1_REPRODUCTION/r1_sandbox'
+
+def utc_now():
+    return datetime.now(timezone.utc).isoformat(timespec='seconds')
+
+def record_execution(record):
+    path = WORK / 'execution.jsonl'
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open('a') as out:
+        out.write(json.dumps(record, ensure_ascii=False, allow_nan=False) + '\n')
+
+def claim_full_run(task):
+    """Never mix full runs: several preserved workstreams append or resume."""
+    marker = WORK / 'full_run.json'
+    marker.parent.mkdir(parents=True, exist_ok=True)
+    record = {'task': task, 'started_utc': utc_now(), 'seed': SEED,
+              'status': 'RUNNING', 'r2_baseline': 'frozen R1, copied reference'}
+    try:
+        with marker.open('x') as out:
+            json.dump(record, out, indent=2)
+    except FileExistsError:
+        raise ValueError('Full run already claimed this execution root. Rebuild in a new '
+                         '--workspace directory; implicit resume is prohibited.') from None
+    r1_outputs = SB / '07_ANALYSIS_OUTPUTS/RUN_PORTABLE'
+    if (r1_outputs / 'r_results.csv').exists() or (FR / '17_MASTER_RESULTS/MASTER_RESULTS_R2.csv').exists():
+        record['status'] = 'REFUSED_EXISTING_MODEL_OUTPUTS'
+        write_json(marker, record)
+        raise ValueError('Existing model outputs found; use a fresh --workspace directory')
+    return marker, record
 
 def write_json(path, obj):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -59,18 +102,36 @@ def fingerprint(path):
 
 def run(argv, *, env=None, name=None):
     executable = argv[2] if len(argv)>2 and argv[1]=='--vanilla' else argv[1]
-    logfile = WORK / 'logs' / ((name or Path(executable).stem)+'.log')
+    logs = WORK / 'logs'
+    logs.mkdir(parents=True, exist_ok=True)
+    stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ')
+    logfile = logs / (stamp + '_' + (name or Path(executable).stem)+'.log')
     logfile.parent.mkdir(parents=True, exist_ok=True)
     settings = os.environ.copy()
-    settings.update({'SOCCERMON_WORKSPACE': str(SB), 'SOCCERMON_RUN_ID': 'RUN_PORTABLE',
+    settings.update({'SOCCERMON_EXECUTION_ROOT': str(WORK),
+                     'SOCCERMON_WORKSPACE': str(SB), 'SOCCERMON_RUN_ID': 'RUN_PORTABLE',
                      'MPLBACKEND': 'Agg', 'MPLCONFIGDIR': str(WORK/'matplotlib'),
                      'OPENBLAS_NUM_THREADS': '1', 'OMP_NUM_THREADS': '1'})
     if env:
         settings.update(env)
+    lib = Path(settings.get('SOCCERMON_R_LIBRARY', ROOT / 'workspace/R/library')).expanduser().resolve()
+    settings.update({'SOCCERMON_R_LIBRARY': str(lib), 'R_LIBS_USER': str(lib),
+                     'REANALYSIS_RESUME': '0'})
+    record = {'kind': 'subprocess', 'argv': [str(x) for x in argv], 'cwd': str(ROOT),
+              'started_utc': utc_now(), 'seed': SEED, 'log': str(logfile.relative_to(ROOT)),
+              'R_library': str(lib)}
     print('Running:', ' '.join(str(x) for x in argv), flush=True)
-    with logfile.open('w') as out:
-        proc = subprocess.run([str(x) for x in argv], cwd=ROOT, env=settings,
-                              stdout=out, stderr=subprocess.STDOUT)
+    try:
+        with logfile.open('x') as out:
+            proc = subprocess.run([str(x) for x in argv], cwd=ROOT, env=settings,
+                                  stdout=out, stderr=subprocess.STDOUT)
+        record['exit_status'] = proc.returncode
+    except BaseException as exc:
+        record.update({'exit_status': None, 'error': f'{type(exc).__name__}: {exc}'})
+        raise
+    finally:
+        record['ended_utc'] = utc_now()
+        record_execution(record)
     if proc.returncode:
         print(logfile.read_text()[-7000:], file=sys.stderr)
         raise RuntimeError(f'Exit {proc.returncode}: {logfile.relative_to(ROOT)}')
@@ -86,15 +147,34 @@ def relocate(text, freeze_root):
     return text
 
 def stage():
-    for path in (FR/'18_LOGS', SB/'logs', SB/'02_RAW_DATA', SB/'07_ANALYSIS_OUTPUTS'):
+    for path in (FR/'18_LOGS', FR/'16_FOCAL_STABILITY', FR/'19_VALIDATION',
+                 SB/'logs', SB/'02_RAW_DATA', SB/'07_ANALYSIS_OUTPUTS'):
         path.mkdir(parents=True, exist_ok=True)
     (SB/'RUN_ID.txt').write_text('RUN_PORTABLE\n')
+    transformations = []
     for p in (ROOT/'analysis/sensitivity').rglob('*'):
         if p.suffix not in ('.py', '.R'):
             continue
         target = FR / p.relative_to(ROOT/'analysis/sensitivity')
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(relocate(p.read_text(encoding='utf-8-sig'), FR))
+        source = p.read_text(encoding='utf-8-sig')
+        staged = relocate(source, FR)
+        changes = ['relocate documented Windows roots']
+        if p.name == 'build_freeze_outputs.py':
+            # These historical checks are read but never used by assembly.
+            # Do not seed fresh R2 with stored validation outputs or imply
+            # that historical raw-vs-derived gates ran in this execution.
+            for line in ('gateA     = rd("19_VALIDATION/R1_REPRODUCTION_CHECK.csv")',
+                         'gateB     = rd("19_VALIDATION/RAW_VS_DERIVED_RECONCILIATION.csv")'):
+                if staged.count(line) != 1:
+                    raise ValueError('Historical assembly source changed: '+line)
+                staged = staged.replace(line, '# Portable staging: omitted unused historical gate read')
+            changes.append('omit two unused historical validation reads; no analysis/result change')
+        target.write_text(staged)
+        transformations.append({'source': str(p.relative_to(ROOT)), 'source_sha256': sha(p),
+                                'staged': str(target.relative_to(ROOT)),
+                                'staged_sha256': sha(target), 'changes': changes})
+    write_json(WORK/'portable_source_transformations.json', transformations)
     # R2 comparisons explicitly use frozen R1 baseline outputs, never claim
     # these files were regenerated by this staging operation.
     reference_run = SB/'07_ANALYSIS_OUTPUTS/RUN_R2_REPRO'
@@ -232,7 +312,13 @@ def verify_sensitivity_data():
     print('Sensitivity data: 2 frozen fingerprint checks PASS')
 
 def r_run(script, name=None):
-    run(['Rscript', '--vanilla', script], name=name)
+    # Prepend the explicitly selected local library before source-level
+    # library() calls. This also survives a site configuration that rewrites
+    # R_LIBS_USER. Analysis scripts and formulas remain unchanged.
+    expression = ('lib <- Sys.getenv("SOCCERMON_R_LIBRARY"); '
+                  'if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); '
+                  'source('+json.dumps(str(script))+', chdir=FALSE)')
+    run(['Rscript', '--vanilla', '-e', expression], name=name or Path(script).stem)
 
 def focus():
     if not (FR/'11_BACKWARD_STANDARDIZATION/modeling_dataset_backwardz.csv').exists():
@@ -243,6 +329,60 @@ def focus():
         raise ValueError('Focal Firth model refits differ from frozen results')
     print(result.to_string(index=False))
 
+def figures():
+    """Run the preserved manuscript figure script against fresh R1 results."""
+    fresh = SB/'07_ANALYSIS_OUTPUTS/RUN_PORTABLE/master_results.csv'
+    if not fresh.is_file():
+        raise ValueError('Fresh finalized R1 master_results.csv is required for figures')
+    source = ROOT/'analysis/reporting/06b_make_figures.py'
+    staged = WORK/'reporting/06b_make_figures.py'
+    staged.parent.mkdir(parents=True, exist_ok=True)
+    text = relocate(source.read_text(encoding='utf-8-sig'), FR)
+    text = text.replace('"RUN_20260722_151418"', '"RUN_PORTABLE"')
+    # The retained figure source checks an obsolete `washout` column. The
+    # actual archived/rebuilt schema uses `washout_days`; its fallback would
+    # otherwise plot all three washouts while labeling the plot as seven days.
+    old = 'o = onset[(onset["washout"] == 7) & (onset["scope"] == "lower_limb")] if "washout" in onset.columns else onset.copy()'
+    if text.count(old) != 1:
+        raise ValueError('Reporting source changed; review the 7-day schema adaptation')
+    text = text.replace(old, 'o = onset.loc[onset["washout_days"].eq(7)].copy()')
+    text = text.replace('Interaction odds ratio (acute load × soreness burden), log scale',
+                        'Interaction effect ratio (logistic OR / Cox HR), log scale')
+    staged.write_text(text)
+    write_json(WORK/'reporting/provenance.json', {
+        'source': str(source.relative_to(ROOT)), 'source_sha256': sha(source),
+        'staged_sha256': sha(staged), 'input': str(fresh.relative_to(ROOT)),
+        'input_sha256': sha(fresh), 'transformations': ['relocate Windows root',
+                                                       'select fresh RUN_PORTABLE',
+                                                       'select washout_days=7 using actual archived input schema',
+                                                       'label logistic OR and Cox HR distinctly in mixed-estimator forest']})
+    run([PYTHON, staged], name='fresh_manuscript_figures')
+    folder = SB/'10_FIGURES'
+    onset = pd.read_csv(folder/'Fig1_data.csv')
+    episodes = pd.read_csv(folder/'Fig2_data.csv')
+    params = json.loads((folder/'Fig3_params.json').read_text())
+    x = pd.read_csv(folder/'Fig3_data.csv')['acute_z'].to_numpy()
+    curves = []
+    for soreness in (-1, 0, 1):
+        logit = (params['intercept'] + params['logit_offset'] + params['acute']*x
+                 + params['soreness']*soreness + params['interaction']*x*soreness)
+        curves.extend({'acute_z': float(a), 'soreness_z': soreness,
+                       'conditional_probability_percent': float(b)}
+                      for a, b in zip(x, 100/(1+np.exp(-logit))))
+    pd.DataFrame(curves).to_csv(folder/'Fig3_curves.csv', index=False)
+    checks = {'Fig1_onset_days': len(onset),
+              'Fig1_unique_player_dates': len(onset.drop_duplicates(['player_id','date'])),
+              'Fig2_event_players': len(episodes),
+              'Fig2_total_episodes': int(episodes['ll_episodes_7d'].sum()),
+              'Fig2_maximum_episodes': int(episodes['ll_episodes_7d'].max())}
+    expected = dict(zip(checks, (52, 52, 15, 92, 45)))
+    write_json(WORK/'validation/figure_data.json', [
+        {'check': key, 'observed': value, 'expected': expected[key],
+         'status': 'PASS' if value == expected[key] else 'FAIL'}
+        for key, value in checks.items()])
+    if checks != expected:
+        raise ValueError('Fresh manuscript figure data differ from published count targets')
+
 def full_r1():
     stage()
     helper = ROOT/'analysis/core/05_bootstrap_and_ipw.py'
@@ -251,7 +391,7 @@ def full_r1():
     r_run(ROOT/'analysis/core/04_run_reanalysis.R', name='r1_models')
     for arg in ('bootstrap','firth_boot','finalize'):
         run([PYTHON,helper,arg], name='r1_'+arg)
-    print('Fresh R1 results: workspace/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE')
+    print('Fresh R1 results:', SB/'07_ANALYSIS_OUTPUTS/RUN_PORTABLE')
     print('Compare these against reproducibility/frozen/r1 before interpreting differences.')
 
 def full_r2():
@@ -286,14 +426,37 @@ def full_r2():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('task',choices=['verify-frozen','rebuild','verify-data','diagnostics','refit-focus','r1-full','r2-full','plot'])
+    parser.add_argument('task',choices=['verify-frozen','rebuild','verify-data','verify-sensitivity-data','diagnostics','refit-focus','r1-full','r2-full','figures','plot'])
     parser.add_argument('--raw-zip',help='Local subjective.zip; otherwise download the documented public input')
+    parser.add_argument('--workspace', default=os.environ.get('SOCCERMON_EXECUTION_ROOT', 'workspace'),
+                        help='Independent execution root inside ignored repository workspace/')
     args = parser.parse_args()
+    configure_workspace(args.workspace)
     functions = {'verify-frozen':verify_frozen,'rebuild':lambda:rebuild(args.raw_zip),
-                 'verify-data':verify_data,'diagnostics':diagnostics,'refit-focus':focus,
+                 'verify-data':verify_data,'verify-sensitivity-data':verify_sensitivity_data,
+                 'diagnostics':diagnostics,'refit-focus':focus,
                  'r1-full':full_r1,'r2-full':full_r2,
+                 'figures': figures,
                  'plot':lambda:run([PYTHON,ROOT/'scripts/plot_focal_results.py'])}
-    functions[args.task]()
+    record = {'kind': 'pipeline', 'task': args.task, 'argv': sys.argv,
+              'execution_root': str(WORK), 'started_utc': utc_now(), 'seed': SEED}
+    marker = None
+    try:
+        if args.task in ('r1-full', 'r2-full'):
+            marker, full_record = claim_full_run(args.task)
+        functions[args.task]()
+        record['exit_status'] = 0
+    except BaseException as exc:
+        record.update({'exit_status': 1, 'error': f'{type(exc).__name__}: {exc}'})
+        raise
+    finally:
+        record['ended_utc'] = utc_now()
+        record_execution(record)
+        if marker is not None:
+            full_record.update({'ended_utc': record['ended_utc'],
+                                'status': 'COMPLETED' if record['exit_status'] == 0 else 'INCOMPLETE',
+                                'exit_status': record['exit_status']})
+            write_json(marker, full_record)
 
 if __name__=='__main__':
     main()

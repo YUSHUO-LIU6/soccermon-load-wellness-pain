@@ -1,0 +1,11 @@
+{
+  "scope": "Interpretation of unchanged strict FAIL outcomes; no tolerance/reference modification",
+  "strict_fail_gates": 95,
+  "impact_class_counts": {
+    "D": 8,
+    "B": 68,
+    "E": 3,
+    "C": 16
+  },
+  "protected_contrast_discrepancy_gates": 0
+}

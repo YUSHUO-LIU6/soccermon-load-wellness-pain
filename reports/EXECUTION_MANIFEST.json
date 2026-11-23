@@ -1,0 +1,4572 @@
+{
+  "generated_utc": "2026-11-23T04:57:19.135587+00:00",
+  "audit_date_local": "2026-11-23",
+  "timezone": "Asia/Shanghai",
+  "baseline_commit": "3ddde51a62559787261accf4e20e143e616b0b73",
+  "branch": "reproducibility/post-publication-audit-20261123",
+  "environment": {
+    "system": "macOS-15.7.9-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.11.15 (main, Jul 18 2026, 16:57:24) [Clang 22.1.3 ]",
+    "uv": "uv 0.11.31 (b7fdec626 2026-07-21 aarch64-apple-darwin)",
+    "R": "Rscript (R) version 4.5.2 (2025-10-31)",
+    "git_base": "3ddde51a62559787261accf4e20e143e616b0b73",
+    "python_packages": {
+      "numpy": "2.4.6",
+      "pandas": "3.0.6",
+      "scipy": "1.17.1",
+      "statsmodels": "0.14.6",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.2"
+    }
+  },
+  "seed_policy": {
+    "base": 20260722,
+    "Firth_bootstrap_initial": 20260723,
+    "internal_QA": 20260902
+  },
+  "workflows": {
+    "r1": {
+      "execution_root": "workspace/r1_20261123",
+      "full_run": {
+        "task": "r1-full",
+        "started_utc": "2026-11-23T04:10:01+00:00",
+        "seed": 20260722,
+        "status": "COMPLETED",
+        "r2_baseline": "frozen R1, copied reference",
+        "ended_utc": "2026-11-23T04:51:00+00:00",
+        "exit_status": 0
+      },
+      "raw_input": {
+        "doi": "10.5281/zenodo.10033832",
+        "sha256": "338e9878fbed1f941cfc37b3f012cb356f97cc0f726e80a79aa5c8e67cc2a87c",
+        "bytes": 705770
+      },
+      "commands": [
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/01_raw_audit_and_rebuild.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:09:31+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T040931.291513Z_01_raw_audit_and_rebuild.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:32+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/02_episodes_and_modeling_data.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:09:32+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T040932.631277Z_02_episodes_and_modeling_data.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:33+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/03_missingness_ipw.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:09:33+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T040933.366334Z_03_missingness_ipw.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:46+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "rebuild",
+          "argv": [
+            "scripts/pipeline.py",
+            "rebuild",
+            "--workspace",
+            "workspace/r1_20261123",
+            "--raw-zip",
+            "<local-user>/Documents/Codex/2026-10-21/github-github-github-github/work/soccermon_portable_workspace/downloads/subjective.zip"
+          ],
+          "execution_root": "<repository>/workspace/r1_20261123",
+          "started_utc": "2026-11-23T04:09:31+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:47+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/05_bootstrap_and_ipw.py",
+            "prep"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:01+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T041001.679301Z_r1_prep.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:02+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/05_bootstrap_and_ipw.py",
+            "ipw"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:02+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T041002.665753Z_r1_ipw.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:04+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r1_20261123/r2/05_SAMPLE_EVENT_AUDIT/run_sample_event_audit.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:03+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T041003.917532Z_run_sample_event_audit.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:04+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r1_20261123/r2/06_SPARSE_DATA/run_sparse_data_diagnostics.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:04+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T041004.259032Z_run_sparse_data_diagnostics.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:04+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r1_20261123/r2/07_COLLINEARITY/run_collinearity_9_3.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:04+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T041004.488446Z_run_collinearity_9_3.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:17+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r1_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_window.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:17+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T041017.864386Z_run_nonoverlap_window.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:18+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r1_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backward_standardization.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:18+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T041018.974631Z_run_backward_standardization.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:27+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "diagnostics",
+          "argv": [
+            "scripts/pipeline.py",
+            "diagnostics",
+            "--workspace",
+            "workspace/r1_20261123"
+          ],
+          "execution_root": "<repository>/workspace/r1_20261123",
+          "started_utc": "2026-11-23T04:10:03+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:28+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/scripts/refit_focus.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:28+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T041028.746337Z_refit_focus.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:32+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "refit-focus",
+          "argv": [
+            "scripts/pipeline.py",
+            "refit-focus",
+            "--workspace",
+            "workspace/r1_20261123"
+          ],
+          "execution_root": "<repository>/workspace/r1_20261123",
+          "started_utc": "2026-11-23T04:10:28+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:32+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/analysis/core/04_run_reanalysis.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:04+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T041004.082526Z_r1_models.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:41:57+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/05_bootstrap_and_ipw.py",
+            "bootstrap"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:41:57+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T044157.101937Z_r1_bootstrap.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:43:34+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/05_bootstrap_and_ipw.py",
+            "firth_boot"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:43:34+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T044334.430574Z_r1_firth_boot.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:51:00+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/05_bootstrap_and_ipw.py",
+            "finalize"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:51:00+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T045100.364557Z_r1_finalize.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:51:00+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "r1-full",
+          "argv": [
+            "scripts/pipeline.py",
+            "r1-full",
+            "--workspace",
+            "workspace/r1_20261123"
+          ],
+          "execution_root": "<repository>/workspace/r1_20261123",
+          "started_utc": "2026-11-23T04:10:01+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:51:00+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r1_20261123/reporting/06b_make_figures.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:52:12+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T045212.701541Z_fresh_manuscript_figures.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:52:13+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "figures",
+          "argv": [
+            "scripts/pipeline.py",
+            "figures",
+            "--workspace",
+            "workspace/r1_20261123"
+          ],
+          "execution_root": "<repository>/workspace/r1_20261123",
+          "started_utc": "2026-11-23T04:52:12+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:52:13+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r1_20261123/reporting/06b_make_figures.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:53:51+00:00",
+          "seed": 20260722,
+          "log": "workspace/r1_20261123/logs/20261123T045351.729692Z_fresh_manuscript_figures.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:53:52+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "figures",
+          "argv": [
+            "scripts/pipeline.py",
+            "figures",
+            "--workspace",
+            "workspace/r1_20261123"
+          ],
+          "execution_root": "<repository>/workspace/r1_20261123",
+          "started_utc": "2026-11-23T04:53:51+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:53:52+00:00"
+        }
+      ],
+      "data_checks": [
+        {
+          "file": "02_RAW_DATA/rebuilt_player_day_base.csv",
+          "status": "PASS",
+          "rows": 36550,
+          "columns": 50,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/modeling_dataset.csv",
+          "status": "PASS",
+          "rows": 36296,
+          "columns": 41,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/episode_inventory.csv",
+          "status": "PASS",
+          "rows": 695,
+          "columns": 8,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/onset_day_inventory.csv",
+          "status": "PASS",
+          "rows": 168,
+          "columns": 7,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/player_event_distribution.csv",
+          "status": "PASS",
+          "rows": 50,
+          "columns": 7,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/missingness_by_variable.csv",
+          "status": "PASS",
+          "rows": 336,
+          "columns": 7,
+          "differing_columns": []
+        }
+      ],
+      "sensitivity_checks": [
+        {
+          "file": "08_NONOVERLAP_WINDOW/modeling_dataset_nonoverlap.csv",
+          "rows": 36296,
+          "columns": 43,
+          "differing_columns": [],
+          "status": "PASS"
+        },
+        {
+          "file": "11_BACKWARD_STANDARDIZATION/modeling_dataset_backwardz.csv",
+          "rows": 36296,
+          "columns": 51,
+          "differing_columns": [],
+          "status": "PASS"
+        }
+      ]
+    },
+    "r2": {
+      "execution_root": "workspace/r2_20261123",
+      "full_run": {
+        "task": "r2-full",
+        "started_utc": "2026-11-23T04:10:02+00:00",
+        "seed": 20260722,
+        "status": "COMPLETED",
+        "r2_baseline": "frozen R1, copied reference",
+        "ended_utc": "2026-11-23T04:34:11+00:00",
+        "exit_status": 0
+      },
+      "raw_input": {
+        "doi": "10.5281/zenodo.10033832",
+        "sha256": "338e9878fbed1f941cfc37b3f012cb356f97cc0f726e80a79aa5c8e67cc2a87c",
+        "bytes": 705770
+      },
+      "commands": [
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/01_raw_audit_and_rebuild.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:09:32+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T040932.437166Z_01_raw_audit_and_rebuild.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:33+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/02_episodes_and_modeling_data.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:09:33+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T040933.829159Z_02_episodes_and_modeling_data.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:34+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/03_missingness_ipw.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:09:34+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T040934.563491Z_03_missingness_ipw.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:46+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "rebuild",
+          "argv": [
+            "scripts/pipeline.py",
+            "rebuild",
+            "--workspace",
+            "workspace/r2_20261123",
+            "--raw-zip",
+            "<local-user>/Documents/Codex/2026-10-21/github-github-github-github/work/soccermon_portable_workspace/downloads/subjective.zip"
+          ],
+          "execution_root": "<repository>/workspace/r2_20261123",
+          "started_utc": "2026-11-23T04:09:32+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:47+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/05_bootstrap_and_ipw.py",
+            "prep"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:02+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041002.742594Z_r2_baseline_prep.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:03+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/analysis/core/05_bootstrap_and_ipw.py",
+            "ipw"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:03+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041003.786292Z_r2_baseline_ipw.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:05+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/05_SAMPLE_EVENT_AUDIT/run_sample_event_audit.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:05+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041005.266616Z_run_sample_event_audit.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:05+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/06_SPARSE_DATA/run_sparse_data_diagnostics.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:05+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041005.629326Z_run_sparse_data_diagnostics.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:05+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/07_COLLINEARITY/run_collinearity_9_3.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:05+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041005.856107Z_run_collinearity_9_3.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:17+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_window.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:17+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041017.855554Z_run_nonoverlap_window.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:10:18+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_models.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:10:18+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041018.963329Z_run_nonoverlap_models.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:14:49+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_boot.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:14:49+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041449.945212Z_run_nonoverlap_boot.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:15:43+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/run_drop_team.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:15:43+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041543.636135Z_run_drop_team.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:16:35+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/run_drop_team_boot.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:16:35+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041635.396972Z_run_drop_team_boot.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:17:30+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/assemble_drop_team_table.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:17:30+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041730.515112Z_assemble_drop_team_table.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:17:30+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/workspace/r2_20261123/r2/10_SEASON_SENSITIVITY/run_season_stability.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:17:30+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T041730.645973Z_run_season_stability.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:23:16+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backward_standardization.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:23:16+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T042316.611766Z_run_backward_standardization.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:23:25+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backwardz_models.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:23:25+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T042325.022618Z_run_backwardz_models.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:33:35+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backwardz_firth_maxit.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:33:35+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T043335.492895Z_run_backwardz_firth_maxit.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:33:40+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/13_IPW_FINAL/run_ipw_final.py",
+            "stage1"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:33:40+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T043340.087311Z_run_ipw_final.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:33:44+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/workspace/r2_20261123/r2/13_IPW_FINAL/run_ipw_final.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:33:44+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T043344.712194Z_run_ipw_final.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:33:51+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/13_IPW_FINAL/run_ipw_final.py",
+            "finalize"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:33:51+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T043351.819096Z_run_ipw_final.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:33:52+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "Rscript",
+            "--vanilla",
+            "-e",
+            "lib <- Sys.getenv(\"SOCCERMON_R_LIBRARY\"); if (dir.exists(lib)) .libPaths(c(normalizePath(lib), .libPaths())); source(\"<repository>/workspace/r2_20261123/r2/14_EVENT_INFLUENCE/run_leave_one_out_qa.R\", chdir=FALSE)"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:33:52+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T043352.040246Z_run_leave_one_out_qa.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:34:11+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/14_EVENT_INFLUENCE/run_event_concentration.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:34:11+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T043411.057768Z_run_event_concentration.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:34:11+00:00"
+        },
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/r2_20261123/r2/20_FREEZE/build_freeze_outputs.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:34:11+00:00",
+          "seed": 20260722,
+          "log": "workspace/r2_20261123/logs/20261123T043411.696423Z_build_freeze_outputs.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:34:11+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "r2-full",
+          "argv": [
+            "scripts/pipeline.py",
+            "r2-full",
+            "--workspace",
+            "workspace/r2_20261123"
+          ],
+          "execution_root": "<repository>/workspace/r2_20261123",
+          "started_utc": "2026-11-23T04:10:02+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:34:11+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "verify-sensitivity-data",
+          "argv": [
+            "scripts/pipeline.py",
+            "verify-sensitivity-data",
+            "--workspace",
+            "workspace/r2_20261123"
+          ],
+          "execution_root": "<repository>/workspace/r2_20261123",
+          "started_utc": "2026-11-23T04:50:54+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:50:55+00:00"
+        }
+      ],
+      "data_checks": [
+        {
+          "file": "02_RAW_DATA/rebuilt_player_day_base.csv",
+          "status": "PASS",
+          "rows": 36550,
+          "columns": 50,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/modeling_dataset.csv",
+          "status": "PASS",
+          "rows": 36296,
+          "columns": 41,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/episode_inventory.csv",
+          "status": "PASS",
+          "rows": 695,
+          "columns": 8,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/onset_day_inventory.csv",
+          "status": "PASS",
+          "rows": 168,
+          "columns": 7,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/player_event_distribution.csv",
+          "status": "PASS",
+          "rows": 50,
+          "columns": 7,
+          "differing_columns": []
+        },
+        {
+          "file": "07_ANALYSIS_OUTPUTS/missingness_by_variable.csv",
+          "status": "PASS",
+          "rows": 336,
+          "columns": 7,
+          "differing_columns": []
+        }
+      ],
+      "sensitivity_checks": [
+        {
+          "file": "08_NONOVERLAP_WINDOW/modeling_dataset_nonoverlap.csv",
+          "rows": 36296,
+          "columns": 43,
+          "differing_columns": [],
+          "status": "PASS"
+        },
+        {
+          "file": "11_BACKWARD_STANDARDIZATION/modeling_dataset_backwardz.csv",
+          "rows": 36296,
+          "columns": 51,
+          "differing_columns": [],
+          "status": "PASS"
+        }
+      ]
+    },
+    "frozen_audit": {
+      "execution_root": "workspace/audit",
+      "full_run": null,
+      "raw_input": null,
+      "commands": [
+        {
+          "kind": "subprocess",
+          "argv": [
+            "<repository>/.venv/bin/python3",
+            "<repository>/workspace/audit/frozen_audit/20_FREEZE/build_validation.py"
+          ],
+          "cwd": "<repository>",
+          "started_utc": "2026-11-23T04:09:19+00:00",
+          "seed": 20260722,
+          "log": "workspace/audit/logs/20261123T040919.900260Z_verify_frozen.log",
+          "R_library": "<repository>/workspace/R/library",
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:20+00:00"
+        },
+        {
+          "kind": "pipeline",
+          "task": "verify-frozen",
+          "argv": [
+            "scripts/pipeline.py",
+            "verify-frozen",
+            "--workspace",
+            "workspace/audit"
+          ],
+          "execution_root": "<repository>/workspace/audit",
+          "started_utc": "2026-11-23T04:09:19+00:00",
+          "seed": 20260722,
+          "exit_status": 0,
+          "ended_utc": "2026-11-23T04:09:20+00:00"
+        }
+      ],
+      "data_checks": null,
+      "sensitivity_checks": null
+    }
+  },
+  "files": [
+    {
+      "path": "workspace/r1_20261123/baseline_origin.json",
+      "bytes": 119,
+      "sha256": "d2722df2a19ffadf73948075364cad661d816ac4dd87c2d6d0ee7c566b45b424"
+    },
+    {
+      "path": "workspace/r1_20261123/downloads/subjective.zip",
+      "bytes": 705770,
+      "sha256": "338e9878fbed1f941cfc37b3f012cb356f97cc0f726e80a79aa5c8e67cc2a87c"
+    },
+    {
+      "path": "workspace/r1_20261123/execution.jsonl",
+      "bytes": 16036,
+      "sha256": "e046789a3ac2b6e0506569c3d37915ae99b2c6e33dc19a8db4f3d97bd59ee07d"
+    },
+    {
+      "path": "workspace/r1_20261123/full_run.json",
+      "bytes": 227,
+      "sha256": "3fb6917700ceecfa212e59494932d939ee84edc9dc82e8101ff6a16fcc173dd9"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T040931.291513Z_01_raw_audit_and_rebuild.log",
+      "bytes": 6910,
+      "sha256": "18ce8e698780104704e5bed5928777536c0ac0ce7457aa4834c6a6e1724ebf3a"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T040932.631277Z_02_episodes_and_modeling_data.log",
+      "bytes": 5738,
+      "sha256": "a42b1bacd1532162de57427e593ad2951daede754e5b6aca84587f6403d9fc6e"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T040933.366334Z_03_missingness_ipw.log",
+      "bytes": 5561,
+      "sha256": "09f90a3bbb90b47af7678a44bf76a579571208e021da21588c0eb5a8c420fc71"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T041001.679301Z_r1_prep.log",
+      "bytes": 718,
+      "sha256": "7d3d059482ba9d93b9377db96cbd25ab62035b33ba33fabfb497df8cca7235ae"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T041002.665753Z_r1_ipw.log",
+      "bytes": 717,
+      "sha256": "b37403c5afdafeaf37d9edb87da12ee43cedf90ca4b6dc9ba464f7ca6317cb84"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T041003.917532Z_run_sample_event_audit.log",
+      "bytes": 1195,
+      "sha256": "a83fe3e1f7e328e77ede7f4b260880d3a97327af6a659c986e9956ae4e5492d2"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T041004.082526Z_r1_models.log",
+      "bytes": 1340,
+      "sha256": "09ae05446f72daab457b61c62b984e27f4bcd6816f979f7757ecd9907f76c4bd"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T041004.259032Z_run_sparse_data_diagnostics.log",
+      "bytes": 6562,
+      "sha256": "b0d54e7ef658abf1b4e46a30ecd7f181ac5fc59005a7077f54ac56b478f2c6c8"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T041004.488446Z_run_collinearity_9_3.log",
+      "bytes": 1068,
+      "sha256": "c34c8c305d264e16a2914a18dd7e3e3678545d3298311077577cc35679d3b6c0"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T041017.864386Z_run_nonoverlap_window.log",
+      "bytes": 1311,
+      "sha256": "44c266a163c9315027c77a6d15621b7d8044558c505aa67807fe9f7a97f92547"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T041018.974631Z_run_backward_standardization.log",
+      "bytes": 17242,
+      "sha256": "87f2e5fcb40cc9f2c064e06be617c3e81f98ea58ac6e1cee6ccae0d20f090707"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T041028.746337Z_refit_focus.log",
+      "bytes": 309,
+      "sha256": "5eb589b73ba53266619271a29043305588b79c9adcff344dad07fd03862b2b50"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T044157.101937Z_r1_bootstrap.log",
+      "bytes": 724,
+      "sha256": "41b6d9bdce4892b8b222befe7fd51ce040004b35e5ed57ed1057b90fd07ae277"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T044334.430574Z_r1_firth_boot.log",
+      "bytes": 1095,
+      "sha256": "1e50cf93146d2f7d806286e517136529b62d7ab089c9b756a1d611df88803436"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T045100.364557Z_r1_finalize.log",
+      "bytes": 226,
+      "sha256": "1dcc21379dc4f965a1165c4af98d22f7648bdba36bcafff0c6925b407939b271"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T045212.701541Z_fresh_manuscript_figures.log",
+      "bytes": 218,
+      "sha256": "8318f0d4d01f3d941b91bceeb6441404cb9317c81fd25ad47d330acd6f715909"
+    },
+    {
+      "path": "workspace/r1_20261123/logs/20261123T045351.729692Z_fresh_manuscript_figures.log",
+      "bytes": 237,
+      "sha256": "b9f13fcc674141c7610fc95e251ec0bcd98e01760efcf11ecfc17bea1a9f7392"
+    },
+    {
+      "path": "workspace/r1_20261123/portable_source_transformations.json",
+      "bytes": 8421,
+      "sha256": "241547ed2cf8b1e82ca21a2874629654a9342cdcf1cd65b3010b519a5b470561"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/02_RAW_DATA/raw_data_inventory.csv",
+      "bytes": 6158,
+      "sha256": "5cd4da98c917fe3b81d999629b8022155203d0bf5438662d31e656a9ebbb10e6"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/02_RAW_DATA/raw_to_old_derived_comparison.csv",
+      "bytes": 52,
+      "sha256": "e12d4ea03f23b60e1a86478f96a4ea8a41f2e59bf7335c9801d81fa18f4a9b71"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/02_RAW_DATA/raw_value_ranges.csv",
+      "bytes": 6660,
+      "sha256": "a2d0e021e87ef4b24d8f95a77ec211d59a9b8176140f14d1ab619b2397b10bd9"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/02_RAW_DATA/rebuilt_player_day_base.csv",
+      "bytes": 9472287,
+      "sha256": "e8477ee0122ba0be74e5f5c6c7a8f0e37957e32f5735658267a8836813bb28ec"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/RESULTS_LOCK_HASH.txt",
+      "bytes": 1690,
+      "sha256": "8bef3b9aa92734dd560d835ff53357526e79498e83dd66b2739e1fc1216dd3c7"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/bootstrap_primary_interaction.json",
+      "bytes": 364,
+      "sha256": "d3127516afbfb7531d90daf48f24b241cdc8c9890667dcc82d4c3cdb0a33b5af"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/bootstrap_replicates.csv",
+      "bytes": 49533,
+      "sha256": "25cbc499866655a4cd71c3dbb85bfe1ed88dd3072e525840b21f1252bf2fc7dd"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/diagnostic_inventory.csv",
+      "bytes": 10406,
+      "sha256": "10f26baf7fa2bb3a59fc49f1759e4ddb83d01ba8d8279ffc803ee6854a144199"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/event_count_inventory.csv",
+      "bytes": 171,
+      "sha256": "2fafc908a374b7e220bff4345d10e64166f1563077b0dcfba9cad254b0c1b379"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/firth_bootstrap_results.csv",
+      "bytes": 8342,
+      "sha256": "2ce324df6079f3ad2547ce860ebfbb1b693f9e508bdb46926b617e58a753954b"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/ipw_weight_diagnostics.csv",
+      "bytes": 374,
+      "sha256": "994b7dbdee9504f738ba5b6633889f325e99c7f55785593c36ea10f4aa0ebe62"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/ipw_weights_fatigue.csv",
+      "bytes": 3307679,
+      "sha256": "f14ddb1b3cda847e50f1781f1e5a3b8f0e40dfc7f7f8af426573c71910eaf4a0"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/ipw_weights_readiness.csv",
+      "bytes": 3307293,
+      "sha256": "c64f81e207b4437b05688a32e5d620289a7975c50b606cb0a325125de40c2bea"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/ipw_weights_soreness.csv",
+      "bytes": 3306521,
+      "sha256": "a5f783b7287a2cd402f081540040dc8a96f8478892665c8141f2b11784f7bd70"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/master_results.csv",
+      "bytes": 65741,
+      "sha256": "0a3a1bd9eea4181c649230b10d9a8291fc5985aa9f45afcec8d097a330351408"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/master_results.json",
+      "bytes": 112190,
+      "sha256": "db034f4ea38436b0f95d088104a6a0706d66a2be1702910227ef56325aac21c3"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/model_inventory.csv",
+      "bytes": 6562,
+      "sha256": "09eacdcb12782e8207e6b5747448a3ddde0100fb30da6e82982c83f6bc53ff82"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/r_results.csv",
+      "bytes": 58630,
+      "sha256": "a388c17dd620766a47f2935d8d26a63de69256aa54347a2eb31df19a51993af1"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/sample_size_inventory.csv",
+      "bytes": 1360,
+      "sha256": "ad295b4bb1961f7a4c48ecd3df1f4edd79850a0684eae100a995d7b93401477a"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/sens_acwr.csv",
+      "bytes": 10020398,
+      "sha256": "1e8645137abe8b231e759e79d7ecf0974564ade0e0a98df66958aa52e601133b"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/sens_washout14d.csv",
+      "bytes": 4575060,
+      "sha256": "d7289cc7f75704b4fca389e77fb7b76a7319851194381986837681a924a7ecf6"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/sens_washout3d.csv",
+      "bytes": 4605538,
+      "sha256": "311418b1119d2f92509359218402322d08389c7b45ccbeed04e0c74b8764246e"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/session_info_R.txt",
+      "bytes": 1903,
+      "sha256": "d6caffb417c5c30475f83f154e2a1bb517fd577aca654b99154da05e15c97374"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/session_info_python.txt",
+      "bytes": 118,
+      "sha256": "d58c8b151aaa120489963ea6e4ec5684047fe28390497f18fc46e71039a17a4d"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/RESULTS_LOCK_HASH.txt",
+      "bytes": 1709,
+      "sha256": "cadb6e1100cf268877259eb15998dbfa17dd02fd58a19f6d3bcc841cf40b017b"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/bootstrap_primary_interaction.json",
+      "bytes": 375,
+      "sha256": "ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/bootstrap_replicates.csv",
+      "bytes": 51510,
+      "sha256": "e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/diagnostic_inventory.csv",
+      "bytes": 10407,
+      "sha256": "b5f0eecb21e484e53a25bb2c7452ceca20fa2944c8706231db1772e00feba58a"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/event_count_inventory.csv",
+      "bytes": 175,
+      "sha256": "3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/firth_bootstrap_results.csv",
+      "bytes": 8391,
+      "sha256": "819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weight_diagnostics.csv",
+      "bytes": 375,
+      "sha256": "06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/master_results.csv",
+      "bytes": 64722,
+      "sha256": "6c130f57aad5d54eef6ed6151c2be946ec7f26a1fffd07feef0315dddedc8e36"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/master_results.json",
+      "bytes": 109308,
+      "sha256": "42fc458dcca98300444350469b68c86b80d7fa575f12216b1990a00cb6c1dd3b"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/model_inventory.csv",
+      "bytes": 6420,
+      "sha256": "3627256f81910e261af2e0e6fe7d7faad85bf523421e1cedef73751bddc49019"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/r_results.csv",
+      "bytes": 57493,
+      "sha256": "5b91888447f1c5eb1e0fbd9a9240f98da49d296b5ea28e931616025188ae1c6b"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/sample_size_inventory.csv",
+      "bytes": 1345,
+      "sha256": "a97b176edbdc9a615bfe8c1dcb5b85406dc88e7332a17379118889cccda0c8bd"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/session_info_R.txt",
+      "bytes": 2118,
+      "sha256": "bdfc9621abf53fe0c0af9c1d33050d2a5ec0e59c1af662276a84ab1647642e39"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/session_info_python.txt",
+      "bytes": 150,
+      "sha256": "31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/episode_comparison_vs_frozen.csv",
+      "bytes": 366,
+      "sha256": "68ed39dc862a003ddce6a9dcac9440db4a5e0eec7aad6a4727bb822f9cdeda24"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/episode_inventory.csv",
+      "bytes": 64720,
+      "sha256": "cf6697a35545a4ae599f4e67bb5540142f4b69275cee48678a4bc4dec139a1e5"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/ipw_diagnostics.csv",
+      "bytes": 10954,
+      "sha256": "c61f9f28533af9fd198a8f000ce0a3bef8cb00e60067da4fd6b05abb6add1dd0"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/ipw_effective_sample_size.csv",
+      "bytes": 653,
+      "sha256": "9cda71dd24694cbe83741ef4a905b8c18ae15654c32d6cd95c03b7a2da9c9372"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/ipw_extreme_weights.csv",
+      "bytes": 3777,
+      "sha256": "954e1246ef70a03ab7051a0a9c68ff69cbb82ed7deaeef797b94190a0f916f47"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/missingness_by_player.csv",
+      "bytes": 39596,
+      "sha256": "8aaeba440502f704b4eafcf6c3c25ed676b13f2c194cd43586ca60a327d8707d"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/missingness_by_variable.csv",
+      "bytes": 22845,
+      "sha256": "d85797160c8be35a03c09568c7c862a6404a265e2e62c219184fc6318eb88f30"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/modeling_dataset.csv",
+      "bytes": 9599752,
+      "sha256": "d596116f0a4a27ede6307f975fba10b558c43a8f3c5cbf26ad7b25ddcbd30fef"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/observation_model_results.csv",
+      "bytes": 8832,
+      "sha256": "ebf8fc22d98793aab6768e63673d2717cf394bbcee276690809d2f68cc46c73f"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/onset_day_inventory.csv",
+      "bytes": 13655,
+      "sha256": "805f2eaf836564185fcd3d861ec908e881c784109102f7bfb6abe7891eaf0fc8"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/player_event_distribution.csv",
+      "bytes": 3114,
+      "sha256": "d60b4ed70ef29e83019e3e19a104162abdac22220d9e127af47b46584307b840"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/Fig1.png",
+      "bytes": 132249,
+      "sha256": "03b6a30fa149b0f9153e7994cef05398d4e2b05097df9ceb11dcf66dd1f71edd"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/Fig1_data.csv",
+      "bytes": 3140,
+      "sha256": "8e189ff1a8c163592b878783335776f664b852b4482a6c42e0d03be5183a9794"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/Fig2.png",
+      "bytes": 74302,
+      "sha256": "d0ce1824bd4c9daae247a3c71a8740ee3251d0cefa8e8187762ddacad44a656c"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/Fig2_data.csv",
+      "bytes": 1049,
+      "sha256": "d391c5673f2d848074d4989b5c6db19a7b2584b555143e45e34d5380e86928bb"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/Fig3.png",
+      "bytes": 165345,
+      "sha256": "452ea9d4ec344274f29649d3fa8a79a34e1fac25a08d31ffca1206d591576b3f"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/Fig3_curves.csv",
+      "bytes": 14188,
+      "sha256": "209247ca16ec007624ba0b67ef96df3180014a1431b4a7bac5108b05622fac2d"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/Fig3_data.csv",
+      "bytes": 2036,
+      "sha256": "ecf4b1664ff153c2203c7bd63d4b16bc2f949be40776ef98671fec6f33d2aac0"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/Fig3_params.json",
+      "bytes": 460,
+      "sha256": "1403039172385810eeda44b07b51ad02d7622c6b4a6463d1ba0df19f2a417be0"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/S1_Fig.png",
+      "bytes": 106588,
+      "sha256": "7b8320978f5b07803ceb53c92f87523c947f428ad5624a12db3d71f8c693f76c"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/10_FIGURES/S1_Fig_data.csv",
+      "bytes": 674,
+      "sha256": "636c4328f9378d575ee23695d0ef779aacdb639f3ab6c6834d1a2679e7543664"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/RUN_ID.txt",
+      "bytes": 13,
+      "sha256": "37a2fb041e83a3448ce9f6a831d7d080709d3848d86fec20e48dd3dbe5d099d3"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/logs/01_raw_audit.log",
+      "bytes": 6910,
+      "sha256": "18ce8e698780104704e5bed5928777536c0ac0ce7457aa4834c6a6e1724ebf3a"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/logs/02_episodes.log",
+      "bytes": 5738,
+      "sha256": "a42b1bacd1532162de57427e593ad2951daede754e5b6aca84587f6403d9fc6e"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/logs/03_missingness.log",
+      "bytes": 5561,
+      "sha256": "09f90a3bbb90b47af7678a44bf76a579571208e021da21588c0eb5a8c420fc71"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/logs/04_reanalysis.log",
+      "bytes": 4270,
+      "sha256": "e12ac21a66eab97bc890eba1e59f6915ed860617fee750b5c10a177f11208feb"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/04_ANALYSIS_TAXONOMY/ANALYSIS_TAXONOMY.csv",
+      "bytes": 1871,
+      "sha256": "8331d659221fb571f3a0701add5332e8b901c8f5e64ea49c6cd42ea4ae1a93f9"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_PLAYER.csv",
+      "bytes": 10869,
+      "sha256": "2f7f82ee7cef71cef8677fef7c96e9176670df4cdba5d7ab68a589ab42354f25"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_SEASON.csv",
+      "bytes": 315,
+      "sha256": "2af6e6dfa38aa8b5c146a9858f7d3198d1a227ff4e0b456582ef2385c17f0e66"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_TEAM.csv",
+      "bytes": 314,
+      "sha256": "e1da84f013424d2d1276e02573f65cd364176072252cf632b8e54b4724ebf4b7"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/05_SAMPLE_EVENT_AUDIT/SAMPLE_EVENT_AUDIT.csv",
+      "bytes": 2239,
+      "sha256": "0b810bc053813f973aa27efdfb229f3f9f446467caa82365315aeb895887fefa"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/05_SAMPLE_EVENT_AUDIT/run_sample_event_audit.py",
+      "bytes": 9191,
+      "sha256": "8a1b28041190232349c3698abdcd724d68fdf04963c4f07dec5bef821fce8e86"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/06_SPARSE_DATA/PRIMARY_SORENESS_COMPARISON.txt",
+      "bytes": 913,
+      "sha256": "5a9cddc0e9b5975d44b08b79e09281068c7d6945c8f7c75cd98d52d7aff01fc2"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/06_SPARSE_DATA/SPARSE_DATA_DIAGNOSTICS.csv",
+      "bytes": 28554,
+      "sha256": "7fb2a0c172356887c78003b6e26af6fdaf2adcb5a887451c67d7218dcee18780"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/06_SPARSE_DATA/run_sparse_data_diagnostics.py",
+      "bytes": 18537,
+      "sha256": "28c5663415c9b9c72714a310bd8b1239195efcfffe2ebd76593a355db49856ec"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/07_COLLINEARITY/ACUTE_CHRONIC_COLLINEARITY.csv",
+      "bytes": 7043,
+      "sha256": "a8b70dada09b411eddf899cb9b2d166a713981e0763ec11d65c907d8e8dd23a6"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/07_COLLINEARITY/run_collinearity_9_3.py",
+      "bytes": 10955,
+      "sha256": "9f8b3ab5f0927f5d5d2d50ef3b24c89096344591bdb4502ead58bab6e05a5d0a"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/07_COLLINEARITY/scatter_acute_vs_chronic_soreness_CC.png",
+      "bytes": 305552,
+      "sha256": "19ae62ef6a93b093a65e134f339e48dc61a6b60ef8744a56bceded06b7f599f1"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/07_COLLINEARITY/vif_bar_main_effects_soreness_CC.png",
+      "bytes": 58236,
+      "sha256": "df9f3052071cb1d79239f7898014b79a3944beec52fe08e61960b27a0f787c29"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/08_NONOVERLAP_WINDOW/NONOVERLAP_CORRELATION.csv",
+      "bytes": 255,
+      "sha256": "419382ad73413c4050c82a22ab04f53b938b54eb44353fcbcc207bcceb8c9018"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/08_NONOVERLAP_WINDOW/NONOVERLAP_QA.txt",
+      "bytes": 498,
+      "sha256": "a799ab1878ed37f7e3e04116ad876cb0692ad7e1c268820f45c9ec56fe36e811"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/08_NONOVERLAP_WINDOW/modeling_dataset_nonoverlap.csv",
+      "bytes": 10739768,
+      "sha256": "e69b8d468b96201f7ee89c16068aec94b640120ad80db3acdf2e5f4c290754d7"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_boot.py",
+      "bytes": 8817,
+      "sha256": "e24faba54ef7106dd09c89b154e1395c180652013c26c9012f7afd4b2e7c51d1"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_models.R",
+      "bytes": 23107,
+      "sha256": "946d2257af90868038128a76d1ce95d6a36aa87efceb9f64e8b4c8784d8d85d7"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_window.py",
+      "bytes": 9694,
+      "sha256": "4325420d28d690ec8caf1a67e53f6862262f6b6b968f3898e79824fa784bbb77"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/09_TEAM_SENSITIVITY/assemble_drop_team_table.R",
+      "bytes": 7473,
+      "sha256": "1524f6c99fdd00238e947cca5a3345e2501abea3cb6f123d209435930eb3a6cf"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/09_TEAM_SENSITIVITY/run_drop_team.R",
+      "bytes": 11065,
+      "sha256": "6bcf40f804730cda5e86be781a72d58843a5053116e3d93dd2f66297ff713d0c"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/09_TEAM_SENSITIVITY/run_drop_team_boot.py",
+      "bytes": 6841,
+      "sha256": "678b2a554e2cca7d03248ea757c0f22344e7aea2557a85f78ae68ce85f77121a"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/10_SEASON_SENSITIVITY/run_season_stability.R",
+      "bytes": 24658,
+      "sha256": "386fa3bedac5f22c05a2275edebf1551da5523b72192196ec9e78b9dde2faacd"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_COVERAGE.csv",
+      "bytes": 1267,
+      "sha256": "0915351bf0f8b7be56a6657e245e1cb3281d2c328e182f784001652ced9ac30e"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/11_BACKWARD_STANDARDIZATION/BACKWARD_Z_QA.txt",
+      "bytes": 16568,
+      "sha256": "b0dd0d013f5a0b59bfc572257c23df0c71efcbc309b670c6458b823d005f5873"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/11_BACKWARD_STANDARDIZATION/modeling_dataset_backwardz.csv",
+      "bytes": 14041643,
+      "sha256": "cf2af4e90cf069d2d065a5d015b3bf4ab19747c9c8f0feda70bbc9d37e71d067"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backward_standardization.py",
+      "bytes": 16463,
+      "sha256": "7c11b421a427ef7230759927b6ce9bbe9503da773e79b114302f8147b7211707"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backwardz_firth_maxit.R",
+      "bytes": 7349,
+      "sha256": "f283de1a717ee43d1d45d978b99dea046d77bf825ed49e40e07edf6ae620ed3b"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backwardz_models.R",
+      "bytes": 26719,
+      "sha256": "72fa09c19597cf1a4ffc754e9313d794441c6cd3e96db7d9daac9cd320a1ff93"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/12_POLARITY_AUDIT/WELLNESS_POLARITY_INDEPENDENT_AUDIT.csv",
+      "bytes": 5614,
+      "sha256": "c8b2cce2bac641753ce5e5464e962d02c30175a69a30ee76776add849fff8f24"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/13_IPW_FINAL/run_ipw_final.R",
+      "bytes": 5188,
+      "sha256": "596d99a4ac33f77b64d41ef2fdaf714f59f11223c5e855356e2b6f060c33aa75"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/13_IPW_FINAL/run_ipw_final.py",
+      "bytes": 28690,
+      "sha256": "93027aefe965ff77c54fcd3cce998fb227c1ba86ddb9d7f356044681717d1489"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/14_EVENT_INFLUENCE/run_event_concentration.py",
+      "bytes": 8002,
+      "sha256": "f5aa6033d6e067ca05a52fca1e4e6495ab5b41e698c1510cfcbbb443dea9646b"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/14_EVENT_INFLUENCE/run_leave_one_out_qa.R",
+      "bytes": 10205,
+      "sha256": "9d36d177c48297a521d85299a3cacae4d73e1e0172ccc6c44ab1f9068740062c"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/18_LOGS/workstream_collinearity.log",
+      "bytes": 1006,
+      "sha256": "ece1d222e7dbef143261fa0407054736e7a74ca2e516c866d946a3fd3abefb84"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/18_LOGS/workstream_exposures.log",
+      "bytes": 2371,
+      "sha256": "6bf2d05c5d75e7b247f3d415e563315352d6f25e0396a05c6fe8391a0d46b3f8"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/19_VALIDATION/gate_a_compare.py",
+      "bytes": 31691,
+      "sha256": "14c3a33e9558b62437a06306ab0126b01de46b3977d7138eb9525ec05234b94d"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/20_FREEZE/build_freeze_outputs.py",
+      "bytes": 25828,
+      "sha256": "121dbe49c5bffccb66be65bac6e7c030d9e86fe56e47b41fde848cbb35179d66"
+    },
+    {
+      "path": "workspace/r1_20261123/r2/20_FREEZE/build_validation.py",
+      "bytes": 18568,
+      "sha256": "b336aec6e9868fb3d92f7befbf1e8fbc2abc9338994daa0a22ec8419b7289db8"
+    },
+    {
+      "path": "workspace/r1_20261123/raw_input.json",
+      "bytes": 138,
+      "sha256": "b9deb6c64e54a2f263484577f7db587745f133e3e9981935755d390235444f7b"
+    },
+    {
+      "path": "workspace/r1_20261123/reporting/06b_make_figures.py",
+      "bytes": 6795,
+      "sha256": "5c0aec6e44896e4512dfd930b6cd4313dfb9d9e9d33c6f62f9e2de87112419e4"
+    },
+    {
+      "path": "workspace/r1_20261123/reporting/provenance.json",
+      "bytes": 664,
+      "sha256": "fd68cd12c88ab51ae2ea7d18e4dda86235d7ab0e67dfc7a12f365e3feb1e85fc"
+    },
+    {
+      "path": "workspace/r1_20261123/validation/R_session.txt",
+      "bytes": 1836,
+      "sha256": "d3716497d12bbd97737cb55234460af4334a4b1698e51b69722a5b5a19f6813d"
+    },
+    {
+      "path": "workspace/r1_20261123/validation/data_rebuild.json",
+      "bytes": 927,
+      "sha256": "a5bab8213d7847cc56f5aca06f02ce551e79d48fb9c2303e43360aa051c19b88"
+    },
+    {
+      "path": "workspace/r1_20261123/validation/figure_data.json",
+      "bytes": 535,
+      "sha256": "5afcb1a555040c9a9a37e5cb55bf65806aab029b64ed7aba45113ba13e5bd95f"
+    },
+    {
+      "path": "workspace/r1_20261123/validation/focal_F_fit.txt",
+      "bytes": 1079,
+      "sha256": "b9b18abf50d9075a7720fd626b483da755813ad93c66ce916fa80c8eb47880d2"
+    },
+    {
+      "path": "workspace/r1_20261123/validation/focal_F_hist_fit.txt",
+      "bytes": 1260,
+      "sha256": "1301ddc0d050edf0750557ef2803a557b3049d812643a1df703a79ead00e59c8"
+    },
+    {
+      "path": "workspace/r1_20261123/validation/focal_refits.csv",
+      "bytes": 985,
+      "sha256": "5f7bc5f326e14e209cbdbac193acd1df0c2d237b19d949bf3d27823c58ca03e8"
+    },
+    {
+      "path": "workspace/r1_20261123/validation/sensitivity_data.json",
+      "bytes": 339,
+      "sha256": "886c431cee2c23a1a228ab08d61ca75c6d6c38ddbc60763839bcc100fa939ccf"
+    },
+    {
+      "path": "workspace/r2_20261123/baseline_origin.json",
+      "bytes": 119,
+      "sha256": "d2722df2a19ffadf73948075364cad661d816ac4dd87c2d6d0ee7c566b45b424"
+    },
+    {
+      "path": "workspace/r2_20261123/downloads/subjective.zip",
+      "bytes": 705770,
+      "sha256": "338e9878fbed1f941cfc37b3f012cb356f97cc0f726e80a79aa5c8e67cc2a87c"
+    },
+    {
+      "path": "workspace/r2_20261123/execution.jsonl",
+      "bytes": 20943,
+      "sha256": "9d1544aeb587ea2979004c4d14afc2f41c8e20e1d341a5a6d8b5a62d9ff29639"
+    },
+    {
+      "path": "workspace/r2_20261123/full_run.json",
+      "bytes": 227,
+      "sha256": "091b4504bbe71732491ed00287cd7d44b417cb27be0de849d3a4f5f82a1924c0"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T040932.437166Z_01_raw_audit_and_rebuild.log",
+      "bytes": 6910,
+      "sha256": "2895ba1f5d223f7460bdfc29b319c4fccea5164151f5666d785b44f4fb30b315"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T040933.829159Z_02_episodes_and_modeling_data.log",
+      "bytes": 5738,
+      "sha256": "f81422a2e1d90a3b13e350f0365a316e576bf95c4b828a1f9df5caa120ebb0f0"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T040934.563491Z_03_missingness_ipw.log",
+      "bytes": 5561,
+      "sha256": "09f90a3bbb90b47af7678a44bf76a579571208e021da21588c0eb5a8c420fc71"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041002.742594Z_r2_baseline_prep.log",
+      "bytes": 718,
+      "sha256": "7d3d059482ba9d93b9377db96cbd25ab62035b33ba33fabfb497df8cca7235ae"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041003.786292Z_r2_baseline_ipw.log",
+      "bytes": 717,
+      "sha256": "b37403c5afdafeaf37d9edb87da12ee43cedf90ca4b6dc9ba464f7ca6317cb84"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041005.266616Z_run_sample_event_audit.log",
+      "bytes": 1195,
+      "sha256": "a83fe3e1f7e328e77ede7f4b260880d3a97327af6a659c986e9956ae4e5492d2"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041005.629326Z_run_sparse_data_diagnostics.log",
+      "bytes": 6562,
+      "sha256": "3db9863aac7f750ee358227fc2013af5ebebe7822a649bd476efc474a0c13472"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041005.856107Z_run_collinearity_9_3.log",
+      "bytes": 1068,
+      "sha256": "c231aedeb34cd5d2c3b59843cc7e44b596cb1b4685120296ee2fbf2a9983c84f"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041017.855554Z_run_nonoverlap_window.log",
+      "bytes": 1311,
+      "sha256": "1e0605071408864e39f53597ad01c95eb3c5d80c102a3338234e440f1d39f5d8"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041018.963329Z_run_nonoverlap_models.log",
+      "bytes": 1880,
+      "sha256": "b073605917a598ddf8bf00c6aaab10370ab09c5f0267024b992a9524712d87d7"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041449.945212Z_run_nonoverlap_boot.log",
+      "bytes": 1005,
+      "sha256": "bca273d0ff1826e09d24be2687bdfab3f8750eee8d407e394784a0b37b7f6e63"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041543.636135Z_run_drop_team.log",
+      "bytes": 395,
+      "sha256": "7d1107f3d36842068f2ff238d5e7d059dd8d6a5f2ecb4fd9e6a9dec19bab583d"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041635.396972Z_run_drop_team_boot.log",
+      "bytes": 871,
+      "sha256": "cb37759e9bdf5feb5a912760e1f8234330a49f570521135c6cf79c3a0421292f"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041730.515112Z_assemble_drop_team_table.log",
+      "bytes": 83,
+      "sha256": "c652ede5bffb680cfd5c059150a9784901e8a862d3bd3d5309fe4bc9a4743501"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T041730.645973Z_run_season_stability.log",
+      "bytes": 684,
+      "sha256": "2a1a094c956b6c3848e1107ee1f945b40a747ad0fbe3519284d7672a0453f17a"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T042316.611766Z_run_backward_standardization.log",
+      "bytes": 17242,
+      "sha256": "58a2c62a83c127fff3c01e26bf70b0b477764ccccdffd19bbdcf3ecda7855fc4"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T042325.022618Z_run_backwardz_models.log",
+      "bytes": 3662,
+      "sha256": "bef811301a6ce45fa1b9941cf3fa1a01bb10befcacf93366c3f888dd91003d0c"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T043335.492895Z_run_backwardz_firth_maxit.log",
+      "bytes": 748,
+      "sha256": "dd86241fc12ea975487e77b4a88b0f99ab1b07d272434ed3a202f1de2c0e8c5e"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T043340.087311Z_run_ipw_final.log",
+      "bytes": 2385,
+      "sha256": "238d8f261e165a6f5dc70b3458e4daf504a87d53ca5d9f7a9549902a51913ac3"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T043344.712194Z_run_ipw_final.log",
+      "bytes": 1197,
+      "sha256": "099a31303e431f302dc7caa612414057afa8b96d541b09f413689d61a24aa5e3"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T043351.819096Z_run_ipw_final.log",
+      "bytes": 773,
+      "sha256": "3d45bd063d6e7fc43b2a15925067d2b28f40f71318afd50b71feb930c74e99e1"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T043352.040246Z_run_leave_one_out_qa.log",
+      "bytes": 4530,
+      "sha256": "818bae304e5aace6b392cff7b3c12658b1607c2fe7e1dfb1046a4c9bea58d520"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T043411.057768Z_run_event_concentration.log",
+      "bytes": 1167,
+      "sha256": "7547c48aa824db7fd062e111dbb86a962e707c435d24a704fce031d3302dbd58"
+    },
+    {
+      "path": "workspace/r2_20261123/logs/20261123T043411.696423Z_build_freeze_outputs.log",
+      "bytes": 4060,
+      "sha256": "876d08239a185c1ec102a85ac4e0715130ad8edc6a33392c2849dc4f4338d4eb"
+    },
+    {
+      "path": "workspace/r2_20261123/portable_source_transformations.json",
+      "bytes": 8421,
+      "sha256": "a575584f696bb70980b577a13e94f7abe674518847a065ba7fb6365c04af9678"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/02_RAW_DATA/raw_data_inventory.csv",
+      "bytes": 6158,
+      "sha256": "5cd4da98c917fe3b81d999629b8022155203d0bf5438662d31e656a9ebbb10e6"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/02_RAW_DATA/raw_to_old_derived_comparison.csv",
+      "bytes": 52,
+      "sha256": "e12d4ea03f23b60e1a86478f96a4ea8a41f2e59bf7335c9801d81fa18f4a9b71"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/02_RAW_DATA/raw_value_ranges.csv",
+      "bytes": 6660,
+      "sha256": "a2d0e021e87ef4b24d8f95a77ec211d59a9b8176140f14d1ab619b2397b10bd9"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/02_RAW_DATA/rebuilt_player_day_base.csv",
+      "bytes": 9472287,
+      "sha256": "e8477ee0122ba0be74e5f5c6c7a8f0e37957e32f5735658267a8836813bb28ec"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/event_count_inventory.csv",
+      "bytes": 171,
+      "sha256": "2fafc908a374b7e220bff4345d10e64166f1563077b0dcfba9cad254b0c1b379"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/ipw_weight_diagnostics.csv",
+      "bytes": 374,
+      "sha256": "994b7dbdee9504f738ba5b6633889f325e99c7f55785593c36ea10f4aa0ebe62"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/ipw_weights_fatigue.csv",
+      "bytes": 3307679,
+      "sha256": "f14ddb1b3cda847e50f1781f1e5a3b8f0e40dfc7f7f8af426573c71910eaf4a0"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/ipw_weights_readiness.csv",
+      "bytes": 3307293,
+      "sha256": "c64f81e207b4437b05688a32e5d620289a7975c50b606cb0a325125de40c2bea"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/ipw_weights_soreness.csv",
+      "bytes": 3306521,
+      "sha256": "a5f783b7287a2cd402f081540040dc8a96f8478892665c8141f2b11784f7bd70"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/sens_acwr.csv",
+      "bytes": 10020398,
+      "sha256": "1e8645137abe8b231e759e79d7ecf0974564ade0e0a98df66958aa52e601133b"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/sens_washout14d.csv",
+      "bytes": 4575060,
+      "sha256": "d7289cc7f75704b4fca389e77fb7b76a7319851194381986837681a924a7ecf6"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/sens_washout3d.csv",
+      "bytes": 4605538,
+      "sha256": "311418b1119d2f92509359218402322d08389c7b45ccbeed04e0c74b8764246e"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/RESULTS_LOCK_HASH.txt",
+      "bytes": 1709,
+      "sha256": "cadb6e1100cf268877259eb15998dbfa17dd02fd58a19f6d3bcc841cf40b017b"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/bootstrap_primary_interaction.json",
+      "bytes": 375,
+      "sha256": "ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/bootstrap_replicates.csv",
+      "bytes": 51510,
+      "sha256": "e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/diagnostic_inventory.csv",
+      "bytes": 10407,
+      "sha256": "b5f0eecb21e484e53a25bb2c7452ceca20fa2944c8706231db1772e00feba58a"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/event_count_inventory.csv",
+      "bytes": 175,
+      "sha256": "3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/firth_bootstrap_results.csv",
+      "bytes": 8391,
+      "sha256": "819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weight_diagnostics.csv",
+      "bytes": 375,
+      "sha256": "06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weights_fatigue.csv",
+      "bytes": 3307679,
+      "sha256": "f14ddb1b3cda847e50f1781f1e5a3b8f0e40dfc7f7f8af426573c71910eaf4a0"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weights_readiness.csv",
+      "bytes": 3307293,
+      "sha256": "c64f81e207b4437b05688a32e5d620289a7975c50b606cb0a325125de40c2bea"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weights_soreness.csv",
+      "bytes": 3306521,
+      "sha256": "a5f783b7287a2cd402f081540040dc8a96f8478892665c8141f2b11784f7bd70"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/master_results.csv",
+      "bytes": 64722,
+      "sha256": "6c130f57aad5d54eef6ed6151c2be946ec7f26a1fffd07feef0315dddedc8e36"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/master_results.json",
+      "bytes": 109308,
+      "sha256": "42fc458dcca98300444350469b68c86b80d7fa575f12216b1990a00cb6c1dd3b"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/model_inventory.csv",
+      "bytes": 6420,
+      "sha256": "3627256f81910e261af2e0e6fe7d7faad85bf523421e1cedef73751bddc49019"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/r_results.csv",
+      "bytes": 57493,
+      "sha256": "5b91888447f1c5eb1e0fbd9a9240f98da49d296b5ea28e931616025188ae1c6b"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/sample_size_inventory.csv",
+      "bytes": 1345,
+      "sha256": "a97b176edbdc9a615bfe8c1dcb5b85406dc88e7332a17379118889cccda0c8bd"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/session_info_R.txt",
+      "bytes": 2118,
+      "sha256": "bdfc9621abf53fe0c0af9c1d33050d2a5ec0e59c1af662276a84ab1647642e39"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/session_info_python.txt",
+      "bytes": 150,
+      "sha256": "31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/episode_comparison_vs_frozen.csv",
+      "bytes": 366,
+      "sha256": "6895e0ba3f5525fcf9051f0469159ef899470a581efaf5f9812757174ce1d286"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/episode_inventory.csv",
+      "bytes": 64720,
+      "sha256": "cf6697a35545a4ae599f4e67bb5540142f4b69275cee48678a4bc4dec139a1e5"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/ipw_diagnostics.csv",
+      "bytes": 10954,
+      "sha256": "c61f9f28533af9fd198a8f000ce0a3bef8cb00e60067da4fd6b05abb6add1dd0"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/ipw_effective_sample_size.csv",
+      "bytes": 653,
+      "sha256": "9cda71dd24694cbe83741ef4a905b8c18ae15654c32d6cd95c03b7a2da9c9372"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/ipw_extreme_weights.csv",
+      "bytes": 3777,
+      "sha256": "954e1246ef70a03ab7051a0a9c68ff69cbb82ed7deaeef797b94190a0f916f47"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/missingness_by_player.csv",
+      "bytes": 39596,
+      "sha256": "8aaeba440502f704b4eafcf6c3c25ed676b13f2c194cd43586ca60a327d8707d"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/missingness_by_variable.csv",
+      "bytes": 22845,
+      "sha256": "d85797160c8be35a03c09568c7c862a6404a265e2e62c219184fc6318eb88f30"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/modeling_dataset.csv",
+      "bytes": 9599752,
+      "sha256": "d596116f0a4a27ede6307f975fba10b558c43a8f3c5cbf26ad7b25ddcbd30fef"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/observation_model_results.csv",
+      "bytes": 8832,
+      "sha256": "ebf8fc22d98793aab6768e63673d2717cf394bbcee276690809d2f68cc46c73f"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/onset_day_inventory.csv",
+      "bytes": 13655,
+      "sha256": "805f2eaf836564185fcd3d861ec908e881c784109102f7bfb6abe7891eaf0fc8"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/player_event_distribution.csv",
+      "bytes": 3114,
+      "sha256": "d60b4ed70ef29e83019e3e19a104162abdac22220d9e127af47b46584307b840"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/RUN_ID.txt",
+      "bytes": 13,
+      "sha256": "37a2fb041e83a3448ce9f6a831d7d080709d3848d86fec20e48dd3dbe5d099d3"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/logs/01_raw_audit.log",
+      "bytes": 6910,
+      "sha256": "2895ba1f5d223f7460bdfc29b319c4fccea5164151f5666d785b44f4fb30b315"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/logs/02_episodes.log",
+      "bytes": 5738,
+      "sha256": "f81422a2e1d90a3b13e350f0365a316e576bf95c4b828a1f9df5caa120ebb0f0"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/logs/03_missingness.log",
+      "bytes": 5561,
+      "sha256": "09f90a3bbb90b47af7678a44bf76a579571208e021da21588c0eb5a8c420fc71"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/02_R1_REPRODUCTION/r1_sandbox/logs/04_reanalysis.log",
+      "bytes": 1435,
+      "sha256": "256763ee884583236d7f3e9c4479834af2edaa6833ad2903e145957cb127d812"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/04_ANALYSIS_TAXONOMY/ANALYSIS_TAXONOMY.csv",
+      "bytes": 1871,
+      "sha256": "8331d659221fb571f3a0701add5332e8b901c8f5e64ea49c6cd42ea4ae1a93f9"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_PLAYER.csv",
+      "bytes": 10869,
+      "sha256": "2f7f82ee7cef71cef8677fef7c96e9176670df4cdba5d7ab68a589ab42354f25"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_SEASON.csv",
+      "bytes": 315,
+      "sha256": "2af6e6dfa38aa8b5c146a9858f7d3198d1a227ff4e0b456582ef2385c17f0e66"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_TEAM.csv",
+      "bytes": 314,
+      "sha256": "e1da84f013424d2d1276e02573f65cd364176072252cf632b8e54b4724ebf4b7"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/05_SAMPLE_EVENT_AUDIT/SAMPLE_EVENT_AUDIT.csv",
+      "bytes": 2239,
+      "sha256": "0b810bc053813f973aa27efdfb229f3f9f446467caa82365315aeb895887fefa"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/05_SAMPLE_EVENT_AUDIT/run_sample_event_audit.py",
+      "bytes": 9191,
+      "sha256": "e17a6bae5bd3cad68df62ec73bb941c5be143f8d9ef9815c69946239ab43f8a9"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/06_SPARSE_DATA/PRIMARY_SORENESS_COMPARISON.txt",
+      "bytes": 913,
+      "sha256": "5a9cddc0e9b5975d44b08b79e09281068c7d6945c8f7c75cd98d52d7aff01fc2"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/06_SPARSE_DATA/SPARSE_DATA_DIAGNOSTICS.csv",
+      "bytes": 28554,
+      "sha256": "7fb2a0c172356887c78003b6e26af6fdaf2adcb5a887451c67d7218dcee18780"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/06_SPARSE_DATA/run_sparse_data_diagnostics.py",
+      "bytes": 18537,
+      "sha256": "78c17a975e2029e233d8bf8ace9f004deb6c1a8613fae85e47106bfb0982018a"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/07_COLLINEARITY/ACUTE_CHRONIC_COLLINEARITY.csv",
+      "bytes": 7043,
+      "sha256": "a8b70dada09b411eddf899cb9b2d166a713981e0763ec11d65c907d8e8dd23a6"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/07_COLLINEARITY/run_collinearity_9_3.py",
+      "bytes": 10955,
+      "sha256": "f495194910156e29aa57a0bfe9d4c5f35db3d86485ab3bfd83a4294004c9d15d"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/07_COLLINEARITY/scatter_acute_vs_chronic_soreness_CC.png",
+      "bytes": 305552,
+      "sha256": "19ae62ef6a93b093a65e134f339e48dc61a6b60ef8744a56bceded06b7f599f1"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/07_COLLINEARITY/vif_bar_main_effects_soreness_CC.png",
+      "bytes": 58236,
+      "sha256": "df9f3052071cb1d79239f7898014b79a3944beec52fe08e61960b27a0f787c29"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/NONOVERLAP_CORRELATION.csv",
+      "bytes": 255,
+      "sha256": "419382ad73413c4050c82a22ab04f53b938b54eb44353fcbcc207bcceb8c9018"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/NONOVERLAP_QA.txt",
+      "bytes": 498,
+      "sha256": "a799ab1878ed37f7e3e04116ad876cb0692ad7e1c268820f45c9ec56fe36e811"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/NONOVERLAP_WINDOW_RESULTS.csv",
+      "bytes": 35265,
+      "sha256": "a060470020d1cdfdedcb24cc68584dcdb736a4e021282a6ae3fcc8a4401cdcd6"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/modeling_dataset_nonoverlap.csv",
+      "bytes": 10739768,
+      "sha256": "e69b8d468b96201f7ee89c16068aec94b640120ad80db3acdf2e5f4c290754d7"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/nonoverlap_boot_replicates.csv",
+      "bytes": 49809,
+      "sha256": "4077af73deb1f27c0b95198e741ab3a509e07255ec562762674513b153735b14"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json",
+      "bytes": 383,
+      "sha256": "8f5d031b37f43cb8153a06b3fc055b7d279d434d13b390786e4982e8c8f59f1d"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/nonoverlap_diagnostics.csv",
+      "bytes": 2486,
+      "sha256": "68b25650e13e4ccf6fafb6499ebf33bd910106f4c902315ae86dbb5247613e31"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_boot.py",
+      "bytes": 8817,
+      "sha256": "234c1f94526e0228101b50ae652fb9ca7cab8d5da040fd2c85897f0266a079ec"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_models.R",
+      "bytes": 23107,
+      "sha256": "e47945be3c3cca66ce2412649d9af1c5913c1a4b4c404bf4ac17d7c04d385acf"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/08_NONOVERLAP_WINDOW/run_nonoverlap_window.py",
+      "bytes": 9694,
+      "sha256": "3d4f3ebb46e4af6f4fef88d6587253d064fc130ce34dc5d171bf5eefb7e3904d"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/DROP_TEAM_SENSITIVITY.csv",
+      "bytes": 18717,
+      "sha256": "b2cc0dedfe6a0fe8c3c16769843e9dc3860fd0efe77fcabc04825e643c37ee44"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/assemble_drop_team_table.R",
+      "bytes": 7473,
+      "sha256": "4f488e8672c2833ed92421d7d1ba38b6aa5d49243f1fab0355ec0c28c82c227d"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/drop_team_boot_replicates.csv",
+      "bytes": 49825,
+      "sha256": "68ccfbba61b26e3444644d41c983ef1e411d98980485d4cf225d063ac37f1356"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/drop_team_boot_row.csv",
+      "bytes": 627,
+      "sha256": "46724beca90c61b194fceca9f8eba48c2a70de16f166b5490b27a8b900ffd703"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/drop_team_boot_summary.json",
+      "bytes": 374,
+      "sha256": "c2491f17de4bb597e05d8487656af3b78a0879f3fded1004ca350c7a1bc0f629"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/drop_team_diagnostics.csv",
+      "bytes": 543,
+      "sha256": "454421cf3aa33fa1434cde062ac4037ba6122860e1f9198d8fdbf74681422727"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/drop_team_model_rows.csv",
+      "bytes": 7440,
+      "sha256": "5ae372834c5b2ec1f0ad30c17b2b2eaaad46acf8a7d904b0785117f7f3bc7e2c"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/run_drop_team.R",
+      "bytes": 11065,
+      "sha256": "bcf050f041d7206946b3e69a5e46bf3e98eb8c9ffa1db4c478b66b870d3d2762"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/09_TEAM_SENSITIVITY/run_drop_team_boot.py",
+      "bytes": 6841,
+      "sha256": "a70fd1de647615bbe493babc6ef268ed7e0f854036d3c5b6cce2b264563d3fc2"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/10_SEASON_SENSITIVITY/SEASON_STABILITY.csv",
+      "bytes": 32725,
+      "sha256": "a9cd9dce9ab59766ec0432fe6dbc2d1abe7132dd9aa527553c2a1db88cb2f4c1"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/10_SEASON_SENSITIVITY/run_season_stability.R",
+      "bytes": 24658,
+      "sha256": "73f0c385e85a91c721f193502f8f84d0263c1803a7d7b587cc160fcad96664ae"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/10_SEASON_SENSITIVITY/season_stability_diagnostics.csv",
+      "bytes": 2939,
+      "sha256": "9806404eac617f59c5fcc9a4d1996082483f72f6098c55a178986d21f5f1a3a1"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_COVERAGE.csv",
+      "bytes": 1267,
+      "sha256": "0915351bf0f8b7be56a6657e245e1cb3281d2c328e182f784001652ced9ac30e"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_RESULTS.csv",
+      "bytes": 69487,
+      "sha256": "289bb1d91e785443f1e9aff579157a1770e11cae9daefa099457e70fcaab7425"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/BACKWARD_Z_QA.txt",
+      "bytes": 16568,
+      "sha256": "b0dd0d013f5a0b59bfc572257c23df0c71efcbc309b670c6458b823d005f5873"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/backwardz_diagnostics.csv",
+      "bytes": 5410,
+      "sha256": "ea332d9383e569886af433b99e59b658d4e876a409b09724887b5ce3890618a6"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/modeling_dataset_backwardz.csv",
+      "bytes": 14041643,
+      "sha256": "cf2af4e90cf069d2d065a5d015b3bf4ab19747c9c8f0feda70bbc9d37e71d067"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backward_standardization.py",
+      "bytes": 16463,
+      "sha256": "2846e3a6ef1d0a4dac7fd9a538a6b92eb75b60d225789ee1c091a6d040a8f8bb"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backwardz_firth_maxit.R",
+      "bytes": 7349,
+      "sha256": "d01abc5f9f234bff5a3ca058e0072855eb8f63701c23ccc5baac42fde2025161"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/11_BACKWARD_STANDARDIZATION/run_backwardz_models.R",
+      "bytes": 26719,
+      "sha256": "21b27e547d3f134a206dc47e333202ace4c3f059a4f49a4a97eea1daa61df59f"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/12_POLARITY_AUDIT/WELLNESS_POLARITY_INDEPENDENT_AUDIT.csv",
+      "bytes": 5614,
+      "sha256": "c8b2cce2bac641753ce5e5464e962d02c30175a69a30ee76776add849fff8f24"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/IPW_FINAL_DIAGNOSTICS.csv",
+      "bytes": 34810,
+      "sha256": "8087a270bc6a75cfcbc104028880c231fc4c07d9d9746d271688689d2836ecbe"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/IPW_FINAL_RESULTS.csv",
+      "bytes": 3223,
+      "sha256": "c15f17afa51ba1e9e84ad70ca810a4bf552a60a9b682d9a93a254c8f9b75d0c2"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/_work/diagnostics_stage1.csv",
+      "bytes": 6882,
+      "sha256": "ff17c9d1469fc637c49345ebf2f70428c976fe00a84e2e200ecc6be0d9cca9e6"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/_work/integrity_checks_stage1.csv",
+      "bytes": 881,
+      "sha256": "86b21d373964445506cc55c01c1583d9b98d293285cacb6f7b7f8df45d076430"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/_work/obs_model_nooutcome_fit_info.csv",
+      "bytes": 596,
+      "sha256": "bde5fa5b4de4304655c231e78478ff9d269aae3aa2a9bb7c1d894a2bd3d06d5e"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/_work/onset_vs_nooutcome_comparison.csv",
+      "bytes": 332,
+      "sha256": "5ef2e3b4c7370479b295836f9b09aeb89d987f40ad74839b7f93c8175ce9148b"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/_work/r1_reproduction_passfail.csv",
+      "bytes": 183,
+      "sha256": "a6e2045cbc1f7f6d9176137ee271cdf0838b7567bd2146c4c0b260536e8482a0"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/_work/repro_check_onset_outcome_refit.json",
+      "bytes": 596,
+      "sha256": "7c1d45707bbfdeb27a3a0bbb1beaa37e5c2631b29ec4818e7263065388420545"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/_work/repro_check_onset_refit.json",
+      "bytes": 449,
+      "sha256": "8d3d3ed80f79e87d385272494f59227177ae560d7c940a76080f3afddc61591b"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/fig_predprob_nooutcome.png",
+      "bytes": 60802,
+      "sha256": "c752c3ce6bedbb0c00d7b749184215dd56336df792b7ca039ba63dc11a55c2af"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/fig_predprob_onset.png",
+      "bytes": 59773,
+      "sha256": "260f74f3e2a20eff5df8afe8df29d8510ca3127f406e2c6ccb37aed2a0c9fd4f"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/fig_weights_trunc_nooutcome.png",
+      "bytes": 60030,
+      "sha256": "c6eaa08abc3067fd468456d9fad87d55e37da5dd60b4c1fe55ef7834d7b7d6db"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/fig_weights_trunc_onset.png",
+      "bytes": 60811,
+      "sha256": "b42450c9e12bb32fcd9daaa2b886de6725d04cd27cc86bdc646f73276485134e"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/fig_weights_untrunc_nooutcome.png",
+      "bytes": 56885,
+      "sha256": "49e50c04262d49133757eb3c554e5ab6ed22858ba3d20cf79b64257d90b50ba2"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/fig_weights_untrunc_onset.png",
+      "bytes": 56658,
+      "sha256": "a0437a7eeab98be43975b49e1d210187654e65b24c2e8b13975a3bd17cb2c4bb"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/ipw_final_r_results.csv",
+      "bytes": 14900,
+      "sha256": "ce52d0584b39679ce3cb1aef7154abc39f8b375c062b1e395fa6148df848e87a"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/ipw_weights_nooutcome_fatigue.csv",
+      "bytes": 3307913,
+      "sha256": "ed5a7d838147ca4a5f898713c75f128f31ead7ac11f8e5e5a139e302724ad8df"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/ipw_weights_nooutcome_readiness.csv",
+      "bytes": 3307629,
+      "sha256": "4e872e9cba4a09dc27eff0726158dca85a1ee2a1596c7915be89f876b452c485"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/ipw_weights_nooutcome_soreness.csv",
+      "bytes": 3307690,
+      "sha256": "aa1024dbd07c6995bdf645ba08067db25410267bdb9a83795410d987e50f7c67"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/run_ipw_final.R",
+      "bytes": 5188,
+      "sha256": "207d7b44d80d7766cd41cc6b336930910e577517bf70f11de8898f819792a6f6"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/13_IPW_FINAL/run_ipw_final.py",
+      "bytes": 28690,
+      "sha256": "66ca969d0e9d5f33e29e37ea4df3f6b1fb171ef1226d97d88dbb8b194185ea4d"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/14_EVENT_INFLUENCE/EVENT_CONCENTRATION.csv",
+      "bytes": 3172,
+      "sha256": "1d3980c3ee805ca0030689ff9ec79cdfd8b95061fee2c9a88d7703e41b92ca8f"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/14_EVENT_INFLUENCE/LEAVE_ONE_EVENT_PLAYER_OUT_QA.csv",
+      "bytes": 91603,
+      "sha256": "6dcec62a7e0e7c241de71ec4d7825b2dfbe275ade7d9c3688eedca580b162a05"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/14_EVENT_INFLUENCE/LOO_EXCLUSION_SUMMARY.csv",
+      "bytes": 7565,
+      "sha256": "3dd3e8441be98918d247a3b29dc27d58651791ed07abeced526d58f52776460c"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/14_EVENT_INFLUENCE/LOO_FIRTH_INTERACTION_FOREST.png",
+      "bytes": 96467,
+      "sha256": "0a1518b2249a324a2ee0b6a4a2c699dbe2525f7390cfaa1dcc9e9f39c36ae173"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/14_EVENT_INFLUENCE/S5_EXCLUSION_VERIFICATION.csv",
+      "bytes": 1272,
+      "sha256": "1349f245fafe9b10731c34f2dab61090ebeadb4ea25171f362f914c04b245281"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/14_EVENT_INFLUENCE/run_event_concentration.py",
+      "bytes": 8002,
+      "sha256": "12325416af9e28c42da95194fed85db6bdfb3ee29ebe54fa3a4fe315398f88a0"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/14_EVENT_INFLUENCE/run_leave_one_out_qa.R",
+      "bytes": 10205,
+      "sha256": "c2d8979a731023dc367aaecc0eb2b228effb54ca070ea05bc2b0799d3fa63415"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/15_MULTIPLICITY/INTERACTION_REPLICATION_DETAIL.csv",
+      "bytes": 304,
+      "sha256": "d80f976f0d6e116d2a102f52947b123d6cb78ec4cff64e9f1c3f65292d78270f"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/15_MULTIPLICITY/MODEL_REGISTRY.csv",
+      "bytes": 33267,
+      "sha256": "09adbbccb98c52c66691e6aa76d833dab19591e6a0b127cae0d2b26547002f1c"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/15_MULTIPLICITY/MULTIPLICITY_CENSUS.csv",
+      "bytes": 1359,
+      "sha256": "bb377483b73f5067b2e46683cb4c6409288ba94bbb0cab40830aa1d57837f5ec"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/15_MULTIPLICITY/NOMINAL_SIGNIFICANCE_INVENTORY.csv",
+      "bytes": 47763,
+      "sha256": "b7ed278e5506242bfd7d04a6a1ba7a9b53736754a52a5ba17a0f4d951d6dea7c"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/16_FOCAL_STABILITY/FOCAL_ESTIMATE_STABILITY.csv",
+      "bytes": 110254,
+      "sha256": "ac713b204b7d6017ab06e6b4daf006039b48e02c35562791c4f99b22519dae4f"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/17_MASTER_RESULTS/FOCAL_ESTIMATE_STABILITY.csv",
+      "bytes": 110254,
+      "sha256": "ac713b204b7d6017ab06e6b4daf006039b48e02c35562791c4f99b22519dae4f"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/17_MASTER_RESULTS/MASTER_RESULTS_R2.csv",
+      "bytes": 252604,
+      "sha256": "d9fcbd44d83b4aef0ea836fa98ad2603b18940737468909ac248430275dcb3de"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/17_MASTER_RESULTS/MASTER_RESULTS_R2.json",
+      "bytes": 426047,
+      "sha256": "0a58d266fb69817f094d2181498771a10dd1c12002b6804b354ef4653c6812e4"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/17_MASTER_RESULTS/MODEL_REGISTRY.csv",
+      "bytes": 33267,
+      "sha256": "09adbbccb98c52c66691e6aa76d833dab19591e6a0b127cae0d2b26547002f1c"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/17_MASTER_RESULTS/SAMPLE_EVENT_AUDIT.csv",
+      "bytes": 2265,
+      "sha256": "d7cea19a607d2fff813f4c62616e7cd96402b77d55dc785645811adf99cb618d"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/18_LOGS/workstream_collinearity.log",
+      "bytes": 1006,
+      "sha256": "fc51ea0993ac9f6222321ce8619f8f93456ba47c011ea6072b73df9deacc06ce"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/18_LOGS/workstream_exposures.log",
+      "bytes": 2371,
+      "sha256": "a622b36900c8ecfdf1c1cb0bd0d84ea2d73a7b6610f17a1332f565d655b2c146"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/18_LOGS/workstream_newmodels.log",
+      "bytes": 6581,
+      "sha256": "231363f432566415dfa9219f9b328399ea93d7233cb001be4dbe38c84d4a4451"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/18_LOGS/workstream_team_season.log",
+      "bytes": 2033,
+      "sha256": "8b9b7589d7cdcc8f640f355f055ed8c90f61d2ce74eaba41608c0dfecd7d18dc"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/19_VALIDATION/gate_a_compare.py",
+      "bytes": 31691,
+      "sha256": "101a8c0cfb3f900a15c006a99525810f8e0528c4a28e41d01af064f651800f5f"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/20_FREEZE/build_freeze_outputs.py",
+      "bytes": 25828,
+      "sha256": "e589a2869d0f55603dfa52e31286842f548023ccb2ea7045e9d0501eaba8544c"
+    },
+    {
+      "path": "workspace/r2_20261123/r2/20_FREEZE/build_validation.py",
+      "bytes": 18568,
+      "sha256": "fde50264e39d8bb88956083d84f026e2ad99505af9ef3bf3962a08adff8d0618"
+    },
+    {
+      "path": "workspace/r2_20261123/raw_input.json",
+      "bytes": 138,
+      "sha256": "b9deb6c64e54a2f263484577f7db587745f133e3e9981935755d390235444f7b"
+    },
+    {
+      "path": "workspace/r2_20261123/validation/data_rebuild.json",
+      "bytes": 927,
+      "sha256": "a5bab8213d7847cc56f5aca06f02ce551e79d48fb9c2303e43360aa051c19b88"
+    },
+    {
+      "path": "workspace/r2_20261123/validation/sensitivity_data.json",
+      "bytes": 339,
+      "sha256": "886c431cee2c23a1a228ab08d61ca75c6d6c38ddbc60763839bcc100fa939ccf"
+    },
+    {
+      "path": "workspace/audit/execution.jsonl",
+      "bytes": 1181,
+      "sha256": "62d4b2c3ad1edebd6261a9766e5cbed1c5cb8888a584d5bc13f5223cc220637f"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/RESULTS_LOCK_HASH.txt",
+      "bytes": 1709,
+      "sha256": "cadb6e1100cf268877259eb15998dbfa17dd02fd58a19f6d3bcc841cf40b017b"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/bootstrap_primary_interaction.json",
+      "bytes": 375,
+      "sha256": "ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/bootstrap_replicates.csv",
+      "bytes": 51510,
+      "sha256": "e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/diagnostic_inventory.csv",
+      "bytes": 10407,
+      "sha256": "b5f0eecb21e484e53a25bb2c7452ceca20fa2944c8706231db1772e00feba58a"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/event_count_inventory.csv",
+      "bytes": 175,
+      "sha256": "3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/firth_bootstrap_results.csv",
+      "bytes": 8391,
+      "sha256": "819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weight_diagnostics.csv",
+      "bytes": 375,
+      "sha256": "06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/master_results.csv",
+      "bytes": 64722,
+      "sha256": "6c130f57aad5d54eef6ed6151c2be946ec7f26a1fffd07feef0315dddedc8e36"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/master_results.json",
+      "bytes": 109308,
+      "sha256": "42fc458dcca98300444350469b68c86b80d7fa575f12216b1990a00cb6c1dd3b"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/model_inventory.csv",
+      "bytes": 6420,
+      "sha256": "3627256f81910e261af2e0e6fe7d7faad85bf523421e1cedef73751bddc49019"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/r_results.csv",
+      "bytes": 57493,
+      "sha256": "5b91888447f1c5eb1e0fbd9a9240f98da49d296b5ea28e931616025188ae1c6b"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/sample_size_inventory.csv",
+      "bytes": 1345,
+      "sha256": "a97b176edbdc9a615bfe8c1dcb5b85406dc88e7332a17379118889cccda0c8bd"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/session_info_R.txt",
+      "bytes": 2118,
+      "sha256": "bdfc9621abf53fe0c0af9c1d33050d2a5ec0e59c1af662276a84ab1647642e39"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/session_info_python.txt",
+      "bytes": 150,
+      "sha256": "31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/04_ANALYSIS_TAXONOMY/ANALYSIS_TAXONOMY.csv",
+      "bytes": 1871,
+      "sha256": "8331d659221fb571f3a0701add5332e8b901c8f5e64ea49c6cd42ea4ae1a93f9"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_PLAYER.csv",
+      "bytes": 10970,
+      "sha256": "ef3109bef74258a2a9a75f6cee1c08097d4f4a6572c6323aa7e7db14cc5fabbc"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_SEASON.csv",
+      "bytes": 320,
+      "sha256": "f934334648086eb201e57288c42c7ca759d0f7ea79ed45bce2825a0b744b17c4"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_TEAM.csv",
+      "bytes": 319,
+      "sha256": "cae819f05a9c8d10cc662584bde42495176bb5d2e3d01fe86f3bf727c671984e"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/05_SAMPLE_EVENT_AUDIT/SAMPLE_EVENT_AUDIT.csv",
+      "bytes": 2248,
+      "sha256": "ab5505e6b33fd0988151bc606d9a6e7193a663fc74d6ad5de68c012d6fa8159c"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/06_SPARSE_DATA/PRIMARY_SORENESS_COMPARISON.txt",
+      "bytes": 920,
+      "sha256": "924648034d25a1aaeb070551a09286a7864aab18de68213b22ecd3517c586e0a"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/06_SPARSE_DATA/SPARSE_DATA_DIAGNOSTICS.csv",
+      "bytes": 28595,
+      "sha256": "e58dbce7a0d7b4b74a6d8c4a46c86e6f0081118bedebb453596c909e53a75de4"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/07_COLLINEARITY/ACUTE_CHRONIC_COLLINEARITY.csv",
+      "bytes": 7081,
+      "sha256": "f20e0fdb609be059dc6915a0cc693799ef66a66cb60d66c5d78e9531297cb232"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/08_NONOVERLAP_WINDOW/NONOVERLAP_CORRELATION.csv",
+      "bytes": 258,
+      "sha256": "6a783f4ccc47af549d105d1003e5b9ae7d45dac8e6203003594b8a9428f6260c"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/08_NONOVERLAP_WINDOW/NONOVERLAP_QA.txt",
+      "bytes": 505,
+      "sha256": "5230ff6f72262df407544404b8a116123c004bccad7ca226a95b3a4452a153b5"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/08_NONOVERLAP_WINDOW/NONOVERLAP_WINDOW_RESULTS.csv",
+      "bytes": 35333,
+      "sha256": "116d287d2aa464d36adedb4633e439fc26d73d14337501ff3fa822e94e327de6"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/08_NONOVERLAP_WINDOW/nonoverlap_boot_replicates.csv",
+      "bytes": 51833,
+      "sha256": "c9434b65663c2f95f51872e136b0107acaec361e7f9386c55ed1f7675217ac11"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json",
+      "bytes": 392,
+      "sha256": "765c0baccd5e4ff450b4779514263eed15c73813e80c389b285cbbaa8fdd794f"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/08_NONOVERLAP_WINDOW/nonoverlap_diagnostics.csv",
+      "bytes": 2871,
+      "sha256": "8c13bfc70fc5eafb46d45e4e434f3021c0736839661a96233aa55671e5421931"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/09_TEAM_SENSITIVITY/DROP_TEAM_SENSITIVITY.csv",
+      "bytes": 18761,
+      "sha256": "544bf4ec2272a375b506f90d0fdf4ad9eb056e495a0ca85b74f214bcf57ca00f"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/09_TEAM_SENSITIVITY/drop_team_boot_replicates.csv",
+      "bytes": 51848,
+      "sha256": "b72f941219c1c57f6236c50e790c494b98b6efa66c294656f8a92d9a34fbb9cc"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/09_TEAM_SENSITIVITY/drop_team_boot_row.csv",
+      "bytes": 629,
+      "sha256": "7e89321fa1d3711982cb4baf8cf4f477f0c6d9690d2d8be7a01b9885a780d0f0"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/09_TEAM_SENSITIVITY/drop_team_boot_summary.json",
+      "bytes": 384,
+      "sha256": "2112da321abeeea80b0f9843a9d4bf367ca60eb4e49804cb4d0967d7172a359c"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/09_TEAM_SENSITIVITY/drop_team_diagnostics.csv",
+      "bytes": 550,
+      "sha256": "f8862a647373ec45df36835c0342a12d69225ebf4f5864606e8436a06a0c690a"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/09_TEAM_SENSITIVITY/drop_team_model_rows.csv",
+      "bytes": 7464,
+      "sha256": "e46e75331a0766c4e92f5b1f61c7cced2ceda2ff771bc13404b416defd9d4a14"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/10_SEASON_SENSITIVITY/SEASON_STABILITY.csv",
+      "bytes": 32814,
+      "sha256": "2111cf320042271926f42be34623c57a977ebedfde137caec3efb55be5077b28"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/10_SEASON_SENSITIVITY/season_stability_diagnostics.csv",
+      "bytes": 2974,
+      "sha256": "1b08b9ac5d5e59ce044b55f4a3e89dc255c1c005b806b391267709fcc3de685c"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_COVERAGE.csv",
+      "bytes": 1280,
+      "sha256": "1f9feb55089995a198fd2305e1633f6e32d53339d3f87c803c9b9355a8debc1b"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_RESULTS.csv",
+      "bytes": 69638,
+      "sha256": "d16a5aa6b71a4b476bcdcc104134f7371c3b5fbdd59df52ad71103dc7b8ebc83"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/11_BACKWARD_STANDARDIZATION/BACKWARD_Z_QA.txt",
+      "bytes": 16683,
+      "sha256": "d30c9b60f8a62130bae8e8ea3512df4e8b2f3953f2070a3bbf808db3857bea7e"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/11_BACKWARD_STANDARDIZATION/backwardz_diagnostics.csv",
+      "bytes": 5674,
+      "sha256": "09b451f41d2e5c8cec9b280c573714c6da1d0732f04dc6a9c4605dcb1e20f997"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/12_POLARITY_AUDIT/WELLNESS_POLARITY_INDEPENDENT_AUDIT.csv",
+      "bytes": 5614,
+      "sha256": "c8b2cce2bac641753ce5e5464e962d02c30175a69a30ee76776add849fff8f24"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/13_IPW_FINAL/IPW_FINAL_DIAGNOSTICS.csv",
+      "bytes": 35214,
+      "sha256": "9e8497ca3935e8564d4666a090aeba24397d66edd9caec678b2080f0ee8aa03d"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/13_IPW_FINAL/IPW_FINAL_RESULTS.csv",
+      "bytes": 3220,
+      "sha256": "605e65dac4f9234c25a523f5af848a3fe7de091305a9aeb2d3943bad44028579"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/13_IPW_FINAL/ipw_final_r_results.csv",
+      "bytes": 14946,
+      "sha256": "653909846f175ab40357072fae2d9aa4ad67cdf191417f99929402ba737a073a"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/14_EVENT_INFLUENCE/EVENT_CONCENTRATION.csv",
+      "bytes": 3197,
+      "sha256": "98f79e4ae09848d6767c16f9b112536d0bfe5047c2c4d58e16608f07fd9b0f53"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/14_EVENT_INFLUENCE/LEAVE_ONE_EVENT_PLAYER_OUT_QA.csv",
+      "bytes": 91791,
+      "sha256": "432bb0b07c40d0b0fdcfa01d2311530f898cf99a3b2b089af33005f9f1c9dce7"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/14_EVENT_INFLUENCE/LOO_EXCLUSION_SUMMARY.csv",
+      "bytes": 7585,
+      "sha256": "f89bdbcb2763ae944f9df49e1bff3bfb1d70a9ab2a994eb6e5e91f5dcc8b34e0"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/14_EVENT_INFLUENCE/S5_EXCLUSION_VERIFICATION.csv",
+      "bytes": 1274,
+      "sha256": "5522d0dfcb0ce1a7b08916445c5e1b88181940d69993426948aff28e2cd3329e"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/15_MULTIPLICITY/INTERACTION_REPLICATION_DETAIL.csv",
+      "bytes": 308,
+      "sha256": "1b23f1711a869cd931f6a432d6f90aa037e71e36047ed50e8938704a74a2b5d3"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/15_MULTIPLICITY/MODEL_REGISTRY.csv",
+      "bytes": 33354,
+      "sha256": "39346963081c71f1d8939e45729619368f0fef9181583346e99b073f49095375"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/15_MULTIPLICITY/MULTIPLICITY_CENSUS.csv",
+      "bytes": 1371,
+      "sha256": "058a7627c588d656caede362bcfe8405f192c8ddf9f843044aa962bfa50308d7"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/15_MULTIPLICITY/NOMINAL_SIGNIFICANCE_INVENTORY.csv",
+      "bytes": 47868,
+      "sha256": "039d377589b4c0fda24a33d2a73589356fffc16ae3465f26096fbeca78e8d1db"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/16_FOCAL_STABILITY/FOCAL_ESTIMATE_STABILITY.csv",
+      "bytes": 110591,
+      "sha256": "9e40c234ffbced5176233cc4353bf9bdf468c00e70a19a21f9f87882be6f6abe"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/17_MASTER_RESULTS/FOCAL_ESTIMATE_STABILITY.csv",
+      "bytes": 110591,
+      "sha256": "9e40c234ffbced5176233cc4353bf9bdf468c00e70a19a21f9f87882be6f6abe"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/17_MASTER_RESULTS/MASTER_RESULTS_R2.csv",
+      "bytes": 253307,
+      "sha256": "d8b4a53c507ceaa481375c385f46d565cae241ccc804407883268db56971a4e2"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/17_MASTER_RESULTS/MASTER_RESULTS_R2.json",
+      "bytes": 438283,
+      "sha256": "7cbdc577adf9c1df4c52549544b635754a6a5e61030ae3a674eaaccf531b45a5"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/17_MASTER_RESULTS/MODEL_REGISTRY.csv",
+      "bytes": 33354,
+      "sha256": "39346963081c71f1d8939e45729619368f0fef9181583346e99b073f49095375"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/17_MASTER_RESULTS/SAMPLE_EVENT_AUDIT.csv",
+      "bytes": 2274,
+      "sha256": "6f9f5f74a81cd618a10ad460c0ab46851b858b3c2b9614d24d3100df0af25f3e"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/19_VALIDATION/NUMERIC_CONSISTENCY_CHECK.csv",
+      "bytes": 8216,
+      "sha256": "4311d2cc31c993579de6a2ae051bec1a53f029fa57add6e630cb75ecb7be80fe"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/19_VALIDATION/R1_REPRODUCTION_CHECK.csv",
+      "bytes": 35238,
+      "sha256": "679b844d9e6324a323e2b80cf4016e318691abcde963ec845208fdd766c7f650"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/19_VALIDATION/RAW_VS_DERIVED_RECONCILIATION.csv",
+      "bytes": 3878,
+      "sha256": "103d227ebc28882ff4d9ace08b024528c309f16f5cfc1a977735f5599a2ca979"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/19_VALIDATION/VALIDATION_REPORT.json",
+      "bytes": 2113,
+      "sha256": "93ddb8345df846d0562e769fe43599c7637d2af14bab6bbc62ead879d385f0b0"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/20_FREEZE/FREEZE_HASH.txt",
+      "bytes": 469,
+      "sha256": "f219a2fd1a80d8e525d7d4c57c421a59126ec5900564c21c1c4592f6fe3c069a"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/20_FREEZE/build_validation.py",
+      "bytes": 18572,
+      "sha256": "c95f9ba18edb99d551390dc91e27e5205d0200f69638607c390255cd3b868f13"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/RESULTS_LOCK_HASH.txt",
+      "bytes": 1709,
+      "sha256": "cadb6e1100cf268877259eb15998dbfa17dd02fd58a19f6d3bcc841cf40b017b"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/bootstrap_primary_interaction.json",
+      "bytes": 375,
+      "sha256": "ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/bootstrap_replicates.csv",
+      "bytes": 51510,
+      "sha256": "e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/diagnostic_inventory.csv",
+      "bytes": 10407,
+      "sha256": "b5f0eecb21e484e53a25bb2c7452ceca20fa2944c8706231db1772e00feba58a"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/event_count_inventory.csv",
+      "bytes": 175,
+      "sha256": "3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/firth_bootstrap_results.csv",
+      "bytes": 8391,
+      "sha256": "819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/ipw_weight_diagnostics.csv",
+      "bytes": 375,
+      "sha256": "06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/master_results.csv",
+      "bytes": 64722,
+      "sha256": "6c130f57aad5d54eef6ed6151c2be946ec7f26a1fffd07feef0315dddedc8e36"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/master_results.json",
+      "bytes": 109308,
+      "sha256": "42fc458dcca98300444350469b68c86b80d7fa575f12216b1990a00cb6c1dd3b"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/model_inventory.csv",
+      "bytes": 6420,
+      "sha256": "3627256f81910e261af2e0e6fe7d7faad85bf523421e1cedef73751bddc49019"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/r_results.csv",
+      "bytes": 57493,
+      "sha256": "5b91888447f1c5eb1e0fbd9a9240f98da49d296b5ea28e931616025188ae1c6b"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/sample_size_inventory.csv",
+      "bytes": 1345,
+      "sha256": "a97b176edbdc9a615bfe8c1dcb5b85406dc88e7332a17379118889cccda0c8bd"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/session_info_R.txt",
+      "bytes": 2118,
+      "sha256": "bdfc9621abf53fe0c0af9c1d33050d2a5ec0e59c1af662276a84ab1647642e39"
+    },
+    {
+      "path": "workspace/audit/frozen_audit/r1/session_info_python.txt",
+      "bytes": 150,
+      "sha256": "31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0"
+    },
+    {
+      "path": "workspace/audit/logs/20261123T040919.900260Z_verify_frozen.log",
+      "bytes": 15390,
+      "sha256": "ee37fd596215dad0595ea943dd4e77d9837f5f294488c348117dcc1758633ed0"
+    },
+    {
+      "path": "workspace/audit/validation/frozen_audit.json",
+      "bytes": 277,
+      "sha256": "01459e8a922e9906ce898c57f43998949c618287e78078e72900e0fd67162767"
+    },
+    {
+      "path": "workspace/R/library/installed_versions.csv",
+      "bytes": 185,
+      "sha256": "e5acbca33fef173cf9e277cfb0c6f6a4b5fa8297c29990bf5b76b55d873a0b00"
+    },
+    {
+      "path": "workspace/R/library/package_origins.csv",
+      "bytes": 934,
+      "sha256": "3cb70bb5ed6d5f3851694f8a1febdb31416f211b1513307a80486ed403e84e20"
+    }
+  ],
+  "supplemental_commands": [
+    {
+      "command": "uv sync --frozen",
+      "exit_status": 0,
+      "evidence": "tool execution transcript; unchanged uv.lock and installed Python versions recorded"
+    },
+    {
+      "command": "Rscript --vanilla scripts/setup_r.R",
+      "exit_status": 0,
+      "evidence": "tool execution transcript; package origins/versions/session recorded"
+    },
+    {
+      "command": "gh api repository metadata, main commit, recursive tree, branches and tags (read only)",
+      "exit_status": 0,
+      "evidence": "work/remote_*.json, work/remote_branches.txt, work/remote_tags.txt"
+    },
+    {
+      "command": "R available.packages exact-version guard for survival 3.8-6",
+      "exit_status": 2,
+      "evidence": "work/survival_version_probe_install.log; current CRAN is 3.8-12, deliberately not installed"
+    },
+    {
+      "command": "Install archived survival_3.8-6.tar.gz into workspace/R/frozen-survival",
+      "exit_status": 0,
+      "evidence": "work/survival_version_probe_archive.log"
+    },
+    {
+      "command": "Rscript --vanilla scripts/probe_frailty_version.R (current and isolated frozen survival libraries)",
+      "exit_status": 0,
+      "evidence": "reports/FRAILTY_VERSION_PROBE.json; work/frailty_probe_current.log; work/frailty_probe_frozen.log"
+    },
+    {
+      "command": "uv run python -m compileall -q analysis scripts tests; git diff --check; git check-ignore (representative ignored paths)",
+      "exit_status": 0,
+      "evidence": "tool execution transcript"
+    }
+  ],
+  "R_packages": [
+    {
+      "package": "lme4",
+      "version": "2.0.1"
+    },
+    {
+      "package": "clubSandwich",
+      "version": "0.7.0"
+    },
+    {
+      "package": "sandwich",
+      "version": "3.1.1"
+    },
+    {
+      "package": "lmtest",
+      "version": "0.9.40"
+    },
+    {
+      "package": "logistf",
+      "version": "1.26.1"
+    },
+    {
+      "package": "survival",
+      "version": "3.8.3"
+    },
+    {
+      "package": "boot",
+      "version": "1.3.32"
+    },
+    {
+      "package": "coxme",
+      "version": "2.2.22"
+    },
+    {
+      "package": "jsonlite",
+      "version": "2.0.0"
+    }
+  ],
+  "R_origins": [
+    {
+      "package": "lme4",
+      "library": "/Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library",
+      "newly_installed": "FALSE"
+    },
+    {
+      "package": "clubSandwich",
+      "library": "/Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library",
+      "newly_installed": "FALSE"
+    },
+    {
+      "package": "sandwich",
+      "library": "/Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library",
+      "newly_installed": "FALSE"
+    },
+    {
+      "package": "lmtest",
+      "library": "/Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library",
+      "newly_installed": "FALSE"
+    },
+    {
+      "package": "logistf",
+      "library": "<repository>/workspace/R/library",
+      "newly_installed": "TRUE"
+    },
+    {
+      "package": "survival",
+      "library": "/Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library",
+      "newly_installed": "FALSE"
+    },
+    {
+      "package": "boot",
+      "library": "/Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library",
+      "newly_installed": "FALSE"
+    },
+    {
+      "package": "coxme",
+      "library": "<repository>/workspace/R/library",
+      "newly_installed": "TRUE"
+    },
+    {
+      "package": "jsonlite",
+      "library": "/Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library",
+      "newly_installed": "FALSE"
+    }
+  ],
+  "source_evidence": {
+    "s2_repository_comparison.json": {
+      "bytes": 58647,
+      "sha256": "ae9691da42f4f261614dcbe325a1c07604224dba709b7fcc7538014bd0dc9597"
+    },
+    "article.html": {
+      "bytes": 190072,
+      "sha256": "dbceab1161c0dd52de7bbaaaf0ac9974bdcdd3d45070b3314a9471ab98a4ee17"
+    },
+    "pone.0362663.s015.pdf": {
+      "bytes": 1366484,
+      "sha256": "52fecc26880fce09c5b798bb04cb9f8614fb21126c95e3f61e4701e2e19483b2"
+    },
+    "pone.0362663.s014.zip": {
+      "bytes": 8300907,
+      "sha256": "d9c9d3cbfa31bd56717ff5c3c925ebe8f74c14062498f0f4ab0bda9d65594577"
+    },
+    "published_frozen_numeric_checks.csv": {
+      "bytes": 53463,
+      "sha256": "cd9467341accce7f8c1b4a87b3a0f7872dfb8327be95e57f60adcce2be8b5c32"
+    },
+    "published_frozen_numeric_checks.json": {
+      "bytes": 135773,
+      "sha256": "633c984150de7cdf40d72dcdbac4cd58237c8c723228e0d6eec57471fe5e8cef"
+    },
+    "article.xml": {
+      "bytes": 93640,
+      "sha256": "2e43efd08e335822fe9249aca8385dd34f633737dacb57e7dcb2bf9a6c711bf5"
+    },
+    "work/osf_files.json": {
+      "bytes": 979,
+      "sha256": "b6c6e66a78e96720529b65cfc07ece0ae7c7d26414521628988c0568c6a026cf"
+    },
+    "work/remote_comparison.json": {
+      "bytes": 90,
+      "sha256": "c6b6210485b4d6ce7de03c1274b9703be350b6646261594c7c965d6abdf8d364"
+    },
+    "work/remote_tree.json": {
+      "bytes": 49519,
+      "sha256": "8ef05bf78fcef62794db8f0c0f802da4e15e98cab9372927ebd003bb964cba24"
+    },
+    "work/osf_storage.json": {
+      "bytes": 1891,
+      "sha256": "4ecf6f7ec225b1b456aba4fe9c30d2a278e847cc786daf104f1d3151111fcc2d"
+    },
+    "work/zenodo_datacite.json": {
+      "bytes": 13406,
+      "sha256": "519b4035011bcff6e3ac41a31014fe2922bfc8941212301f21552cb247653d18"
+    },
+    "work/osf_archived_files.json": {
+      "bytes": 2408,
+      "sha256": "f0d5d001d7df1ac7e680b0da30922bc77b95db6bbf7e279411e1d956959838c9"
+    },
+    "work/test_result.json": {
+      "bytes": 147,
+      "sha256": "3dfb1318c3e33d0c4b3be166e8580711af3ced8a584bbcb21307afe0cc9edc07"
+    },
+    "work/osf_metadata.json": {
+      "bytes": 66380,
+      "sha256": "ddc475248202bd9666ba5ced482ac3e5d776e75b146d369dfd6eb2f88231c90a"
+    },
+    "work/proposed_safety.json": {
+      "bytes": 126,
+      "sha256": "412366b648b56daffe3e2059e6638e07ca05d912db3e185e19fd307cb2d15db7"
+    },
+    "work/remote_head.json": {
+      "bytes": 344,
+      "sha256": "3c80f9bd814b73de82458b33a0d42b8130c5544c16ece11770ce633e6759b282"
+    },
+    "work/frailty_survival_frozen.json": {
+      "bytes": 928,
+      "sha256": "c74f8c20633a959e1757ef47cfac2a3fd7c640b114ddd7b17aa442521760c619"
+    },
+    "work/osf_schema.json": {
+      "bytes": 30175,
+      "sha256": "399c833d77e2500472e4af80d3af9a391b3e8409d4f193d069e300a47a68196a"
+    },
+    "work/environment_snapshot.json": {
+      "bytes": 497,
+      "sha256": "b80b588c9bd986d98df07634ea938d45635f1e546c142ce4b1ff113637282098"
+    },
+    "work/frailty_survival_current.json": {
+      "bytes": 928,
+      "sha256": "cceefd5cec50b6703cb68ec7ba9f4ed468dafbb12cb36040bd6b958bacd379fc"
+    },
+    "work/remote_metadata.json": {
+      "bytes": 154,
+      "sha256": "b45cc0598acc9d791c6091b194735b61d9e9f4ee980be7fd728760311f690b47"
+    },
+    "work/survival_3.8-6.tar.gz": {
+      "bytes": 9549370,
+      "sha256": "9a4c0a35d86c64ec5a6e6cf179ab22dcffb5ce1d313d2880a09f1e53422699d7"
+    }
+  },
+  "remote": {
+    "metadata": {
+      "default_branch": "main",
+      "full_name": "YUSHUO-LIU6/soccermon-load-wellness-pain",
+      "private": true,
+      "pushed_at": "2026-10-20T17:03:22Z",
+      "visibility": "private"
+    },
+    "main_head": {
+      "commit": {
+        "message": "Build portable SoccerMon workflow with frozen provenance and verified focal refits",
+        "tree": {
+          "sha": "3b55fb83c92dbe666e12df2c889f73f2d5b4c229",
+          "url": "https://api.github.com/repos/YUSHUO-LIU6/soccermon-load-wellness-pain/git/trees/3b55fb83c92dbe666e12df2c889f73f2d5b4c229"
+        }
+      },
+      "sha": "3ddde51a62559787261accf4e20e143e616b0b73"
+    },
+    "tree_comparison": {
+      "truncated": false,
+      "local_files": 137,
+      "remote_files": 137,
+      "identical": true
+    }
+  },
+  "source_manifest_files": 101,
+  "proposed_file_hashes": [
+    {
+      "path": ".github/workflows/integrity.yml",
+      "sha256": "52d8ed9eaeb28be7650266ed1a4491af9f281a34014b71144435c8f55e22693e",
+      "bytes": 536
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "c5b8c85d53bcb35a25a57464e0b62c19a8403f42330228f1c7a81690f4d8b17c",
+      "bytes": 364
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "1b05065b05f9b103400a93a94a544266925b27ff5bfb320770a21e59d5f81e65",
+      "bytes": 1047
+    },
+    {
+      "path": "README.md",
+      "sha256": "ba666684f328c71953c67172a84f4ca6bcab4ab038756ea4a68b3d6cef6f8f22",
+      "bytes": 5280
+    },
+    {
+      "path": "data/README.md",
+      "sha256": "aca9975411ee3e15c1cfe7ce9cbe9ba50e2e4f53b09394b9b23dd318e5f83811",
+      "bytes": 924
+    },
+    {
+      "path": "docs/DATA_REUSE.md",
+      "sha256": "9a80598a54f6ae0ac7fca95fc1772a45a9da985612e10ae9792e545c1d6cf59f",
+      "bytes": 1852
+    },
+    {
+      "path": "docs/REPRODUCING.md",
+      "sha256": "16c9b5eae1ca85263231f78e73890a6acf953aad90bb95318b238de9c8fd9c7d",
+      "bytes": 8253
+    },
+    {
+      "path": "docs/STUDY.md",
+      "sha256": "b66187b2a027866f780307293f79847ba457cd82c3e8c334afd4d18711f9ea00",
+      "bytes": 7172
+    },
+    {
+      "path": "environment/REPRODUCIBILITY.md",
+      "sha256": "c77a5d39f20b01d0a483272cb384d385fcb29af6d58652d25fb9bffc0e9a1958",
+      "bytes": 2447
+    },
+    {
+      "path": "reports/DISCREPANCY_SUMMARY.csv",
+      "sha256": "89a7727caa5a9cfeccf6fc549de0bfd22eb0d2cc538b8b69a49441ffb79523d2",
+      "bytes": 78247
+    },
+    {
+      "path": "reports/FIGURE_DATA_CHECKS.json",
+      "sha256": "5afcb1a555040c9a9a37e5cb55bf65806aab029b64ed7aba45113ba13e5bd95f",
+      "bytes": 535
+    },
+    {
+      "path": "reports/FRAILTY_VERSION_PROBE.json",
+      "sha256": "207e6eb3478d9f1e2929a7eb1859576001f07ea16b47c71486af04d10783891b",
+      "bytes": 2399
+    },
+    {
+      "path": "reports/FRESH_FOCAL_REFITS.csv",
+      "sha256": "5f7bc5f326e14e209cbdbac193acd1df0c2d237b19d949bf3d27823c58ca03e8",
+      "bytes": 985
+    },
+    {
+      "path": "reports/NUMERICAL_DISCREPANCIES.csv",
+      "sha256": "0481003def9af8841a190c681be559a405c82b95b8a58d6d0f9f391b0aa6d79d",
+      "bytes": 620283
+    },
+    {
+      "path": "reports/PUBLICATION_SAFETY.md",
+      "sha256": "f34a88ebf8841f5c921e9ba610967bd0520aa0a4f6f9374f697c19effa85b303",
+      "bytes": 7334
+    },
+    {
+      "path": "reports/PUBLICATION_SOURCE_AUDIT.md",
+      "sha256": "98756af6e9d5a013742690da5319acf68f6fd37535714b545f49887375181a26",
+      "bytes": 5861
+    },
+    {
+      "path": "reports/PUBLISHED_FROZEN_COMPARISON.csv",
+      "sha256": "eb6c55adb1e8a9b807ffdbb06436618143ef23a46b65caa3ec0e152a7b4243a0",
+      "bytes": 52839
+    },
+    {
+      "path": "reports/REPRODUCIBILITY_AUDIT.md",
+      "sha256": "9cd5fb9693b8c5f88412991b76faa3b155a9e6121c09dfd450747c2d403ddcac",
+      "bytes": 21138
+    },
+    {
+      "path": "reports/RESULT_COMPARISON.csv",
+      "sha256": "f438b8ca7a2eab642bb941acc6ca44e93cd61483b3e5b65f9921293d20a083d2",
+      "bytes": 222655
+    },
+    {
+      "path": "reports/S2_REPOSITORY_COMPARISON.json",
+      "sha256": "ae9691da42f4f261614dcbe325a1c07604224dba709b7fcc7538014bd0dc9597",
+      "bytes": 58647
+    },
+    {
+      "path": "reproducibility/README.md",
+      "sha256": "2dd02e0ff0fe58a571318b5972c9e4c648eacd83535adeea0c9e1cccc8b20dc8",
+      "bytes": 1256
+    },
+    {
+      "path": "scripts/pipeline.py",
+      "sha256": "f4c796ebbdcd27a946072d0645ed6ac5a26433b4f282e1939be884d0cb23a4c1",
+      "bytes": 23855
+    },
+    {
+      "path": "scripts/probe_frailty_version.R",
+      "sha256": "220f6c3f84553ab4c374e8d9d903471213488f75feeaaf24d44cacd429fc95b6",
+      "bytes": 2539
+    },
+    {
+      "path": "scripts/refit_focus.R",
+      "sha256": "f73048b5a62ccfe1d06194f3a65a87e376d7bb8eb6c285dd9e040e9f2284020f",
+      "bytes": 2890
+    },
+    {
+      "path": "scripts/setup_r.R",
+      "sha256": "9fae7ee7e9f5e918d53b20ed5ced127716c8a8264a09c9f062a66a374a825bc1",
+      "bytes": 1260
+    },
+    {
+      "path": "scripts/verify_results.py",
+      "sha256": "2f4ecdcbfe8af7e6759888bd07b6d48a83ed6a281ae49f8911d3a10ced5f24f4",
+      "bytes": 23169
+    },
+    {
+      "path": "tests/test_verify_results.py",
+      "sha256": "7cff8aaa0377b5e1e514828a7232b1eb31a669f09ce8bb70b07ca0bd705de976",
+      "bytes": 7355
+    },
+    {
+      "path": "tests/test_workspace_safety.py",
+      "sha256": "6f7800607c35dab124897a3522bd1a0c056f1a5c889ca33621bc0cd97b8c6a28",
+      "bytes": 3274
+    }
+  ],
+  "provenance_note": "Scientific source hashes are verified independently. Working-tree wrapper additions during execution affected subsequent figure/verification commands only; full model specifications and full-run orchestration were unchanged.",
+  "comparison_status_counts": {
+    "PASS": 709,
+    "FAIL": 95,
+    "NOT RUN": 17,
+    "BLOCKED": 0
+  },
+  "focal_refits": [
+    {
+      "model": "F",
+      "term": "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+      "n": "19758",
+      "events": "28",
+      "OR": "0.629552028809833",
+      "CI_low": "0.445024129213309",
+      "CI_high": "0.965067464096429",
+      "frozen_OR": "0.629552028809833",
+      "frozen_CI_low": "0.445024129213313",
+      "frozen_CI_high": "0.965067464096432",
+      "frozen_n": "19758",
+      "frozen_events": "28",
+      "max_abs_difference": "4.27435864480685e-15",
+      "tolerance": "0.001",
+      "status": "PASS"
+    },
+    {
+      "model": "F",
+      "term": "chronic_load_28d_wp_z",
+      "n": "19758",
+      "events": "28",
+      "OR": "0.947219920255698",
+      "CI_low": "0.533211926617031",
+      "CI_high": "1.71881049450506",
+      "frozen_OR": "0.947219920255698",
+      "frozen_CI_low": "0.533211926617023",
+      "frozen_CI_high": "1.71881049450506",
+      "frozen_n": "19758",
+      "frozen_events": "28",
+      "max_abs_difference": "7.54951656745106e-15",
+      "tolerance": "0.001",
+      "status": "PASS"
+    },
+    {
+      "model": "F_hist",
+      "term": "acute_load_7d_wp_z_hist:soreness_burden_recent3_wp_z_hist",
+      "n": "19216",
+      "events": "27",
+      "OR": "0.974084183502877",
+      "CI_low": "0.727651843783167",
+      "CI_high": "1.25204346548811",
+      "frozen_OR": "0.974084183502877",
+      "frozen_CI_low": "0.727651843783169",
+      "frozen_CI_high": "1.25204346548811",
+      "frozen_n": "19216",
+      "frozen_events": "27",
+      "max_abs_difference": "2.44249065417534e-15",
+      "tolerance": "0.001",
+      "status": "PASS"
+    },
+    {
+      "model": "F_hist",
+      "term": "chronic_load_28d_wp_z_hist",
+      "n": "19216",
+      "events": "27",
+      "OR": "1.95545434782404",
+      "CI_low": "1.20829121202402",
+      "CI_high": "3.05818279293207",
+      "frozen_OR": "1.95545434782404",
+      "frozen_CI_low": "1.20829121202403",
+      "frozen_CI_high": "3.05818279293206",
+      "frozen_n": "19216",
+      "frozen_events": "27",
+      "max_abs_difference": "8.88178419700125e-15",
+      "tolerance": "0.001",
+      "status": "PASS"
+    }
+  ],
+  "bootstraps": {
+    "R1 marginal": {
+      "summary": {
+        "model_id": "A_boot",
+        "wellness_variant": "soreness",
+        "term": "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+        "n_boot_requested": 2000,
+        "n_boot_ok": 2000,
+        "n_boot_failed": 0,
+        "beta_full_sample": -0.42507198520737316,
+        "OR_median": 0.6697433733162325,
+        "OR_ci_low": 0.44674653765675687,
+        "OR_ci_high": 1.1071045704185325,
+        "p_OR_gt1": 0.071
+      },
+      "actual_replicate_rows": 2000,
+      "replicate_sha256": "25cbc499866655a4cd71c3dbb85bfe1ed88dd3072e525840b21f1252bf2fc7dd"
+    },
+    "R2 non-overlap": {
+      "summary": {
+        "model_id": "A_nonoverlap_dropteam_boot",
+        "wellness_variant": "soreness",
+        "term": "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+        "n_boot_requested": 2000,
+        "n_boot_ok": 2000,
+        "n_boot_failed": 0,
+        "beta_full_sample": -0.34102460229765785,
+        "OR_median": 0.7404129923851331,
+        "OR_ci_low": 0.5567567069208209,
+        "OR_ci_high": 1.1331093769180518,
+        "p_OR_gt1": 0.102
+      },
+      "actual_replicate_rows": 2000,
+      "replicate_sha256": "4077af73deb1f27c0b95198e741ab3a509e07255ec562762674513b153735b14"
+    },
+    "R2 drop-team": {
+      "summary": {
+        "model_id": "A_drop_team_boot",
+        "wellness_variant": "soreness",
+        "term": "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+        "n_boot_requested": 2000,
+        "n_boot_ok": 2000,
+        "n_boot_failed": 0,
+        "beta_full_sample": -0.34173745859601284,
+        "OR_median": 0.7400979206944621,
+        "OR_ci_low": 0.5555808288041754,
+        "OR_ci_high": 1.1323038612868643,
+        "p_OR_gt1": 0.1015
+      },
+      "actual_replicate_rows": 2000,
+      "replicate_sha256": "68ccfbba61b26e3444644d41c983ef1e411d98980485d4cf225d063ac37f1356"
+    }
+  },
+  "firth_bootstrap_summary": [
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "soreness",
+      "term": "Intercept",
+      "OR": "0.009632931365980486",
+      "CI_low": "0.0011390368214841005",
+      "CI_high": "0.04270559107991599",
+      "p": "",
+      "se": "0.9463520638561036",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=1.09e-07",
+      "n": "19758",
+      "players": "49",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "soreness",
+      "term": "acute_load_7d_wp_z",
+      "OR": "0.6100153898670228",
+      "CI_low": "0.2504172664722457",
+      "CI_high": "1.1010870303771592",
+      "p": "",
+      "se": "0.37525231063147846",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=1.09e-07",
+      "n": "19758",
+      "players": "49",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "soreness",
+      "term": "soreness_burden_recent3_wp_z",
+      "OR": "0.832164965398582",
+      "CI_low": "0.5864229269465361",
+      "CI_high": "1.470532662524384",
+      "p": "",
+      "se": "0.2427923252629559",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=1.09e-07",
+      "n": "19758",
+      "players": "49",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "soreness",
+      "term": "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+      "OR": "0.6550922812138917",
+      "CI_low": "0.43975365542598",
+      "CI_high": "1.158568786801437",
+      "p": "",
+      "se": "0.25438600782811227",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=1.09e-07",
+      "n": "19758",
+      "players": "49",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "soreness",
+      "term": "chronic_load_28d_wp_z",
+      "OR": "0.9604036493501124",
+      "CI_low": "0.481508672403659",
+      "CI_high": "1.954462457224423",
+      "p": "",
+      "se": "0.3612452130642232",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=1.09e-07",
+      "n": "19758",
+      "players": "49",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "soreness",
+      "term": "prev_episode_ever",
+      "OR": "6.262726409957635",
+      "CI_low": "1.8914658778338165",
+      "CI_high": "29.06829676157386",
+      "p": "",
+      "se": "0.7131853200123933",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=1.09e-07",
+      "n": "19758",
+      "players": "49",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "soreness",
+      "term": "calendar_time",
+      "OR": "0.9917588486029127",
+      "CI_low": "0.9844920010836196",
+      "CI_high": "0.9960851910467345",
+      "p": "",
+      "se": "0.0031521185090000823",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=1.09e-07",
+      "n": "19758",
+      "players": "49",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "soreness",
+      "term": "teamTeamB",
+      "OR": "0.023049277279307",
+      "CI_low": "0.006719538151341104",
+      "CI_high": "0.08659839510744781",
+      "p": "",
+      "se": "0.6518750445132586",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=1.09e-07",
+      "n": "19758",
+      "players": "49",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "soreness",
+      "term": "season2021",
+      "OR": "2.9138486943264357",
+      "CI_low": "0.3460575994681614",
+      "CI_high": "30.7620538924795",
+      "p": "",
+      "se": "1.1726311125864868",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=1.09e-07",
+      "n": "19758",
+      "players": "49",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "fatigue",
+      "term": "Intercept",
+      "OR": "0.010173862976407272",
+      "CI_low": "0.0011387520216532832",
+      "CI_high": "0.0461591323209849",
+      "p": "",
+      "se": "0.9759564696129883",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=8.94e-08",
+      "n": "19815",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "fatigue",
+      "term": "acute_load_7d_wp_z",
+      "OR": "0.6284949167868429",
+      "CI_low": "0.2376601793948251",
+      "CI_high": "1.3154217751110246",
+      "p": "",
+      "se": "0.4299605656814368",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=8.94e-08",
+      "n": "19815",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "fatigue",
+      "term": "fatigue_burden_recent3_wp_z",
+      "OR": "0.756791411132853",
+      "CI_low": "0.5543035715128157",
+      "CI_high": "1.166775776699244",
+      "p": "",
+      "se": "0.18508473667140177",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=8.94e-08",
+      "n": "19815",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "fatigue",
+      "term": "acute_load_7d_wp_z:fatigue_burden_recent3_wp_z",
+      "OR": "0.8673767724252479",
+      "CI_low": "0.6184370295955474",
+      "CI_high": "1.249459805421018",
+      "p": "",
+      "se": "0.17761204416792784",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=8.94e-08",
+      "n": "19815",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "fatigue",
+      "term": "chronic_load_28d_wp_z",
+      "OR": "0.973228161897915",
+      "CI_low": "0.5054735516353426",
+      "CI_high": "1.927531327585808",
+      "p": "",
+      "se": "0.35260330872574003",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=8.94e-08",
+      "n": "19815",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "fatigue",
+      "term": "prev_episode_ever",
+      "OR": "5.906293195817038",
+      "CI_low": "1.555299171756887",
+      "CI_high": "31.800228289659238",
+      "p": "",
+      "se": "0.7488749284898915",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=8.94e-08",
+      "n": "19815",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "fatigue",
+      "term": "calendar_time",
+      "OR": "0.9917865749499527",
+      "CI_low": "0.9836390214231356",
+      "CI_high": "0.9959010401342464",
+      "p": "",
+      "se": "0.003850823310635858",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=8.94e-08",
+      "n": "19815",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "fatigue",
+      "term": "teamTeamB",
+      "OR": "0.02602088218922789",
+      "CI_low": "0.00952290744073201",
+      "CI_high": "0.09626270158173897",
+      "p": "",
+      "se": "0.6120591249397747",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=8.94e-08",
+      "n": "19815",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "fatigue",
+      "term": "season2021",
+      "OR": "2.727627157903463",
+      "CI_low": "0.36426609053890524",
+      "CI_high": "41.51038591062104",
+      "p": "",
+      "se": "1.3148692647951155",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=2000, failed=0); python-vs-logistf max|dBeta|=8.94e-08",
+      "n": "19815",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "readiness",
+      "term": "Intercept",
+      "OR": "0.010106904350705407",
+      "CI_low": "0.0013467869834122923",
+      "CI_high": "0.047153382615457845",
+      "p": "",
+      "se": "0.9455026883561906",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=1999, failed=1); python-vs-logistf max|dBeta|=3.54e-08",
+      "n": "19817",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "readiness",
+      "term": "acute_load_7d_wp_z",
+      "OR": "0.6764877657545127",
+      "CI_low": "0.2806212463790289",
+      "CI_high": "1.2587119097539339",
+      "p": "",
+      "se": "0.39884526403194515",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=1999, failed=1); python-vs-logistf max|dBeta|=3.54e-08",
+      "n": "19817",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "readiness",
+      "term": "readiness_deficit_recent3_wp_z",
+      "OR": "1.026051929180636",
+      "CI_low": "0.8548349569587413",
+      "CI_high": "1.2265492764273658",
+      "p": "",
+      "se": "0.09634997114722486",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=1999, failed=1); python-vs-logistf max|dBeta|=3.54e-08",
+      "n": "19817",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "readiness",
+      "term": "acute_load_7d_wp_z:readiness_deficit_recent3_wp_z",
+      "OR": "0.8850206723161554",
+      "CI_low": "0.6212352387893547",
+      "CI_high": "1.251516513716638",
+      "p": "",
+      "se": "0.1865817301828374",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=1999, failed=1); python-vs-logistf max|dBeta|=3.54e-08",
+      "n": "19817",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "readiness",
+      "term": "chronic_load_28d_wp_z",
+      "OR": "1.0143226531493075",
+      "CI_low": "0.522110964267444",
+      "CI_high": "2.0244490440170595",
+      "p": "",
+      "se": "0.36201331751946647",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=1999, failed=1); python-vs-logistf max|dBeta|=3.54e-08",
+      "n": "19817",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "readiness",
+      "term": "prev_episode_ever",
+      "OR": "6.211346794421721",
+      "CI_low": "1.7450512355923669",
+      "CI_high": "28.66261502183971",
+      "p": "",
+      "se": "0.7225666011176465",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=1999, failed=1); python-vs-logistf max|dBeta|=3.54e-08",
+      "n": "19817",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "readiness",
+      "term": "calendar_time",
+      "OR": "0.9919080386458544",
+      "CI_low": "0.9839377933742516",
+      "CI_high": "0.9958392422619093",
+      "p": "",
+      "se": "0.003886907532078689",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=1999, failed=1); python-vs-logistf max|dBeta|=3.54e-08",
+      "n": "19817",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "readiness",
+      "term": "teamTeamB",
+      "OR": "0.025951880666402104",
+      "CI_low": "0.009126139590427573",
+      "CI_high": "0.10160127172284852",
+      "p": "",
+      "se": "0.6211949074327798",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=1999, failed=1); python-vs-logistf max|dBeta|=3.54e-08",
+      "n": "19817",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    },
+    {
+      "analysis_role": "SMALL_SAMPLE_SENSITIVITY",
+      "model_id": "F_boot",
+      "wellness_variant": "readiness",
+      "term": "season2021",
+      "OR": "2.4963091754404494",
+      "CI_low": "0.3315574591537966",
+      "CI_high": "39.724631087695435",
+      "p": "",
+      "se": "1.329483720945545",
+      "converged": "True",
+      "optimizer": "Firth IRLS cluster bootstrap B=2000 (ok=1999, failed=1); python-vs-logistf max|dBeta|=3.54e-08",
+      "n": "19817",
+      "players": "50",
+      "events": "28",
+      "notes": "SE=SD of bootstrap betas; CI=percentile on OR scale"
+    }
+  ],
+  "git_diff_stat": " .gitignore                |  16 ++++\n README.md                 | 136 +++++++++++++++---------------\n data/README.md            |   2 +\n docs/REPRODUCING.md       | 209 +++++++++++++++++++++++++++++++---------------\n docs/STUDY.md             | 151 ++++++++++++++++++++++-----------\n reproducibility/README.md |   8 +-\n scripts/pipeline.py       | 187 ++++++++++++++++++++++++++++++++++++++---\n scripts/refit_focus.R     |  15 ++--\n scripts/setup_r.R         |   7 +-\n 9 files changed, 528 insertions(+), 203 deletions(-)\n",
+  "tests": {
+    "command": "uv run python -m unittest discover -s tests -v",
+    "exit_status": 0,
+    "tests": 22,
+    "log": "work/tests.log",
+    "status": "PASS"
+  },
+  "citation_schema_validation": {
+    "command": "uvx --from cffconvert cffconvert --validate",
+    "exit_status": 0,
+    "log": "work/citation_validation.log",
+    "schema": "1.2.0"
+  },
+  "limitations": [
+    "Firth historical bootstrap does not persist per-replicate estimates; accepted counts are operational and do not prove iterative convergence.",
+    "Marginal bootstrap is not a GLMM bootstrap.",
+    "R2 uses copied frozen R1 baseline; it is not a fresh-R1 end-to-end comparison.",
+    "Original and current R/package/platform versions differ.",
+    "Final publisher layout and exhaustive paper cell/graphic reproduction are not certified."
+  ],
+  "follow_up": {
+    "recorded_utc": "2026-11-23T06:21:10.671214+00:00",
+    "baseline_scientific_commit": "3ddde51a62559787261accf4e20e143e616b0b73",
+    "delivery_parent_commit": "f92c54b366865474fdc0e05ea9893604744fdfe5",
+    "scope": "Post-publication verification; existing full R1/R2 and other bootstrap evidence reused",
+    "Firth_replay": {
+      "scope": "POST_PUBLICATION_VALIDATION",
+      "started_utc": "2026-11-23T05:40:52.247944+00:00",
+      "source_sha256": "2b92b77626a7b542a8ce1a09c3961aa21fd2c15ea37e9ee4ee85ce96fc9a2a2d",
+      "dataset_sha256": "d596116f0a4a27ede6307f975fba10b558c43a8f3c5cbf26ad7b25ddcbd30fef",
+      "reference_sha256": "2ce324df6079f3ad2547ce860ebfbb1b693f9e508bdb46926b617e58a753954b",
+      "initial_seed": 20260723,
+      "requested_per_variant": 2000,
+      "max_iterations": 200,
+      "step_tolerance": 1e-09,
+      "variants": {
+        "soreness": {
+          "terms": [
+            "Intercept",
+            "acute_load_7d_wp_z",
+            "soreness_burden_recent3_wp_z",
+            "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+            "chronic_load_28d_wp_z",
+            "prev_episode_ever",
+            "calendar_time",
+            "teamTeamB",
+            "season2021"
+          ],
+          "completed": 2000,
+          "original_accepted": 2000,
+          "original_rejected": 0,
+          "termination_counts": {
+            "step_tolerance": 2000
+          },
+          "accepted_without_convergence_criterion": 0,
+          "convergence_criterion_accepted": 2000,
+          "reconstructed_original_summary": {
+            "OR": [
+              0.009632931365980486,
+              0.6100153898670228,
+              0.832164965398582,
+              0.6550922812138917,
+              0.9604036493501124,
+              6.262726409957635,
+              0.9917588486029127,
+              0.023049277279307,
+              2.9138486943264357
+            ],
+            "CI_low": [
+              0.0011390368214841005,
+              0.2504172664722457,
+              0.5864229269465361,
+              0.43975365542598,
+              0.481508672403659,
+              1.8914658778338165,
+              0.9844920010836196,
+              0.006719538151341104,
+              0.3460575994681614
+            ],
+            "CI_high": [
+              0.04270559107991599,
+              1.1010870303771592,
+              1.470532662524384,
+              1.158568786801437,
+              1.954462457224423,
+              29.06829676157386,
+              0.9960851910467345,
+              0.08659839510744781,
+              30.7620538924795
+            ],
+            "se": [
+              0.9463520638561028,
+              0.375252310631478,
+              0.24279232526295605,
+              0.25438600782811255,
+              0.3612452130642233,
+              0.7131853200123937,
+              0.003152118509000083,
+              0.6518750445132584,
+              1.1726311125864861
+            ]
+          },
+          "criterion_only_diagnostic_summary": {
+            "OR": [
+              0.009632931365980486,
+              0.6100153898670228,
+              0.832164965398582,
+              0.6550922812138917,
+              0.9604036493501124,
+              6.262726409957635,
+              0.9917588486029127,
+              0.023049277279307,
+              2.9138486943264357
+            ],
+            "CI_low": [
+              0.0011390368214841005,
+              0.2504172664722457,
+              0.5864229269465361,
+              0.43975365542598,
+              0.481508672403659,
+              1.8914658778338165,
+              0.9844920010836196,
+              0.006719538151341104,
+              0.3460575994681614
+            ],
+            "CI_high": [
+              0.04270559107991599,
+              1.1010870303771592,
+              1.470532662524384,
+              1.158568786801437,
+              1.954462457224423,
+              29.06829676157386,
+              0.9960851910467345,
+              0.08659839510744781,
+              30.7620538924795
+            ],
+            "se": [
+              0.9463520638561028,
+              0.375252310631478,
+              0.24279232526295605,
+              0.25438600782811255,
+              0.3612452130642233,
+              0.7131853200123937,
+              0.003152118509000083,
+              0.6518750445132584,
+              1.1726311125864861
+            ]
+          },
+          "previous_fresh_summary_agreement": true
+        },
+        "fatigue": {
+          "terms": [
+            "Intercept",
+            "acute_load_7d_wp_z",
+            "fatigue_burden_recent3_wp_z",
+            "acute_load_7d_wp_z:fatigue_burden_recent3_wp_z",
+            "chronic_load_28d_wp_z",
+            "prev_episode_ever",
+            "calendar_time",
+            "teamTeamB",
+            "season2021"
+          ],
+          "completed": 2000,
+          "original_accepted": 2000,
+          "original_rejected": 0,
+          "termination_counts": {
+            "step_tolerance": 2000
+          },
+          "accepted_without_convergence_criterion": 0,
+          "convergence_criterion_accepted": 2000,
+          "reconstructed_original_summary": {
+            "OR": [
+              0.010173862976407272,
+              0.6284949167868429,
+              0.756791411132853,
+              0.8673767724252479,
+              0.973228161897915,
+              5.906293195817038,
+              0.9917865749499527,
+              0.02602088218922789,
+              2.727627157903463
+            ],
+            "CI_low": [
+              0.0011387520216532832,
+              0.2376601793948251,
+              0.5543035715128157,
+              0.6184370295955474,
+              0.5054735516353426,
+              1.555299171756887,
+              0.9836390214231356,
+              0.00952290744073201,
+              0.36426609053890524
+            ],
+            "CI_high": [
+              0.0461591323209849,
+              1.3154217751110246,
+              1.166775776699244,
+              1.249459805421018,
+              1.927531327585808,
+              31.800228289659238,
+              0.9959010401342464,
+              0.09626270158173897,
+              41.51038591062104
+            ],
+            "se": [
+              0.9759564696129884,
+              0.4299605656814369,
+              0.18508473667140185,
+              0.17761204416792797,
+              0.35260330872573986,
+              0.7488749284898912,
+              0.0038508233106358566,
+              0.6120591249397748,
+              1.3148692647951155
+            ]
+          },
+          "criterion_only_diagnostic_summary": {
+            "OR": [
+              0.010173862976407272,
+              0.6284949167868429,
+              0.756791411132853,
+              0.8673767724252479,
+              0.973228161897915,
+              5.906293195817038,
+              0.9917865749499527,
+              0.02602088218922789,
+              2.727627157903463
+            ],
+            "CI_low": [
+              0.0011387520216532832,
+              0.2376601793948251,
+              0.5543035715128157,
+              0.6184370295955474,
+              0.5054735516353426,
+              1.555299171756887,
+              0.9836390214231356,
+              0.00952290744073201,
+              0.36426609053890524
+            ],
+            "CI_high": [
+              0.0461591323209849,
+              1.3154217751110246,
+              1.166775776699244,
+              1.249459805421018,
+              1.927531327585808,
+              31.800228289659238,
+              0.9959010401342464,
+              0.09626270158173897,
+              41.51038591062104
+            ],
+            "se": [
+              0.9759564696129884,
+              0.4299605656814369,
+              0.18508473667140185,
+              0.17761204416792797,
+              0.35260330872573986,
+              0.7488749284898912,
+              0.0038508233106358566,
+              0.6120591249397748,
+              1.3148692647951155
+            ]
+          },
+          "previous_fresh_summary_agreement": true
+        },
+        "readiness": {
+          "terms": [
+            "Intercept",
+            "acute_load_7d_wp_z",
+            "readiness_deficit_recent3_wp_z",
+            "acute_load_7d_wp_z:readiness_deficit_recent3_wp_z",
+            "chronic_load_28d_wp_z",
+            "prev_episode_ever",
+            "calendar_time",
+            "teamTeamB",
+            "season2021"
+          ],
+          "completed": 2000,
+          "original_accepted": 1999,
+          "original_rejected": 1,
+          "termination_counts": {
+            "step_tolerance": 2000
+          },
+          "accepted_without_convergence_criterion": 0,
+          "convergence_criterion_accepted": 1999,
+          "reconstructed_original_summary": {
+            "OR": [
+              0.010106904350705407,
+              0.6764877657545127,
+              1.026051929180636,
+              0.8850206723161554,
+              1.0143226531493075,
+              6.211346794421721,
+              0.9919080386458544,
+              0.025951880666402104,
+              2.4963091754404494
+            ],
+            "CI_low": [
+              0.0013467869834122923,
+              0.2806212463790289,
+              0.8548349569587413,
+              0.6212352387893547,
+              0.522110964267444,
+              1.7450512355923669,
+              0.9839377933742516,
+              0.009126139590427573,
+              0.3315574591537966
+            ],
+            "CI_high": [
+              0.047153382615457845,
+              1.2587119097539339,
+              1.2265492764273658,
+              1.251516513716638,
+              2.0244490440170595,
+              28.66261502183971,
+              0.9958392422619093,
+              0.10160127172284852,
+              39.724631087695435
+            ],
+            "se": [
+              0.9455026883561898,
+              0.3988452640319452,
+              0.09634997114722484,
+              0.18658173018283755,
+              0.362013317519466,
+              0.7225666011176463,
+              0.0038869075320786903,
+              0.62119490743278,
+              1.3294837209455435
+            ]
+          },
+          "criterion_only_diagnostic_summary": {
+            "OR": [
+              0.010106904350705407,
+              0.6764877657545127,
+              1.026051929180636,
+              0.8850206723161554,
+              1.0143226531493075,
+              6.211346794421721,
+              0.9919080386458544,
+              0.025951880666402104,
+              2.4963091754404494
+            ],
+            "CI_low": [
+              0.0013467869834122923,
+              0.2806212463790289,
+              0.8548349569587413,
+              0.6212352387893547,
+              0.522110964267444,
+              1.7450512355923669,
+              0.9839377933742516,
+              0.009126139590427573,
+              0.3315574591537966
+            ],
+            "CI_high": [
+              0.047153382615457845,
+              1.2587119097539339,
+              1.2265492764273658,
+              1.251516513716638,
+              2.0244490440170595,
+              28.66261502183971,
+              0.9958392422619093,
+              0.10160127172284852,
+              39.724631087695435
+            ],
+            "se": [
+              0.9455026883561898,
+              0.3988452640319452,
+              0.09634997114722484,
+              0.18658173018283755,
+              0.362013317519466,
+              0.7225666011176463,
+              0.0038869075320786903,
+              0.62119490743278,
+              1.3294837209455435
+            ]
+          },
+          "previous_fresh_summary_agreement": true
+        }
+      },
+      "ended_utc": "2026-11-23T05:48:26.394822+00:00",
+      "replicates_sha256": "c80311394044177f834d99ae420e5926e3959a665ee2024f4ecec43f7f852d24"
+    },
+    "strict_comparison_counts": {
+      "PASS": 709,
+      "FAIL": 95,
+      "BLOCKED": 0,
+      "NOT RUN": 17
+    },
+    "impact_assessment": {
+      "scope": "Interpretation of unchanged strict FAIL outcomes; no tolerance/reference modification",
+      "strict_fail_gates": 95,
+      "impact_class_counts": {
+        "D": 8,
+        "B": 68,
+        "E": 3,
+        "C": 16
+      },
+      "protected_contrast_discrepancy_gates": 0
+    },
+    "model_diagnostic_assessment": "reports/MODEL_DIAGNOSTIC_ASSESSMENT.csv",
+    "commands": [
+      {
+        "argv": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run python scripts/audit_firth_replicates.py --dataset <R1 modeling dataset> --reference <fresh Firth summary> --output workspace/firth_trace_20261123",
+        "exit_status": 0,
+        "log": "work/firth_trace.log"
+      },
+      {
+        "argv": "Rscript --vanilla scripts/diagnose_qa_glmm.R <modeling dataset> workspace/qa_glmm_diagnostics.json",
+        "exit_status": 0,
+        "log": "work/qa_glmm_diagnostics_retry.log",
+        "prior_diagnostic_error": "Optional derivative slots were NULL; original QA fit was unaffected. Defensive extraction was fixed, only that focused QA diagnostic was rerun."
+      },
+      {
+        "argv": "Rscript --vanilla scripts/check_qa_stationarity.R workspace/qa_glmm_fits workspace/qa_stationarity.json",
+        "exit_status": 0,
+        "log": "work/qa_stationarity.log"
+      },
+      {
+        "argv": "uv run python scripts/verify_results.py --r1-workspace workspace/r1_20261123 --r2-workspace workspace/r2_20261123 --firth-audit workspace/firth_trace_20261123 --output reports/RESULT_COMPARISON.csv --details-output reports/NUMERICAL_DISCREPANCIES.csv",
+        "exit_status": 1,
+        "reason": "95 strict differences deliberately remain FAIL; no BLOCKED replicate evidence remains"
+      },
+      {
+        "argv": "uv run python -m unittest discover -s tests -v",
+        "exit_status": 0,
+        "tests": 39,
+        "log": "work/tests_current.log"
+      },
+      {
+        "argv": "uv run python scripts/pipeline.py verify-frozen --workspace workspace/release_integrity_20261123",
+        "exit_status": 0,
+        "log": "work/release_frozen_check.log"
+      },
+      {
+        "argv": "uv run python -m compileall -q analysis scripts tests; git diff --check; CFF 1.2.0 schema validation",
+        "exit_status": 0
+      }
+    ],
+    "author_decisions": {
+      "MIT_project_owned_code": true,
+      "copyright_holders": "Yushuo Liu and Haitao Li",
+      "local_account_git_identity_reviewed_as_noncredential_and_allowed_public": true,
+      "date": "2026-11-23"
+    },
+    "private_pull_request": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/pull/1",
+    "file_hashes": [
+      {
+        "path": ".github/workflows/integrity.yml",
+        "sha256": "f6bc3e81dc22a62c62ea43fd852bf210e93681bbf4e1a682af3622e933d26b45",
+        "bytes": 724
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "c5b8c85d53bcb35a25a57464e0b62c19a8403f42330228f1c7a81690f4d8b17c",
+        "bytes": 364
+      },
+      {
+        "path": "CITATION.cff",
+        "sha256": "ec2da797f54e652fe44a946a98116bebd09c825c0308164d8d8902bff7e62a65",
+        "bytes": 1060
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "b983ad8f081831fbb40d5af39ea56f23902d5554dbc0f4fd39c75d533fdafa59",
+        "bytes": 1081
+      },
+      {
+        "path": "README.md",
+        "sha256": "f8ef38bc7baf6cbef0ff1ac58022783e6d388f714d0cbc378b785d54aa6db059",
+        "bytes": 5664
+      },
+      {
+        "path": "data/README.md",
+        "sha256": "aca9975411ee3e15c1cfe7ce9cbe9ba50e2e4f53b09394b9b23dd318e5f83811",
+        "bytes": 924
+      },
+      {
+        "path": "docs/DATA_REUSE.md",
+        "sha256": "f443b2bf2bbde0e35206aa34a61fe671af298807b2eff10a4dc0cdf34d4a16d6",
+        "bytes": 2012
+      },
+      {
+        "path": "docs/REPRODUCING.md",
+        "sha256": "f1e0b4eb217f1703805955e7ad3266cdfa8e7d6113b14ef8ff7c73e06f7dba45",
+        "bytes": 9790
+      },
+      {
+        "path": "docs/STUDY.md",
+        "sha256": "b66187b2a027866f780307293f79847ba457cd82c3e8c334afd4d18711f9ea00",
+        "bytes": 7172
+      },
+      {
+        "path": "environment/REPRODUCIBILITY.md",
+        "sha256": "49dbcf85d1d9950c08af906ed16bf7b96f51a6d68eea4f39f28f280992cdae28",
+        "bytes": 2666
+      },
+      {
+        "path": "reports/DISCREPANCY_SUMMARY.csv",
+        "sha256": "89a7727caa5a9cfeccf6fc549de0bfd22eb0d2cc538b8b69a49441ffb79523d2",
+        "bytes": 78247
+      },
+      {
+        "path": "reports/ESTIMATE_IMPACT.csv",
+        "sha256": "0af09140a09937e90ce3f92e83c0fdb33359ed017231a979fe5dfceb314ed115",
+        "bytes": 48277
+      },
+      {
+        "path": "reports/FAIL_IMPACT_CLASSIFICATION.csv",
+        "sha256": "3d0a68a861aecddb9a57b61646bd1046d93190a2867899d8fb8340ae1f1ba6ac",
+        "bytes": 42393
+      },
+      {
+        "path": "reports/FAIL_IMPACT_SUMMARY.json",
+        "sha256": "31db35aa87794b33b646787d9665dba0a29fb5ce4e3af84bcc9e67b29313a9b2",
+        "bytes": 256
+      },
+      {
+        "path": "reports/FIGURE_DATA_CHECKS.json",
+        "sha256": "5afcb1a555040c9a9a37e5cb55bf65806aab029b64ed7aba45113ba13e5bd95f",
+        "bytes": 535
+      },
+      {
+        "path": "reports/FIRTH_REPLICATE_DIAGNOSTICS.csv",
+        "sha256": "c80311394044177f834d99ae420e5926e3959a665ee2024f4ecec43f7f852d24",
+        "bytes": 1548768
+      },
+      {
+        "path": "reports/FIRTH_REPLICATE_SUMMARY.json",
+        "sha256": "9a45053fc9bc10b7e8d70c912f49fe04a46a835f67720efedff3574b6633f882",
+        "bytes": 10033
+      },
+      {
+        "path": "reports/FOLLOW_UP_VERIFICATION.md",
+        "sha256": "43e466b37774534fb8b1e533c4f3b47004ca7f08ce2c14e28e385c5fec190113",
+        "bytes": 6106
+      },
+      {
+        "path": "reports/FRAILTY_VERSION_PROBE.json",
+        "sha256": "207e6eb3478d9f1e2929a7eb1859576001f07ea16b47c71486af04d10783891b",
+        "bytes": 2399
+      },
+      {
+        "path": "reports/FRESH_FOCAL_REFITS.csv",
+        "sha256": "5f7bc5f326e14e209cbdbac193acd1df0c2d237b19d949bf3d27823c58ca03e8",
+        "bytes": 985
+      },
+      {
+        "path": "reports/MODEL_DIAGNOSTIC_ASSESSMENT.csv",
+        "sha256": "8c8644b73f6e676d9f21a5ea7d5a513f03af0e4f6e257f22eb558ab2c2a257b2",
+        "bytes": 1920
+      },
+      {
+        "path": "reports/NUMERICAL_DISCREPANCIES.csv",
+        "sha256": "0481003def9af8841a190c681be559a405c82b95b8a58d6d0f9f391b0aa6d79d",
+        "bytes": 620283
+      },
+      {
+        "path": "reports/PUBLICATION_SAFETY.md",
+        "sha256": "7f22d4a8e05fa9e06de5a7b85c32c2126f6ea73229ab00a0582de8bad717a913",
+        "bytes": 7608
+      },
+      {
+        "path": "reports/PUBLICATION_SOURCE_AUDIT.md",
+        "sha256": "a662fe88842f4173a90711871e051bb8b060db699da931598e4b1652a1ccf0d7",
+        "bytes": 6019
+      },
+      {
+        "path": "reports/PUBLISHED_FROZEN_COMPARISON.csv",
+        "sha256": "eb6c55adb1e8a9b807ffdbb06436618143ef23a46b65caa3ec0e152a7b4243a0",
+        "bytes": 52839
+      },
+      {
+        "path": "reports/QA_GLMM_DIAGNOSTICS.json",
+        "sha256": "0a7db41f6037e6ff2b5b27368dac2c632a149f4c5113fc7759469c0653852311",
+        "bytes": 2259
+      },
+      {
+        "path": "reports/QA_GLMM_STATIONARITY.json",
+        "sha256": "41ae3ffb483b548ebcd044259a412f3b5959c0e2a1ea95e4e4d61b807375b56a",
+        "bytes": 1330
+      },
+      {
+        "path": "reports/RELEASE_GATE.json",
+        "sha256": "7acc8897a55ea646ef666e1cd39f012dc171b8efdb5338417e2b097cda7d8d42",
+        "bytes": 1993
+      },
+      {
+        "path": "reports/REPRODUCIBILITY_AUDIT.md",
+        "sha256": "a2956fdfe6c5a18f22958bc01e2941f91d3733604a8b9c185f7930bc06dfc514",
+        "bytes": 22046
+      },
+      {
+        "path": "reports/RESULT_COMPARISON.csv",
+        "sha256": "7687b877c014d8c8e43d4ec75e79b954a2989393e85949054648710f2a655ff5",
+        "bytes": 228448
+      },
+      {
+        "path": "reports/S2_REPOSITORY_COMPARISON.json",
+        "sha256": "ae9691da42f4f261614dcbe325a1c07604224dba709b7fcc7538014bd0dc9597",
+        "bytes": 58647
+      },
+      {
+        "path": "reproducibility/README.md",
+        "sha256": "2dd02e0ff0fe58a571318b5972c9e4c648eacd83535adeea0c9e1cccc8b20dc8",
+        "bytes": 1256
+      },
+      {
+        "path": "scripts/assess_model_diagnostics.py",
+        "sha256": "c64fea92b71adea5b6979ec3220d19509371742774ca5b51aa679d007b5da56b",
+        "bytes": 3017
+      },
+      {
+        "path": "scripts/audit_firth_replicates.py",
+        "sha256": "f379e1616c38007fa092bcdb2f95494fc7f7e944515bcc2654a327dabf405d92",
+        "bytes": 8668
+      },
+      {
+        "path": "scripts/check_qa_stationarity.R",
+        "sha256": "d675eb0684b995b82cba26d5efe2e809588ccad5124cd74e9be468be5e2de0fc",
+        "bytes": 1333
+      },
+      {
+        "path": "scripts/classify_differences.py",
+        "sha256": "17da8cdb1ae4d4692b93809fb3d2f364759ddbdfaade05e44d26cf39bbf811ac",
+        "bytes": 6123
+      },
+      {
+        "path": "scripts/diagnose_qa_glmm.R",
+        "sha256": "360a7f1ea819d5f89ebe16cd7c53130fe33d338ea08eac370ffdebeb6bda2071",
+        "bytes": 2714
+      },
+      {
+        "path": "scripts/estimate_impact.py",
+        "sha256": "e6f28107590996dd81383c1a38f53c7d8216974fc6687937368b79ab8b9d66ed",
+        "bytes": 3134
+      },
+      {
+        "path": "scripts/pipeline.py",
+        "sha256": "f4c796ebbdcd27a946072d0645ed6ac5a26433b4f282e1939be884d0cb23a4c1",
+        "bytes": 23855
+      },
+      {
+        "path": "scripts/probe_frailty_version.R",
+        "sha256": "220f6c3f84553ab4c374e8d9d903471213488f75feeaaf24d44cacd429fc95b6",
+        "bytes": 2539
+      },
+      {
+        "path": "scripts/refit_focus.R",
+        "sha256": "f73048b5a62ccfe1d06194f3a65a87e376d7bb8eb6c285dd9e040e9f2284020f",
+        "bytes": 2890
+      },
+      {
+        "path": "scripts/setup_r.R",
+        "sha256": "962a9b4ab9e84ea4466194ce7f893c6602aa5e8ef0f744fa6a404782969bb909",
+        "bytes": 1272
+      },
+      {
+        "path": "scripts/verify_results.py",
+        "sha256": "f169caf862bfe352454f6b87158c56b5f268904cb25d091af2300a8660f3e993",
+        "bytes": 27192
+      },
+      {
+        "path": "tests/test_bootstrap_instrumentation.py",
+        "sha256": "35bddd35e8b46a3ea8f3356f280efeaf7cbb7a702aba53e5261047b8fd55cae8",
+        "bytes": 2118
+      },
+      {
+        "path": "tests/test_difference_classification.py",
+        "sha256": "bbc96c2dccc808ab6f3f98bcff641df11fbabb656758470d88c483dcdeb55143",
+        "bytes": 1409
+      },
+      {
+        "path": "tests/test_exported_firth_evidence.py",
+        "sha256": "4f1c8be1dd1a496736a0f58a2419f245698a7a51cc85ae1f12a7080d6c7eba61",
+        "bytes": 2614
+      },
+      {
+        "path": "tests/test_model_diagnostic_assessment.py",
+        "sha256": "26a05d95cd392bdea0129673e8e47e5f87b052d09c0ae3fb6a56b94d4900bdbd",
+        "bytes": 1431
+      },
+      {
+        "path": "tests/test_verify_results.py",
+        "sha256": "a6a0206ae2491c43e5408e06e9de19ae599a3ce78f0509707d74dff5812dc884",
+        "bytes": 7790
+      },
+      {
+        "path": "tests/test_workspace_safety.py",
+        "sha256": "6f7800607c35dab124897a3522bd1a0c056f1a5c889ca33621bc0cd97b8c6a28",
+        "bytes": 3274
+      }
+    ],
+    "limitations": [
+      "Exact cross-platform equality is not claimed for warning-bearing frailty or internal QA fits.",
+      "Independent finite differences are diagnostic and do not certify global optimality.",
+      "New Firth traces reconstruct the published algorithm but do not recover historical unsaved traces."
+    ],
+    "remote_CI": {
+      "status": "PASS",
+      "tested_code_commit": "f92c54b366865474fdc0e05ea9893604744fdfe5",
+      "tests": 39,
+      "pull_request_run": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122545635",
+      "push_run": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122539941"
+    },
+    "release_assessment": "READY WITH DOCUMENTED LIMITATIONS"
+  }
+}
