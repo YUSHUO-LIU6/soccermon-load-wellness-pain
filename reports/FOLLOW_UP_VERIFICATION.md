@@ -93,5 +93,7 @@ identity and confirmed it contains no credentials and may be disclosed.
 Subsequent commits use the verified GitHub identity. Existing history is
 preserved without force push. Runtime data, model objects, libraries and logs
 remain ignored; only diagnostic summaries and non-identifying replicate
-coefficients are included. Public release remains conditional on final CI and
-release checks; strict numerical differences remain visible in the release.
+coefficients are included. Remote Linux CI passed 39 tests, including reconstruction of frozen summaries
+from the exported traces without raw inputs. RELEASE_GATE.json records
+READY WITH DOCUMENTED LIMITATIONS; strict numerical differences remain
+visible in the release.

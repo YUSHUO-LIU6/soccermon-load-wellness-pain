@@ -7,7 +7,9 @@ Audit branch: `reproducibility/post-publication-audit-20261123`.
 **Follow-up scientific assessment: READY WITH DOCUMENTED LIMITATIONS.**
 Core scientific contrasts and all accepted Firth replicates have been verified.
 Strict ancillary/QA discrepancies remain visible and are not converted to PASS.
-Remote CI and final delivery checks must pass before public release. See
+The 39-test remote CI suite passed on the final code revision. The release
+profile is recorded in [RELEASE_GATE.json](RELEASE_GATE.json); final branch
+checks are verified again before merge. See
 [FOLLOW_UP_VERIFICATION.md](FOLLOW_UP_VERIFICATION.md) for the current evidence.
 
 ## Research and publication information
@@ -255,8 +257,9 @@ The acceptance-tool JSON Path-label defect found against the full R2 master
 was repaired and covered by a nested-result regression test. **39 local unit
 tests passed**; Python compilation and `git diff --check` passed. CFF 1.2.0
 schema validation passed after using the supported electronic-page field.
-The data-free GitHub Actions workflow is prepared but was not run remotely,
-since no push occurred. Tests certify software gates and source integrity;
+The data-free GitHub Actions workflow ran successfully on Linux, including
+the 39 tests, frozen-source checks, exported replicate reconstruction and
+Python compilation. It downloads no raw monitoring data and refits no models. Tests certify software gates and source integrity;
 they do not establish statistical model validity or clinical performance.
 
 ## Known limitations
@@ -302,7 +305,8 @@ an unexplained change to the primary Firth/bootstrap findings.
 The author authorized MIT for project-owned code and confirmed that the first
 private commit's local-account identity contains no credentials and may be
 public. Existing history is preserved; subsequent commits use the verified
-GitHub identity. Remote CI and final release checks remain required.
+GitHub identity. Remote CI passed; the final release profile records the remaining scientific
+limitations and the verified rights/privacy decisions.
 
 No credential candidate, raw archive,
 installed environment or large output was detected among the inspected
@@ -318,8 +322,8 @@ used. Public release is governed by the recorded final release gate.
 
 ## Final reproducibility verdict
 
-**READY WITH DOCUMENTED LIMITATIONS** is the scientific assessment, conditional
-on successful remote CI and final release checks. The raw rebuild, protected
+**READY WITH DOCUMENTED LIMITATIONS** is the final release assessment. Remote
+CI passed, and licensing/privacy decisions are resolved. The raw rebuild, protected
 Firth contrasts, all six original bootstrap procedures and the added Firth
 replicate replay are verified. Exact universal cross-platform equality and
 ancillary-model convergence are not claimed. The retained strict failures,

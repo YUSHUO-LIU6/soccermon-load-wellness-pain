@@ -81,15 +81,18 @@ and later exposure sensitivities are documented deviations/choices; none was
 retroactively inserted into the original protocol. Full-period scaling is
 retrospective, the outcome is self-reported and the findings are associational.
 
-## Current GitHub coverage
+## GitHub baseline coverage before delivery
 
 The local baseline has 137 tracked paths at commit
 `3ddde51a62559787261accf4e20e143e616b0b73`. Connected GitHub metadata/file
 APIs returned 404 and unauthenticated Git inspection failed. The authenticated
-local `gh` CLI subsequently succeeded: the repository is **private**, default
+local `gh` CLI subsequently succeeded: at that baseline check the repository
+was **private**, default
 branch `main`, with the same commit SHA as the local baseline. All 137 remote
 file-blob SHAs match `git ls-tree -r HEAD`; the recursive tree is not truncated.
 This resolves the connector-access limitation. The remote/local baseline and
 S2 comparison therefore concerns the same observed main-branch contents.
-Branch/tag inventories are recorded in local evidence. No push, Release,
-visibility change or other remote mutation occurred.
+Branch/tag inventories were recorded in local evidence before delivery.
+Subsequent verified work is delivered through PR #1 and the release profile;
+this baseline/S2 comparison is not a claim that the delivered main branch
+remains at 3ddde51.

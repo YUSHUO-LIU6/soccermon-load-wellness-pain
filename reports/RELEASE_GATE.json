@@ -1,5 +1,5 @@
 {
-  "assessment": "PENDING_REMOTE_CI",
+  "assessment": "READY WITH DOCUMENTED LIMITATIONS",
   "scientific_assessment": "READY WITH DOCUMENTED LIMITATIONS",
   "strict_result_gates": {
     "PASS": 709,
@@ -35,7 +35,13 @@
     "gamma frailty Model E",
     "joint team/season-removal internal QA GLMM"
   ],
-  "CI": "PENDING",
+  "CI": {
+    "status": "PASS",
+    "tested_code_commit": "f92c54b366865474fdc0e05ea9893604744fdfe5",
+    "tests": 39,
+    "pull_request_run": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122545635",
+    "push_run": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122539941"
+  },
   "pull_request": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/pull/1",
   "previous_remote_CI": {
     "tested_commit": "a8c9898f6bd432adbb16b0d7499f4591e6237572",
@@ -45,5 +51,6 @@
       "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122163971"
     ],
     "tests": 38
-  }
+  },
+  "release_constraints": "Retain strict FAIL records and all unverified ancillary results; no universal convergence or exact cross-platform equality claim"
 }

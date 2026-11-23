@@ -64,14 +64,12 @@ were preserved. No reidentification was attempted.
 No bundled installed Python/R libraries or cached third-party articles/screenshots
 were found in the tracked baseline. The retained polarity notes cite external
 evidence; the cached originals are not included. Analysis files are project
-scripts with source hashes, but no rights-holder attestation or code license
-has been supplied. The initial pass assigned no software license. The rights holders subsequently
+scripts with preserved source hashes. The initial pass assigned no software license. The rights holders subsequently
 authorized the MIT license for project-owned code; LICENSE now records the
 approved attribution. Third-party source-data terms remain separate.
 
-Code-license authority was confirmed by the author on 2026-11-23. Before assigning one, confirm ownership
-of the project code and any contributions and identify applicable source-data
-and reused-material terms. The paper citation, source-dataset attribution, code
+Code-license authority was confirmed by the author on 2026-11-23. Source-data
+and reused-material terms remain identified separately. The paper citation, source-dataset attribution, code
 license and data license are distinct records; one should not be substituted
 for another.
 
@@ -113,15 +111,19 @@ author authorization. Source-data CC BY 4.0 attribution is retained. The first
 private audit commit used an automatic local-account identity; the author
 confirmed it contains no credentials and may be public. Subsequent commits
 use the verified GitHub identity; no history rewrite or force push occurred.
-Statistical limits are documented in FOLLOW_UP_VERIFICATION.md. Remote CI and
-the final release gate must pass before changing visibility or issuing a
-formal Release.
+Statistical limits are documented in FOLLOW_UP_VERIFICATION.md. The remote
+39-test CI suite passed and RELEASE_GATE.json records the qualified release
+assessment.
 
 ## Final proposed-file scan
 
-The final candidate contains 157 paths (20 new files plus the
-137 baseline paths, including modified documents/tools). A second scan of
-all proposed contents found zero token/private-key/current-account-path
-candidates and no file larger than 5 MB. Fresh data and dependency environments
-remain ignored. Discrepancy ledgers retain the public source identifiers under
-the same data-attribution notice; they are not new raw monitoring releases.
+The final candidate contains 178 tracked files. A scan of all proposed file
+contents found zero token/private-key/current-account-path candidates and no
+file larger than 5 MB. Existing reachable history was reviewed; the additional
+local-account commit identity was explicitly reviewed by the author as
+noncredential metadata permitted for public disclosure. Fresh monitoring data,
+model objects, dependency libraries and authentication logs remain ignored.
+Discrepancy ledgers retain public source identifiers under the data-attribution
+notice; bootstrap traces contain coefficients and aggregate counts, not sampled
+player identities. This is a bounded content/history review, not proof that an
+arbitrary secret could never exist.

@@ -3884,9 +3884,9 @@
     "Final publisher layout and exhaustive paper cell/graphic reproduction are not certified."
   ],
   "follow_up": {
-    "recorded_utc": "2026-11-23T06:12:07.147477+00:00",
+    "recorded_utc": "2026-11-23T06:21:10.671214+00:00",
     "baseline_scientific_commit": "3ddde51a62559787261accf4e20e143e616b0b73",
-    "delivery_parent_commit": "a8c9898f6bd432adbb16b0d7499f4591e6237572",
+    "delivery_parent_commit": "f92c54b366865474fdc0e05ea9893604744fdfe5",
     "scope": "Post-publication verification; existing full R1/R2 and other bootstrap evidence reused",
     "Firth_replay": {
       "scope": "POST_PUBLICATION_VALIDATION",
@@ -4341,8 +4341,8 @@
       },
       {
         "path": "docs/DATA_REUSE.md",
-        "sha256": "41cd86f5ddbb26c41c924f9917074a5e17ade5e891627521ae2dc6aa8fe70626",
-        "bytes": 2019
+        "sha256": "f443b2bf2bbde0e35206aa34a61fe671af298807b2eff10a4dc0cdf34d4a16d6",
+        "bytes": 2012
       },
       {
         "path": "docs/REPRODUCING.md",
@@ -4396,8 +4396,8 @@
       },
       {
         "path": "reports/FOLLOW_UP_VERIFICATION.md",
-        "sha256": "79bdf49e4a463870a2f3199d2fe2781c6ce76da922af1b06587492c9b80df486",
-        "bytes": 5989
+        "sha256": "43e466b37774534fb8b1e533c4f3b47004ca7f08ce2c14e28e385c5fec190113",
+        "bytes": 6106
       },
       {
         "path": "reports/FRAILTY_VERSION_PROBE.json",
@@ -4421,13 +4421,13 @@
       },
       {
         "path": "reports/PUBLICATION_SAFETY.md",
-        "sha256": "45a2d6ce9f70e8cbb8ecd63599ec7a88101207d6ed7d9661a4b352b157c30570",
-        "bytes": 7457
+        "sha256": "7f22d4a8e05fa9e06de5a7b85c32c2126f6ea73229ab00a0582de8bad717a913",
+        "bytes": 7608
       },
       {
         "path": "reports/PUBLICATION_SOURCE_AUDIT.md",
-        "sha256": "98756af6e9d5a013742690da5319acf68f6fd37535714b545f49887375181a26",
-        "bytes": 5861
+        "sha256": "a662fe88842f4173a90711871e051bb8b060db699da931598e4b1652a1ccf0d7",
+        "bytes": 6019
       },
       {
         "path": "reports/PUBLISHED_FROZEN_COMPARISON.csv",
@@ -4446,13 +4446,13 @@
       },
       {
         "path": "reports/RELEASE_GATE.json",
-        "sha256": "d2d86fe343028c733806360c597781f0c2d849e59fc9627fb43990d885a34fda",
-        "bytes": 1500
+        "sha256": "7acc8897a55ea646ef666e1cd39f012dc171b8efdb5338417e2b097cda7d8d42",
+        "bytes": 1993
       },
       {
         "path": "reports/REPRODUCIBILITY_AUDIT.md",
-        "sha256": "e0fa767ad5e86d1203dcf5449253a26934077e51db8a36496bdedd5a5832bf18",
-        "bytes": 21712
+        "sha256": "a2956fdfe6c5a18f22958bc01e2941f91d3733604a8b9c185f7930bc06dfc514",
+        "bytes": 22046
       },
       {
         "path": "reports/RESULT_COMPARISON.csv",
@@ -4559,6 +4559,14 @@
       "Exact cross-platform equality is not claimed for warning-bearing frailty or internal QA fits.",
       "Independent finite differences are diagnostic and do not certify global optimality.",
       "New Firth traces reconstruct the published algorithm but do not recover historical unsaved traces."
-    ]
+    ],
+    "remote_CI": {
+      "status": "PASS",
+      "tested_code_commit": "f92c54b366865474fdc0e05ea9893604744fdfe5",
+      "tests": 39,
+      "pull_request_run": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122545635",
+      "push_run": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122539941"
+    },
+    "release_assessment": "READY WITH DOCUMENTED LIMITATIONS"
   }
 }
