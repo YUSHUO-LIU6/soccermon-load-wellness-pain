@@ -59,6 +59,11 @@ The R2 historical workflow explicitly uses the frozen R1 baseline; a fresh R1
 run does not replace it. Some historical scripts append or resume, so full
 runs require separate clean workspaces.
 
+The [follow-up verification](reports/FOLLOW_UP_VERIFICATION.md) records
+replicate-level convergence evidence and the scientific-impact classification
+of retained cross-platform differences. Ancillary frailty and joint-removal QA
+fits remain unverified for interpretation.
+
 The [post-publication audit](reports/REPRODUCIBILITY_AUDIT.md),
 [result comparison](reports/RESULT_COMPARISON.csv) and
 [execution manifest](reports/EXECUTION_MANIFEST.json) distinguish actual new
@@ -96,6 +101,8 @@ the repository and archive are identical.
 
 Raw ZIP files, local dependencies, manuscript drafts and private reviewer
 correspondence are not distributed here. Existing player-level summaries and
-third-party materials require the reuse review documented in the audit.
-No repository code license has been selected. The article's publication
-license does not itself resolve licensing of all code or source data.
+third-party materials are covered by the attribution and rights review in
+[DATA_REUSE.md](docs/DATA_REUSE.md).
+Project-owned software is licensed under [MIT](LICENSE), with author
+authorization. Source data, derived data and published materials retain their
+respective terms; see [reuse and attribution](docs/DATA_REUSE.md).

@@ -237,17 +237,17 @@ r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_replicates.csv,struct
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_replicates.csv,structure,row_key_multiset,PASS,2000 distinct keys,2000 distinct keys,exact,,,keys=replicate; missing/extra keys or occurrence counts=0
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_replicates.csv,field,beta_interaction,PASS,2000 paired rows,0 differences,Gate A: relative 1e-6 or absolute 1e-8; text/NA/state exact (whitespace/case for bool),8.215650382226158e-14,7.078854147687405e-13,
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,structure,root.keys,PASS,OR_ci_high|OR_ci_low|OR_median|beta_full_sample|model_id|n_boot_failed|n_boot_ok|n_boot_requested|p_OR_gt1|term|wellness_variant,OR_ci_high|OR_ci_low|OR_median|beta_full_sample|model_id|n_boot_failed|n_boot_ok|n_boot_requested|p_OR_gt1|term|wellness_variant,exact,,,
-r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.OR_ci_high,PASS,1.133109376918052,1.1331093769180518,Gate A: relative 1e-6 or absolute 1e-8,2.220446049250313e-16,1.9596043369526353e-16,
+r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.n_boot_failed,PASS,0,0,exact,0.0,0.0,
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.OR_median,PASS,0.740412992385132,0.7404129923851331,Gate A: relative 1e-6 or absolute 1e-8,1.1102230246251565e-15,1.499464536742844e-15,
+r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.OR_ci_high,PASS,1.133109376918052,1.1331093769180518,Gate A: relative 1e-6 or absolute 1e-8,2.220446049250313e-16,1.9596043369526353e-16,
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.wellness_variant,PASS,soreness,soreness,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.n_boot_requested,PASS,2000,2000,exact,0.0,0.0,
+r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.beta_full_sample,PASS,-0.3410246022976568,-0.34102460229765785,Gate A: relative 1e-6 or absolute 1e-8,1.0547118733938987e-15,3.0927735602879186e-15,
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.n_boot_ok,PASS,2000,2000,exact,0.0,0.0,
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.p_OR_gt1,PASS,0.102,0.102,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.n_boot_failed,PASS,0,0,exact,0.0,0.0,
-r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.OR_ci_low,PASS,0.5567567069208207,0.5567567069208209,Gate A: relative 1e-6 or absolute 1e-8,2.220446049250313e-16,3.988180154183744e-16,
-r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.term,PASS,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.beta_full_sample,PASS,-0.3410246022976568,-0.34102460229765785,Gate A: relative 1e-6 or absolute 1e-8,1.0547118733938987e-15,3.0927735602879186e-15,
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.model_id,PASS,A_nonoverlap_dropteam_boot,A_nonoverlap_dropteam_boot,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
+r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.term,PASS,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
+r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.OR_ci_low,PASS,0.5567567069208207,0.5567567069208209,Gate A: relative 1e-6 or absolute 1e-8,2.220446049250313e-16,3.988180154183744e-16,
+r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json,value,root.n_boot_requested,PASS,2000,2000,exact,0.0,0.0,
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_diagnostics.csv,artifact_identity,SHA-256 recorded,PASS,8c13bfc70fc5eafb46d45e4e434f3021c0736839661a96233aa55671e5421931,68b25650e13e4ccf6fafb6499ebf33bd910106f4c902315ae86dbb5247613e31,identity only; byte equality not required for result tables,,,Semantic comparison follows; this row does not assert numerical equality
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_diagnostics.csv,structure,columns,PASS,model_id|wellness_variant|diagnostic|value,model_id|wellness_variant|diagnostic|value,exact order,,,
 r2_frozen_r1_baseline,08_NONOVERLAP_WINDOW/nonoverlap_diagnostics.csv,structure,row_count,FAIL,29,25,exact,,,
@@ -297,17 +297,17 @@ r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_row.csv,field,events,PA
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_row.csv,field,optimizer,PASS,1 paired rows,0 differences,Gate A: relative 1e-6 or absolute 1e-8; text/NA/state exact (whitespace/case for bool),0.0,0.0,
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_row.csv,field,notes,PASS,1 paired rows,0 differences,Gate A: relative 1e-6 or absolute 1e-8; text/NA/state exact (whitespace/case for bool),0.0,0.0,
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,structure,root.keys,PASS,OR_ci_high|OR_ci_low|OR_median|beta_full_sample|model_id|n_boot_failed|n_boot_ok|n_boot_requested|p_OR_gt1|term|wellness_variant,OR_ci_high|OR_ci_low|OR_median|beta_full_sample|model_id|n_boot_failed|n_boot_ok|n_boot_requested|p_OR_gt1|term|wellness_variant,exact,,,
-r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.OR_ci_high,PASS,1.1323038612868648,1.1323038612868643,Gate A: relative 1e-6 or absolute 1e-8,4.440892098500626e-16,3.92199678048748e-16,
+r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.n_boot_failed,PASS,0,0,exact,0.0,0.0,
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.OR_median,PASS,0.7400979206944621,0.7400979206944621,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
+r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.OR_ci_high,PASS,1.1323038612868648,1.1323038612868643,Gate A: relative 1e-6 or absolute 1e-8,4.440892098500626e-16,3.92199678048748e-16,
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.wellness_variant,PASS,soreness,soreness,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.n_boot_requested,PASS,2000,2000,exact,0.0,0.0,
+r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.beta_full_sample,PASS,-0.341737458596013,-0.34173745859601284,Gate A: relative 1e-6 or absolute 1e-8,1.6653345369377348e-16,4.87314016958972e-16,
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.n_boot_ok,PASS,2000,2000,exact,0.0,0.0,
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.p_OR_gt1,PASS,0.1015,0.1015,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.n_boot_failed,PASS,0,0,exact,0.0,0.0,
-r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.OR_ci_low,PASS,0.5555808288041754,0.5555808288041754,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.term,PASS,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.beta_full_sample,PASS,-0.341737458596013,-0.34173745859601284,Gate A: relative 1e-6 or absolute 1e-8,1.6653345369377348e-16,4.87314016958972e-16,
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.model_id,PASS,A_drop_team_boot,A_drop_team_boot,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
+r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.term,PASS,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
+r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.OR_ci_low,PASS,0.5555808288041754,0.5555808288041754,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
+r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_boot_summary.json,value,root.n_boot_requested,PASS,2000,2000,exact,0.0,0.0,
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_diagnostics.csv,artifact_identity,SHA-256 recorded,PASS,f8862a647373ec45df36835c0342a12d69225ebf4f5864606e8436a06a0c690a,454421cf3aa33fa1434cde062ac4037ba6122860e1f9198d8fdbf74681422727,identity only; byte equality not required for result tables,,,Semantic comparison follows; this row does not assert numerical equality
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_diagnostics.csv,structure,columns,PASS,model_id|wellness_variant|diagnostic|value,model_id|wellness_variant|diagnostic|value,exact order,,,
 r2_frozen_r1_baseline,09_TEAM_SENSITIVITY/drop_team_diagnostics.csv,structure,row_count,PASS,6,6,exact,,,
@@ -601,10 +601,6 @@ r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.csv,field,events,PASS,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.csv,field,notes,PASS,678 paired rows,0 differences,Gate A: relative 1e-6 or absolute 1e-8; text/NA/state exact (whitespace/case for bool),0.0,0.0,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,structure,root.keys,PASS,duplicate_keys|n_rows|n_rows_R1|n_rows_R2|rows|schema_version,duplicate_keys|n_rows|n_rows_R1|n_rows_R2|rows|schema_version,exact,,,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,value,root.n_rows_R1,PASS,243,243,exact,0.0,0.0,
-r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,value,root.schema_version,PASS,R1 master_results 15-column schema + 1 added column 'taxonomy' (R1_REVISION_SAP | R2_REVIEWER_REQUESTED | R2_INTERNAL_QA_ONLY). analysis_role extended with INTERNAL_QA for R2 internal-QA fits. All other columns identical in meaning to RUN_R2_REPRO/master_results.csv.,R1 master_results 15-column schema + 1 added column 'taxonomy' (R1_REVISION_SAP | R2_REVIEWER_REQUESTED | R2_INTERNAL_QA_ONLY). analysis_role extended with INTERNAL_QA for R2 internal-QA fits. All other columns identical in meaning to RUN_R2_REPRO/master_results.csv.,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,value,root.n_rows,PASS,678,678,exact,0.0,0.0,
-r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,value,root.n_rows_R2,PASS,435,435,exact,0.0,0.0,
-r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,value,root.duplicate_keys,PASS,0,0,exact,0.0,0.0,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json:root.rows,structure,columns,PASS,analysis_role|model_id|wellness_variant|term|OR|CI_low|CI_high|p|se|converged|optimizer|n|players|events|notes|taxonomy,analysis_role|model_id|wellness_variant|term|OR|CI_low|CI_high|p|se|converged|optimizer|n|players|events|notes|taxonomy,exact order,,,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json:root.rows,structure,row_count,PASS,678,678,exact,,,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json:root.rows,structure,row_key_multiset,PASS,678 distinct keys,678 distinct keys,exact,,,"keys=analysis_role,model_id,wellness_variant,term,taxonomy; missing/extra keys or occurrence counts=0"
@@ -619,6 +615,10 @@ r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json:root.rows,field,n
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json:root.rows,field,players,PASS,678 paired rows,0 differences,exact,0.0,0.0,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json:root.rows,field,events,PASS,678 paired rows,0 differences,exact,0.0,0.0,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json:root.rows,field,notes,PASS,678 paired rows,0 differences,Gate A: relative 1e-6 or absolute 1e-8; text/NA/state exact (whitespace/case for bool),0.0,0.0,
+r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,value,root.n_rows,PASS,678,678,exact,0.0,0.0,
+r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,value,root.n_rows_R2,PASS,435,435,exact,0.0,0.0,
+r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,value,root.schema_version,PASS,R1 master_results 15-column schema + 1 added column 'taxonomy' (R1_REVISION_SAP | R2_REVIEWER_REQUESTED | R2_INTERNAL_QA_ONLY). analysis_role extended with INTERNAL_QA for R2 internal-QA fits. All other columns identical in meaning to RUN_R2_REPRO/master_results.csv.,R1 master_results 15-column schema + 1 added column 'taxonomy' (R1_REVISION_SAP | R2_REVIEWER_REQUESTED | R2_INTERNAL_QA_ONLY). analysis_role extended with INTERNAL_QA for R2 internal-QA fits. All other columns identical in meaning to RUN_R2_REPRO/master_results.csv.,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
+r2_frozen_r1_baseline,17_MASTER_RESULTS/MASTER_RESULTS_R2.json,value,root.duplicate_keys,PASS,0,0,exact,0.0,0.0,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MODEL_REGISTRY.csv,artifact_identity,SHA-256 recorded,PASS,39346963081c71f1d8939e45729619368f0fef9181583346e99b073f49095375,09adbbccb98c52c66691e6aa76d833dab19591e6a0b127cae0d2b26547002f1c,identity only; byte equality not required for result tables,,,Semantic comparison follows; this row does not assert numerical equality
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MODEL_REGISTRY.csv,structure,columns,PASS,registry_row|model_id|taxonomy|wellness_variant|estimator|exposure_definition|standardization|team_included|season_included|interaction_included|n|events|event_players|focal_terms|fit_status|role,registry_row|model_id|taxonomy|wellness_variant|estimator|exposure_definition|standardization|team_included|season_included|interaction_included|n|events|event_players|focal_terms|fit_status|role,exact order,,,
 r2_frozen_r1_baseline,17_MASTER_RESULTS/MODEL_REGISTRY.csv,structure,row_count,PASS,86,86,exact,,,
@@ -657,17 +657,17 @@ r2_frozen_r1_baseline,20_FREEZE/FREEZE_HASH.txt,scope,fresh comparison,NOT RUN,,
 r1,r1/RESULTS_LOCK.md,scope,byte comparison,NOT RUN,,,,,,Environment/log/QA prose and lock hashes may vary; structured data are compared separately
 r1,r1/RESULTS_LOCK_HASH.txt,scope,byte comparison,NOT RUN,,,,,,Environment/log/QA prose and lock hashes may vary; structured data are compared separately
 r1,r1/bootstrap_primary_interaction.json,structure,root.keys,PASS,OR_ci_high|OR_ci_low|OR_median|beta_full_sample|model_id|n_boot_failed|n_boot_ok|n_boot_requested|p_OR_gt1|term|wellness_variant,OR_ci_high|OR_ci_low|OR_median|beta_full_sample|model_id|n_boot_failed|n_boot_ok|n_boot_requested|p_OR_gt1|term|wellness_variant,exact,,,
-r1,r1/bootstrap_primary_interaction.json,value,root.OR_ci_high,PASS,1.1071045704185327,1.1071045704185325,Gate A: relative 1e-6 or absolute 1e-8,2.220446049250313e-16,2.005633531447612e-16,
+r1,r1/bootstrap_primary_interaction.json,value,root.n_boot_failed,PASS,0,0,exact,0.0,0.0,
 r1,r1/bootstrap_primary_interaction.json,value,root.OR_median,PASS,0.6697433733162328,0.6697433733162325,Gate A: relative 1e-6 or absolute 1e-8,3.3306690738754696e-16,4.973052674464951e-16,
+r1,r1/bootstrap_primary_interaction.json,value,root.OR_ci_high,PASS,1.1071045704185327,1.1071045704185325,Gate A: relative 1e-6 or absolute 1e-8,2.220446049250313e-16,2.005633531447612e-16,
 r1,r1/bootstrap_primary_interaction.json,value,root.wellness_variant,PASS,soreness,soreness,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r1,r1/bootstrap_primary_interaction.json,value,root.n_boot_requested,PASS,2000,2000,exact,0.0,0.0,
+r1,r1/bootstrap_primary_interaction.json,value,root.beta_full_sample,PASS,-0.42507198520737305,-0.42507198520737316,Gate A: relative 1e-6 or absolute 1e-8,1.1102230246251565e-16,2.611847082991201e-16,
 r1,r1/bootstrap_primary_interaction.json,value,root.n_boot_ok,PASS,2000,2000,exact,0.0,0.0,
 r1,r1/bootstrap_primary_interaction.json,value,root.p_OR_gt1,PASS,0.071,0.071,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r1,r1/bootstrap_primary_interaction.json,value,root.n_boot_failed,PASS,0,0,exact,0.0,0.0,
-r1,r1/bootstrap_primary_interaction.json,value,root.OR_ci_low,PASS,0.4467465376567564,0.44674653765675687,Gate A: relative 1e-6 or absolute 1e-8,4.440892098500626e-16,9.940518222689932e-16,
-r1,r1/bootstrap_primary_interaction.json,value,root.term,PASS,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
-r1,r1/bootstrap_primary_interaction.json,value,root.beta_full_sample,PASS,-0.42507198520737305,-0.42507198520737316,Gate A: relative 1e-6 or absolute 1e-8,1.1102230246251565e-16,2.611847082991201e-16,
 r1,r1/bootstrap_primary_interaction.json,value,root.model_id,PASS,A_boot,A_boot,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
+r1,r1/bootstrap_primary_interaction.json,value,root.term,PASS,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,acute_load_7d_wp_z:soreness_burden_recent3_wp_z,Gate A: relative 1e-6 or absolute 1e-8,0.0,0.0,
+r1,r1/bootstrap_primary_interaction.json,value,root.OR_ci_low,PASS,0.4467465376567564,0.44674653765675687,Gate A: relative 1e-6 or absolute 1e-8,4.440892098500626e-16,9.940518222689932e-16,
+r1,r1/bootstrap_primary_interaction.json,value,root.n_boot_requested,PASS,2000,2000,exact,0.0,0.0,
 r1,r1/bootstrap_replicates.csv,artifact_identity,SHA-256 recorded,PASS,e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03,25cbc499866655a4cd71c3dbb85bfe1ed88dd3072e525840b21f1252bf2fc7dd,identity only; byte equality not required for result tables,,,Semantic comparison follows; this row does not assert numerical equality
 r1,r1/bootstrap_replicates.csv,structure,columns,PASS,replicate|beta_interaction,replicate|beta_interaction,exact order,,,
 r1,r1/bootstrap_replicates.csv,structure,row_count,PASS,2000,2000,exact,,,
@@ -784,7 +784,37 @@ r2_frozen_r1_baseline,drop_team_boot,bootstrap_integrity,B=2000 actual/valid/fai
 r1,r1/firth_bootstrap_results.csv,bootstrap_integrity,soreness summary counts,PASS,9 terms; requested=2000; ok+failed=2000,"[(2000, 2000, 0)]",exact,,,Counts parsed from original summary; individual Firth replicates are not saved by historical implementation
 r1,r1/firth_bootstrap_results.csv,bootstrap_integrity,fatigue summary counts,PASS,9 terms; requested=2000; ok+failed=2000,"[(2000, 2000, 0)]",exact,,,Counts parsed from original summary; individual Firth replicates are not saved by historical implementation
 r1,r1/firth_bootstrap_results.csv,bootstrap_integrity,readiness summary counts,PASS,9 terms; requested=2000; ok+failed=2000,"[(2000, 1999, 1)]",exact,,,Counts parsed from original summary; individual Firth replicates are not saved by historical implementation
-r1,r1/firth_bootstrap_results.csv,bootstrap_integrity,independent per-replicate Firth audit,BLOCKED,,,,,,Historical Firth routine does not persist replicate estimates/IDs; summary and execution log alone cannot independently verify every replicate
+post-publication,post-publication Firth replicate audit,provenance,source/input/seed/replicate hashes,PASS,,,,,,New replay only; historical individual traces remain unavailable
+post-publication,post-publication Firth replicate audit,bootstrap_integrity,soreness replicate convergence/counts,PASS,2000 unique IDs; accepted records meet original step criterion,completed=2000; accepted=2000; accepted without criterion=0,unchanged 1e-9 step rule,,,
+post-publication,post-publication Firth replicate audit,replicate_summary,soreness/Intercept,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,soreness/acute_load_7d_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,soreness/soreness_burden_recent3_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,soreness/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,soreness/chronic_load_28d_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,soreness/prev_episode_ever,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,soreness/calendar_time,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,soreness/teamTeamB,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,soreness/season2021,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,bootstrap_integrity,fatigue replicate convergence/counts,PASS,2000 unique IDs; accepted records meet original step criterion,completed=2000; accepted=2000; accepted without criterion=0,unchanged 1e-9 step rule,,,
+post-publication,post-publication Firth replicate audit,replicate_summary,fatigue/Intercept,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,fatigue/acute_load_7d_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,fatigue/fatigue_burden_recent3_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,fatigue/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,fatigue/chronic_load_28d_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,fatigue/prev_episode_ever,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,fatigue/calendar_time,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,fatigue/teamTeamB,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,fatigue/season2021,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,bootstrap_integrity,readiness replicate convergence/counts,PASS,2000 unique IDs; accepted records meet original step criterion,completed=2000; accepted=1999; accepted without criterion=0,unchanged 1e-9 step rule,,,
+post-publication,post-publication Firth replicate audit,replicate_summary,readiness/Intercept,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,readiness/acute_load_7d_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,readiness/readiness_deficit_recent3_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,readiness/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,readiness/chronic_load_28d_wp_z,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,readiness/prev_episode_ever,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,readiness/calendar_time,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,readiness/teamTeamB,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
+post-publication,post-publication Firth replicate audit,replicate_summary,readiness/season2021,PASS,,,,,,Recomputed from individual saved coefficients; unchanged Gate A tolerance
 r1,bootstrap seed,implementation,marginal RNG seed,PASS,20260722,20260722,source-code audit only,,,SEED read from preserved routine; runtime provenance checked separately
 r1,bootstrap seed,implementation,Firth RNG initial seed,PASS,20260723,20260723,source-code audit only,,,default_rng(SEED+1); one stream continues across soreness/fatigue/readiness
 r1,execution provenance,full_run,r1-full,PASS,COMPLETED marker; pipeline exit=0; seed=20260722,marker=COMPLETED; exit=0,exact,,,Producer manifest checked; numerical results assessed separately

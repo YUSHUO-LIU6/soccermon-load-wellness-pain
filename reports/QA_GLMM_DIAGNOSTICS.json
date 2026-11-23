@@ -1,0 +1,55 @@
+{
+  "scope": "POST_PUBLICATION_VALIDATION: fixed QA formula, initialization diagnostics only",
+  "R": "R version 4.5.2 (2025-10-31)",
+  "lme4": "2.0.1",
+  "n": 19758,
+  "events": 28,
+  "fits": {
+    "default": {
+      "formula": "onset_day ~ acute_load_7d_wp_z + soreness_burden_recent3_wp_z +      chronic_load_28d_wp_z + prev_episode_ever + calendar_time +      (1 | player_id) + acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+      "log_likelihood": -175.41084986681426,
+      "theta": {
+        "player_id.(Intercept)": 3.438772757461166
+      },
+      "coefficients": {
+        "(Intercept)": -7.5564304481861813,
+        "acute_load_7d_wp_z": -0.36874896308653021,
+        "soreness_burden_recent3_wp_z": -0.21301590045833632,
+        "chronic_load_28d_wp_z": -0.063813126272007858,
+        "prev_episode_ever": -0.40011530156531783,
+        "calendar_time": -0.0056041392405497886,
+        "acute_load_7d_wp_z:soreness_burden_recent3_wp_z": -0.35585512770007927
+      },
+      "warnings": [],
+      "optimizer_code": 0,
+      "lme4_convergence": null,
+      "max_abs_gradient": null,
+      "derivative_storage_class": "NULL",
+      "max_abs_scaled_gradient": null,
+      "Hessian_eigenvalues": null
+    },
+    "frozen_fixed_effect_start": {
+      "formula": "onset_day ~ acute_load_7d_wp_z + soreness_burden_recent3_wp_z +      chronic_load_28d_wp_z + prev_episode_ever + calendar_time +      (1 | player_id) + acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+      "log_likelihood": -176.30941733787895,
+      "theta": {
+        "player_id.(Intercept)": 2.0942815435686608
+      },
+      "coefficients": {
+        "(Intercept)": -6.5369005180674167,
+        "acute_load_7d_wp_z": -0.37831022926764551,
+        "soreness_burden_recent3_wp_z": -0.18486185523925419,
+        "chronic_load_28d_wp_z": -0.16655240682291322,
+        "prev_episode_ever": 0.60150236425297077,
+        "calendar_time": -0.0057741364364168445,
+        "acute_load_7d_wp_z:soreness_burden_recent3_wp_z": -0.35388685415885257
+      },
+      "warnings": [],
+      "optimizer_code": 0,
+      "lme4_convergence": null,
+      "max_abs_gradient": null,
+      "derivative_storage_class": "NULL",
+      "max_abs_scaled_gradient": null,
+      "Hessian_eigenvalues": null
+    }
+  }
+}

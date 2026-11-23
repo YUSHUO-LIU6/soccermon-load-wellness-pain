@@ -65,9 +65,11 @@ No bundled installed Python/R libraries or cached third-party articles/screensho
 were found in the tracked baseline. The retained polarity notes cite external
 evidence; the cached originals are not included. Analysis files are project
 scripts with source hashes, but no rights-holder attestation or code license
-has been supplied. No MIT, GPL or other new license has been added.
+has been supplied. The initial pass assigned no software license. The rights holders subsequently
+authorized the MIT license for project-owned code; LICENSE now records the
+approved attribution. Third-party source-data terms remain separate.
 
-A code license remains an author decision. Before assigning one, confirm ownership
+Code-license authority was confirmed by the author on 2026-11-23. Before assigning one, confirm ownership
 of the project code and any contributions and identify applicable source-data
 and reused-material terms. The paper citation, source-dataset attribution, code
 license and data license are distinct records; one should not be substituted
@@ -106,14 +108,14 @@ It does not claim a model refit or a full bootstrap run.
 
 ## Release gate
 
-**Not cleared for an irreversible public release by this review.** Resolve
-the numerical/source discrepancies and the code-license decision.
-The authenticated GitHub CLI subsequently verified the private remote main
-commit and all 137 file blobs against the local baseline; connector 404s
-did not reflect absent repository content. The author should also review the historical account-path
-comment and Git identity metadata. No credentials or large raw-data leak were
-detected in the inspected scope. No push, Release, visibility change, history
-rewrite, license assignment, or removal of frozen scientific evidence was made.
+The code-license and identity-disclosure decisions are now resolved by explicit
+author authorization. Source-data CC BY 4.0 attribution is retained. The first
+private audit commit used an automatic local-account identity; the author
+confirmed it contains no credentials and may be public. Subsequent commits
+use the verified GitHub identity; no history rewrite or force push occurred.
+Statistical limits are documented in FOLLOW_UP_VERIFICATION.md. Remote CI and
+the final release gate must pass before changing visibility or issuing a
+formal Release.
 
 ## Final proposed-file scan
 

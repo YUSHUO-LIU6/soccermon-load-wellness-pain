@@ -3273,10 +3273,10 @@
   ],
   "provenance_note": "Scientific source hashes are verified independently. Working-tree wrapper additions during execution affected subsequent figure/verification commands only; full model specifications and full-run orchestration were unchanged.",
   "comparison_status_counts": {
-    "PASS": 678,
-    "NOT RUN": 17,
+    "PASS": 709,
     "FAIL": 95,
-    "BLOCKED": 1
+    "NOT RUN": 17,
+    "BLOCKED": 0
   },
   "focal_refits": [
     {
@@ -3882,5 +3882,673 @@
     "R2 uses copied frozen R1 baseline; it is not a fresh-R1 end-to-end comparison.",
     "Original and current R/package/platform versions differ.",
     "Final publisher layout and exhaustive paper cell/graphic reproduction are not certified."
-  ]
+  ],
+  "follow_up": {
+    "recorded_utc": "2026-11-23T06:08:32.833833+00:00",
+    "baseline_scientific_commit": "3ddde51a62559787261accf4e20e143e616b0b73",
+    "delivery_parent_commit": "11d8af18729e1230786af4240e0226e92f88359a",
+    "scope": "Post-publication verification; existing full R1/R2 and other bootstrap evidence reused",
+    "Firth_replay": {
+      "scope": "POST_PUBLICATION_VALIDATION",
+      "started_utc": "2026-11-23T05:40:52.247944+00:00",
+      "source_sha256": "2b92b77626a7b542a8ce1a09c3961aa21fd2c15ea37e9ee4ee85ce96fc9a2a2d",
+      "dataset_sha256": "d596116f0a4a27ede6307f975fba10b558c43a8f3c5cbf26ad7b25ddcbd30fef",
+      "reference_sha256": "2ce324df6079f3ad2547ce860ebfbb1b693f9e508bdb46926b617e58a753954b",
+      "initial_seed": 20260723,
+      "requested_per_variant": 2000,
+      "max_iterations": 200,
+      "step_tolerance": 1e-09,
+      "variants": {
+        "soreness": {
+          "terms": [
+            "Intercept",
+            "acute_load_7d_wp_z",
+            "soreness_burden_recent3_wp_z",
+            "acute_load_7d_wp_z:soreness_burden_recent3_wp_z",
+            "chronic_load_28d_wp_z",
+            "prev_episode_ever",
+            "calendar_time",
+            "teamTeamB",
+            "season2021"
+          ],
+          "completed": 2000,
+          "original_accepted": 2000,
+          "original_rejected": 0,
+          "termination_counts": {
+            "step_tolerance": 2000
+          },
+          "accepted_without_convergence_criterion": 0,
+          "convergence_criterion_accepted": 2000,
+          "reconstructed_original_summary": {
+            "OR": [
+              0.009632931365980486,
+              0.6100153898670228,
+              0.832164965398582,
+              0.6550922812138917,
+              0.9604036493501124,
+              6.262726409957635,
+              0.9917588486029127,
+              0.023049277279307,
+              2.9138486943264357
+            ],
+            "CI_low": [
+              0.0011390368214841005,
+              0.2504172664722457,
+              0.5864229269465361,
+              0.43975365542598,
+              0.481508672403659,
+              1.8914658778338165,
+              0.9844920010836196,
+              0.006719538151341104,
+              0.3460575994681614
+            ],
+            "CI_high": [
+              0.04270559107991599,
+              1.1010870303771592,
+              1.470532662524384,
+              1.158568786801437,
+              1.954462457224423,
+              29.06829676157386,
+              0.9960851910467345,
+              0.08659839510744781,
+              30.7620538924795
+            ],
+            "se": [
+              0.9463520638561028,
+              0.375252310631478,
+              0.24279232526295605,
+              0.25438600782811255,
+              0.3612452130642233,
+              0.7131853200123937,
+              0.003152118509000083,
+              0.6518750445132584,
+              1.1726311125864861
+            ]
+          },
+          "criterion_only_diagnostic_summary": {
+            "OR": [
+              0.009632931365980486,
+              0.6100153898670228,
+              0.832164965398582,
+              0.6550922812138917,
+              0.9604036493501124,
+              6.262726409957635,
+              0.9917588486029127,
+              0.023049277279307,
+              2.9138486943264357
+            ],
+            "CI_low": [
+              0.0011390368214841005,
+              0.2504172664722457,
+              0.5864229269465361,
+              0.43975365542598,
+              0.481508672403659,
+              1.8914658778338165,
+              0.9844920010836196,
+              0.006719538151341104,
+              0.3460575994681614
+            ],
+            "CI_high": [
+              0.04270559107991599,
+              1.1010870303771592,
+              1.470532662524384,
+              1.158568786801437,
+              1.954462457224423,
+              29.06829676157386,
+              0.9960851910467345,
+              0.08659839510744781,
+              30.7620538924795
+            ],
+            "se": [
+              0.9463520638561028,
+              0.375252310631478,
+              0.24279232526295605,
+              0.25438600782811255,
+              0.3612452130642233,
+              0.7131853200123937,
+              0.003152118509000083,
+              0.6518750445132584,
+              1.1726311125864861
+            ]
+          },
+          "previous_fresh_summary_agreement": true
+        },
+        "fatigue": {
+          "terms": [
+            "Intercept",
+            "acute_load_7d_wp_z",
+            "fatigue_burden_recent3_wp_z",
+            "acute_load_7d_wp_z:fatigue_burden_recent3_wp_z",
+            "chronic_load_28d_wp_z",
+            "prev_episode_ever",
+            "calendar_time",
+            "teamTeamB",
+            "season2021"
+          ],
+          "completed": 2000,
+          "original_accepted": 2000,
+          "original_rejected": 0,
+          "termination_counts": {
+            "step_tolerance": 2000
+          },
+          "accepted_without_convergence_criterion": 0,
+          "convergence_criterion_accepted": 2000,
+          "reconstructed_original_summary": {
+            "OR": [
+              0.010173862976407272,
+              0.6284949167868429,
+              0.756791411132853,
+              0.8673767724252479,
+              0.973228161897915,
+              5.906293195817038,
+              0.9917865749499527,
+              0.02602088218922789,
+              2.727627157903463
+            ],
+            "CI_low": [
+              0.0011387520216532832,
+              0.2376601793948251,
+              0.5543035715128157,
+              0.6184370295955474,
+              0.5054735516353426,
+              1.555299171756887,
+              0.9836390214231356,
+              0.00952290744073201,
+              0.36426609053890524
+            ],
+            "CI_high": [
+              0.0461591323209849,
+              1.3154217751110246,
+              1.166775776699244,
+              1.249459805421018,
+              1.927531327585808,
+              31.800228289659238,
+              0.9959010401342464,
+              0.09626270158173897,
+              41.51038591062104
+            ],
+            "se": [
+              0.9759564696129884,
+              0.4299605656814369,
+              0.18508473667140185,
+              0.17761204416792797,
+              0.35260330872573986,
+              0.7488749284898912,
+              0.0038508233106358566,
+              0.6120591249397748,
+              1.3148692647951155
+            ]
+          },
+          "criterion_only_diagnostic_summary": {
+            "OR": [
+              0.010173862976407272,
+              0.6284949167868429,
+              0.756791411132853,
+              0.8673767724252479,
+              0.973228161897915,
+              5.906293195817038,
+              0.9917865749499527,
+              0.02602088218922789,
+              2.727627157903463
+            ],
+            "CI_low": [
+              0.0011387520216532832,
+              0.2376601793948251,
+              0.5543035715128157,
+              0.6184370295955474,
+              0.5054735516353426,
+              1.555299171756887,
+              0.9836390214231356,
+              0.00952290744073201,
+              0.36426609053890524
+            ],
+            "CI_high": [
+              0.0461591323209849,
+              1.3154217751110246,
+              1.166775776699244,
+              1.249459805421018,
+              1.927531327585808,
+              31.800228289659238,
+              0.9959010401342464,
+              0.09626270158173897,
+              41.51038591062104
+            ],
+            "se": [
+              0.9759564696129884,
+              0.4299605656814369,
+              0.18508473667140185,
+              0.17761204416792797,
+              0.35260330872573986,
+              0.7488749284898912,
+              0.0038508233106358566,
+              0.6120591249397748,
+              1.3148692647951155
+            ]
+          },
+          "previous_fresh_summary_agreement": true
+        },
+        "readiness": {
+          "terms": [
+            "Intercept",
+            "acute_load_7d_wp_z",
+            "readiness_deficit_recent3_wp_z",
+            "acute_load_7d_wp_z:readiness_deficit_recent3_wp_z",
+            "chronic_load_28d_wp_z",
+            "prev_episode_ever",
+            "calendar_time",
+            "teamTeamB",
+            "season2021"
+          ],
+          "completed": 2000,
+          "original_accepted": 1999,
+          "original_rejected": 1,
+          "termination_counts": {
+            "step_tolerance": 2000
+          },
+          "accepted_without_convergence_criterion": 0,
+          "convergence_criterion_accepted": 1999,
+          "reconstructed_original_summary": {
+            "OR": [
+              0.010106904350705407,
+              0.6764877657545127,
+              1.026051929180636,
+              0.8850206723161554,
+              1.0143226531493075,
+              6.211346794421721,
+              0.9919080386458544,
+              0.025951880666402104,
+              2.4963091754404494
+            ],
+            "CI_low": [
+              0.0013467869834122923,
+              0.2806212463790289,
+              0.8548349569587413,
+              0.6212352387893547,
+              0.522110964267444,
+              1.7450512355923669,
+              0.9839377933742516,
+              0.009126139590427573,
+              0.3315574591537966
+            ],
+            "CI_high": [
+              0.047153382615457845,
+              1.2587119097539339,
+              1.2265492764273658,
+              1.251516513716638,
+              2.0244490440170595,
+              28.66261502183971,
+              0.9958392422619093,
+              0.10160127172284852,
+              39.724631087695435
+            ],
+            "se": [
+              0.9455026883561898,
+              0.3988452640319452,
+              0.09634997114722484,
+              0.18658173018283755,
+              0.362013317519466,
+              0.7225666011176463,
+              0.0038869075320786903,
+              0.62119490743278,
+              1.3294837209455435
+            ]
+          },
+          "criterion_only_diagnostic_summary": {
+            "OR": [
+              0.010106904350705407,
+              0.6764877657545127,
+              1.026051929180636,
+              0.8850206723161554,
+              1.0143226531493075,
+              6.211346794421721,
+              0.9919080386458544,
+              0.025951880666402104,
+              2.4963091754404494
+            ],
+            "CI_low": [
+              0.0013467869834122923,
+              0.2806212463790289,
+              0.8548349569587413,
+              0.6212352387893547,
+              0.522110964267444,
+              1.7450512355923669,
+              0.9839377933742516,
+              0.009126139590427573,
+              0.3315574591537966
+            ],
+            "CI_high": [
+              0.047153382615457845,
+              1.2587119097539339,
+              1.2265492764273658,
+              1.251516513716638,
+              2.0244490440170595,
+              28.66261502183971,
+              0.9958392422619093,
+              0.10160127172284852,
+              39.724631087695435
+            ],
+            "se": [
+              0.9455026883561898,
+              0.3988452640319452,
+              0.09634997114722484,
+              0.18658173018283755,
+              0.362013317519466,
+              0.7225666011176463,
+              0.0038869075320786903,
+              0.62119490743278,
+              1.3294837209455435
+            ]
+          },
+          "previous_fresh_summary_agreement": true
+        }
+      },
+      "ended_utc": "2026-11-23T05:48:26.394822+00:00",
+      "replicates_sha256": "c80311394044177f834d99ae420e5926e3959a665ee2024f4ecec43f7f852d24"
+    },
+    "strict_comparison_counts": {
+      "PASS": 709,
+      "FAIL": 95,
+      "BLOCKED": 0,
+      "NOT RUN": 17
+    },
+    "impact_assessment": {
+      "scope": "Interpretation of unchanged strict FAIL outcomes; no tolerance/reference modification",
+      "strict_fail_gates": 95,
+      "impact_class_counts": {
+        "D": 8,
+        "B": 68,
+        "E": 3,
+        "C": 16
+      },
+      "protected_contrast_discrepancy_gates": 0
+    },
+    "model_diagnostic_assessment": "reports/MODEL_DIAGNOSTIC_ASSESSMENT.csv",
+    "commands": [
+      {
+        "argv": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run python scripts/audit_firth_replicates.py --dataset <R1 modeling dataset> --reference <fresh Firth summary> --output workspace/firth_trace_20261123",
+        "exit_status": 0,
+        "log": "work/firth_trace.log"
+      },
+      {
+        "argv": "Rscript --vanilla scripts/diagnose_qa_glmm.R <modeling dataset> workspace/qa_glmm_diagnostics.json",
+        "exit_status": 0,
+        "log": "work/qa_glmm_diagnostics_retry.log",
+        "prior_diagnostic_error": "Optional derivative slots were NULL; original QA fit was unaffected. Defensive extraction was fixed, only that focused QA diagnostic was rerun."
+      },
+      {
+        "argv": "Rscript --vanilla scripts/check_qa_stationarity.R workspace/qa_glmm_fits workspace/qa_stationarity.json",
+        "exit_status": 0,
+        "log": "work/qa_stationarity.log"
+      },
+      {
+        "argv": "uv run python scripts/verify_results.py --r1-workspace workspace/r1_20261123 --r2-workspace workspace/r2_20261123 --firth-audit workspace/firth_trace_20261123 --output reports/RESULT_COMPARISON.csv --details-output reports/NUMERICAL_DISCREPANCIES.csv",
+        "exit_status": 1,
+        "reason": "95 strict differences deliberately remain FAIL; no BLOCKED replicate evidence remains"
+      },
+      {
+        "argv": "uv run python -m unittest discover -s tests -v",
+        "exit_status": 0,
+        "tests": 38,
+        "log": "work/tests_current.log"
+      },
+      {
+        "argv": "uv run python scripts/pipeline.py verify-frozen --workspace workspace/release_integrity_20261123",
+        "exit_status": 0,
+        "log": "work/release_frozen_check.log"
+      },
+      {
+        "argv": "uv run python -m compileall -q analysis scripts tests; git diff --check; CFF 1.2.0 schema validation",
+        "exit_status": 0
+      }
+    ],
+    "author_decisions": {
+      "MIT_project_owned_code": true,
+      "copyright_holders": "Yushuo Liu and Haitao Li",
+      "local_account_git_identity_reviewed_as_noncredential_and_allowed_public": true,
+      "date": "2026-11-23"
+    },
+    "private_pull_request": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/pull/1",
+    "file_hashes": [
+      {
+        "path": ".github/workflows/integrity.yml",
+        "sha256": "f6bc3e81dc22a62c62ea43fd852bf210e93681bbf4e1a682af3622e933d26b45",
+        "bytes": 724
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "c5b8c85d53bcb35a25a57464e0b62c19a8403f42330228f1c7a81690f4d8b17c",
+        "bytes": 364
+      },
+      {
+        "path": "CITATION.cff",
+        "sha256": "ec2da797f54e652fe44a946a98116bebd09c825c0308164d8d8902bff7e62a65",
+        "bytes": 1060
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "b983ad8f081831fbb40d5af39ea56f23902d5554dbc0f4fd39c75d533fdafa59",
+        "bytes": 1081
+      },
+      {
+        "path": "README.md",
+        "sha256": "f8ef38bc7baf6cbef0ff1ac58022783e6d388f714d0cbc378b785d54aa6db059",
+        "bytes": 5664
+      },
+      {
+        "path": "data/README.md",
+        "sha256": "aca9975411ee3e15c1cfe7ce9cbe9ba50e2e4f53b09394b9b23dd318e5f83811",
+        "bytes": 924
+      },
+      {
+        "path": "docs/DATA_REUSE.md",
+        "sha256": "41cd86f5ddbb26c41c924f9917074a5e17ade5e891627521ae2dc6aa8fe70626",
+        "bytes": 2019
+      },
+      {
+        "path": "docs/REPRODUCING.md",
+        "sha256": "f1e0b4eb217f1703805955e7ad3266cdfa8e7d6113b14ef8ff7c73e06f7dba45",
+        "bytes": 9790
+      },
+      {
+        "path": "docs/STUDY.md",
+        "sha256": "b66187b2a027866f780307293f79847ba457cd82c3e8c334afd4d18711f9ea00",
+        "bytes": 7172
+      },
+      {
+        "path": "environment/REPRODUCIBILITY.md",
+        "sha256": "c77a5d39f20b01d0a483272cb384d385fcb29af6d58652d25fb9bffc0e9a1958",
+        "bytes": 2447
+      },
+      {
+        "path": "reports/DISCREPANCY_SUMMARY.csv",
+        "sha256": "89a7727caa5a9cfeccf6fc549de0bfd22eb0d2cc538b8b69a49441ffb79523d2",
+        "bytes": 78247
+      },
+      {
+        "path": "reports/ESTIMATE_IMPACT.csv",
+        "sha256": "0af09140a09937e90ce3f92e83c0fdb33359ed017231a979fe5dfceb314ed115",
+        "bytes": 48277
+      },
+      {
+        "path": "reports/FAIL_IMPACT_CLASSIFICATION.csv",
+        "sha256": "3d0a68a861aecddb9a57b61646bd1046d93190a2867899d8fb8340ae1f1ba6ac",
+        "bytes": 42393
+      },
+      {
+        "path": "reports/FAIL_IMPACT_SUMMARY.json",
+        "sha256": "31db35aa87794b33b646787d9665dba0a29fb5ce4e3af84bcc9e67b29313a9b2",
+        "bytes": 256
+      },
+      {
+        "path": "reports/FIGURE_DATA_CHECKS.json",
+        "sha256": "5afcb1a555040c9a9a37e5cb55bf65806aab029b64ed7aba45113ba13e5bd95f",
+        "bytes": 535
+      },
+      {
+        "path": "reports/FIRTH_REPLICATE_DIAGNOSTICS.csv",
+        "sha256": "c80311394044177f834d99ae420e5926e3959a665ee2024f4ecec43f7f852d24",
+        "bytes": 1548768
+      },
+      {
+        "path": "reports/FIRTH_REPLICATE_SUMMARY.json",
+        "sha256": "9a45053fc9bc10b7e8d70c912f49fe04a46a835f67720efedff3574b6633f882",
+        "bytes": 10033
+      },
+      {
+        "path": "reports/FOLLOW_UP_VERIFICATION.md",
+        "sha256": "79bdf49e4a463870a2f3199d2fe2781c6ce76da922af1b06587492c9b80df486",
+        "bytes": 5989
+      },
+      {
+        "path": "reports/FRAILTY_VERSION_PROBE.json",
+        "sha256": "207e6eb3478d9f1e2929a7eb1859576001f07ea16b47c71486af04d10783891b",
+        "bytes": 2399
+      },
+      {
+        "path": "reports/FRESH_FOCAL_REFITS.csv",
+        "sha256": "5f7bc5f326e14e209cbdbac193acd1df0c2d237b19d949bf3d27823c58ca03e8",
+        "bytes": 985
+      },
+      {
+        "path": "reports/MODEL_DIAGNOSTIC_ASSESSMENT.csv",
+        "sha256": "8c8644b73f6e676d9f21a5ea7d5a513f03af0e4f6e257f22eb558ab2c2a257b2",
+        "bytes": 1920
+      },
+      {
+        "path": "reports/NUMERICAL_DISCREPANCIES.csv",
+        "sha256": "0481003def9af8841a190c681be559a405c82b95b8a58d6d0f9f391b0aa6d79d",
+        "bytes": 620283
+      },
+      {
+        "path": "reports/PUBLICATION_SAFETY.md",
+        "sha256": "45a2d6ce9f70e8cbb8ecd63599ec7a88101207d6ed7d9661a4b352b157c30570",
+        "bytes": 7457
+      },
+      {
+        "path": "reports/PUBLICATION_SOURCE_AUDIT.md",
+        "sha256": "98756af6e9d5a013742690da5319acf68f6fd37535714b545f49887375181a26",
+        "bytes": 5861
+      },
+      {
+        "path": "reports/PUBLISHED_FROZEN_COMPARISON.csv",
+        "sha256": "eb6c55adb1e8a9b807ffdbb06436618143ef23a46b65caa3ec0e152a7b4243a0",
+        "bytes": 52839
+      },
+      {
+        "path": "reports/QA_GLMM_DIAGNOSTICS.json",
+        "sha256": "0a7db41f6037e6ff2b5b27368dac2c632a149f4c5113fc7759469c0653852311",
+        "bytes": 2259
+      },
+      {
+        "path": "reports/QA_GLMM_STATIONARITY.json",
+        "sha256": "41ae3ffb483b548ebcd044259a412f3b5959c0e2a1ea95e4e4d61b807375b56a",
+        "bytes": 1330
+      },
+      {
+        "path": "reports/REPRODUCIBILITY_AUDIT.md",
+        "sha256": "8c989c6dcdb22720c737d0f0ed6feb6924e72dcbde4172c981525ce1e66a80e4",
+        "bytes": 21555
+      },
+      {
+        "path": "reports/RESULT_COMPARISON.csv",
+        "sha256": "7687b877c014d8c8e43d4ec75e79b954a2989393e85949054648710f2a655ff5",
+        "bytes": 228448
+      },
+      {
+        "path": "reports/S2_REPOSITORY_COMPARISON.json",
+        "sha256": "ae9691da42f4f261614dcbe325a1c07604224dba709b7fcc7538014bd0dc9597",
+        "bytes": 58647
+      },
+      {
+        "path": "reproducibility/README.md",
+        "sha256": "2dd02e0ff0fe58a571318b5972c9e4c648eacd83535adeea0c9e1cccc8b20dc8",
+        "bytes": 1256
+      },
+      {
+        "path": "scripts/assess_model_diagnostics.py",
+        "sha256": "c64fea92b71adea5b6979ec3220d19509371742774ca5b51aa679d007b5da56b",
+        "bytes": 3017
+      },
+      {
+        "path": "scripts/audit_firth_replicates.py",
+        "sha256": "f379e1616c38007fa092bcdb2f95494fc7f7e944515bcc2654a327dabf405d92",
+        "bytes": 8668
+      },
+      {
+        "path": "scripts/check_qa_stationarity.R",
+        "sha256": "d675eb0684b995b82cba26d5efe2e809588ccad5124cd74e9be468be5e2de0fc",
+        "bytes": 1333
+      },
+      {
+        "path": "scripts/classify_differences.py",
+        "sha256": "17da8cdb1ae4d4692b93809fb3d2f364759ddbdfaade05e44d26cf39bbf811ac",
+        "bytes": 6123
+      },
+      {
+        "path": "scripts/diagnose_qa_glmm.R",
+        "sha256": "360a7f1ea819d5f89ebe16cd7c53130fe33d338ea08eac370ffdebeb6bda2071",
+        "bytes": 2714
+      },
+      {
+        "path": "scripts/estimate_impact.py",
+        "sha256": "e6f28107590996dd81383c1a38f53c7d8216974fc6687937368b79ab8b9d66ed",
+        "bytes": 3134
+      },
+      {
+        "path": "scripts/pipeline.py",
+        "sha256": "f4c796ebbdcd27a946072d0645ed6ac5a26433b4f282e1939be884d0cb23a4c1",
+        "bytes": 23855
+      },
+      {
+        "path": "scripts/probe_frailty_version.R",
+        "sha256": "220f6c3f84553ab4c374e8d9d903471213488f75feeaaf24d44cacd429fc95b6",
+        "bytes": 2539
+      },
+      {
+        "path": "scripts/refit_focus.R",
+        "sha256": "f73048b5a62ccfe1d06194f3a65a87e376d7bb8eb6c285dd9e040e9f2284020f",
+        "bytes": 2890
+      },
+      {
+        "path": "scripts/setup_r.R",
+        "sha256": "9fae7ee7e9f5e918d53b20ed5ced127716c8a8264a09c9f062a66a374a825bc1",
+        "bytes": 1260
+      },
+      {
+        "path": "scripts/verify_results.py",
+        "sha256": "f169caf862bfe352454f6b87158c56b5f268904cb25d091af2300a8660f3e993",
+        "bytes": 27192
+      },
+      {
+        "path": "tests/test_bootstrap_instrumentation.py",
+        "sha256": "35bddd35e8b46a3ea8f3356f280efeaf7cbb7a702aba53e5261047b8fd55cae8",
+        "bytes": 2118
+      },
+      {
+        "path": "tests/test_difference_classification.py",
+        "sha256": "bbc96c2dccc808ab6f3f98bcff641df11fbabb656758470d88c483dcdeb55143",
+        "bytes": 1409
+      },
+      {
+        "path": "tests/test_model_diagnostic_assessment.py",
+        "sha256": "26a05d95cd392bdea0129673e8e47e5f87b052d09c0ae3fb6a56b94d4900bdbd",
+        "bytes": 1431
+      },
+      {
+        "path": "tests/test_verify_results.py",
+        "sha256": "a6a0206ae2491c43e5408e06e9de19ae599a3ce78f0509707d74dff5812dc884",
+        "bytes": 7790
+      },
+      {
+        "path": "tests/test_workspace_safety.py",
+        "sha256": "6f7800607c35dab124897a3522bd1a0c056f1a5c889ca33621bc0cd97b8c6a28",
+        "bytes": 3274
+      }
+    ],
+    "limitations": [
+      "Exact cross-platform equality is not claimed for warning-bearing frailty or internal QA fits.",
+      "Independent finite differences are diagnostic and do not certify global optimality.",
+      "New Firth traces reconstruct the published algorithm but do not recover historical unsaved traces."
+    ]
+  }
 }

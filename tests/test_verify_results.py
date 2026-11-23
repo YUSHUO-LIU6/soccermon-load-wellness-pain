@@ -14,6 +14,15 @@ spec.loader.exec_module(verify)
 
 
 class NumericPolicyTests(unittest.TestCase):
+    def test_recorded_convergence_requires_finite_original_step(self):
+        record=dict(termination='step_tolerance',criterion_met='true',iterations='12',terminal_step='NaN')
+        self.assertFalse(verify.criterion_record(record))
+        record['terminal_step']='0.00001'
+        self.assertFalse(verify.criterion_record(record))
+        record['terminal_step']='1e-10'
+        self.assertTrue(verify.criterion_record(record))
+
+
     def test_historical_policy_and_strict_counts(self):
         self.assertTrue(verify.compare_value(1, 1.0000009)[0])
         self.assertFalse(verify.compare_value(1, 1.000002)[0])

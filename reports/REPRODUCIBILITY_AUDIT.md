@@ -4,9 +4,11 @@ Audit date: 2026-11-23 (Asia/Shanghai). Baseline commit:
 `3ddde51a62559787261accf4e20e143e616b0b73`.
 Audit branch: `reproducibility/post-publication-audit-20261123`.
 
-**Final verdict: NOT READY — BLOCKERS REMAIN.** Both full workflows completed,
-but complete numerical/estimation-state equivalence and independent Firth
-replicate/convergence validation are not established. No public release was made.
+**Follow-up scientific assessment: READY WITH DOCUMENTED LIMITATIONS.**
+Core scientific contrasts and all accepted Firth replicates have been verified.
+Strict ancillary/QA discrepancies remain visible and are not converted to PASS.
+Remote CI and final delivery checks must pass before public release. See
+[FOLLOW_UP_VERIFICATION.md](FOLLOW_UP_VERIFICATION.md) for the current evidence.
 
 ## Research and publication information
 
@@ -139,7 +141,9 @@ under the unchanged Gate A policy. Marginal replicate tables each have exactly
 
 The Firth completion/acceptance evidence comes from actual loop completion,
 execution logs and term-wise summaries, not independently retained individual
-replicate estimates/IDs. That stronger trace audit remains BLOCKED.
+replicate estimates/IDs. The subsequent post-publication replay now supplies
+6,000 saved traces and verifies convergence of all accepted replicates; it does
+not recover the historical unsaved traces.
 Original marginal-logit bootstraps are whole-player fixed-formula fits, not
 2,000 mixed-effect refits.
 The historical scripts explicitly did not run 2,000 glmer fits; this audit
@@ -173,8 +177,9 @@ each differing cell. No frozen value or acceptance threshold was altered.
 
 ## Numerical discrepancies
 
-The final verifier records **791 field/structure/provenance gates: 678 PASS,
-95 FAIL, 1 BLOCKED and 17 NOT RUN** (exit status 1). These are gates, not counts
+The initial verifier recorded 791 gates (678 PASS, 95 FAIL, 1 BLOCKED,
+17 NOT RUN). With the separate Firth replay evidence, the current verifier
+records **821 gates: 709 PASS, 95 FAIL, 0 BLOCKED, 17 NOT RUN** (exit status 1). These are gates, not counts
 of independent models or failed fits. A 2,411-cell discrepancy ledger and
 grouped summary preserve all compared-cell differences. Final checks identify tie-dependent player ranks and
 cumulative event shares, plus platform/version-sensitive mixed-model fits.
@@ -247,7 +252,7 @@ and Cox HR are explicitly distinguished in the staged mixed-estimator forest
 axis label; no numerical estimate is changed by this presentation correction.
 
 The acceptance-tool JSON Path-label defect found against the full R2 master
-was repaired and covered by a nested-result regression test. **22 local unit
+was repaired and covered by a nested-result regression test. **38 local unit
 tests passed**; Python compilation and `git diff --check` passed. CFF 1.2.0
 schema validation passed after using the supported electronic-page field.
 The data-free GitHub Actions workflow is prepared but was not run remotely,
@@ -274,28 +279,30 @@ must use source data, model coefficients, content and visual inspection.
 
 ## Remaining blockers and public-release safety
 
-No additional analysis process remains running. The full requested historical
-workflows were executed; a separate fresh-R1-baseline substitution into R2 was
-not executed and is not claimed. The following release blockers remain:
+All requested historical workflows completed. The follow-up replays only the
+three Firth streams whose individual records were missing. A separate
+fresh-R1-baseline substitution into R2 was not executed and is not claimed.
 
-1. Full estimation-state/numerical equivalence fails, particularly E/readiness.
-   Recreate the original Windows R 4.6.1 environment with the recorded package
-   versions and rerun into a new root to isolate the residual platform effect.
-   The source/inputs and recovery commands are in `docs/REPRODUCING.md`.
-2. Historical Firth/IRLS code does not establish per-replicate convergence or
-   retain individual Firth estimates. A separately versioned instrumented
-   convergence audit is needed for that stronger claim; rerunning the existing
-   command cannot recover unrecorded historical traces. No frozen inference
-   was silently replaced with a corrected-algorithm result.
-3. The code license/rights-holder decision remains with the author. The source
-   dataset's CC BY 4.0 metadata does not itself assign a software license.
+The previous fresh-replicate BLOCKED finding is resolved: all 6,000 recorded
+Firth attempts meet the original step tolerance, and all 5,999 accepted fits
+reproduce the prior 27 term summaries. The readiness rejection remains intact.
+The historical iteration-limit flag bug remains in preserved source, but it
+did not affect accepted replicates in this replay.
 
-Exact historical duplicates, tied ranks and diagnostic formatting differences
-have documented explanations but remain FAIL under the required strict gates.
-The 17 NOT RUN entries concern copied/manual historical evidence, prose or
-cross-platform session/lock byte comparison, not unexecuted requested bootstrap
-procedures. Complete final publisher-layout recreation remains a documented
-scope limitation, not a claim of a new failed statistical fit.
+The 95 strict FAIL gates are individually classified: 68 estimation/optimizer,
+16 small numerical drift, 8 ordering/duplicate structure, 3 annotations, and
+zero protected-contrast discrepancies. No tolerance was relaxed. Gamma-frailty
+and joint team/season-removal QA fits remain unverified and must not support
+new scientific inference. The additional diagnostics explain their numerical
+instability without selecting a more favorable model. Independent finite
+numerical derivatives are themselves imperfect; global optimality is not
+claimed. These are documented limits on ancillary interpretation rather than
+an unexplained change to the primary Firth/bootstrap findings.
+
+The author authorized MIT for project-owned code and confirmed that the first
+private commit's local-account identity contains no credentials and may be
+public. Existing history is preserved; subsequent commits use the verified
+GitHub identity. Remote CI and final release checks remain required.
 
 No credential candidate, raw archive,
 installed environment or large output was detected among the inspected
@@ -303,21 +310,21 @@ reachable Git blobs. Existing frozen player-linked health summaries, source
 UUIDs, one historical account-path comment and Git identity metadata are
 explicitly disclosed in `PUBLICATION_SAFETY.md`. DataCite supplies the source
 CC BY 4.0 rights metadata; `docs/DATA_REUSE.md` adds attribution and change
-notices. A code license remains an author decision; none was added.
-No push, Release, visibility change, destructive history operation or alteration
-of raw/frozen scientific records occurred.
+notices. MIT was added after explicit rights-holder authorization; third-party terms
+remain separate.
+Private branch and PR delivery occurred after the initial audit. No raw or
+frozen scientific record or historical commit was altered; no force push was
+used. Public release is governed by the recorded final release gate.
 
 ## Final reproducibility verdict
 
-**NOT READY — BLOCKERS REMAIN.** Raw-data reconstruction, the focal Firth
-models and all six archived bootstrap procedures were actually rerun and
-numerically agree at the recorded criteria. The full model suite is not an
-exact cross-platform reproduction: E/readiness changes estimation state and
-other strict numerical/structural differences remain. This audit does not
-certify universal convergence, an original-environment failure reproduction,
-or complete publisher-layout identity. Public release requires explicit
-review of these findings and a code-license decision. No research result,
-reference value or acceptance threshold was changed to manufacture PASS.
+**READY WITH DOCUMENTED LIMITATIONS** is the scientific assessment, conditional
+on successful remote CI and final release checks. The raw rebuild, protected
+Firth contrasts, all six original bootstrap procedures and the added Firth
+replicate replay are verified. Exact universal cross-platform equality and
+ancillary-model convergence are not claimed. The retained strict failures,
+original failures, new warning-bearing returns and provenance remain available
+for inspection. No result or threshold was changed to manufacture PASS.
 
 ## Proposed changes and author decisions
 
@@ -332,9 +339,8 @@ GitHub-connected checkout. Execution evidence was copied locally without
 rerunning the completed workflows; workspace data, environments and logs
 remain excluded from Git. Main-branch scientific history was preserved.
 
-The author must choose/approve a code license and decide the appropriate
-follow-up for the unresolved estimation/convergence evidence before public
-release. A permissive license, a patent-grant license and a copyleft license
-have different reuse obligations; none is adopted implicitly from the dataset
-or article license. Ownership/contributor permission must support the choice.
-Any push, public Release or visibility change still requires explicit approval.
+The author explicitly authorized the MIT license and the historical identity
+disclosure. The follow-up scientific diagnostics are documented separately
+from the original registered/SAP analyses. The current instruction authorizes
+normal GitHub delivery, merge, Release and public visibility only after the
+release gate passes; no additional authorization is inferred from data access.

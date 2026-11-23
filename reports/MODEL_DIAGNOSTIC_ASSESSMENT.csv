@@ -1,0 +1,9 @@
+scope,model,variant,reported_status,assessment,evidence
+frozen,E,soreness,OK (gamma frailty),WARNED_UNVERIFIED,; frailty_warnings: Inner loop failed to coverge for iterations 1 2 3 4 5 6; cox_terms_dropped_aliased: calendar_time || frailty(player_id); frailty_variance: NA
+frozen,E,fatigue,OK (gamma frailty),WARNED_UNVERIFIED,; frailty_warnings: Inner loop failed to coverge for iterations 1 2 3 4 5 6; cox_terms_dropped_aliased: season2021 || frailty(player_id); frailty_variance: NA
+frozen,E,readiness,FAILED,HISTORICAL_FAILURE,No starting estimate was successful; frailty_error: missing value where TRUE/FALSE needed
+fresh,E,soreness,OK (gamma frailty),WARNED_UNVERIFIED,; frailty_warnings: Inner loop failed to coverge for iterations 1 2 3 4 5 6; cox_terms_dropped_aliased: calendar_time || season2021 || frailty(player_id); frailty_variance: NA
+fresh,E,fatigue,OK (gamma frailty),WARNED_UNVERIFIED,; frailty_warnings: Inner loop failed to coverge for iterations 1 2 3 4 5 6; cox_terms_dropped_aliased: season2021 || frailty(player_id); frailty_variance: NA
+fresh,E,readiness,OK (gamma frailty),WARNED_UNVERIFIED,; frailty_warnings: Inner loop failed to coverge for iterations 1; cox_terms_dropped_aliased: teamTeamB || season2021 || frailty(player_id); frailty_variance: NA
+post-publication,A_drop_team_season,default,optimizer code 0,STATIONARITY_UNVERIFIED,"Recomputed deviance matches stored fit; Richardson Hessian is not positive definite; initializations reach different returned coefficients/likelihoods. Numerical derivatives are diagnostic, not a global-optimum certificate."
+post-publication,A_drop_team_season,frozen_fixed_effect_start,optimizer code 0,STATIONARITY_UNVERIFIED,"Recomputed deviance matches stored fit; Richardson Hessian is not positive definite; initializations reach different returned coefficients/likelihoods. Numerical derivatives are diagnostic, not a global-optimum certificate."

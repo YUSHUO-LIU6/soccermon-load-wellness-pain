@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite the published article when using this analysis code."
 type: software
+license: MIT
 title: "SoccerMon load, wellness and lower-limb pain: reproducible analysis code"
 authors:
   - family-names: Liu

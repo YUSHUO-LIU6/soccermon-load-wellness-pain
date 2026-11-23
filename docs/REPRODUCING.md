@@ -160,3 +160,30 @@ on macOS/R 4.5.2. This is an explanatory dependency diagnostic, not a replacemen
 analysis or evidence that the fit converged. Recreating the original Windows
 R 4.6.1 environment remains necessary to isolate the residual failure-state
 difference. The original failure, warnings and current results stay separate.
+
+## Independent Firth replicate diagnostics
+
+The archived Firth summaries did not retain individual replicates. To fill
+that evidence gap without changing the numerical algorithm or acceptance rule:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run python scripts/audit_firth_replicates.py \
+  --dataset workspace/r1-new/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/modeling_dataset.csv \
+  --reference workspace/r1-new/r2/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_PORTABLE/firth_bootstrap_results.csv \
+  --output workspace/firth-trace-new
+uv run python scripts/verify_results.py \
+  --r1-workspace workspace/r1-new --r2-workspace workspace/r2-new \
+  --firth-audit workspace/firth-trace-new --output reports/RESULT_COMPARISON.csv
+```
+
+This replays only three Firth B=2,000 streams, retains the original seed stream,
+and records termination/acceptance plus every coefficient without saving player
+identities. It refuses an existing output root. It is post-publication
+verification, not an original preregistered analysis. The original marginal
+bootstraps do not need repeating solely to add these Firth traces.
+
+Strict FAIL outcomes are not waived by the release decision. The accompanying
+scientific-impact assessment distinguishes protected contrasts from unstable
+ancillary fits, rejected fallback levels, small numeric differences, tied ranks
+and repeated historical records. Model E and the joint team/season-removal QA
+GLMM remain unverified for interpretation; see `reports/FOLLOW_UP_VERIFICATION.md`.

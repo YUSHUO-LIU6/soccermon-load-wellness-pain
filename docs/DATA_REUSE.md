@@ -23,7 +23,8 @@ attempted. Preserve source credit and the change description when reusing
 these derived materials; the original creators do not endorse this analysis.
 
 The article's license, the dataset's recorded license, ownership of project
-code and a proposed software license are separate matters. No software
-license has been assigned by this audit. No third-party software installation,
+code and a proposed software license are separate matters. The code rights holders explicitly authorized the [MIT software license](../LICENSE)
+on 2026-11-23. This authorization covers project-owned code; it does not
+relicense third-party data or the published source materials. No third-party software installation,
 external thesis, instrument screenshot or source article is bundled in the
 proposed repository changes.

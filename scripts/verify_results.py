@@ -20,6 +20,7 @@ import math
 from pathlib import Path
 import re
 import sys
+import statistics
 
 ROOT = Path(__file__).resolve().parents[1]
 REL_TOL, ABS_TOL = 1e-6, 1e-8
@@ -252,7 +253,7 @@ def bootstrap_integrity(audit, scope, summary, reps, label):
         audit.add(scope, label, "bootstrap_integrity", "parse", "FAIL", reason=str(exc))
 
 
-def firth_bootstrap_integrity(audit, output):
+def firth_bootstrap_integrity(audit, output, trace_root=None):
     label = "r1/firth_bootstrap_results.csv"
     if not output.is_file():
         audit.add("r1", label, "bootstrap_integrity", "Firth B=2000", "NOT RUN", reason="Fresh summary absent")
@@ -269,11 +270,70 @@ def firth_bootstrap_integrity(audit, output):
         audit.add("r1", label, "bootstrap_integrity", var + " summary counts", "PASS" if ok else "FAIL",
                   "9 terms; requested=2000; ok+failed=2000", str(sorted(counts)), "exact",
                   reason="Counts parsed from original summary; individual Firth replicates are not saved by historical implementation")
-    audit.add("r1", label, "bootstrap_integrity", "independent per-replicate Firth audit", "BLOCKED",
-              reason="Historical Firth routine does not persist replicate estimates/IDs; summary and execution log alone cannot independently verify every replicate")
+    if trace_root is None:
+        audit.add("r1", label, "bootstrap_integrity", "independent per-replicate Firth audit", "BLOCKED",
+                  reason="Supply --firth-audit for a separately labeled, instrumented post-publication replay; original historical traces were not saved")
+    else:
+        verify_firth_trace(audit, output, trace_root)
 
 
-def compare_all(r1_workspace=None, r2_workspace=None, *, root=ROOT, details=None):
+def criterion_record(row):
+    """Independently validate recorded convergence, rather than trusting flags."""
+    step = number(row.get('terminal_step'))
+    flag = normal(row.get('criterion_met'))
+    try:
+        iterations = int(row['iterations'])
+    except (ValueError, TypeError, KeyError):
+        return False
+    return (normal(row.get('termination')) == 'step_tolerance' and
+            flag is not None and flag.lower() == 'true' and
+            1 <= iterations <= 200 and step is not None and
+            math.isfinite(step) and 0 <= step < 1e-9)
+
+
+def verify_firth_trace(audit, reference, trace_root):
+    label = 'post-publication Firth replicate audit'
+    try:
+        info=json.loads((trace_root/'summary.json').read_text())
+        _, records=read_csv(trace_root/'replicates.csv')
+        _, refs=read_csv(reference)
+        provenance=(info['scope']=='POST_PUBLICATION_VALIDATION' and
+            info['source_sha256']==sha(ROOT/'analysis/core/05_bootstrap_and_ipw.py') and
+            info['dataset_sha256']==sha(reference.parents[1]/'modeling_dataset.csv') and
+            info['reference_sha256']==sha(reference) and info['initial_seed']==20260723 and
+            info['replicates_sha256']==sha(trace_root/'replicates.csv') and
+            info['step_tolerance']==1e-9 and info['max_iterations']==200)
+        audit.add('post-publication',label,'provenance','source/input/seed/replicate hashes',
+                  'PASS' if provenance else 'FAIL',reason='New replay only; historical individual traces remain unavailable')
+        for variant in ('soreness','fatigue','readiness'):
+            group=[r for r in records if r['variant']==variant]
+            accepted=[r for r in group if r['original_accepted'].lower()=='true']
+            count=info['variants'][variant]
+            ids=sorted(int(r['replicate']) for r in group)
+            bad=[r for r in accepted if not criterion_record(r) or
+                 not all(number(r['beta_'+str(i)]) is not None and math.isfinite(number(r['beta_'+str(i)])) for i in range(9))]
+            ok=(ids==list(range(2000)) and len(accepted)==count['original_accepted'] and
+                len(group)-len(accepted)==count['original_rejected'] and not bad)
+            audit.add('post-publication',label,'bootstrap_integrity',variant+' replicate convergence/counts',
+                      'PASS' if ok else 'FAIL','2000 unique IDs; accepted records meet original step criterion',
+                      f'completed={len(group)}; accepted={len(accepted)}; accepted without criterion={len(bad)}','unchanged 1e-9 step rule')
+            reference_rows={r['term']:r for r in refs if r['wellness_variant']==variant}
+            for i,term in enumerate(count['terms']):
+                values=sorted(float(r['beta_'+str(i)]) for r in accepted)
+                def percentile(q):
+                    index=(len(values)-1)*q;lo=math.floor(index);hi=math.ceil(index)
+                    return values[lo]+(values[hi]-values[lo])*(index-lo)
+                computed={'OR':math.exp(statistics.median(values)),
+                          'CI_low':math.exp(percentile(.025)), 'CI_high':math.exp(percentile(.975)),
+                          'se':statistics.stdev(values)}
+                matches=[compare_value(v,reference_rows[term][field])[0] for field,v in computed.items()]
+                audit.add('post-publication',label,'replicate_summary',variant+'/'+term,
+                          'PASS' if all(matches) else 'FAIL',reason='Recomputed from individual saved coefficients; unchanged Gate A tolerance')
+    except (OSError,ValueError,KeyError,TypeError,ZeroDivisionError) as exc:
+        audit.add('post-publication',label,'bootstrap_integrity','trace validation','FAIL',reason=str(exc))
+
+
+def compare_all(r1_workspace=None, r2_workspace=None, *, root=ROOT, details=None, firth_audit=None):
     audit = Audit(details)
     frozen = root / "reproducibility/frozen"
     for entry in read_csv(root / "reproducibility/source_manifest.csv")[1]:
@@ -336,7 +396,7 @@ def compare_all(r1_workspace=None, r2_workspace=None, *, root=ROOT, details=None
         reps = folder / ("bootstrap_replicates.csv" if sub is None else prefix + "_replicates.csv")
         bootstrap_integrity(audit, scope, summary, reps, prefix)
     if r1_workspace is not None:
-        firth_bootstrap_integrity(audit, r1_dir(r1_workspace) / "firth_bootstrap_results.csv")
+        firth_bootstrap_integrity(audit, r1_dir(r1_workspace) / "firth_bootstrap_results.csv", firth_audit)
     for scope, ws in [("r1", r1_workspace), ("r2_frozen_r1_baseline", r2_workspace)]:
         source = root / 'analysis/core/05_bootstrap_and_ipw.py'
         match = re.search(r'^SEED\s*=\s*(\d+)', source.read_text(), re.M)
@@ -380,6 +440,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--r1-workspace", type=Path, help="Fresh R1 execution root, containing r2/")
     parser.add_argument("--r2-workspace", type=Path, help="Fresh R2 execution root using explicitly frozen R1 baseline")
+    parser.add_argument("--firth-audit", type=Path, help="Separate instrumented Firth replay root")
     parser.add_argument("--output", type=Path, default=ROOT / "reports/RESULT_COMPARISON.csv")
     parser.add_argument("--details-output", type=Path,
                         help="Optional complete cell discrepancy ledger, separate from field-level gates")
@@ -392,7 +453,7 @@ def main(argv=None):
     if args.details_output is not None and args.details_output.resolve().is_relative_to((ROOT / 'reproducibility/frozen').resolve()):
         parser.error('Details output must not overwrite a frozen reference')
     details = []
-    rows = compare_all(args.r1_workspace, args.r2_workspace, details=details)
+    rows = compare_all(args.r1_workspace, args.r2_workspace, details=details, firth_audit=args.firth_audit)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=FIELDS, lineterminator='\n')
