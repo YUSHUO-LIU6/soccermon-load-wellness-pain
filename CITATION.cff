@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Please cite the published article when using this analysis code."
+type: software
+title: "SoccerMon load, wellness and lower-limb pain: reproducible analysis code"
+authors:
+  - family-names: Liu
+    given-names: Yushuo
+    orcid: "https://orcid.org/0009-0004-7262-2041"
+  - family-names: Li
+    given-names: Haitao
+repository-code: "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain"
+url: "https://doi.org/10.1371/journal.pone.0362663"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Liu
+      given-names: Yushuo
+      orcid: "https://orcid.org/0009-0004-7262-2041"
+    - family-names: Li
+      given-names: Haitao
+  title: "Within-player load-wellness monitoring and lower-limb pain in elite female football: A reproducible secondary analysis of the SoccerMon dataset"
+  journal: "PLOS ONE"
+  year: 2026
+  month: 11
+  date-published: "2026-11-13"
+  volume: "21"
+  issue: "11"
+  start: "e0362663"
+  doi: "10.1371/journal.pone.0362663"
+  url: "https://doi.org/10.1371/journal.pone.0362663"

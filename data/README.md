@@ -17,3 +17,5 @@ Supply an existing copy with `--raw-zip /path/to/subjective.zip`.
 `reproducibility/data_fingerprints.json` contains order-sensitive column
 digests of six frozen derived files, not the player-level records themselves.
 The source dataset's terms and attribution remain applicable.
+See [DATA_REUSE.md](../docs/DATA_REUSE.md) for creators, the DOI registry's
+CC BY 4.0 record, transformation notices and player-linked summary disclosure.

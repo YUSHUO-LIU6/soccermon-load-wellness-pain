@@ -14,3 +14,19 @@ Rplots.pdf
 .Rhistory
 .RData
 .Rproj.user/
+
+# Fresh execution roots, caches and audit source downloads must remain local.
+work/
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+renv/library/
+renv/staging/

@@ -1,0 +1,48 @@
+{
+  "scope": "Post-publication fixed-formula dependency diagnostic, separate from full R1/R2 execution",
+  "current": {
+    "scope": "Post-publication controlled dependency probe; does not replace the full run",
+    "R": "R version 4.5.2 (2025-10-31)",
+    "survival": "3.8.3",
+    "seed": 20260722,
+    "formula": "Surv(tstart, tstop, onset_day) ~ acute_load_7d_wp_z * readiness_deficit_recent3_wp_z +      chronic_load_28d_wp_z + prev_episode_ever + calendar_time +      team + season + frailty(player_id)",
+    "n": 19817,
+    "events": 28,
+    "gamma_status": "FITTED",
+    "gamma_error": null,
+    "warnings": "Inner loop failed to coverge for iterations 1",
+    "coefficients": {
+      "acute_load_7d_wp_z": -0.7165756523371803,
+      "readiness_deficit_recent3_wp_z": -0.3086068259608788,
+      "chronic_load_28d_wp_z": 0.08656125796519143,
+      "prev_episode_ever": 1.2602846573727624,
+      "calendar_time": -0.003762660019960881,
+      "teamTeamB": null,
+      "season2021": null,
+      "acute_load_7d_wp_z:readiness_deficit_recent3_wp_z": -0.002623333088942613
+    }
+  },
+  "frozen_survival_version": {
+    "scope": "Post-publication controlled dependency probe; does not replace the full run",
+    "R": "R version 4.5.2 (2025-10-31)",
+    "survival": "3.8.6",
+    "seed": 20260722,
+    "formula": "Surv(tstart, tstop, onset_day) ~ acute_load_7d_wp_z * readiness_deficit_recent3_wp_z +      chronic_load_28d_wp_z + prev_episode_ever + calendar_time +      team + season + frailty(player_id)",
+    "n": 19817,
+    "events": 28,
+    "gamma_status": "FITTED",
+    "gamma_error": null,
+    "warnings": "Inner loop failed to coverge for iterations 1",
+    "coefficients": {
+      "acute_load_7d_wp_z": -0.7165756523371803,
+      "readiness_deficit_recent3_wp_z": -0.3086068259608788,
+      "chronic_load_28d_wp_z": 0.08656125796519143,
+      "prev_episode_ever": 1.2602846573727624,
+      "calendar_time": -0.003762660019960881,
+      "teamTeamB": null,
+      "season2021": null,
+      "acute_load_7d_wp_z:readiness_deficit_recent3_wp_z": -0.002623333088942613
+    }
+  },
+  "conclusion": "Both survival versions return the same coefficients with an inner-loop convergence warning on macOS/R 4.5.2. Changing survival alone did not reproduce the original Windows failure; the platform/R effect has not been isolated. Returned coefficients and historical OK flags do not certify convergence."
+}

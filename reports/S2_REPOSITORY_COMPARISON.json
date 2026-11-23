@@ -1,0 +1,989 @@
+{
+  "published_s2_bytes": 8300907,
+  "published_s2_sha256": "d9c9d3cbfa31bd56717ff5c3c925ebe8f74c14062498f0f4ab0bda9d65594577",
+  "published_s2_member_count": 181,
+  "manifest_rows": 101,
+  "comparisons": [
+    {
+      "repository_path": "reproducibility/frozen/04_ANALYSIS_TAXONOMY/ANALYSIS_TAXONOMY.csv",
+      "source_member": "S2_File_reproducibility_archive/04_ANALYSIS_TAXONOMY/ANALYSIS_TAXONOMY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "8331d659221fb571f3a0701add5332e8b901c8f5e64ea49c6cd42ea4ae1a93f9",
+      "repository_sha256": "8331d659221fb571f3a0701add5332e8b901c8f5e64ea49c6cd42ea4ae1a93f9",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_PLAYER.csv",
+      "source_member": "S2_File_reproducibility_archive/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_PLAYER.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "ef3109bef74258a2a9a75f6cee1c08097d4f4a6572c6323aa7e7db14cc5fabbc",
+      "repository_sha256": "ef3109bef74258a2a9a75f6cee1c08097d4f4a6572c6323aa7e7db14cc5fabbc",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_SEASON.csv",
+      "source_member": "S2_File_reproducibility_archive/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_SEASON.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "f934334648086eb201e57288c42c7ca759d0f7ea79ed45bce2825a0b744b17c4",
+      "repository_sha256": "f934334648086eb201e57288c42c7ca759d0f7ea79ed45bce2825a0b744b17c4",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_TEAM.csv",
+      "source_member": "S2_File_reproducibility_archive/05_SAMPLE_EVENT_AUDIT/EVENTS_BY_TEAM.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "cae819f05a9c8d10cc662584bde42495176bb5d2e3d01fe86f3bf727c671984e",
+      "repository_sha256": "cae819f05a9c8d10cc662584bde42495176bb5d2e3d01fe86f3bf727c671984e",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/05_SAMPLE_EVENT_AUDIT/SAMPLE_EVENT_AUDIT.csv",
+      "source_member": "S2_File_reproducibility_archive/05_SAMPLE_EVENT_AUDIT/SAMPLE_EVENT_AUDIT.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "ab5505e6b33fd0988151bc606d9a6e7193a663fc74d6ad5de68c012d6fa8159c",
+      "repository_sha256": "ab5505e6b33fd0988151bc606d9a6e7193a663fc74d6ad5de68c012d6fa8159c",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/05_SAMPLE_EVENT_AUDIT/run_sample_event_audit.py",
+      "source_member": "S2_File_reproducibility_archive/05_SAMPLE_EVENT_AUDIT/run_sample_event_audit.py",
+      "status": "IDENTICAL",
+      "published_sha256": "a5bc1167717b5095ffcbf18ca5889d346316c078575e97ceabfe3e815ad11f5e",
+      "repository_sha256": "a5bc1167717b5095ffcbf18ca5889d346316c078575e97ceabfe3e815ad11f5e",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/06_SPARSE_DATA/PRIMARY_SORENESS_COMPARISON.txt",
+      "source_member": "S2_File_reproducibility_archive/06_SPARSE_DATA/PRIMARY_SORENESS_COMPARISON.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "924648034d25a1aaeb070551a09286a7864aab18de68213b22ecd3517c586e0a",
+      "repository_sha256": "924648034d25a1aaeb070551a09286a7864aab18de68213b22ecd3517c586e0a",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/06_SPARSE_DATA/SPARSE_DATA_DIAGNOSTICS.csv",
+      "source_member": "S2_File_reproducibility_archive/06_SPARSE_DATA/SPARSE_DATA_DIAGNOSTICS.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "e58dbce7a0d7b4b74a6d8c4a46c86e6f0081118bedebb453596c909e53a75de4",
+      "repository_sha256": "e58dbce7a0d7b4b74a6d8c4a46c86e6f0081118bedebb453596c909e53a75de4",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/06_SPARSE_DATA/run_sparse_data_diagnostics.py",
+      "source_member": "S2_File_reproducibility_archive/06_SPARSE_DATA/run_sparse_data_diagnostics.py",
+      "status": "IDENTICAL",
+      "published_sha256": "2177cedf520cd71d3bd87b87638bf2e5dac9925ded0400d7d209a78a20c7d621",
+      "repository_sha256": "2177cedf520cd71d3bd87b87638bf2e5dac9925ded0400d7d209a78a20c7d621",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/07_COLLINEARITY/ACUTE_CHRONIC_COLLINEARITY.csv",
+      "source_member": "S2_File_reproducibility_archive/07_COLLINEARITY/ACUTE_CHRONIC_COLLINEARITY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "f20e0fdb609be059dc6915a0cc693799ef66a66cb60d66c5d78e9531297cb232",
+      "repository_sha256": "f20e0fdb609be059dc6915a0cc693799ef66a66cb60d66c5d78e9531297cb232",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/07_COLLINEARITY/run_collinearity_9_3.py",
+      "source_member": "S2_File_reproducibility_archive/07_COLLINEARITY/run_collinearity_9_3.py",
+      "status": "IDENTICAL",
+      "published_sha256": "071111bc03389d6e9620e566226b177551fe3a9afb78a6d81e035d107dc6a2fd",
+      "repository_sha256": "071111bc03389d6e9620e566226b177551fe3a9afb78a6d81e035d107dc6a2fd",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/08_NONOVERLAP_WINDOW/NONOVERLAP_CORRELATION.csv",
+      "source_member": "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/NONOVERLAP_CORRELATION.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "6a783f4ccc47af549d105d1003e5b9ae7d45dac8e6203003594b8a9428f6260c",
+      "repository_sha256": "6a783f4ccc47af549d105d1003e5b9ae7d45dac8e6203003594b8a9428f6260c",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/08_NONOVERLAP_WINDOW/NONOVERLAP_QA.txt",
+      "source_member": "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/NONOVERLAP_QA.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "5230ff6f72262df407544404b8a116123c004bccad7ca226a95b3a4452a153b5",
+      "repository_sha256": "5230ff6f72262df407544404b8a116123c004bccad7ca226a95b3a4452a153b5",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/08_NONOVERLAP_WINDOW/NONOVERLAP_WINDOW_RESULTS.csv",
+      "source_member": "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/NONOVERLAP_WINDOW_RESULTS.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "116d287d2aa464d36adedb4633e439fc26d73d14337501ff3fa822e94e327de6",
+      "repository_sha256": "116d287d2aa464d36adedb4633e439fc26d73d14337501ff3fa822e94e327de6",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/08_NONOVERLAP_WINDOW/nonoverlap_boot_replicates.csv",
+      "source_member": "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/nonoverlap_boot_replicates.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "c9434b65663c2f95f51872e136b0107acaec361e7f9386c55ed1f7675217ac11",
+      "repository_sha256": "c9434b65663c2f95f51872e136b0107acaec361e7f9386c55ed1f7675217ac11",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json",
+      "source_member": "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/nonoverlap_boot_summary.json",
+      "status": "IDENTICAL",
+      "published_sha256": "765c0baccd5e4ff450b4779514263eed15c73813e80c389b285cbbaa8fdd794f",
+      "repository_sha256": "765c0baccd5e4ff450b4779514263eed15c73813e80c389b285cbbaa8fdd794f",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/08_NONOVERLAP_WINDOW/nonoverlap_diagnostics.csv",
+      "source_member": "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/nonoverlap_diagnostics.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "8c13bfc70fc5eafb46d45e4e434f3021c0736839661a96233aa55671e5421931",
+      "repository_sha256": "8c13bfc70fc5eafb46d45e4e434f3021c0736839661a96233aa55671e5421931",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/08_NONOVERLAP_WINDOW/run_nonoverlap_boot.py",
+      "source_member": "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/run_nonoverlap_boot.py",
+      "status": "IDENTICAL",
+      "published_sha256": "72c584f0c6d4489ac5080414603b09835b60e2a5958e61ce3e8dabb332f2a380",
+      "repository_sha256": "72c584f0c6d4489ac5080414603b09835b60e2a5958e61ce3e8dabb332f2a380",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/08_NONOVERLAP_WINDOW/run_nonoverlap_models.R",
+      "source_member": "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/run_nonoverlap_models.R",
+      "status": "IDENTICAL",
+      "published_sha256": "8c09d6c9c25ff7fdb02d2acaa3428b03aedc3a2a4098d38c33c5005e38005159",
+      "repository_sha256": "8c09d6c9c25ff7fdb02d2acaa3428b03aedc3a2a4098d38c33c5005e38005159",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/08_NONOVERLAP_WINDOW/run_nonoverlap_window.py",
+      "source_member": "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/run_nonoverlap_window.py",
+      "status": "IDENTICAL",
+      "published_sha256": "43c7cb527ffb6bc193710b5aec77e5b1c242c0048da924b00ce887d2d04ab504",
+      "repository_sha256": "43c7cb527ffb6bc193710b5aec77e5b1c242c0048da924b00ce887d2d04ab504",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/09_TEAM_SENSITIVITY/DROP_TEAM_SENSITIVITY.csv",
+      "source_member": "S2_File_reproducibility_archive/09_TEAM_SENSITIVITY/DROP_TEAM_SENSITIVITY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "544bf4ec2272a375b506f90d0fdf4ad9eb056e495a0ca85b74f214bcf57ca00f",
+      "repository_sha256": "544bf4ec2272a375b506f90d0fdf4ad9eb056e495a0ca85b74f214bcf57ca00f",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/09_TEAM_SENSITIVITY/assemble_drop_team_table.R",
+      "source_member": "S2_File_reproducibility_archive/09_TEAM_SENSITIVITY/assemble_drop_team_table.R",
+      "status": "IDENTICAL",
+      "published_sha256": "2605170f122e5f81db38e027aa60fe88005e696d0d30ddb2853431b81bd99c6b",
+      "repository_sha256": "2605170f122e5f81db38e027aa60fe88005e696d0d30ddb2853431b81bd99c6b",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/09_TEAM_SENSITIVITY/drop_team_boot_replicates.csv",
+      "source_member": "S2_File_reproducibility_archive/09_TEAM_SENSITIVITY/drop_team_boot_replicates.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "b72f941219c1c57f6236c50e790c494b98b6efa66c294656f8a92d9a34fbb9cc",
+      "repository_sha256": "b72f941219c1c57f6236c50e790c494b98b6efa66c294656f8a92d9a34fbb9cc",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/09_TEAM_SENSITIVITY/drop_team_boot_row.csv",
+      "source_member": "S2_File_reproducibility_archive/09_TEAM_SENSITIVITY/drop_team_boot_row.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "7e89321fa1d3711982cb4baf8cf4f477f0c6d9690d2d8be7a01b9885a780d0f0",
+      "repository_sha256": "7e89321fa1d3711982cb4baf8cf4f477f0c6d9690d2d8be7a01b9885a780d0f0",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/09_TEAM_SENSITIVITY/drop_team_boot_summary.json",
+      "source_member": "S2_File_reproducibility_archive/09_TEAM_SENSITIVITY/drop_team_boot_summary.json",
+      "status": "IDENTICAL",
+      "published_sha256": "2112da321abeeea80b0f9843a9d4bf367ca60eb4e49804cb4d0967d7172a359c",
+      "repository_sha256": "2112da321abeeea80b0f9843a9d4bf367ca60eb4e49804cb4d0967d7172a359c",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/09_TEAM_SENSITIVITY/drop_team_diagnostics.csv",
+      "source_member": "S2_File_reproducibility_archive/09_TEAM_SENSITIVITY/drop_team_diagnostics.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "f8862a647373ec45df36835c0342a12d69225ebf4f5864606e8436a06a0c690a",
+      "repository_sha256": "f8862a647373ec45df36835c0342a12d69225ebf4f5864606e8436a06a0c690a",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/09_TEAM_SENSITIVITY/drop_team_model_rows.csv",
+      "source_member": "S2_File_reproducibility_archive/09_TEAM_SENSITIVITY/drop_team_model_rows.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "e46e75331a0766c4e92f5b1f61c7cced2ceda2ff771bc13404b416defd9d4a14",
+      "repository_sha256": "e46e75331a0766c4e92f5b1f61c7cced2ceda2ff771bc13404b416defd9d4a14",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/09_TEAM_SENSITIVITY/run_drop_team.R",
+      "source_member": "S2_File_reproducibility_archive/09_TEAM_SENSITIVITY/run_drop_team.R",
+      "status": "IDENTICAL",
+      "published_sha256": "ec09e5fd640674f7064a484b3cdf2bff64d7f55bde31966d6e39a0876f26405e",
+      "repository_sha256": "ec09e5fd640674f7064a484b3cdf2bff64d7f55bde31966d6e39a0876f26405e",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/09_TEAM_SENSITIVITY/run_drop_team_boot.py",
+      "source_member": "S2_File_reproducibility_archive/09_TEAM_SENSITIVITY/run_drop_team_boot.py",
+      "status": "IDENTICAL",
+      "published_sha256": "6a2eb9297e72b92af7c235be9a3c9b0d75a39bd0ebb532ad85c80a1f3a85d13b",
+      "repository_sha256": "6a2eb9297e72b92af7c235be9a3c9b0d75a39bd0ebb532ad85c80a1f3a85d13b",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/10_SEASON_SENSITIVITY/SEASON_STABILITY.csv",
+      "source_member": "S2_File_reproducibility_archive/10_SEASON_SENSITIVITY/SEASON_STABILITY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "2111cf320042271926f42be34623c57a977ebedfde137caec3efb55be5077b28",
+      "repository_sha256": "2111cf320042271926f42be34623c57a977ebedfde137caec3efb55be5077b28",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/10_SEASON_SENSITIVITY/run_season_stability.R",
+      "source_member": "S2_File_reproducibility_archive/10_SEASON_SENSITIVITY/run_season_stability.R",
+      "status": "IDENTICAL",
+      "published_sha256": "0dfd59020425169b2e288dc3ad00d7fb490f9c83de78d2774daff850749c00a0",
+      "repository_sha256": "0dfd59020425169b2e288dc3ad00d7fb490f9c83de78d2774daff850749c00a0",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/10_SEASON_SENSITIVITY/season_stability_diagnostics.csv",
+      "source_member": "S2_File_reproducibility_archive/10_SEASON_SENSITIVITY/season_stability_diagnostics.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "1b08b9ac5d5e59ce044b55f4a3e89dc255c1c005b806b391267709fcc3de685c",
+      "repository_sha256": "1b08b9ac5d5e59ce044b55f4a3e89dc255c1c005b806b391267709fcc3de685c",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_COVERAGE.csv",
+      "source_member": "S2_File_reproducibility_archive/11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_COVERAGE.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "1f9feb55089995a198fd2305e1633f6e32d53339d3f87c803c9b9355a8debc1b",
+      "repository_sha256": "1f9feb55089995a198fd2305e1633f6e32d53339d3f87c803c9b9355a8debc1b",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_RESULTS.csv",
+      "source_member": "S2_File_reproducibility_archive/11_BACKWARD_STANDARDIZATION/BACKWARD_STANDARDIZATION_RESULTS.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "d16a5aa6b71a4b476bcdcc104134f7371c3b5fbdd59df52ad71103dc7b8ebc83",
+      "repository_sha256": "d16a5aa6b71a4b476bcdcc104134f7371c3b5fbdd59df52ad71103dc7b8ebc83",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/11_BACKWARD_STANDARDIZATION/BACKWARD_Z_QA.txt",
+      "source_member": "S2_File_reproducibility_archive/11_BACKWARD_STANDARDIZATION/BACKWARD_Z_QA.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "d30c9b60f8a62130bae8e8ea3512df4e8b2f3953f2070a3bbf808db3857bea7e",
+      "repository_sha256": "d30c9b60f8a62130bae8e8ea3512df4e8b2f3953f2070a3bbf808db3857bea7e",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/11_BACKWARD_STANDARDIZATION/backwardz_diagnostics.csv",
+      "source_member": "S2_File_reproducibility_archive/11_BACKWARD_STANDARDIZATION/backwardz_diagnostics.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "09b451f41d2e5c8cec9b280c573714c6da1d0732f04dc6a9c4605dcb1e20f997",
+      "repository_sha256": "09b451f41d2e5c8cec9b280c573714c6da1d0732f04dc6a9c4605dcb1e20f997",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/11_BACKWARD_STANDARDIZATION/run_backward_standardization.py",
+      "source_member": "S2_File_reproducibility_archive/11_BACKWARD_STANDARDIZATION/run_backward_standardization.py",
+      "status": "IDENTICAL",
+      "published_sha256": "49191d8192ec46c06fbe46eadad45d70ebf8a610bd04f598436f3fb9fba31316",
+      "repository_sha256": "49191d8192ec46c06fbe46eadad45d70ebf8a610bd04f598436f3fb9fba31316",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/11_BACKWARD_STANDARDIZATION/run_backwardz_firth_maxit.R",
+      "source_member": "S2_File_reproducibility_archive/11_BACKWARD_STANDARDIZATION/run_backwardz_firth_maxit.R",
+      "status": "IDENTICAL",
+      "published_sha256": "08e6323e6c8ef6b542d1d8ea879e0020911c9002475b0faee06f08230b5e5573",
+      "repository_sha256": "08e6323e6c8ef6b542d1d8ea879e0020911c9002475b0faee06f08230b5e5573",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/11_BACKWARD_STANDARDIZATION/run_backwardz_models.R",
+      "source_member": "S2_File_reproducibility_archive/11_BACKWARD_STANDARDIZATION/run_backwardz_models.R",
+      "status": "IDENTICAL",
+      "published_sha256": "f4b114561093a9de3be413d8ca8690e963f97008dac65a7132f1029d477179ca",
+      "repository_sha256": "f4b114561093a9de3be413d8ca8690e963f97008dac65a7132f1029d477179ca",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/12_POLARITY_AUDIT/POLARITY_EVIDENCE_NOTE.md",
+      "source_member": "S2_File_reproducibility_archive/12_POLARITY_AUDIT/POLARITY_EVIDENCE_NOTE.md",
+      "status": "IDENTICAL",
+      "published_sha256": "88fac37d2390180bcf040890cf558f93a66ceb6b56d6f773e677f2e005f29aab",
+      "repository_sha256": "88fac37d2390180bcf040890cf558f93a66ceb6b56d6f773e677f2e005f29aab",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/12_POLARITY_AUDIT/WELLNESS_POLARITY_INDEPENDENT_AUDIT.csv",
+      "source_member": "S2_File_reproducibility_archive/12_POLARITY_AUDIT/WELLNESS_POLARITY_INDEPENDENT_AUDIT.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "c8b2cce2bac641753ce5e5464e962d02c30175a69a30ee76776add849fff8f24",
+      "repository_sha256": "c8b2cce2bac641753ce5e5464e962d02c30175a69a30ee76776add849fff8f24",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/13_IPW_FINAL/IPW_FINAL_DIAGNOSTICS.csv",
+      "source_member": "S2_File_reproducibility_archive/13_IPW_FINAL/IPW_FINAL_DIAGNOSTICS.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "9e8497ca3935e8564d4666a090aeba24397d66edd9caec678b2080f0ee8aa03d",
+      "repository_sha256": "9e8497ca3935e8564d4666a090aeba24397d66edd9caec678b2080f0ee8aa03d",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/13_IPW_FINAL/IPW_FINAL_RESULTS.csv",
+      "source_member": "S2_File_reproducibility_archive/13_IPW_FINAL/IPW_FINAL_RESULTS.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "605e65dac4f9234c25a523f5af848a3fe7de091305a9aeb2d3943bad44028579",
+      "repository_sha256": "605e65dac4f9234c25a523f5af848a3fe7de091305a9aeb2d3943bad44028579",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/13_IPW_FINAL/ipw_final_r_results.csv",
+      "source_member": "S2_File_reproducibility_archive/13_IPW_FINAL/ipw_final_r_results.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "653909846f175ab40357072fae2d9aa4ad67cdf191417f99929402ba737a073a",
+      "repository_sha256": "653909846f175ab40357072fae2d9aa4ad67cdf191417f99929402ba737a073a",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/13_IPW_FINAL/run_ipw_final.R",
+      "source_member": "S2_File_reproducibility_archive/13_IPW_FINAL/run_ipw_final.R",
+      "status": "IDENTICAL",
+      "published_sha256": "cda0acb47d923fb676997491988b91fdf3b516857f2835c444cb682daed791d8",
+      "repository_sha256": "cda0acb47d923fb676997491988b91fdf3b516857f2835c444cb682daed791d8",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/13_IPW_FINAL/run_ipw_final.py",
+      "source_member": "S2_File_reproducibility_archive/13_IPW_FINAL/run_ipw_final.py",
+      "status": "IDENTICAL",
+      "published_sha256": "7f34c3d567265a81c4ca81e583333cd2ef6ff3ba7927ddc41287a3ddcffb62be",
+      "repository_sha256": "7f34c3d567265a81c4ca81e583333cd2ef6ff3ba7927ddc41287a3ddcffb62be",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/14_EVENT_INFLUENCE/EVENT_CONCENTRATION.csv",
+      "source_member": "S2_File_reproducibility_archive/14_EVENT_INFLUENCE/EVENT_CONCENTRATION.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "98f79e4ae09848d6767c16f9b112536d0bfe5047c2c4d58e16608f07fd9b0f53",
+      "repository_sha256": "98f79e4ae09848d6767c16f9b112536d0bfe5047c2c4d58e16608f07fd9b0f53",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/14_EVENT_INFLUENCE/LEAVE_ONE_EVENT_PLAYER_OUT_QA.csv",
+      "source_member": "S2_File_reproducibility_archive/14_EVENT_INFLUENCE/LEAVE_ONE_EVENT_PLAYER_OUT_QA.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "432bb0b07c40d0b0fdcfa01d2311530f898cf99a3b2b089af33005f9f1c9dce7",
+      "repository_sha256": "432bb0b07c40d0b0fdcfa01d2311530f898cf99a3b2b089af33005f9f1c9dce7",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/14_EVENT_INFLUENCE/LOO_EXCLUSION_SUMMARY.csv",
+      "source_member": "S2_File_reproducibility_archive/14_EVENT_INFLUENCE/LOO_EXCLUSION_SUMMARY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "f89bdbcb2763ae944f9df49e1bff3bfb1d70a9ab2a994eb6e5e91f5dcc8b34e0",
+      "repository_sha256": "f89bdbcb2763ae944f9df49e1bff3bfb1d70a9ab2a994eb6e5e91f5dcc8b34e0",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/14_EVENT_INFLUENCE/S5_EXCLUSION_VERIFICATION.csv",
+      "source_member": "S2_File_reproducibility_archive/14_EVENT_INFLUENCE/S5_EXCLUSION_VERIFICATION.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "5522d0dfcb0ce1a7b08916445c5e1b88181940d69993426948aff28e2cd3329e",
+      "repository_sha256": "5522d0dfcb0ce1a7b08916445c5e1b88181940d69993426948aff28e2cd3329e",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/14_EVENT_INFLUENCE/run_event_concentration.py",
+      "source_member": "S2_File_reproducibility_archive/14_EVENT_INFLUENCE/run_event_concentration.py",
+      "status": "IDENTICAL",
+      "published_sha256": "68430778096171169c05039a7b938c64af4afa012b51ad5d15c43778ed7ce869",
+      "repository_sha256": "68430778096171169c05039a7b938c64af4afa012b51ad5d15c43778ed7ce869",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/14_EVENT_INFLUENCE/run_leave_one_out_qa.R",
+      "source_member": "S2_File_reproducibility_archive/14_EVENT_INFLUENCE/run_leave_one_out_qa.R",
+      "status": "IDENTICAL",
+      "published_sha256": "c565f847c1a3369756242f34da47d2482e79b9efd9a3e9b3d904632f3ce78e14",
+      "repository_sha256": "c565f847c1a3369756242f34da47d2482e79b9efd9a3e9b3d904632f3ce78e14",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/15_MULTIPLICITY/INTERACTION_REPLICATION_DETAIL.csv",
+      "source_member": "S2_File_reproducibility_archive/15_MULTIPLICITY/INTERACTION_REPLICATION_DETAIL.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "1b23f1711a869cd931f6a432d6f90aa037e71e36047ed50e8938704a74a2b5d3",
+      "repository_sha256": "1b23f1711a869cd931f6a432d6f90aa037e71e36047ed50e8938704a74a2b5d3",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/15_MULTIPLICITY/MODEL_REGISTRY.csv",
+      "source_member": "S2_File_reproducibility_archive/15_MULTIPLICITY/MODEL_REGISTRY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "39346963081c71f1d8939e45729619368f0fef9181583346e99b073f49095375",
+      "repository_sha256": "39346963081c71f1d8939e45729619368f0fef9181583346e99b073f49095375",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/15_MULTIPLICITY/MULTIPLICITY_CENSUS.csv",
+      "source_member": "S2_File_reproducibility_archive/15_MULTIPLICITY/MULTIPLICITY_CENSUS.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "058a7627c588d656caede362bcfe8405f192c8ddf9f843044aa962bfa50308d7",
+      "repository_sha256": "058a7627c588d656caede362bcfe8405f192c8ddf9f843044aa962bfa50308d7",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/15_MULTIPLICITY/NOMINAL_SIGNIFICANCE_INVENTORY.csv",
+      "source_member": "S2_File_reproducibility_archive/15_MULTIPLICITY/NOMINAL_SIGNIFICANCE_INVENTORY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "039d377589b4c0fda24a33d2a73589356fffc16ae3465f26096fbeca78e8d1db",
+      "repository_sha256": "039d377589b4c0fda24a33d2a73589356fffc16ae3465f26096fbeca78e8d1db",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/16_FOCAL_STABILITY/FOCAL_ESTIMATE_STABILITY.csv",
+      "source_member": "S2_File_reproducibility_archive/16_FOCAL_STABILITY/FOCAL_ESTIMATE_STABILITY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "9e40c234ffbced5176233cc4353bf9bdf468c00e70a19a21f9f87882be6f6abe",
+      "repository_sha256": "9e40c234ffbced5176233cc4353bf9bdf468c00e70a19a21f9f87882be6f6abe",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/17_MASTER_RESULTS/FOCAL_ESTIMATE_STABILITY.csv",
+      "source_member": "S2_File_reproducibility_archive/17_MASTER_RESULTS/FOCAL_ESTIMATE_STABILITY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "9e40c234ffbced5176233cc4353bf9bdf468c00e70a19a21f9f87882be6f6abe",
+      "repository_sha256": "9e40c234ffbced5176233cc4353bf9bdf468c00e70a19a21f9f87882be6f6abe",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/17_MASTER_RESULTS/MASTER_RESULTS_R2.csv",
+      "source_member": "S2_File_reproducibility_archive/17_MASTER_RESULTS/MASTER_RESULTS_R2.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "d8b4a53c507ceaa481375c385f46d565cae241ccc804407883268db56971a4e2",
+      "repository_sha256": "d8b4a53c507ceaa481375c385f46d565cae241ccc804407883268db56971a4e2",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/17_MASTER_RESULTS/MASTER_RESULTS_R2.json",
+      "source_member": "S2_File_reproducibility_archive/17_MASTER_RESULTS/MASTER_RESULTS_R2.json",
+      "status": "IDENTICAL",
+      "published_sha256": "7cbdc577adf9c1df4c52549544b635754a6a5e61030ae3a674eaaccf531b45a5",
+      "repository_sha256": "7cbdc577adf9c1df4c52549544b635754a6a5e61030ae3a674eaaccf531b45a5",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/17_MASTER_RESULTS/MODEL_REGISTRY.csv",
+      "source_member": "S2_File_reproducibility_archive/17_MASTER_RESULTS/MODEL_REGISTRY.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "39346963081c71f1d8939e45729619368f0fef9181583346e99b073f49095375",
+      "repository_sha256": "39346963081c71f1d8939e45729619368f0fef9181583346e99b073f49095375",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/17_MASTER_RESULTS/SAMPLE_EVENT_AUDIT.csv",
+      "source_member": "S2_File_reproducibility_archive/17_MASTER_RESULTS/SAMPLE_EVENT_AUDIT.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "6f9f5f74a81cd618a10ad460c0ab46851b858b3c2b9614d24d3100df0af25f3e",
+      "repository_sha256": "6f9f5f74a81cd618a10ad460c0ab46851b858b3c2b9614d24d3100df0af25f3e",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/19_VALIDATION/NUMERIC_CONSISTENCY_CHECK.csv",
+      "source_member": "S2_File_reproducibility_archive/19_VALIDATION/NUMERIC_CONSISTENCY_CHECK.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "431eb60ddf932b3dfee4f10e9d4b0ae89b8ae66941c7df3a5ed65d30d819be65",
+      "repository_sha256": "431eb60ddf932b3dfee4f10e9d4b0ae89b8ae66941c7df3a5ed65d30d819be65",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/19_VALIDATION/R1_REPRODUCTION_CHECK.csv",
+      "source_member": "S2_File_reproducibility_archive/19_VALIDATION/R1_REPRODUCTION_CHECK.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "679b844d9e6324a323e2b80cf4016e318691abcde963ec845208fdd766c7f650",
+      "repository_sha256": "679b844d9e6324a323e2b80cf4016e318691abcde963ec845208fdd766c7f650",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/19_VALIDATION/RAW_VS_DERIVED_RECONCILIATION.csv",
+      "source_member": "S2_File_reproducibility_archive/19_VALIDATION/RAW_VS_DERIVED_RECONCILIATION.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "103d227ebc28882ff4d9ace08b024528c309f16f5cfc1a977735f5599a2ca979",
+      "repository_sha256": "103d227ebc28882ff4d9ace08b024528c309f16f5cfc1a977735f5599a2ca979",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/19_VALIDATION/VALIDATION_REPORT.json",
+      "source_member": "S2_File_reproducibility_archive/19_VALIDATION/VALIDATION_REPORT.json",
+      "status": "IDENTICAL",
+      "published_sha256": "d270172a45dc12a42aa1505753aaf5ea79a0a62e36a9f64c2b2df131fe5803ba",
+      "repository_sha256": "d270172a45dc12a42aa1505753aaf5ea79a0a62e36a9f64c2b2df131fe5803ba",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/19_VALIDATION/VALIDATION_REPORT.md",
+      "source_member": "S2_File_reproducibility_archive/19_VALIDATION/VALIDATION_REPORT.md",
+      "status": "IDENTICAL",
+      "published_sha256": "136b3e25f92fbf172739187fb267cc36b767c0893b83112f2ffa596067263ad6",
+      "repository_sha256": "136b3e25f92fbf172739187fb267cc36b767c0893b83112f2ffa596067263ad6",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/19_VALIDATION/gate_a_compare.py",
+      "source_member": "S2_File_reproducibility_archive/19_VALIDATION/gate_a_compare.py",
+      "status": "IDENTICAL",
+      "published_sha256": "b993c9013f8a8506e46deeee29acfc05c953e401c794dcbc9482faa34e158ba5",
+      "repository_sha256": "b993c9013f8a8506e46deeee29acfc05c953e401c794dcbc9482faa34e158ba5",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/20_FREEZE/FREEZE_HASH.txt",
+      "source_member": "S2_File_reproducibility_archive/20_FREEZE/FREEZE_HASH.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "f219a2fd1a80d8e525d7d4c57c421a59126ec5900564c21c1c4592f6fe3c069a",
+      "repository_sha256": "f219a2fd1a80d8e525d7d4c57c421a59126ec5900564c21c1c4592f6fe3c069a",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/20_FREEZE/build_freeze_outputs.py",
+      "source_member": "S2_File_reproducibility_archive/20_FREEZE/build_freeze_outputs.py",
+      "status": "IDENTICAL",
+      "published_sha256": "8784507118ec8a75fe87ed30fa210375872ead8140d493dd325de6a0dd4b64b5",
+      "repository_sha256": "8784507118ec8a75fe87ed30fa210375872ead8140d493dd325de6a0dd4b64b5",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/sensitivity/20_FREEZE/build_validation.py",
+      "source_member": "S2_File_reproducibility_archive/20_FREEZE/build_validation.py",
+      "status": "IDENTICAL",
+      "published_sha256": "443aa47eade305ef09db8a97e3aa54039c57005f2f8fbc0dbc6322a8df629bc4",
+      "repository_sha256": "443aa47eade305ef09db8a97e3aa54039c57005f2f8fbc0dbc6322a8df629bc4",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/RESULTS_LOCK.md",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/RESULTS_LOCK.md",
+      "status": "IDENTICAL",
+      "published_sha256": "9a7265031ca182052d879099f50e83aaf94cbfb983acf66f3bfaf311790e68f2",
+      "repository_sha256": "9a7265031ca182052d879099f50e83aaf94cbfb983acf66f3bfaf311790e68f2",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/RESULTS_LOCK_HASH.txt",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/RESULTS_LOCK_HASH.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "cadb6e1100cf268877259eb15998dbfa17dd02fd58a19f6d3bcc841cf40b017b",
+      "repository_sha256": "cadb6e1100cf268877259eb15998dbfa17dd02fd58a19f6d3bcc841cf40b017b",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/bootstrap_primary_interaction.json",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/bootstrap_primary_interaction.json",
+      "status": "IDENTICAL",
+      "published_sha256": "ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41",
+      "repository_sha256": "ed61ebe02a592ed7ffdd992f019652039ca01ed662185293bbebd473f396ef41",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/bootstrap_replicates.csv",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/bootstrap_replicates.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03",
+      "repository_sha256": "e7d9431cf769ea24ce0883d8e74a4fd6f6fe890c9880bbc84cd91a8ff3d15d03",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/diagnostic_inventory.csv",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/diagnostic_inventory.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "b5f0eecb21e484e53a25bb2c7452ceca20fa2944c8706231db1772e00feba58a",
+      "repository_sha256": "b5f0eecb21e484e53a25bb2c7452ceca20fa2944c8706231db1772e00feba58a",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/event_count_inventory.csv",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/event_count_inventory.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204",
+      "repository_sha256": "3a1fd92f6c55c7779393b0847c91c47cc0caa025e95f8ff7c557d41d6b03d204",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/firth_bootstrap_results.csv",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/firth_bootstrap_results.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140",
+      "repository_sha256": "819e43cf2339eedeef18e0500a3c8eb4796e1fb2dc3ce44d2b59198d81547140",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/ipw_weight_diagnostics.csv",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weight_diagnostics.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3",
+      "repository_sha256": "06f26a53dbe84dc8dcab9b67c14b67ec0f344c68723016df8ae7178c1853f0b3",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/master_results.csv",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/master_results.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "6c130f57aad5d54eef6ed6151c2be946ec7f26a1fffd07feef0315dddedc8e36",
+      "repository_sha256": "6c130f57aad5d54eef6ed6151c2be946ec7f26a1fffd07feef0315dddedc8e36",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/master_results.json",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/master_results.json",
+      "status": "IDENTICAL",
+      "published_sha256": "42fc458dcca98300444350469b68c86b80d7fa575f12216b1990a00cb6c1dd3b",
+      "repository_sha256": "42fc458dcca98300444350469b68c86b80d7fa575f12216b1990a00cb6c1dd3b",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/model_inventory.csv",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/model_inventory.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "3627256f81910e261af2e0e6fe7d7faad85bf523421e1cedef73751bddc49019",
+      "repository_sha256": "3627256f81910e261af2e0e6fe7d7faad85bf523421e1cedef73751bddc49019",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/r_results.csv",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/r_results.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "5b91888447f1c5eb1e0fbd9a9240f98da49d296b5ea28e931616025188ae1c6b",
+      "repository_sha256": "5b91888447f1c5eb1e0fbd9a9240f98da49d296b5ea28e931616025188ae1c6b",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/sample_size_inventory.csv",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/sample_size_inventory.csv",
+      "status": "IDENTICAL",
+      "published_sha256": "a97b176edbdc9a615bfe8c1dcb5b85406dc88e7332a17379118889cccda0c8bd",
+      "repository_sha256": "a97b176edbdc9a615bfe8c1dcb5b85406dc88e7332a17379118889cccda0c8bd",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/session_info_R.txt",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/session_info_R.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "bdfc9621abf53fe0c0af9c1d33050d2a5ec0e59c1af662276a84ab1647642e39",
+      "repository_sha256": "bdfc9621abf53fe0c0af9c1d33050d2a5ec0e59c1af662276a84ab1647642e39",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/r1/session_info_python.txt",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/session_info_python.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0",
+      "repository_sha256": "31bf83acd395af87abebc35c33df3060796d857c8f1581e039073cc8ad0301f0",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "protocol/revision_sap/Revision_Statistical_Analysis_Plan_v1.0.md",
+      "source_member": "soccermon_sources/R2_FINAL_ANALYSIS_FREEZE/02_R1_REPRODUCTION/r1_sandbox/05_REVISION_SAP/Revision_Statistical_Analysis_Plan_v1.0.md",
+      "status": "NOT IN S2",
+      "reason": "Different historical source package"
+    },
+    {
+      "repository_path": "protocol/revision_sap/SAP_FREEZE_HASH.txt",
+      "source_member": "soccermon_sources/R2_FINAL_ANALYSIS_FREEZE/02_R1_REPRODUCTION/r1_sandbox/05_REVISION_SAP/SAP_FREEZE_HASH.txt",
+      "status": "NOT IN S2",
+      "reason": "Different historical source package"
+    },
+    {
+      "repository_path": "protocol/revision_sap/missing_data_plan.md",
+      "source_member": "soccermon_sources/R2_FINAL_ANALYSIS_FREEZE/02_R1_REPRODUCTION/r1_sandbox/05_REVISION_SAP/missing_data_plan.md",
+      "status": "NOT IN S2",
+      "reason": "Different historical source package"
+    },
+    {
+      "repository_path": "protocol/revision_sap/model_candidate_matrix.csv",
+      "source_member": "soccermon_sources/R2_FINAL_ANALYSIS_FREEZE/02_R1_REPRODUCTION/r1_sandbox/05_REVISION_SAP/model_candidate_matrix.csv",
+      "status": "NOT IN S2",
+      "reason": "Different historical source package"
+    },
+    {
+      "repository_path": "environment/original_session_info_python.txt",
+      "source_member": "S2_File_reproducibility_archive/01_ENVIRONMENT/session_info_python.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "89519b1dc186b7a964242778bfd4b950400cef0f1fd796910175a1f0d96610a2",
+      "repository_sha256": "89519b1dc186b7a964242778bfd4b950400cef0f1fd796910175a1f0d96610a2",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "environment/original_session_info_R.txt",
+      "source_member": "S2_File_reproducibility_archive/01_ENVIRONMENT/session_info_R.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "41b3cb220233eb5bccaac7e9db6ab30dd535de2e405f0c1cc8c8cb989dd9d789",
+      "repository_sha256": "41b3cb220233eb5bccaac7e9db6ab30dd535de2e405f0c1cc8c8cb989dd9d789",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "data/subjective.zip.sha256",
+      "source_member": "S2_File_reproducibility_archive/00_INPUT_SNAPSHOT/subjective.zip.sha256",
+      "status": "IDENTICAL",
+      "published_sha256": "729bba9b5f2c228e119adc5228229b9ae4fe35dce50f7978f0082cc35b2d1aca",
+      "repository_sha256": "729bba9b5f2c228e119adc5228229b9ae4fe35dce50f7978f0082cc35b2d1aca",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/SOURCE_FREEZE_HASH.txt",
+      "source_member": "S2_File_reproducibility_archive/00_ARCHIVE_SCOPE/SOURCE_FREEZE_HASH.txt",
+      "status": "IDENTICAL",
+      "published_sha256": "fc1277f14662aac79dbe419f57f4b5dd5abbef37d1a2030a453619406e03fc71",
+      "repository_sha256": "fc1277f14662aac79dbe419f57f4b5dd5abbef37d1a2030a453619406e03fc71",
+      "recorded_original_sha256": "",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/reporting/06b_make_figures.py",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/06b_make_figures.py",
+      "status": "IDENTICAL",
+      "reason": "Different historical source package",
+      "published_sha256": "f0c1206cb157205232b910abc8c5612402ae03c386aafe80249b3b8bdf896a65",
+      "repository_sha256": "f0c1206cb157205232b910abc8c5612402ae03c386aafe80249b3b8bdf896a65",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "reproducibility/frozen/12_POLARITY_AUDIT/WELLNESS_POLARITY_EVIDENCE.md",
+      "source_member": "soccermon_sources/R2_FINAL_ANALYSIS_FREEZE/12_POLARITY_AUDIT/WELLNESS_POLARITY_EVIDENCE.md",
+      "status": "NOT IN S2",
+      "reason": "Different historical source package"
+    },
+    {
+      "repository_path": "analysis/core/01_raw_audit_and_rebuild.py",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/01_raw_audit_and_rebuild.py",
+      "status": "DIFFERENT",
+      "published_sha256": "809f77a4cbb5e1c13bc7b711cb3d285a02969bd1220c1e68ffbb79a3679344f8",
+      "repository_sha256": "665b8707b271275565152b61effe6a62487ca4b3049146bf5584dde31d46acd6",
+      "recorded_original_sha256": "809f77a4cbb5e1c13bc7b711cb3d285a02969bd1220c1e68ffbb79a3679344f8",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/core/02_episodes_and_modeling_data.py",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/02_episodes_and_modeling_data.py",
+      "status": "DIFFERENT",
+      "published_sha256": "32907453d0a5c82c7a07a1f2c5c65221a153c256ae2cf450b6839e18c762815e",
+      "repository_sha256": "453a661464d6f949b5fafab78c84e271d485753b46282e257c472025d13659bd",
+      "recorded_original_sha256": "32907453d0a5c82c7a07a1f2c5c65221a153c256ae2cf450b6839e18c762815e",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/core/03_missingness_ipw.py",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/03_missingness_ipw.py",
+      "status": "DIFFERENT",
+      "published_sha256": "8a4e45bb13b8bbf220e935647147be16ac130c202e3789ea57cf50daf537692c",
+      "repository_sha256": "2aa5b7221abcf58e1fb46935f3fef070b687a35cd520911a27368cb3f786e8ed",
+      "recorded_original_sha256": "8a4e45bb13b8bbf220e935647147be16ac130c202e3789ea57cf50daf537692c",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/core/04_run_reanalysis.R",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/04_run_reanalysis.R",
+      "status": "DIFFERENT",
+      "published_sha256": "7e09805e5731a5192a312a2aeed6fb4f1b240f96a076c3b820923e6573f1df5f",
+      "repository_sha256": "e6ab56772d11f9bde8097994ac12db34b5d428d7da253142a57ee4e603d765d2",
+      "recorded_original_sha256": "7e09805e5731a5192a312a2aeed6fb4f1b240f96a076c3b820923e6573f1df5f",
+      "original_sha_matches": true
+    },
+    {
+      "repository_path": "analysis/core/05_bootstrap_and_ipw.py",
+      "source_member": "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/05_bootstrap_and_ipw.py",
+      "status": "DIFFERENT",
+      "published_sha256": "ccd83c90029e8613d04c6156cd67e2c5843070c91837e50bc214ca8318df19d2",
+      "repository_sha256": "2b92b77626a7b542a8ce1a09c3961aa21fd2c15ea37e9ee4ee85ce96fc9a2a2d",
+      "recorded_original_sha256": "ccd83c90029e8613d04c6156cd67e2c5843070c91837e50bc214ca8318df19d2",
+      "original_sha_matches": true
+    }
+  ],
+  "unrepresented_s2_members": [
+    "S2_File_reproducibility_archive/00_ARCHIVE_SCOPE/ARCHIVE_SCOPE.md",
+    "S2_File_reproducibility_archive/00_INPUT_SNAPSHOT/INPUT_HASHES_R1_PACKAGE.csv",
+    "S2_File_reproducibility_archive/00_INPUT_SNAPSHOT/OUTER_ZIP_SHA256.txt",
+    "S2_File_reproducibility_archive/01_ENVIRONMENT/commands_used.md",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/02_RAW_DATA/rebuilt_player_day_base.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/06_make_tables.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/06_make_tables_figures.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/07_number_maps.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/08_assemble_manuscript.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/09_final_audit.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/10_final_letters_and_package.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/phase12_metadata_checklist.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/phase12_strobe_checklist.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/phase13_build_s2_archive.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/phase3_decision_matrix.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/phase5_variable_polarity_audit.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/phase7_protocol_reconciliation.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/phase9_sap_freeze.py",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/06_ANALYSIS_CODE/run_revision_1.ps1",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weights_fatigue.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weights_readiness.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/RUN_R2_REPRO/ipw_weights_soreness.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/episode_inventory.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/ipw_diagnostics.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/ipw_effective_sample_size.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/ipw_extreme_weights.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/missingness_by_player.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/missingness_by_variable.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/modeling_dataset.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/observation_model_results.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/onset_day_inventory.csv",
+    "S2_File_reproducibility_archive/02_R1_REPRODUCTION/r1_sandbox/07_ANALYSIS_OUTPUTS/player_event_distribution.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/02_RAW_DATA/data_integrity_report.md",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/02_RAW_DATA/raw_data_inventory.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/02_RAW_DATA/raw_to_old_derived_comparison.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/02_RAW_DATA/raw_value_ranges.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/episode_comparison_vs_frozen.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/episode_inventory.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/ipw_diagnostics.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/ipw_effective_sample_size.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/ipw_extreme_weights.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/missingness_by_player.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/missingness_by_variable.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/observation_model_results.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/onset_day_inventory.csv",
+    "S2_File_reproducibility_archive/03_RAW_REBUILD/r1_raw_sandbox/07_ANALYSIS_OUTPUTS/player_event_distribution.csv",
+    "S2_File_reproducibility_archive/08_NONOVERLAP_WINDOW/modeling_dataset_nonoverlap.csv",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/_work/diagnostics_stage1.csv",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/_work/integrity_checks_stage1.csv",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/_work/obs_model_nooutcome_fit_info.csv",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/_work/onset_vs_nooutcome_comparison.csv",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/_work/r1_reproduction_passfail.csv",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/_work/repro_check_onset_outcome_refit.json",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/_work/repro_check_onset_refit.json",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/fig_predprob_nooutcome.png",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/fig_predprob_onset.png",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/fig_weights_trunc_nooutcome.png",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/fig_weights_trunc_onset.png",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/fig_weights_untrunc_nooutcome.png",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/fig_weights_untrunc_onset.png",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/ipw_weights_nooutcome_fatigue.csv",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/ipw_weights_nooutcome_readiness.csv",
+    "S2_File_reproducibility_archive/13_IPW_FINAL/ipw_weights_nooutcome_soreness.csv",
+    "S2_File_reproducibility_archive/14_EVENT_INFLUENCE/LOO_FIRTH_INTERACTION_FOREST.png",
+    "S2_File_reproducibility_archive/18_LOGS/gate_a_compare.log",
+    "S2_File_reproducibility_archive/18_LOGS/gate_a_run.log",
+    "S2_File_reproducibility_archive/18_LOGS/gate_b_01.log",
+    "S2_File_reproducibility_archive/18_LOGS/gate_b_02.log",
+    "S2_File_reproducibility_archive/18_LOGS/gate_b_03.log",
+    "S2_File_reproducibility_archive/18_LOGS/gate_b_compare.log",
+    "S2_File_reproducibility_archive/18_LOGS/workstream_audits.log",
+    "S2_File_reproducibility_archive/18_LOGS/workstream_collinearity.log",
+    "S2_File_reproducibility_archive/18_LOGS/workstream_exposures.log",
+    "S2_File_reproducibility_archive/18_LOGS/workstream_ipw.log",
+    "S2_File_reproducibility_archive/18_LOGS/workstream_newmodels.log",
+    "S2_File_reproducibility_archive/18_LOGS/workstream_team_season.log",
+    "S2_File_reproducibility_archive/20_FREEZE/EDITOR_REVIEWER_COMPUTATIONAL_RESPONSE_MAP.csv",
+    "S2_File_reproducibility_archive/20_FREEZE/FINAL_FREEZE_STATUS.txt",
+    "S2_File_reproducibility_archive/20_FREEZE/R2_FINAL_ANALYSIS_REPORT.md",
+    "S2_File_reproducibility_archive/20_FREEZE/build_freeze_hashes.py",
+    "S2_File_reproducibility_archive/20_FREEZE/capture_session_info.R",
+    "S2_File_reproducibility_archive/99_ARCHIVE_INTEGRITY/archive_sha256_manifest.csv",
+    "S2_File_reproducibility_archive/99_ARCHIVE_INTEGRITY/archive_summary.txt",
+    "S2_File_reproducibility_archive/99_ARCHIVE_INTEGRITY/source_to_archive_map.csv",
+    "S2_File_reproducibility_archive/README.md"
+  ]
+}

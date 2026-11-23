@@ -1,0 +1,624 @@
+table,row,field,published,frozen,rounding_half_unit,status
+Table 2,Population-average fallback: acute load,OR,0.696,0.696293594529414,0.0005,PASS
+Table 2,Population-average fallback: acute load,CI_low,0.296,0.296175089177324,0.0005,PASS
+Table 2,Population-average fallback: acute load,CI_high,1.637,1.63695323306688,0.0005,PASS
+Table 2,Population-average fallback: acute load,p,0.407,0.406547186963442,0.0005,PASS
+Table 2,Population-average fallback: soreness burden,OR,0.745,0.744836277083393,0.0005,PASS
+Table 2,Population-average fallback: soreness burden,CI_low,0.440,0.440412206593338,0.0005,PASS
+Table 2,Population-average fallback: soreness burden,CI_high,1.260,1.25968597453457,0.0005,PASS
+Table 2,Population-average fallback: soreness burden,p,0.272,0.271830435163005,0.0005,PASS
+Table 2,Population-average fallback: chronic load,OR,0.953,0.953461046548104,0.0005,PASS
+Table 2,Population-average fallback: chronic load,CI_low,0.532,0.532483825041372,0.0005,PASS
+Table 2,Population-average fallback: chronic load,CI_high,1.707,1.70725930917051,0.0005,PASS
+Table 2,Population-average fallback: chronic load,p,0.873,0.872610933548258,0.0005,PASS
+Table 2,Population-average fallback: previous episode history,OR,6.486,6.48630000396862,0.0005,PASS
+Table 2,Population-average fallback: previous episode history,CI_low,1.659,1.65940726991399,0.0005,PASS
+Table 2,Population-average fallback: previous episode history,CI_high,25.354,25.3536841161749,0.0005,PASS
+Table 2,Population-average fallback: previous episode history,p,0.007,0.00718451199839635,0.0005,PASS
+Table 2,Firth acute x soreness,OR,0.630,0.629552028809833,0.0005,PASS
+Table 2,Firth acute x soreness,CI_low,0.445,0.445024129213313,0.0005,PASS
+Table 2,Firth acute x soreness,CI_high,0.965,0.965067464096432,0.0005,PASS
+Table 2,Firth acute x soreness,p,0.035,0.0348256172282559,0.0005,PASS
+Table 2,Firth + player-cluster bootstrap,OR,0.655,0.655092281213892,0.0005,PASS
+Table 2,Firth + player-cluster bootstrap,CI_low,0.440,0.4397536554259801,0.0005,PASS
+Table 2,Firth + player-cluster bootstrap,CI_high,1.159,1.1585687868014372,0.0005,PASS
+Table 2,Marginal player-cluster bootstrap,OR,0.670,0.6697433733162328,0.0005,PASS
+Table 2,Marginal player-cluster bootstrap,CI_low,0.447,0.4467465376567564,0.0005,PASS
+Table 2,Marginal player-cluster bootstrap,CI_high,1.107,1.1071045704185327,0.0005,PASS
+Table 2,"IPW, observation model includes onset",OR,0.646,0.646366589674676,0.0005,PASS
+Table 2,"IPW, observation model includes onset",CI_low,0.429,0.429316712397819,0.0005,PASS
+Table 2,"IPW, observation model includes onset",CI_high,0.973,0.973150488165793,0.0005,PASS
+Table 2,"IPW, observation model includes onset",p,0.037,0.0365844253641482,0.0005,PASS
+Table 2,"IPW, observation model omits onset",OR,0.657,0.65671312887304,0.0005,PASS
+Table 2,"IPW, observation model omits onset",CI_low,0.425,0.424703246203828,0.0005,PASS
+Table 2,"IPW, observation model omits onset",CI_high,1.015,1.01546700546583,0.0005,PASS
+Table 2,"IPW, observation model omits onset",p,0.059,0.0586271530959739,0.0005,PASS
+Table 3,Non-overlapping chronic t-28 to t-8,OR,0.630,0.630041612925762,0.0005,PASS
+Table 3,Non-overlapping chronic t-28 to t-8,CI_low,0.445,0.445193442080729,0.0005,PASS
+Table 3,Non-overlapping chronic t-28 to t-8,CI_high,0.966,0.966108220584765,0.0005,PASS
+Table 3,Drop team,OR,0.694,0.693842622800896,0.0005,PASS
+Table 3,Drop team,CI_low,0.470,0.469871808346769,0.0005,PASS
+Table 3,Drop team,CI_high,1.025,1.02457218471796,0.0005,PASS
+Table 3,Drop season,OR,0.630,0.630311468642296,0.0005,PASS
+Table 3,Drop season,CI_low,0.444,0.443973479874673,0.0005,PASS
+Table 3,Drop season,CI_high,0.970,0.970364163313642,0.0005,PASS
+Table 3,Backward-looking interaction,OR,0.974,0.974084183502877,0.0005,PASS
+Table 3,Backward-looking interaction,CI_low,0.728,0.727651843783169,0.0005,PASS
+Table 3,Backward-looking interaction,CI_high,1.252,1.25204346548811,0.0005,PASS
+Table 3,Backward-looking chronic,OR,1.955,1.95545434782404,0.0005,PASS
+Table 3,Backward-looking chronic,CI_low,1.208,1.20829121202403,0.0005,PASS
+Table 3,Backward-looking chronic,CI_high,3.058,3.05818279293206,0.0005,PASS
+Table 3,Backward-looking + drop team,OR,0.958,0.958070329503594,0.0005,PASS
+Table 3,Backward-looking + drop team,CI_low,0.697,0.696881962730255,0.0005,PASS
+Table 3,Backward-looking + drop team,CI_high,1.317,1.31715097443327,0.0005,PASS
+S5,soreness/F/acute_load_7d_wp_z,OR,0.599,0.599094422804644,0.0005,PASS
+S5,soreness/F/acute_load_7d_wp_z,CI_low,0.325,0.324925700281675,0.0005,PASS
+S5,soreness/F/acute_load_7d_wp_z,CI_high,1.114,1.1137928130643,0.0005,PASS
+S5,soreness/F/acute_load_7d_wp_z,p,0.105,0.105094845576809,0.0005,PASS
+S5,soreness/F/soreness_burden_recent3_wp_z,OR,0.823,0.823322219063635,0.0005,PASS
+S5,soreness/F/soreness_burden_recent3_wp_z,CI_low,0.579,0.57942499536065,0.0005,PASS
+S5,soreness/F/soreness_burden_recent3_wp_z,CI_high,1.166,1.16587992353514,0.0005,PASS
+S5,soreness/F/soreness_burden_recent3_wp_z,p,0.273,0.272923595400388,0.0005,PASS
+S5,soreness/F/chronic_load_28d_wp_z,OR,0.947,0.947219920255698,0.0005,PASS
+S5,soreness/F/chronic_load_28d_wp_z,CI_low,0.533,0.533211926617023,0.0005,PASS
+S5,soreness/F/chronic_load_28d_wp_z,CI_high,1.719,1.71881049450506,0.0005,PASS
+S5,soreness/F/chronic_load_28d_wp_z,p,0.856,0.855923317530161,0.0005,PASS
+S5,soreness/F/prev_episode_ever,OR,6.129,6.12931772198318,0.0005,PASS
+S5,soreness/F/prev_episode_ever,CI_low,2.580,2.57968399372013,0.0005,PASS
+S5,soreness/F/prev_episode_ever,CI_high,17.424,17.4239187386029,0.0005,PASS
+S5,soreness/F/prev_episode_ever,p,<0.001,1.31295017753441e-05,,PASS
+S5,soreness/F/calendar_time,OR,0.992,0.99189478856468,0.0005,PASS
+S5,soreness/F/calendar_time,CI_low,0.987,0.986932861713726,0.0005,PASS
+S5,soreness/F/calendar_time,CI_high,0.997,0.996516996149522,0.0005,PASS
+S5,soreness/F/calendar_time,p,<0.001,0.000507774704028408,,PASS
+S5,soreness/F/teamTeamB,OR,0.023,0.0227928600514415,0.0005,PASS
+S5,soreness/F/teamTeamB,CI_low,0.000,0.000178064240824378,0.0005,PASS
+S5,soreness/F/teamTeamB,CI_high,0.170,0.169658983863773,0.0005,PASS
+S5,soreness/F/teamTeamB,p,<0.001,6.16717937163003e-07,,PASS
+S5,soreness/F/season2021,OR,2.889,2.88919090630971,0.0005,PASS
+S5,soreness/F/season2021,CI_low,0.599,0.59943389826759,0.0005,PASS
+S5,soreness/F/season2021,CI_high,14.053,14.0529090736831,0.0005,PASS
+S5,soreness/F/season2021,p,0.185,0.1847326435595,0.0005,PASS
+S5,soreness/F/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,OR,0.630,0.629552028809833,0.0005,PASS
+S5,soreness/F/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,CI_low,0.445,0.445024129213313,0.0005,PASS
+S5,soreness/F/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,CI_high,0.965,0.965067464096432,0.0005,PASS
+S5,soreness/F/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,p,0.035,0.0348256172282559,0.0005,PASS
+S5,soreness/B/acute_load_7d_wp_z,OR,0.478,0.477952161603176,0.0005,PASS
+S5,soreness/B/acute_load_7d_wp_z,CI_low,0.225,0.225063703475212,0.0005,PASS
+S5,soreness/B/acute_load_7d_wp_z,CI_high,1.015,1.01499382287695,0.0005,PASS
+S5,soreness/B/acute_load_7d_wp_z,p,0.055,0.0546978674996017,0.0005,PASS
+S5,soreness/B/soreness_burden_recent3_wp_z,OR,0.713,0.712535001808553,0.0005,PASS
+S5,soreness/B/soreness_burden_recent3_wp_z,CI_low,0.426,0.425689147630998,0.0005,PASS
+S5,soreness/B/soreness_burden_recent3_wp_z,CI_high,1.193,1.19266871525325,0.0005,PASS
+S5,soreness/B/soreness_burden_recent3_wp_z,p,0.197,0.19719151367324,0.0005,PASS
+S5,soreness/B/chronic_load_28d_wp_z,OR,0.949,0.949239863620246,0.0005,PASS
+S5,soreness/B/chronic_load_28d_wp_z,CI_low,0.342,0.341834108028652,0.0005,PASS
+S5,soreness/B/chronic_load_28d_wp_z,CI_high,2.636,2.63594620174725,0.0005,PASS
+S5,soreness/B/chronic_load_28d_wp_z,p,0.920,0.920367513275231,0.0005,PASS
+S5,soreness/B/prev_episode_ever,OR,6.374,6.3736310272676,0.0005,PASS
+S5,soreness/B/prev_episode_ever,CI_low,1.724,1.72425051997388,0.0005,PASS
+S5,soreness/B/prev_episode_ever,CI_high,23.560,23.5599015347049,0.0005,PASS
+S5,soreness/B/prev_episode_ever,p,0.005,0.00549062700533248,0.0005,PASS
+S5,soreness/B/calendar_time,status,Not estimable,NA,,PASS
+S5,soreness/B/teamTeamB,status,Not interpretable,7.99237131593023e-10,,PASS
+S5,soreness/B/season2021,status,Not estimable,NA,,PASS
+S5,soreness/B/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,OR,0.589,0.589462538989187,0.0005,PASS
+S5,soreness/B/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,CI_low,0.402,0.401674030185078,0.0005,PASS
+S5,soreness/B/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,CI_high,0.865,0.865044933852153,0.0005,PASS
+S5,soreness/B/acute_load_7d_wp_z:soreness_burden_recent3_wp_z,p,0.007,0.00691730099892259,0.0005,PASS
+S5,fatigue/F/acute_load_7d_wp_z,OR,0.615,0.615262473773623,0.0005,PASS
+S5,fatigue/F/acute_load_7d_wp_z,CI_low,0.329,0.328809660168787,0.0005,PASS
+S5,fatigue/F/acute_load_7d_wp_z,CI_high,1.159,1.15943600389299,0.0005,PASS
+S5,fatigue/F/acute_load_7d_wp_z,p,0.133,0.132643861227851,0.0005,PASS
+S5,fatigue/F/fatigue_burden_recent3_wp_z,OR,0.759,0.75920323313816,0.0005,PASS
+S5,fatigue/F/fatigue_burden_recent3_wp_z,CI_low,0.529,0.529101817520951,0.0005,PASS
+S5,fatigue/F/fatigue_burden_recent3_wp_z,CI_high,1.086,1.08636536267934,0.0005,PASS
+S5,fatigue/F/fatigue_burden_recent3_wp_z,p,0.133,0.133302367578026,0.0005,PASS
+S5,fatigue/F/chronic_load_28d_wp_z,OR,0.949,0.949148135251104,0.0005,PASS
+S5,fatigue/F/chronic_load_28d_wp_z,CI_low,0.532,0.532109367419679,0.0005,PASS
+S5,fatigue/F/chronic_load_28d_wp_z,CI_high,1.728,1.72836812025292,0.0005,PASS
+S5,fatigue/F/chronic_load_28d_wp_z,p,0.862,0.862222529339561,0.0005,PASS
+S5,fatigue/F/prev_episode_ever,OR,5.923,5.922977690543,0.0005,PASS
+S5,fatigue/F/prev_episode_ever,CI_low,2.500,2.49976201538208,0.0005,PASS
+S5,fatigue/F/prev_episode_ever,CI_high,16.804,16.8040087920478,0.0005,PASS
+S5,fatigue/F/prev_episode_ever,p,<0.001,1.83243404346944e-05,,PASS
+S5,fatigue/F/calendar_time,OR,0.992,0.991929542180952,0.0005,PASS
+S5,fatigue/F/calendar_time,CI_low,0.987,0.986981886027111,0.0005,PASS
+S5,fatigue/F/calendar_time,CI_high,0.997,0.99655895145539,0.0005,PASS
+S5,fatigue/F/calendar_time,p,<0.001,0.000542097368573247,,PASS
+S5,fatigue/F/teamTeamB,OR,0.026,0.0258495711385424,0.0005,PASS
+S5,fatigue/F/teamTeamB,CI_low,0.000,0.000202507230372367,0.0005,PASS
+S5,fatigue/F/teamTeamB,CI_high,0.190,0.190118346827769,0.0005,PASS
+S5,fatigue/F/teamTeamB,p,<0.001,1.64823628734379e-06,,PASS
+S5,fatigue/F/season2021,OR,2.790,2.78975859055337,0.0005,PASS
+S5,fatigue/F/season2021,CI_low,0.589,0.588765531754901,0.0005,PASS
+S5,fatigue/F/season2021,CI_high,13.267,13.2668742481214,0.0005,PASS
+S5,fatigue/F/season2021,p,0.194,0.194422987125427,0.0005,PASS
+S5,fatigue/F/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,OR,0.819,0.818673431389287,0.0005,PASS
+S5,fatigue/F/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,CI_low,0.569,0.569427186625548,0.0005,PASS
+S5,fatigue/F/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,CI_high,1.380,1.38025438659376,0.0005,PASS
+S5,fatigue/F/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,p,0.447,0.447156884792352,0.0005,PASS
+S5,fatigue/B/acute_load_7d_wp_z,OR,0.552,0.552242258257099,0.0005,PASS
+S5,fatigue/B/acute_load_7d_wp_z,CI_low,0.239,0.238853367660363,0.0005,PASS
+S5,fatigue/B/acute_load_7d_wp_z,CI_high,1.277,1.2768147872152,0.0005,PASS
+S5,fatigue/B/acute_load_7d_wp_z,p,0.165,0.164972875128481,0.0005,PASS
+S5,fatigue/B/fatigue_burden_recent3_wp_z,OR,0.771,0.770950700949893,0.0005,PASS
+S5,fatigue/B/fatigue_burden_recent3_wp_z,CI_low,0.588,0.587669486948032,0.0005,PASS
+S5,fatigue/B/fatigue_burden_recent3_wp_z,CI_high,1.011,1.01139330269106,0.0005,PASS
+S5,fatigue/B/fatigue_burden_recent3_wp_z,p,0.060,0.0603534140440195,0.0005,PASS
+S5,fatigue/B/chronic_load_28d_wp_z,OR,0.908,0.907840443131069,0.0005,PASS
+S5,fatigue/B/chronic_load_28d_wp_z,CI_low,0.333,0.332851631616531,0.0005,PASS
+S5,fatigue/B/chronic_load_28d_wp_z,CI_high,2.476,2.47610103691462,0.0005,PASS
+S5,fatigue/B/chronic_load_28d_wp_z,p,0.850,0.850195502806182,0.0005,PASS
+S5,fatigue/B/prev_episode_ever,OR,6.328,6.32816909414884,0.0005,PASS
+S5,fatigue/B/prev_episode_ever,CI_low,1.781,1.78123278339671,0.0005,PASS
+S5,fatigue/B/prev_episode_ever,CI_high,22.482,22.4820273113184,0.0005,PASS
+S5,fatigue/B/prev_episode_ever,p,0.004,0.00433668837535493,0.0005,PASS
+S5,fatigue/B/calendar_time,status,Not estimable,NA,,PASS
+S5,fatigue/B/teamTeamB,status,Not interpretable,9.84626709481395e-10,,PASS
+S5,fatigue/B/season2021,status,Not estimable,NA,,PASS
+S5,fatigue/B/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,OR,0.784,0.783868644628639,0.0005,PASS
+S5,fatigue/B/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,CI_low,0.595,0.595335520886227,0.0005,PASS
+S5,fatigue/B/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,CI_high,1.032,1.03210715718299,0.0005,PASS
+S5,fatigue/B/acute_load_7d_wp_z:fatigue_burden_recent3_wp_z,p,0.083,0.0827663819483416,0.0005,PASS
+S5,readiness/F/acute_load_7d_wp_z,OR,0.682,0.681586380741518,0.0005,PASS
+S5,readiness/F/acute_load_7d_wp_z,CI_low,0.364,0.363676082268901,0.0005,PASS
+S5,readiness/F/acute_load_7d_wp_z,CI_high,1.277,1.2770820188672,0.0005,PASS
+S5,readiness/F/acute_load_7d_wp_z,p,0.232,0.232461633530661,0.0005,PASS
+S5,readiness/F/readiness_deficit_recent3_wp_z,OR,1.019,1.01884288359096,0.0005,PASS
+S5,readiness/F/readiness_deficit_recent3_wp_z,CI_low,0.719,0.719163554828732,0.0005,PASS
+S5,readiness/F/readiness_deficit_recent3_wp_z,CI_high,1.420,1.42034303094722,0.0005,PASS
+S5,readiness/F/readiness_deficit_recent3_wp_z,p,0.915,0.914942510878576,0.0005,PASS
+S5,readiness/F/chronic_load_28d_wp_z,OR,0.982,0.981640261587403,0.0005,PASS
+S5,readiness/F/chronic_load_28d_wp_z,CI_low,0.545,0.545186599790744,0.0005,PASS
+S5,readiness/F/chronic_load_28d_wp_z,CI_high,1.799,1.79934223248638,0.0005,PASS
+S5,readiness/F/chronic_load_28d_wp_z,p,0.951,0.951498808032863,0.0005,PASS
+S5,readiness/F/prev_episode_ever,OR,5.850,5.84980510006797,0.0005,PASS
+S5,readiness/F/prev_episode_ever,CI_low,2.461,2.46136995945719,0.0005,PASS
+S5,readiness/F/prev_episode_ever,CI_high,16.634,16.6344120516616,0.0005,PASS
+S5,readiness/F/prev_episode_ever,p,<0.001,2.29050524522822e-05,,PASS
+S5,readiness/F/calendar_time,OR,0.992,0.992035871706009,0.0005,PASS
+S5,readiness/F/calendar_time,CI_low,0.987,0.987064083697564,0.0005,PASS
+S5,readiness/F/calendar_time,CI_high,0.997,0.99666018138221,0.0005,PASS
+S5,readiness/F/calendar_time,p,<0.001,0.000630191580900386,,PASS
+S5,readiness/F/teamTeamB,OR,0.027,0.0265973709602826,0.0005,PASS
+S5,readiness/F/teamTeamB,CI_low,0.000,0.000208253437279715,0.0005,PASS
+S5,readiness/F/teamTeamB,CI_high,0.196,0.196130835693888,0.0005,PASS
+S5,readiness/F/teamTeamB,p,<0.001,2.41790205413039e-06,,PASS
+S5,readiness/F/season2021,OR,2.554,2.55392315939634,0.0005,PASS
+S5,readiness/F/season2021,CI_low,0.540,0.540387904812386,0.0005,PASS
+S5,readiness/F/season2021,CI_high,12.116,12.1158501952638,0.0005,PASS
+S5,readiness/F/season2021,p,0.235,0.23461880341623,0.0005,PASS
+S5,readiness/F/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,OR,0.866,0.865740833714593,0.0005,PASS
+S5,readiness/F/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,CI_low,0.636,0.636113078014286,0.0005,PASS
+S5,readiness/F/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,CI_high,1.270,1.26989306225265,0.0005,PASS
+S5,readiness/F/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,p,0.427,0.426624692359047,0.0005,PASS
+S5,readiness/B/acute_load_7d_wp_z,OR,0.554,0.553766632090903,0.0005,PASS
+S5,readiness/B/acute_load_7d_wp_z,CI_low,0.242,0.242073514887037,0.0005,PASS
+S5,readiness/B/acute_load_7d_wp_z,CI_high,1.267,1.26679485345765,0.0005,PASS
+S5,readiness/B/acute_load_7d_wp_z,p,0.162,0.161556489668407,0.0005,PASS
+S5,readiness/B/readiness_deficit_recent3_wp_z,OR,0.778,0.778291398202744,0.0005,PASS
+S5,readiness/B/readiness_deficit_recent3_wp_z,CI_low,0.592,0.591914611833832,0.0005,PASS
+S5,readiness/B/readiness_deficit_recent3_wp_z,CI_high,1.023,1.02335284246443,0.0005,PASS
+S5,readiness/B/readiness_deficit_recent3_wp_z,p,0.073,0.0726993603706527,0.0005,PASS
+S5,readiness/B/chronic_load_28d_wp_z,OR,0.922,0.921951718179278,0.0005,PASS
+S5,readiness/B/chronic_load_28d_wp_z,CI_low,0.328,0.328001776591068,0.0005,PASS
+S5,readiness/B/chronic_load_28d_wp_z,CI_high,2.591,2.59143404492422,0.0005,PASS
+S5,readiness/B/chronic_load_28d_wp_z,p,0.878,0.877518656934993,0.0005,PASS
+S5,readiness/B/prev_episode_ever,OR,6.110,6.11005665238623,0.0005,PASS
+S5,readiness/B/prev_episode_ever,CI_low,1.701,1.70056252643553,0.0005,PASS
+S5,readiness/B/prev_episode_ever,CI_high,21.953,21.9532017876584,0.0005,PASS
+S5,readiness/B/prev_episode_ever,p,0.006,0.00554259207444767,0.0005,PASS
+S5,readiness/B/calendar_time,status,Not estimable,NA,,PASS
+S5,readiness/B/teamTeamB,status,Not interpretable,8.57560488014831e-10,,PASS
+S5,readiness/B/season2021,status,Not estimable,NA,,PASS
+S5,readiness/B/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,OR,0.837,0.837169821130048,0.0005,PASS
+S5,readiness/B/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,CI_low,0.622,0.622089530956835,0.0005,PASS
+S5,readiness/B/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,CI_high,1.127,1.1266116443608,0.0005,PASS
+S5,readiness/B/acute_load_7d_wp_z:readiness_deficit_recent3_wp_z,p,0.241,0.240750574914504,0.0005,PASS
+S6,S1_washout3d/Acute load (7-day within-player z-score),OR,0.721,0.720535438909061,0.0005,PASS
+S6,S1_washout3d/Acute load (7-day within-player z-score),CI_low,0.436,0.435519359476091,0.0005,PASS
+S6,S1_washout3d/Acute load (7-day within-player z-score),CI_high,1.192,1.1920740316766,0.0005,PASS
+S6,S1_washout3d/Acute load (7-day within-player z-score),p,0.202,0.201954184965417,0.0005,PASS
+S6,S1_washout3d/Soreness burden (recent 3-day within-player z-score),OR,0.685,0.685331543446001,0.0005,PASS
+S6,S1_washout3d/Soreness burden (recent 3-day within-player z-score),CI_low,0.530,0.529676821309549,0.0005,PASS
+S6,S1_washout3d/Soreness burden (recent 3-day within-player z-score),CI_high,0.887,0.886728105792632,0.0005,PASS
+S6,S1_washout3d/Soreness burden (recent 3-day within-player z-score),p,0.004,0.00404581974753938,0.0005,PASS
+S6,S1_washout3d/Chronic load (28-day within-player z-score),OR,0.863,0.862905913965382,0.0005,PASS
+S6,S1_washout3d/Chronic load (28-day within-player z-score),CI_low,0.519,0.51948480350591,0.0005,PASS
+S6,S1_washout3d/Chronic load (28-day within-player z-score),CI_high,1.433,1.43335591595984,0.0005,PASS
+S6,S1_washout3d/Chronic load (28-day within-player z-score),p,0.569,0.569019328921853,0.0005,PASS
+S6,S1_washout3d/Previous episode history,OR,4.291,4.29105275096149,0.0005,PASS
+S6,S1_washout3d/Previous episode history,CI_low,1.101,1.1011628737901,0.0005,PASS
+S6,S1_washout3d/Previous episode history,CI_high,16.722,16.7215351605144,0.0005,PASS
+S6,S1_washout3d/Previous episode history,p,0.036,0.035828833388266,0.0005,PASS
+S6,S1_washout3d/Calendar time (per day),OR,0.988,0.987566123719904,0.0005,PASS
+S6,S1_washout3d/Calendar time (per day),CI_low,0.983,0.982770435569636,0.0005,PASS
+S6,S1_washout3d/Calendar time (per day),CI_high,0.992,0.992385213698312,0.0005,PASS
+S6,S1_washout3d/Calendar time (per day),p,<0.001,4.71073085006512e-07,,PASS
+S6,S1_washout3d/Team B vs Team A,OR,0.025,0.0254481367387017,0.0005,PASS
+S6,S1_washout3d/Team B vs Team A,CI_low,0.001,0.00145206553470582,0.0005,PASS
+S6,S1_washout3d/Team B vs Team A,CI_high,0.446,0.44599065813022,0.0005,PASS
+S6,S1_washout3d/Team B vs Team A,p,0.012,0.0119826128939047,0.0005,PASS
+S6,S1_washout3d/2021 season vs 2020,OR,5.824,5.82435263075337,0.0005,PASS
+S6,S1_washout3d/2021 season vs 2020,CI_low,1.241,1.24105012234514,0.0005,PASS
+S6,S1_washout3d/2021 season vs 2020,CI_high,27.334,27.3341768850248,0.0005,PASS
+S6,S1_washout3d/2021 season vs 2020,p,0.025,0.0254980220965522,0.0005,PASS
+S6,S1_washout3d/Acute load × soreness burden,OR,0.794,0.793628939897974,0.0005,PASS
+S6,S1_washout3d/Acute load × soreness burden,CI_low,0.566,0.566374051056677,0.0005,PASS
+S6,S1_washout3d/Acute load × soreness burden,CI_high,1.112,1.11206876986769,0.0005,PASS
+S6,S1_washout3d/Acute load × soreness burden,p,0.179,0.179313512936042,0.0005,PASS
+S6,S1_washout14d/Acute load (7-day within-player z-score),OR,0.895,0.895488097313444,0.0005,PASS
+S6,S1_washout14d/Acute load (7-day within-player z-score),CI_low,0.270,0.270138489556536,0.0005,PASS
+S6,S1_washout14d/Acute load (7-day within-player z-score),CI_high,2.968,2.96847344392302,0.0005,PASS
+S6,S1_washout14d/Acute load (7-day within-player z-score),p,0.857,0.856733935507168,0.0005,PASS
+S6,S1_washout14d/Soreness burden (recent 3-day within-player z-score),OR,0.765,0.764562537062941,0.0005,PASS
+S6,S1_washout14d/Soreness burden (recent 3-day within-player z-score),CI_low,0.379,0.378940754366366,0.0005,PASS
+S6,S1_washout14d/Soreness burden (recent 3-day within-player z-score),CI_high,1.543,1.54260492265491,0.0005,PASS
+S6,S1_washout14d/Soreness burden (recent 3-day within-player z-score),p,0.453,0.45349336843638,0.0005,PASS
+S6,S1_washout14d/Chronic load (28-day within-player z-score),OR,0.838,0.838093101067885,0.0005,PASS
+S6,S1_washout14d/Chronic load (28-day within-player z-score),CI_low,0.430,0.430264114932434,0.0005,PASS
+S6,S1_washout14d/Chronic load (28-day within-player z-score),CI_high,1.632,1.6324857725304,0.0005,PASS
+S6,S1_washout14d/Chronic load (28-day within-player z-score),p,0.604,0.603599383761258,0.0005,PASS
+S6,S1_washout14d/Previous episode history,OR,4.388,4.38760807461762,0.0005,PASS
+S6,S1_washout14d/Previous episode history,CI_low,1.140,1.14045851682918,0.0005,PASS
+S6,S1_washout14d/Previous episode history,CI_high,16.880,16.8801445492061,0.0005,PASS
+S6,S1_washout14d/Previous episode history,p,0.031,0.0314610312851499,0.0005,PASS
+S6,S1_washout14d/Calendar time (per day),OR,0.994,0.993666076317591,0.0005,PASS
+S6,S1_washout14d/Calendar time (per day),CI_low,0.989,0.988750088125132,0.0005,PASS
+S6,S1_washout14d/Calendar time (per day),CI_high,0.999,0.998606506419283,0.0005,PASS
+S6,S1_washout14d/Calendar time (per day),p,0.012,0.0120361431904518,0.0005,PASS
+S6,S1_washout14d/Team B vs Team A,OR,0.000,3.78203137549101e-08,0.0005,PASS
+S6,S1_washout14d/Team B vs Team A,CI_low,0.000,1.9911735841754e-08,0.0005,PASS
+S6,S1_washout14d/Team B vs Team A,CI_high,0.000,7.18358330929846e-08,0.0005,PASS
+S6,S1_washout14d/Team B vs Team A,p,<0.001,0.0,,PASS
+S6,S1_washout14d/2021 season vs 2020,OR,2.066,2.06586093838419,0.0005,PASS
+S6,S1_washout14d/2021 season vs 2020,CI_low,0.400,0.400277164428137,0.0005,PASS
+S6,S1_washout14d/2021 season vs 2020,CI_high,10.662,10.6620656785127,0.0005,PASS
+S6,S1_washout14d/2021 season vs 2020,p,0.386,0.386209349896059,0.0005,PASS
+S7,S2_end_plus_washout/Acute load (7-day within-player z-score),OR,0.518,0.517836679510653,0.0005,PASS
+S7,S2_end_plus_washout/Acute load (7-day within-player z-score),CI_low,0.253,0.252523368741875,0.0005,PASS
+S7,S2_end_plus_washout/Acute load (7-day within-player z-score),CI_high,1.062,1.06190103507103,0.0005,PASS
+S7,S2_end_plus_washout/Acute load (7-day within-player z-score),p,0.072,0.0724815475962838,0.0005,PASS
+S7,S2_end_plus_washout/Soreness burden (recent 3-day within-player z-score),OR,0.829,0.8289752781095,0.0005,PASS
+S7,S2_end_plus_washout/Soreness burden (recent 3-day within-player z-score),CI_low,0.488,0.487576522647014,0.0005,PASS
+S7,S2_end_plus_washout/Soreness burden (recent 3-day within-player z-score),CI_high,1.409,1.40941981370631,0.0005,PASS
+S7,S2_end_plus_washout/Soreness burden (recent 3-day within-player z-score),p,0.489,0.488519650078771,0.0005,PASS
+S7,S2_end_plus_washout/Chronic load (28-day within-player z-score),OR,0.924,0.924389950722173,0.0005,PASS
+S7,S2_end_plus_washout/Chronic load (28-day within-player z-score),CI_low,0.537,0.537466372378642,0.0005,PASS
+S7,S2_end_plus_washout/Chronic load (28-day within-player z-score),CI_high,1.590,1.58986091951099,0.0005,PASS
+S7,S2_end_plus_washout/Chronic load (28-day within-player z-score),p,0.776,0.776278057732329,0.0005,PASS
+S7,S2_end_plus_washout/Previous episode history,OR,6.491,6.49099653139557,0.0005,PASS
+S7,S2_end_plus_washout/Previous episode history,CI_low,1.708,1.70811579871339,0.0005,PASS
+S7,S2_end_plus_washout/Previous episode history,CI_high,24.666,24.6663815195231,0.0005,PASS
+S7,S2_end_plus_washout/Previous episode history,p,0.006,0.00603217560999321,0.0005,PASS
+S7,S2_end_plus_washout/Calendar time (per day),OR,0.991,0.991464339403549,0.0005,PASS
+S7,S2_end_plus_washout/Calendar time (per day),CI_low,0.986,0.985775336086515,0.0005,PASS
+S7,S2_end_plus_washout/Calendar time (per day),CI_high,0.997,0.997186174500357,0.0005,PASS
+S7,S2_end_plus_washout/Calendar time (per day),p,0.004,0.00350315320415777,0.0005,PASS
+S7,S2_end_plus_washout/Team B vs Team A,OR,0.000,2.92769582699087e-08,0.0005,PASS
+S7,S2_end_plus_washout/Team B vs Team A,CI_low,0.000,1.49730595912693e-08,0.0005,PASS
+S7,S2_end_plus_washout/Team B vs Team A,CI_high,0.000,5.72455001807227e-08,0.0005,PASS
+S7,S2_end_plus_washout/Team B vs Team A,p,<0.001,0.0,,PASS
+S7,S2_end_plus_washout/2021 season vs 2020,OR,3.031,3.03140877853317,0.0005,PASS
+S7,S2_end_plus_washout/2021 season vs 2020,CI_low,0.354,0.353778725931218,0.0005,PASS
+S7,S2_end_plus_washout/2021 season vs 2020,CI_high,25.975,25.9751039534089,0.0005,PASS
+S7,S2_end_plus_washout/2021 season vs 2020,p,0.312,0.311581371437514,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Acute load (7-day within-player z-score),OR,0.804,0.803964843258268,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Acute load (7-day within-player z-score),CI_low,0.558,0.557828660533183,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Acute load (7-day within-player z-score),CI_high,1.159,1.15870609548367,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Acute load (7-day within-player z-score),p,0.242,0.241965546063523,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Soreness burden (recent 3-day within-player z-score),OR,0.747,0.746501241206175,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Soreness burden (recent 3-day within-player z-score),CI_low,0.449,0.448964775520031,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Soreness burden (recent 3-day within-player z-score),CI_high,1.241,1.24122009900863,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Soreness burden (recent 3-day within-player z-score),p,0.260,0.259746371604625,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Chronic load (28-day within-player z-score),OR,0.659,0.65872762492859,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Chronic load (28-day within-player z-score),CI_low,0.259,0.259404206810637,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Chronic load (28-day within-player z-score),CI_high,1.673,1.67276425150969,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Chronic load (28-day within-player z-score),p,0.380,0.379964447503402,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Previous episode history,OR,6.301,6.30080734375534,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Previous episode history,CI_low,1.608,1.60763639497781,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Previous episode history,CI_high,24.695,24.6947464657698,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Previous episode history,p,0.008,0.00825987114173022,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Calendar time (per day),OR,0.992,0.991638954526668,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Calendar time (per day),CI_low,0.986,0.986311113243087,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Calendar time (per day),CI_high,0.997,0.996995575667194,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Calendar time (per day),p,0.002,0.00225269763028417,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Team B vs Team A,OR,0.000,2.78159764566952e-08,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Team B vs Team A,CI_low,0.000,1.38310139257429e-08,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Team B vs Team A,CI_high,0.000,5.59415636766384e-08,0.0005,PASS
+S7,S3_ACWR_replaces_acute/Team B vs Team A,p,<0.001,0.0,,PASS
+S7,S3_ACWR_replaces_acute/2021 season vs 2020,OR,2.779,2.77947466280454,0.0005,PASS
+S7,S3_ACWR_replaces_acute/2021 season vs 2020,CI_low,0.389,0.389495526449488,0.0005,PASS
+S7,S3_ACWR_replaces_acute/2021 season vs 2020,CI_high,19.835,19.8345780029756,0.0005,PASS
+S7,S3_ACWR_replaces_acute/2021 season vs 2020,p,0.308,0.307929955235771,0.0005,PASS
+S7,S4_strict_lag1_wellness/Acute load (7-day within-player z-score),OR,0.703,0.703341928904522,0.0005,PASS
+S7,S4_strict_lag1_wellness/Acute load (7-day within-player z-score),CI_low,0.292,0.291540399538861,0.0005,PASS
+S7,S4_strict_lag1_wellness/Acute load (7-day within-player z-score),CI_high,1.697,1.69681412846247,0.0005,PASS
+S7,S4_strict_lag1_wellness/Acute load (7-day within-player z-score),p,0.434,0.43350216559541,0.0005,PASS
+S7,S4_strict_lag1_wellness/Soreness burden (lag-1 within-player z-score),OR,0.723,0.723443526974793,0.0005,PASS
+S7,S4_strict_lag1_wellness/Soreness burden (lag-1 within-player z-score),CI_low,0.442,0.441570420360948,0.0005,PASS
+S7,S4_strict_lag1_wellness/Soreness burden (lag-1 within-player z-score),CI_high,1.185,1.18524817920076,0.0005,PASS
+S7,S4_strict_lag1_wellness/Soreness burden (lag-1 within-player z-score),p,0.199,0.198699521020178,0.0005,PASS
+S7,S4_strict_lag1_wellness/Chronic load (28-day within-player z-score),OR,0.784,0.78370593720642,0.0005,PASS
+S7,S4_strict_lag1_wellness/Chronic load (28-day within-player z-score),CI_low,0.426,0.425622199193269,0.0005,PASS
+S7,S4_strict_lag1_wellness/Chronic load (28-day within-player z-score),CI_high,1.443,1.44305207100745,0.0005,PASS
+S7,S4_strict_lag1_wellness/Chronic load (28-day within-player z-score),p,0.434,0.433928508686359,0.0005,PASS
+S7,S4_strict_lag1_wellness/Previous episode history,OR,5.077,5.07708740692128,0.0005,PASS
+S7,S4_strict_lag1_wellness/Previous episode history,CI_low,1.190,1.18978080373352,0.0005,PASS
+S7,S4_strict_lag1_wellness/Previous episode history,CI_high,21.665,21.665181062454,0.0005,PASS
+S7,S4_strict_lag1_wellness/Previous episode history,p,0.028,0.0281828949307633,0.0005,PASS
+S7,S4_strict_lag1_wellness/Calendar time (per day),OR,0.995,0.994717147019723,0.0005,PASS
+S7,S4_strict_lag1_wellness/Calendar time (per day),CI_low,0.990,0.990461796362732,0.0005,PASS
+S7,S4_strict_lag1_wellness/Calendar time (per day),CI_high,0.999,0.99899078006709,0.0005,PASS
+S7,S4_strict_lag1_wellness/Calendar time (per day),p,0.015,0.0154510393778343,0.0005,PASS
+S7,S4_strict_lag1_wellness/Team B vs Team A,OR,0.000,2.95327431345978e-08,0.0005,PASS
+S7,S4_strict_lag1_wellness/Team B vs Team A,CI_low,0.000,1.5707477431664e-08,0.0005,PASS
+S7,S4_strict_lag1_wellness/Team B vs Team A,CI_high,0.000,5.55266064107745e-08,0.0005,PASS
+S7,S4_strict_lag1_wellness/Team B vs Team A,p,<0.001,0.0,,PASS
+S7,S4_strict_lag1_wellness/2021 season vs 2020,OR,1.043,1.04306091654492,0.0005,PASS
+S7,S4_strict_lag1_wellness/2021 season vs 2020,CI_low,0.158,0.158290348690809,0.0005,PASS
+S7,S4_strict_lag1_wellness/2021 season vs 2020,CI_high,6.873,6.87329382127205,0.0005,PASS
+S7,S4_strict_lag1_wellness/2021 season vs 2020,p,0.965,0.965043288019139,0.0005,PASS
+S7,S5_exclude_high_contributor/Acute load (7-day within-player z-score),OR,0.714,0.714491162163227,0.0005,PASS
+S7,S5_exclude_high_contributor/Acute load (7-day within-player z-score),CI_low,0.249,0.249306438285766,0.0005,PASS
+S7,S5_exclude_high_contributor/Acute load (7-day within-player z-score),CI_high,2.048,2.04767122870771,0.0005,PASS
+S7,S5_exclude_high_contributor/Acute load (7-day within-player z-score),p,0.531,0.53143072856427,0.0005,PASS
+S7,S5_exclude_high_contributor/Soreness burden (recent 3-day within-player z-score),OR,0.741,0.740911928555309,0.0005,PASS
+S7,S5_exclude_high_contributor/Soreness burden (recent 3-day within-player z-score),CI_low,0.361,0.361109026083071,0.0005,PASS
+S7,S5_exclude_high_contributor/Soreness burden (recent 3-day within-player z-score),CI_high,1.520,1.5201793536705,0.0005,PASS
+S7,S5_exclude_high_contributor/Soreness burden (recent 3-day within-player z-score),p,0.413,0.41347320476098,0.0005,PASS
+S7,S5_exclude_high_contributor/Chronic load (28-day within-player z-score),OR,0.994,0.994372079816772,0.0005,PASS
+S7,S5_exclude_high_contributor/Chronic load (28-day within-player z-score),CI_low,0.504,0.504069052021693,0.0005,PASS
+S7,S5_exclude_high_contributor/Chronic load (28-day within-player z-score),CI_high,1.962,1.9615880585277,0.0005,PASS
+S7,S5_exclude_high_contributor/Chronic load (28-day within-player z-score),p,0.987,0.987009512546961,0.0005,PASS
+S7,S5_exclude_high_contributor/Previous episode history,OR,5.176,5.17569462312596,0.0005,PASS
+S7,S5_exclude_high_contributor/Previous episode history,CI_low,1.295,1.2947903259356,0.0005,PASS
+S7,S5_exclude_high_contributor/Previous episode history,CI_high,20.689,20.6889210517528,0.0005,PASS
+S7,S5_exclude_high_contributor/Previous episode history,p,0.020,0.0200484111418496,0.0005,PASS
+S7,S5_exclude_high_contributor/Calendar time (per day),OR,0.990,0.990081539403814,0.0005,PASS
+S7,S5_exclude_high_contributor/Calendar time (per day),CI_low,0.984,0.984081398358151,0.0005,PASS
+S7,S5_exclude_high_contributor/Calendar time (per day),CI_high,0.996,0.996118264509117,0.0005,PASS
+S7,S5_exclude_high_contributor/Calendar time (per day),p,0.001,0.00130874730636766,0.0005,PASS
+S7,S5_exclude_high_contributor/Team B vs Team A,OR,0.000,3.02523502725154e-08,0.0005,PASS
+S7,S5_exclude_high_contributor/Team B vs Team A,CI_low,0.000,1.44813876706491e-08,0.0005,PASS
+S7,S5_exclude_high_contributor/Team B vs Team A,CI_high,0.000,6.31986877104261e-08,0.0005,PASS
+S7,S5_exclude_high_contributor/Team B vs Team A,p,<0.001,0.0,,PASS
+S7,S5_exclude_high_contributor/2021 season vs 2020,OR,6.428,6.427778946416,0.0005,PASS
+S7,S5_exclude_high_contributor/2021 season vs 2020,CI_low,1.108,1.10789236432726,0.0005,PASS
+S7,S5_exclude_high_contributor/2021 season vs 2020,CI_high,37.293,37.292740264599,0.0005,PASS
+S7,S5_exclude_high_contributor/2021 season vs 2020,p,0.038,0.0380587585986011,0.0005,PASS
+S7,E/F_nonoverlap/Acute,OR,0.599,0.598631395980394,0.0005,PASS
+S7,E/F_nonoverlap/Acute,CI_low,0.358,0.358336563299947,0.0005,PASS
+S7,E/F_nonoverlap/Acute,CI_high,1.012,1.01188874024656,0.0005,PASS
+S7,E/F_nonoverlap/Wellness,OR,0.822,0.8222651458153,0.0005,PASS
+S7,E/F_nonoverlap/Wellness,CI_low,0.579,0.578528407372248,0.0005,PASS
+S7,E/F_nonoverlap/Wellness,CI_high,1.164,1.16448405216455,0.0005,PASS
+S7,E/F_nonoverlap/Chronic,OR,0.928,0.928440708336872,0.0005,PASS
+S7,E/F_nonoverlap/Chronic,CI_low,0.593,0.593148925669103,0.0005,PASS
+S7,E/F_nonoverlap/Chronic,CI_high,1.479,1.47865940363141,0.0005,PASS
+S7,E/F_nonoverlap/Previous,OR,6.154,6.15385429106188,0.0005,PASS
+S7,E/F_nonoverlap/Previous,CI_low,2.590,2.58982411317566,0.0005,PASS
+S7,E/F_nonoverlap/Previous,CI_high,17.495,17.4947491486664,0.0005,PASS
+S7,E/F_nonoverlap/Acute x wellness,OR,0.630,0.630041612925762,0.0005,PASS
+S7,E/F_nonoverlap/Acute x wellness,CI_low,0.445,0.445193442080729,0.0005,PASS
+S7,E/F_nonoverlap/Acute x wellness,CI_high,0.966,0.966108220584765,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Acute,OR,0.637,0.636981606427493,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Acute,CI_low,0.388,0.387962061221604,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Acute,CI_high,1.046,1.04583825967248,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Wellness,OR,0.827,0.827316714136072,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Wellness,CI_low,0.574,0.574280750350728,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Wellness,CI_high,1.192,1.19184378907162,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Chronic,OR,0.891,0.891404514265698,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Chronic,CI_low,0.541,0.541081884482035,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Chronic,CI_high,1.469,1.46854298922596,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Previous,OR,1.607,1.60723576049993,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Previous,CI_low,0.330,0.330230690974775,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Previous,CI_high,7.822,7.82243098666777,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Acute x wellness,OR,0.703,0.702890606940449,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Acute x wellness,CI_low,0.475,0.475081263643167,0.0005,PASS
+S7,E/A_nonoverlap_dropteam/Acute x wellness,CI_high,1.040,1.03993830768329,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Acute,OR,0.653,0.652722945761537,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Acute,CI_low,0.376,0.376328968321924,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Acute,CI_high,1.134,1.13415768256539,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Wellness,OR,0.852,0.851699185588928,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Wellness,CI_low,0.589,0.588509387534549,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Wellness,CI_high,1.227,1.22660170875574,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Chronic,OR,0.781,0.781177720813112,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Chronic,CI_low,0.496,0.496036869117366,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Chronic,CI_high,1.263,1.26273850767452,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Previous,OR,7.106,7.10558417452596,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Previous,CI_low,3.001,3.00061607445467,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Previous,CI_high,20.153,20.152509431279,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Acute x wellness,OR,0.670,0.669591453074855,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Acute x wellness,CI_low,0.475,0.474946726457516,0.0005,PASS
+S7,E/F_nonoverlap_dropteam/Acute x wellness,CI_high,1.069,1.06871664158014,0.0005,PASS
+S7,H/F_hist/Acute,OR,0.720,0.720131602635031,0.0005,PASS
+S7,H/F_hist/Acute,CI_low,0.392,0.392156586699196,0.0005,PASS
+S7,H/F_hist/Acute,CI_high,1.107,1.10727489026041,0.0005,PASS
+S7,H/F_hist/Wellness,OR,0.885,0.884878412620584,0.0005,PASS
+S7,H/F_hist/Wellness,CI_low,0.526,0.525572105852894,0.0005,PASS
+S7,H/F_hist/Wellness,CI_high,1.368,1.36792928686409,0.0005,PASS
+S7,H/F_hist/Chronic,OR,1.955,1.95545434782404,0.0005,PASS
+S7,H/F_hist/Chronic,CI_low,1.208,1.20829121202403,0.0005,PASS
+S7,H/F_hist/Chronic,CI_high,3.058,3.05818279293206,0.0005,PASS
+S7,H/F_hist/Previous,OR,8.977,8.97741937760307,0.0005,PASS
+S7,H/F_hist/Previous,CI_low,3.417,3.41687485657566,0.0005,PASS
+S7,H/F_hist/Previous,CI_high,30.061,30.0614527002017,0.0005,PASS
+S7,H/F_hist/Acute x wellness,OR,0.974,0.974084183502877,0.0005,PASS
+S7,H/F_hist/Acute x wellness,CI_low,0.728,0.727651843783169,0.0005,PASS
+S7,H/F_hist/Acute x wellness,CI_high,1.252,1.25204346548811,0.0005,PASS
+S7,H/A_hist_dropteam/Acute,OR,0.624,0.624339132044437,0.0005,PASS
+S7,H/A_hist_dropteam/Acute,CI_low,0.347,0.347179768410322,0.0005,PASS
+S7,H/A_hist_dropteam/Acute,CI_high,1.123,1.1227594095901,0.0005,PASS
+S7,H/A_hist_dropteam/Wellness,OR,0.820,0.820436148866447,0.0005,PASS
+S7,H/A_hist_dropteam/Wellness,CI_low,0.480,0.479734327109903,0.0005,PASS
+S7,H/A_hist_dropteam/Wellness,CI_high,1.403,1.40310050027461,0.0005,PASS
+S7,H/A_hist_dropteam/Chronic,OR,1.941,1.94066520456294,0.0005,PASS
+S7,H/A_hist_dropteam/Chronic,CI_low,1.162,1.16191811834712,0.0005,PASS
+S7,H/A_hist_dropteam/Chronic,CI_high,3.241,3.24134840203619,0.0005,PASS
+S7,H/A_hist_dropteam/Previous,OR,5.628,5.62844933617083,0.0005,PASS
+S7,H/A_hist_dropteam/Previous,CI_low,1.014,1.01445992852665,0.0005,PASS
+S7,H/A_hist_dropteam/Previous,CI_high,31.228,31.2278888884763,0.0005,PASS
+S7,H/A_hist_dropteam/Acute x wellness,OR,0.958,0.958070329503594,0.0005,PASS
+S7,H/A_hist_dropteam/Acute x wellness,CI_low,0.697,0.696881962730255,0.0005,PASS
+S7,H/A_hist_dropteam/Acute x wellness,CI_high,1.317,1.31715097443327,0.0005,PASS
+S7,H/F_hist_dropteam/Acute,OR,0.676,0.676002814556137,0.0005,PASS
+S7,H/F_hist_dropteam/Acute,CI_low,0.464,0.464061856927589,0.0005,PASS
+S7,H/F_hist_dropteam/Acute,CI_high,0.961,0.961047128055931,0.0005,PASS
+S7,H/F_hist_dropteam/Wellness,OR,0.893,0.893330809090202,0.0005,PASS
+S7,H/F_hist_dropteam/Wellness,CI_low,0.562,0.562423516501698,0.0005,PASS
+S7,H/F_hist_dropteam/Wellness,CI_high,1.363,1.36278421362052,0.0005,PASS
+S7,H/F_hist_dropteam/Chronic,OR,2.068,2.06750677779208,0.0005,PASS
+S7,H/F_hist_dropteam/Chronic,CI_low,1.386,1.38580134976692,0.0005,PASS
+S7,H/F_hist_dropteam/Chronic,CI_high,2.908,2.9081031593232,0.0005,PASS
+S7,H/F_hist_dropteam/Previous,OR,14.510,14.5103879129453,0.0005,PASS
+S7,H/F_hist_dropteam/Previous,CI_low,5.228,5.22849639425454,0.0005,PASS
+S7,H/F_hist_dropteam/Previous,CI_high,53.279,53.279452453869,0.0005,PASS
+S7,H/F_hist_dropteam/Acute x wellness,OR,0.944,0.943974146507874,0.0005,PASS
+S7,H/F_hist_dropteam/Acute x wellness,CI_low,0.859,0.858875249539958,0.0005,PASS
+S7,H/F_hist_dropteam/Acute x wellness,CI_high,1.137,1.13669814702596,0.0005,PASS
+S7,F/reference/Acute load,OR,0.599,0.599094422804644,0.0005,PASS
+S7,F/reference/Acute load,CI_low,0.325,0.324925700281675,0.0005,PASS
+S7,F/reference/Acute load,CI_high,1.114,1.1137928130643,0.0005,PASS
+S7,F/drop_team/Acute load,OR,0.705,0.705458589333269,0.0005,PASS
+S7,F/drop_team/Acute load,CI_low,0.369,0.368524252187476,0.0005,PASS
+S7,F/drop_team/Acute load,CI_high,1.347,1.34696413322058,0.0005,PASS
+S7,F/reference/Soreness burden,OR,0.823,0.823322219063635,0.0005,PASS
+S7,F/reference/Soreness burden,CI_low,0.579,0.57942499536065,0.0005,PASS
+S7,F/reference/Soreness burden,CI_high,1.166,1.16587992353514,0.0005,PASS
+S7,F/drop_team/Soreness burden,OR,0.853,0.852851943964097,0.0005,PASS
+S7,F/drop_team/Soreness burden,CI_low,0.590,0.589527489322899,0.0005,PASS
+S7,F/drop_team/Soreness burden,CI_high,1.228,1.22796392602005,0.0005,PASS
+S7,F/reference/Chronic load,OR,0.947,0.947219920255698,0.0005,PASS
+S7,F/reference/Chronic load,CI_low,0.533,0.533211926617023,0.0005,PASS
+S7,F/reference/Chronic load,CI_high,1.719,1.71881049450506,0.0005,PASS
+S7,F/drop_team/Chronic load,OR,0.749,0.748505371829984,0.0005,PASS
+S7,F/drop_team/Chronic load,CI_low,0.418,0.418196885954931,0.0005,PASS
+S7,F/drop_team/Chronic load,CI_high,1.385,1.38505534071686,0.0005,PASS
+S7,F/reference/Previous episode history,OR,6.129,6.12931772198318,0.0005,PASS
+S7,F/reference/Previous episode history,CI_low,2.580,2.57968399372013,0.0005,PASS
+S7,F/reference/Previous episode history,CI_high,17.424,17.4239187386029,0.0005,PASS
+S7,F/drop_team/Previous episode history,OR,7.104,7.10386846537867,0.0005,PASS
+S7,F/drop_team/Previous episode history,CI_low,2.999,2.99872113940156,0.0005,PASS
+S7,F/drop_team/Previous episode history,CI_high,20.154,20.1541403419554,0.0005,PASS
+S7,F/reference/Acute x soreness,OR,0.630,0.629552028809833,0.0005,PASS
+S7,F/reference/Acute x soreness,CI_low,0.445,0.445024129213313,0.0005,PASS
+S7,F/reference/Acute x soreness,CI_high,0.965,0.965067464096432,0.0005,PASS
+S7,F/drop_team/Acute x soreness,OR,0.671,0.671036174270028,0.0005,PASS
+S7,F/drop_team/Acute x soreness,CI_low,0.474,0.473925379548839,0.0005,PASS
+S7,F/drop_team/Acute x soreness,CI_high,1.069,1.06946182434698,0.0005,PASS
+S8,Marginal IRLS/soreness/Acute load × soreness burden,OR,0.670,0.6697433733162328,0.0005,PASS
+S8,Marginal IRLS/soreness/Acute load × soreness burden,CI_low,0.447,0.4467465376567564,0.0005,PASS
+S8,Marginal IRLS/soreness/Acute load × soreness burden,CI_high,1.107,1.1071045704185327,0.0005,PASS
+S8,Firth logistic/soreness/Intercept,OR,0.010,0.009632931365980469,0.0005,PASS
+S8,Firth logistic/soreness/Intercept,CI_low,0.001,0.0011390368214840771,0.0005,PASS
+S8,Firth logistic/soreness/Intercept,CI_high,0.043,0.04270559107991612,0.0005,PASS
+S8,Firth logistic/soreness/Acute load (7-day within-player z-score),OR,0.610,0.6100153898670233,0.0005,PASS
+S8,Firth logistic/soreness/Acute load (7-day within-player z-score),CI_low,0.250,0.2504172664722448,0.0005,PASS
+S8,Firth logistic/soreness/Acute load (7-day within-player z-score),CI_high,1.101,1.1010870303771703,0.0005,PASS
+S8,Firth logistic/soreness/Soreness burden (recent 3-day within-player z-score),OR,0.832,0.8321649653985825,0.0005,PASS
+S8,Firth logistic/soreness/Soreness burden (recent 3-day within-player z-score),CI_low,0.586,0.5864229269465357,0.0005,PASS
+S8,Firth logistic/soreness/Soreness burden (recent 3-day within-player z-score),CI_high,1.471,1.4705326625243837,0.0005,PASS
+S8,Firth logistic/soreness/Acute load × soreness burden,OR,0.655,0.655092281213892,0.0005,PASS
+S8,Firth logistic/soreness/Acute load × soreness burden,CI_low,0.440,0.4397536554259801,0.0005,PASS
+S8,Firth logistic/soreness/Acute load × soreness burden,CI_high,1.159,1.1585687868014372,0.0005,PASS
+S8,Firth logistic/soreness/Chronic load (28-day within-player z-score),OR,0.960,0.9604036493501138,0.0005,PASS
+S8,Firth logistic/soreness/Chronic load (28-day within-player z-score),CI_low,0.482,0.48150867240365647,0.0005,PASS
+S8,Firth logistic/soreness/Chronic load (28-day within-player z-score),CI_high,1.954,1.9544624572244285,0.0005,PASS
+S8,Firth logistic/soreness/Previous episode history,OR,6.263,6.262726409957607,0.0005,PASS
+S8,Firth logistic/soreness/Previous episode history,CI_low,1.891,1.8914658778338147,0.0005,PASS
+S8,Firth logistic/soreness/Previous episode history,CI_high,29.068,29.068296761573652,0.0005,PASS
+S8,Firth logistic/soreness/Calendar time,OR,0.992,0.9917588486029127,0.0005,PASS
+S8,Firth logistic/soreness/Calendar time,CI_low,0.984,0.9844920010836196,0.0005,PASS
+S8,Firth logistic/soreness/Calendar time,CI_high,0.996,0.9960851910467345,0.0005,PASS
+S8,Firth logistic/soreness/Team B vs Team A,OR,0.023,0.02304927727930709,0.0005,PASS
+S8,Firth logistic/soreness/Team B vs Team A,CI_low,0.007,0.006719538151341075,0.0005,PASS
+S8,Firth logistic/soreness/Team B vs Team A,CI_high,0.087,0.08659839510744757,0.0005,PASS
+S8,Firth logistic/soreness/2021 season vs 2020,OR,2.914,2.913848694326474,0.0005,PASS
+S8,Firth logistic/soreness/2021 season vs 2020,CI_low,0.346,0.3460575994681628,0.0005,PASS
+S8,Firth logistic/soreness/2021 season vs 2020,CI_high,30.762,30.76205389248059,0.0005,PASS
+S8,Firth logistic/fatigue/Intercept,OR,0.010,0.010173862976407344,0.0005,PASS
+S8,Firth logistic/fatigue/Intercept,CI_low,0.001,0.0011387520216532953,0.0005,PASS
+S8,Firth logistic/fatigue/Intercept,CI_high,0.046,0.046159132320984037,0.0005,PASS
+S8,Firth logistic/fatigue/Acute load (7-day within-player z-score),OR,0.628,0.6284949167868422,0.0005,PASS
+S8,Firth logistic/fatigue/Acute load (7-day within-player z-score),CI_low,0.238,0.23766017939482503,0.0005,PASS
+S8,Firth logistic/fatigue/Acute load (7-day within-player z-score),CI_high,1.315,1.3154217751110227,0.0005,PASS
+S8,Firth logistic/fatigue/Fatigue burden (recent 3-day within-player z-score),OR,0.757,0.756791411132853,0.0005,PASS
+S8,Firth logistic/fatigue/Fatigue burden (recent 3-day within-player z-score),CI_low,0.554,0.5543035715128157,0.0005,PASS
+S8,Firth logistic/fatigue/Fatigue burden (recent 3-day within-player z-score),CI_high,1.167,1.1667757766992437,0.0005,PASS
+S8,Firth logistic/fatigue/Acute load × fatigue burden,OR,0.867,0.8673767724252474,0.0005,PASS
+S8,Firth logistic/fatigue/Acute load × fatigue burden,CI_low,0.618,0.6184370295955477,0.0005,PASS
+S8,Firth logistic/fatigue/Acute load × fatigue burden,CI_high,1.249,1.2494598054210173,0.0005,PASS
+S8,Firth logistic/fatigue/Chronic load (28-day within-player z-score),OR,0.973,0.9732281618979135,0.0005,PASS
+S8,Firth logistic/fatigue/Chronic load (28-day within-player z-score),CI_low,0.505,0.505473551635345,0.0005,PASS
+S8,Firth logistic/fatigue/Chronic load (28-day within-player z-score),CI_high,1.928,1.9275313275858081,0.0005,PASS
+S8,Firth logistic/fatigue/Previous episode history,OR,5.906,5.906293195817049,0.0005,PASS
+S8,Firth logistic/fatigue/Previous episode history,CI_low,1.555,1.555299171756879,0.0005,PASS
+S8,Firth logistic/fatigue/Previous episode history,CI_high,31.800,31.800228289659238,0.0005,PASS
+S8,Firth logistic/fatigue/Calendar time,OR,0.992,0.9917865749499527,0.0005,PASS
+S8,Firth logistic/fatigue/Calendar time,CI_low,0.984,0.9836390214231358,0.0005,PASS
+S8,Firth logistic/fatigue/Calendar time,CI_high,0.996,0.9959010401342464,0.0005,PASS
+S8,Firth logistic/fatigue/Team B vs Team A,OR,0.026,0.02602088218922791,0.0005,PASS
+S8,Firth logistic/fatigue/Team B vs Team A,CI_low,0.010,0.009522907440732052,0.0005,PASS
+S8,Firth logistic/fatigue/Team B vs Team A,CI_high,0.096,0.09626270158173893,0.0005,PASS
+S8,Firth logistic/fatigue/2021 season vs 2020,OR,2.728,2.7276271579035205,0.0005,PASS
+S8,Firth logistic/fatigue/2021 season vs 2020,CI_low,0.364,0.3642660905389051,0.0005,PASS
+S8,Firth logistic/fatigue/2021 season vs 2020,CI_high,41.510,41.510385910620904,0.0005,PASS
+S8,Firth logistic/readiness/Intercept,OR,0.010,0.010106904350705407,0.0005,PASS
+S8,Firth logistic/readiness/Intercept,CI_low,0.001,0.0013467869834122982,0.0005,PASS
+S8,Firth logistic/readiness/Intercept,CI_high,0.047,0.047153382615457616,0.0005,PASS
+S8,Firth logistic/readiness/Acute load (7-day within-player z-score),OR,0.676,0.6764877657545123,0.0005,PASS
+S8,Firth logistic/readiness/Acute load (7-day within-player z-score),CI_low,0.281,0.28062124637902847,0.0005,PASS
+S8,Firth logistic/readiness/Acute load (7-day within-player z-score),CI_high,1.259,1.258711909753933,0.0005,PASS
+S8,Firth logistic/readiness/Readiness deficit (recent 3-day within-player z-score),OR,1.026,1.0260519291806358,0.0005,PASS
+S8,Firth logistic/readiness/Readiness deficit (recent 3-day within-player z-score),CI_low,0.855,0.8548349569587412,0.0005,PASS
+S8,Firth logistic/readiness/Readiness deficit (recent 3-day within-player z-score),CI_high,1.227,1.226549276427367,0.0005,PASS
+S8,Firth logistic/readiness/Acute load × readiness deficit,OR,0.885,0.8850206723161549,0.0005,PASS
+S8,Firth logistic/readiness/Acute load × readiness deficit,CI_low,0.621,0.6212352387893288,0.0005,PASS
+S8,Firth logistic/readiness/Acute load × readiness deficit,CI_high,1.252,1.2515165137166369,0.0005,PASS
+S8,Firth logistic/readiness/Chronic load (28-day within-player z-score),OR,1.014,1.0143226531493061,0.0005,PASS
+S8,Firth logistic/readiness/Chronic load (28-day within-player z-score),CI_low,0.522,0.5221109642674462,0.0005,PASS
+S8,Firth logistic/readiness/Chronic load (28-day within-player z-score),CI_high,2.024,2.0244490440170546,0.0005,PASS
+S8,Firth logistic/readiness/Previous episode history,OR,6.211,6.2113467944217025,0.0005,PASS
+S8,Firth logistic/readiness/Previous episode history,CI_low,1.745,1.7450512355923715,0.0005,PASS
+S8,Firth logistic/readiness/Previous episode history,CI_high,28.663,28.662615021840917,0.0005,PASS
+S8,Firth logistic/readiness/Calendar time,OR,0.992,0.9919080386458543,0.0005,PASS
+S8,Firth logistic/readiness/Calendar time,CI_low,0.984,0.9839377933742516,0.0005,PASS
+S8,Firth logistic/readiness/Calendar time,CI_high,0.996,0.9958392422619093,0.0005,PASS
+S8,Firth logistic/readiness/Team B vs Team A,OR,0.026,0.02595188066640223,0.0005,PASS
+S8,Firth logistic/readiness/Team B vs Team A,CI_low,0.009,0.009126139590427556,0.0005,PASS
+S8,Firth logistic/readiness/Team B vs Team A,CI_high,0.102,0.10160127172284852,0.0005,PASS
+S8,Firth logistic/readiness/2021 season vs 2020,OR,2.496,2.496309175440432,0.0005,PASS
+S8,Firth logistic/readiness/2021 season vs 2020,CI_low,0.332,0.33155745915380186,0.0005,PASS
+S8,Firth logistic/readiness/2021 season vs 2020,CI_high,39.725,39.724631087695386,0.0005,PASS
+S8,Marginal IRLS (drop team)/soreness/Acute load x soreness burden,OR,0.740,0.740097920694462,0.0005,PASS
+S8,Marginal IRLS (drop team)/soreness/Acute load x soreness burden,CI_low,0.556,0.555580828804175,0.0005,PASS
+S8,Marginal IRLS (drop team)/soreness/Acute load x soreness burden,CI_high,1.132,1.13230386128686,0.0005,PASS
+S8,Marginal IRLS (non-overlap + drop team)/soreness/Acute load x soreness burden,OR,0.740,0.740412992385132,0.0005,PASS
+S8,Marginal IRLS (non-overlap + drop team)/soreness/Acute load x soreness burden,CI_low,0.557,0.5567567069208207,0.0005,PASS
+S8,Marginal IRLS (non-overlap + drop team)/soreness/Acute load x soreness burden,CI_high,1.133,1.133109376918052,0.0005,PASS
+S9,IPW_onset/soreness,OR,0.646,0.646366589674676,0.0005,PASS
+S9,IPW_onset/soreness,CI_low,0.429,0.429316712397819,0.0005,PASS
+S9,IPW_onset/soreness,CI_high,0.973,0.973150488165793,0.0005,PASS
+S9,IPW_onset/soreness,p,0.037,0.0365844253641482,0.0005,PASS
+S9,IPW_nooutcome/soreness,OR,0.657,0.65671312887304,0.0005,PASS
+S9,IPW_nooutcome/soreness,CI_low,0.425,0.424703246203828,0.0005,PASS
+S9,IPW_nooutcome/soreness,CI_high,1.015,1.01546700546583,0.0005,PASS
+S9,IPW_nooutcome/soreness,p,0.059,0.0586271530959739,0.0005,PASS
+S9,IPW_onset/fatigue,OR,0.801,0.801210599371089,0.0005,PASS
+S9,IPW_onset/fatigue,CI_low,0.616,0.616270746279726,0.0005,PASS
+S9,IPW_onset/fatigue,CI_high,1.042,1.04165000272981,0.0005,PASS
+S9,IPW_onset/fatigue,p,0.098,0.0978752981967673,0.0005,PASS
+S9,IPW_nooutcome/fatigue,OR,0.789,0.78854552059312,0.0005,PASS
+S9,IPW_nooutcome/fatigue,CI_low,0.612,0.611942160479485,0.0005,PASS
+S9,IPW_nooutcome/fatigue,CI_high,1.016,1.01611570211188,0.0005,PASS
+S9,IPW_nooutcome/fatigue,p,0.066,0.0662961205312363,0.0005,PASS
+S9,IPW_onset/readiness,OR,0.918,0.918403540832762,0.0005,PASS
+S9,IPW_onset/readiness,CI_low,0.695,0.695080839788006,0.0005,PASS
+S9,IPW_onset/readiness,CI_high,1.213,1.21347764969526,0.0005,PASS
+S9,IPW_onset/readiness,p,0.549,0.549303497619335,0.0005,PASS
+S9,IPW_nooutcome/readiness,OR,0.901,0.901298792557291,0.0005,PASS
+S9,IPW_nooutcome/readiness,CI_low,0.684,0.68358914837602,0.0005,PASS
+S9,IPW_nooutcome/readiness,CI_high,1.188,1.18834465906178,0.0005,PASS
+S9,IPW_nooutcome/readiness,p,0.461,0.461310225583626,0.0005,PASS

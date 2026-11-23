@@ -1,0 +1,32 @@
+[
+  {
+    "check": "Fig1_onset_days",
+    "observed": 52,
+    "expected": 52,
+    "status": "PASS"
+  },
+  {
+    "check": "Fig1_unique_player_dates",
+    "observed": 52,
+    "expected": 52,
+    "status": "PASS"
+  },
+  {
+    "check": "Fig2_event_players",
+    "observed": 15,
+    "expected": 15,
+    "status": "PASS"
+  },
+  {
+    "check": "Fig2_total_episodes",
+    "observed": 92,
+    "expected": 92,
+    "status": "PASS"
+  },
+  {
+    "check": "Fig2_maximum_episodes",
+    "observed": 45,
+    "expected": 45,
+    "status": "PASS"
+  }
+]

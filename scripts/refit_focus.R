@@ -7,8 +7,9 @@ suppressPackageStartupMessages(library(logistf))
 set.seed(20260722)
 ws <- Sys.getenv("SOCCERMON_WORKSPACE")
 root <- normalizePath(".")
-fr <- file.path(root,"workspace/r2")
-out <- file.path(root,"workspace/validation")
+execution_root <- Sys.getenv("SOCCERMON_EXECUTION_ROOT", unset=file.path(root,"workspace"))
+fr <- file.path(execution_root,"r2")
+out <- file.path(execution_root,"validation")
 dir.create(out,recursive=TRUE,showWarnings=FALSE)
 rows <- list()
 configs <- list(
@@ -25,8 +26,9 @@ for (cfg in configs) {
  c <- paste0("chronic_load_28d_wp_z",cfg$suffix)
  f <- as.formula(paste("onset_day ~",a,"*",w,"+",c,"+ prev_episode_ever + calendar_time + team + season"))
  d <- d[complete.cases(d[,all.vars(f)]),]
- cat("Fitting",cfg$id,"N",nrow(d),"events",sum(d$onset_day),"\n")
+  cat("Fitting",cfg$id,"N",nrow(d),"events",sum(d$onset_day),"\n")
  fit <- logistf(f,data=d)
+  capture.output(print(fit),file=file.path(out,paste0("focal_",cfg$id,"_fit.txt")))
  ref <- read.csv(cfg$source,stringsAsFactors=FALSE)
  for (term in c(paste0(a,":",w),c)) {
   expected <- ref[ref$model_id==cfg$id & ref$wellness_variant=="soreness" & ref$term==term,]
@@ -34,10 +36,13 @@ for (cfg in configs) {
   observed <- c(OR=exp(fit$coefficients[term]),low=exp(fit$ci.lower[term]),high=exp(fit$ci.upper[term]))
   target <- c(expected$OR,expected$CI_low,expected$CI_high)
   error <- max(abs(unname(observed)-target))
+  sample_ok <- nrow(d)==expected$n && sum(d$onset_day)==expected$events
   rows[[length(rows)+1]] <- data.frame(model=cfg$id,term=term,n=nrow(d),events=sum(d$onset_day),
       OR=unname(observed[1]),CI_low=unname(observed[2]),CI_high=unname(observed[3]),
-      frozen_OR=expected$OR,max_abs_difference=error,tolerance=0.001,
-      status=if (error<=0.001) "PASS" else "FAIL")
+      frozen_OR=expected$OR,frozen_CI_low=expected$CI_low,frozen_CI_high=expected$CI_high,
+      frozen_n=expected$n,frozen_events=expected$events,
+      max_abs_difference=error,tolerance=0.001,
+      status=if (is.finite(error) && error<=0.001 && sample_ok) "PASS" else "FAIL")
  }
 }
 write.csv(do.call(rbind,rows),file.path(out,"focal_refits.csv"),row.names=FALSE)
