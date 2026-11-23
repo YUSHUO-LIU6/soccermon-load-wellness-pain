@@ -22,7 +22,7 @@
     "summary_agreement": true
   },
   "local_tests": {
-    "count": 38,
+    "count": 39,
     "status": "PASS"
   },
   "source_integrity": "101 source files and 54 frozen consistency checks PASS",
@@ -36,5 +36,14 @@
     "joint team/season-removal internal QA GLMM"
   ],
   "CI": "PENDING",
-  "pull_request": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/pull/1"
+  "pull_request": "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/pull/1",
+  "previous_remote_CI": {
+    "tested_commit": "a8c9898f6bd432adbb16b0d7499f4591e6237572",
+    "conclusion": "success",
+    "runs": [
+      "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122163620",
+      "https://github.com/YUSHUO-LIU6/soccermon-load-wellness-pain/actions/runs/45122163971"
+    ],
+    "tests": 38
+  }
 }

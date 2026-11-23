@@ -3884,9 +3884,9 @@
     "Final publisher layout and exhaustive paper cell/graphic reproduction are not certified."
   ],
   "follow_up": {
-    "recorded_utc": "2026-11-23T06:08:32.833833+00:00",
+    "recorded_utc": "2026-11-23T06:12:07.147477+00:00",
     "baseline_scientific_commit": "3ddde51a62559787261accf4e20e143e616b0b73",
-    "delivery_parent_commit": "11d8af18729e1230786af4240e0226e92f88359a",
+    "delivery_parent_commit": "a8c9898f6bd432adbb16b0d7499f4591e6237572",
     "scope": "Post-publication verification; existing full R1/R2 and other bootstrap evidence reused",
     "Firth_replay": {
       "scope": "POST_PUBLICATION_VALIDATION",
@@ -4288,7 +4288,7 @@
       {
         "argv": "uv run python -m unittest discover -s tests -v",
         "exit_status": 0,
-        "tests": 38,
+        "tests": 39,
         "log": "work/tests_current.log"
       },
       {
@@ -4356,8 +4356,8 @@
       },
       {
         "path": "environment/REPRODUCIBILITY.md",
-        "sha256": "c77a5d39f20b01d0a483272cb384d385fcb29af6d58652d25fb9bffc0e9a1958",
-        "bytes": 2447
+        "sha256": "49dbcf85d1d9950c08af906ed16bf7b96f51a6d68eea4f39f28f280992cdae28",
+        "bytes": 2666
       },
       {
         "path": "reports/DISCREPANCY_SUMMARY.csv",
@@ -4445,9 +4445,14 @@
         "bytes": 1330
       },
       {
+        "path": "reports/RELEASE_GATE.json",
+        "sha256": "d2d86fe343028c733806360c597781f0c2d849e59fc9627fb43990d885a34fda",
+        "bytes": 1500
+      },
+      {
         "path": "reports/REPRODUCIBILITY_AUDIT.md",
-        "sha256": "8c989c6dcdb22720c737d0f0ed6feb6924e72dcbde4172c981525ce1e66a80e4",
-        "bytes": 21555
+        "sha256": "e0fa767ad5e86d1203dcf5449253a26934077e51db8a36496bdedd5a5832bf18",
+        "bytes": 21712
       },
       {
         "path": "reports/RESULT_COMPARISON.csv",
@@ -4511,8 +4516,8 @@
       },
       {
         "path": "scripts/setup_r.R",
-        "sha256": "9fae7ee7e9f5e918d53b20ed5ced127716c8a8264a09c9f062a66a374a825bc1",
-        "bytes": 1260
+        "sha256": "962a9b4ab9e84ea4466194ce7f893c6602aa5e8ef0f744fa6a404782969bb909",
+        "bytes": 1272
       },
       {
         "path": "scripts/verify_results.py",
@@ -4528,6 +4533,11 @@
         "path": "tests/test_difference_classification.py",
         "sha256": "bbc96c2dccc808ab6f3f98bcff641df11fbabb656758470d88c483dcdeb55143",
         "bytes": 1409
+      },
+      {
+        "path": "tests/test_exported_firth_evidence.py",
+        "sha256": "4f1c8be1dd1a496736a0f58a2419f245698a7a51cc85ae1f12a7080d6c7eba61",
+        "bytes": 2614
       },
       {
         "path": "tests/test_model_diagnostic_assessment.py",

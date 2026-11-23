@@ -43,3 +43,7 @@ survival 3.8-6 into `workspace/R/frozen-survival`. It did not replace the full
 run's library. Both survival versions returned the same warning-bearing fit
 on this machine; the original Windows failure was not reproduced by changing
 survival alone. See `reports/FRAILTY_VERSION_PROBE.json`.
+
+The optional post-publication stationarity check uses numDeriv 2016.8-1.1
+(reported by R as 2016.8.1.1). It is included in the missing-only local-library
+setup. It does not alter the original model-fitting algorithms.

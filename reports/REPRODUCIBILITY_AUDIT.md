@@ -252,7 +252,7 @@ and Cox HR are explicitly distinguished in the staged mixed-estimator forest
 axis label; no numerical estimate is changed by this presentation correction.
 
 The acceptance-tool JSON Path-label defect found against the full R2 master
-was repaired and covered by a nested-result regression test. **38 local unit
+was repaired and covered by a nested-result regression test. **39 local unit
 tests passed**; Python compilation and `git diff --check` passed. CFF 1.2.0
 schema validation passed after using the supported electronic-page field.
 The data-free GitHub Actions workflow is prepared but was not run remotely,
@@ -328,7 +328,9 @@ for inspection. No result or threshold was changed to manufacture PASS.
 
 ## Proposed changes and author decisions
 
-Nine tracked files are modified and twenty new files are proposed. Documentation
+The initial audit changed nine tracked files and proposed twenty new files.
+The follow-up adds replicate evidence, scientific-impact and model-status
+assessment, numerical diagnostic tools, approved licensing and tested CI. Documentation
 now cites the published article and separates registered/SAP/R1/R2/audit layers;
 the runner isolates full executions and records commands, libraries and source
 adaptations; fresh acceptance tests, a frailty dependency probe, data-free CI,
